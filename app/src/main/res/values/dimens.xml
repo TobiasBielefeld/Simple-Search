@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="shadow_height">4dp</dimen>
+    <dimen name="record_list_entry_padding">15dp</dimen>
+    <dimen name="record_list_text_size">18sp</dimen>
+</resources>

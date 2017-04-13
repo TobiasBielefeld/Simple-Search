@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_version">Version</string>
+
+    <string name="confirm">Bestätigen</string>
+    <string name="cancel">Abbrechen</string>
+
+    <!-- Main Activity -->
+    <string name="record_list_button_description">Kopiere zur Suchabfrage</string>
+    <string name="unsupported_search_character">Abfrage enthält nicht unterstützte Werte :(</string>
+    <string name="unsupported_search_string">Deine benutzerdefinierte Suchmaschine  ist nicht gültig :/</string>
+    <string name="string_doesnt_contain_placeholder">Es gibt keinen Platzhalter für die Suchabfrage in deiner benutzerdefinierten Suchmaschine!</string>
+
+    <string name="menu_settings">@string/activity_settings</string>
+    <string name="menu_delete_all">Alle Aufzeichnungen löschen</string>
+    <string name="search_hint">Suche nach…</string>
+
+    <!-- Dialogs -->
+    <string name="dialog_delete_entry_title">Diesen Eintrag löschen?</string>
+    <string name="dialog_delete_all_records_text">Alle Aufzeichnungen löschen! Bist du dir sicher?</string>
+    <string name="dialog_custom_search_engine_title">Benutzerdefinierte Suchmaschine eintragen</string>
+    <string formatted="false" name="dialog_custom_search_engine_text">Trage ein \"%s\" (ohne Anführungszeichen)
+        als Platzhalter an der Stelle ein, wo die Suchabfrage eingefügt werden soll.</string>
+
+    <!-- Settings -->
+    <string name="activity_settings">Einstellungen</string>
+
+    <string name="pref_search_title">Suche</string>
+    <string name="pref_search_summary">Ändere die Suchmaschine und richte Aufzeichnungen ein</string>
+    <string name="pref_general_title">Allgemein</string>
+    <string name="pref_general_summary">Ändere das Verhalten der Anwendung</string>
+
+    <string name="settings_search_engine_title">Suchmaschine</string>
+    <string name="settings_enable_records_title">Erlaube Aufzeichnungen</string>
+    <string name="settings_enable_records_text">Speichere Suchabfragen zur Wiederverwendung</string>
+    <string name="settings_orientation">Bildschirmausrichtung</string>
+    <string name="settings_change_language">Ändere Sprache</string>
+    <string name="settings_hide_status_bar">Verstecke Statusleiste</string>
+
+    <!--About-->
+    <string name="activity_about">Über</string>
+    <string name="about_description">Zeige Informationen über die Anwendung wie Lizenzen und Änderungen</string>
+    <string name="about_tab_1">Informationen</string>
+    <string name="about_tab_2">Lizenz</string>
+    <string name="about_tab_3">Änderungen</string>
+    <string name="about_text1">entwickelt Tobias Bielefeld</string>
+    <string name="about_text2">danke für das Nutzen meiner App :)</string>
+
+    <string name="about_build_date">Kompiliert am</string>
+    <string name="about_programm_code_text">Quellcode erhältich auf:</string>
+
+    <string name="about_third_party_licenses">Drittanbieterlizenzen</string>
+    <string name="about_material_icons_text">Die Material Design Icons wurden von Google Inc erstellt und unter der
+        <a href="https://github.com/google/material-design-icons/blob/master/LICENSE">Apache 2.0 Lizenz</a> veröffentlicht</string>
+
+</resources>

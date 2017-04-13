@@ -1,0 +1,28 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:defaultValue="1"
+        android:entries="@array/pref_orientation_titles"
+        android:entryValues="@array/pref_orientation_values"
+        android:key="@string/pref_key_orientation"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@null"
+        android:summary="%s"
+        android:title="@string/settings_orientation" />
+
+    <ListPreference
+        android:defaultValue="default"
+        android:entries="@array/pref_language_titles"
+        android:entryValues="@array/pref_language_values"
+        android:key="@string/pref_key_language"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@null"
+        android:summary="%s"
+        android:title="@string/settings_change_language" />
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="@string/pref_key_hide_status_bar"
+        android:title="@string/settings_hide_status_bar" />
+
+</PreferenceScreen>

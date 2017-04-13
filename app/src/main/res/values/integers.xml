@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="max_number_records">20</integer>
+
+    <string name="default_search_engine" translatable="false">6</string>
+</resources>

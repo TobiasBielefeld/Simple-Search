@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_search_engine_titles">
+        <item>Benutzerdefiniert</item>
+        <item>Google</item>
+        <item>Yahoo</item>
+        <item>Bing</item>
+        <item>Yandex</item>
+        <item>Startpage</item>
+        <item>DuckDuckGo</item>
+        <item>DuckDuckGo Lite</item>
+        <item>searx.me</item>
+    </string-array>
+
+    <string-array formatted="false" name="search_engine_uris">
+        <item>empty</item> <!-- custom search engine will be set up promatically, so this entry can be empty-->
+        <item>https://www.google.de/#q=%s</item>
+        <item>https://de.search.yahoo.com/search?p=%s</item>
+        <item>https://www.bing.com/search?q=%s&amp;cc=de</item>
+        <item>https://www.yandex.com/?q=%s</item>
+        <item>https://www.startpage.com/do/search?query=%s&amp;language=deutsch</item>
+        <item>https://duckduckgo.com/?q=%s</item>
+        <item>https://duckduckgo.com/lite?q=%s</item>
+        <item>https://www.searx.me/?q=%s</item>
+    </string-array>
+
+    <string-array name="pref_language_titles">
+        <item>Standard Sprache</item>
+        <item>Englisch</item>
+        <item>Deutsch</item>
+    </string-array>
+
+    <string-array name="pref_language_values">
+        <item>default</item>
+        <item>en</item>
+        <item>de</item>
+    </string-array>
+
+    <string-array name="pref_orientation_titles">
+        <item>Folge System Einstellungen</item>
+        <item>Hochformat</item>
+        <item>Querformat</item>
+        <item>Querformat umgedreht</item>
+    </string-array>
+</resources>

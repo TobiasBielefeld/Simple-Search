@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Simple Search</string>
+    <string name="app_version">Version</string>
+
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Main Activity -->
+    <string name="record_list_button_description">Copy to search query</string>
+    <string name="unsupported_search_character">Query contains unsupported characters :(</string>
+    <string name="unsupported_search_string">Your custom search url isn\'t valid :/</string>
+    <string name="string_doesnt_contain_placeholder">There is no placeholder for the search query in your custom search engine!</string>
+
+    <string name="menu_settings">@string/activity_settings</string>
+    <string name="menu_delete_all">Delete all records</string>
+    <string name="search_hint">Search for…</string>
+
+    <!-- Dialogs -->
+    <string name="dialog_delete_entry_title">Delete this record?</string>
+    <string name="dialog_delete_all_records_text">Delete all records! Are you sure?</string>
+    <string name="dialog_custom_search_engine_title">Enter custom search engine</string>
+    <string formatted="false" name="dialog_custom_search_engine_text">Enter a \"%s\" (without the quotation marks)
+        as a placeholder where the search query should be inserted at.</string>
+
+    <!-- Settings -->
+    <string name="activity_settings">Settings</string>
+
+    <string name="pref_key_search_engine" translatable="false">pref_key_search_engine</string>
+    <string name="pref_key_enable_records" translatable="false">pref_key_enable_records</string>
+    <string name="pref_key_custom_search_engine" translatable="false">pref_key_custom_search_engine</string>
+    <string name="pref_key_orientation" translatable="false">pref_key_orientation</string>
+    <string name="pref_key_language" translatable="false">pref_key_language</string>
+    <string name="pref_key_hide_status_bar" translatable="false">pref_key_hide_status_bar</string>
+
+    <string name="pref_search_title">Search</string>
+    <string name="pref_search_summary">Change the search engine and set up records</string>
+    <string name="pref_general_title">General</string>
+    <string name="pref_general_summary">Change the behavior of the app</string>
+
+    <string name="settings_search_engine_title">Search engine</string>
+    <string name="settings_enable_records_title">Enable records</string>
+    <string name="settings_enable_records_text">Save searched queries for reuse</string>
+    <string name="settings_orientation">Screen orientation</string>
+    <string name="settings_change_language">Change language</string>
+    <string name="settings_hide_status_bar">Hide status bar</string>
+
+    <!--About-->
+    <string name="activity_about">About</string>
+    <string name="about_description">Show information about the app like licenses and changelog</string>
+    <string name="about_tab_1">Information</string>
+    <string name="about_tab_2">License</string>
+    <string name="about_tab_3">Changelog</string>
+    <string name="about_text1">developed by Tobias Bielefeld</string>
+    <string name="about_text2">thanks for using my app :)</string>
+
+    <string name="about_build_date">Build date</string>
+    <string name="about_programm_code_text">Source code available on:</string>
+    <string name="about_programm_code_text2" translatable="false"><a href="https://github.com/TobiasBielefeld/Simple-Search">GitHub</a></string>
+
+    <string name="about_third_party_licenses">Third party licenses</string>
+    <string name="about_material_icons_text">The Material design icons are made by Google Inc and published under the
+        <a href="https://github.com/google/material-design-icons/blob/master/LICENSE">Apache 2.0 license</a></string>
+
+</resources>
