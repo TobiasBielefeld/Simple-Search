@@ -2,9 +2,9 @@
 ![platform](http://img.shields.io/badge/platform-Android-blue.svg)
 
 # Simple Search
-This is a very basic app. Designed for people who wants to replace the Google Search bar from the home screen with another bar, which uses their prefered search engine. 
+This is a very basic app. Designed for people who wants to use a search widget with their preferred search engine. 
 
-This app contains a search bar to type in a search query, which will be opend in the internet browser. A widget for the home screen will simply start the app.
+This app contains a search bar to type in a search query, which will be opened in the Internet browser. A widget for the home screen will simply start the app.
 
 You can change the search engine in the settings (Default is DuckDuckGo) or type in a custom search string. The app also saves the search queries as a history.
 
