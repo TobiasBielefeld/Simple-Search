@@ -11,7 +11,7 @@ This app contains a search bar to type in a search query, which will be opened i
 You can change the search engine in the settings (Default is DuckDuckGo) or type in a custom search string. The app also saves the search queries as a history.
 
 ## Screenshots
-<img src="https://github.com/TobiasBielefeld/Simple-Search/blob/master/pictures/screenshot_1.png" width=200 height=356> <img src="https://github.com/TobiasBielefeld/Simple-Search/blob/master/pictures/screenshot_2.png" width=200 height=356> <img src="https://github.com/TobiasBielefeld/Simple-Search/blob/master/pictures/screenshot_3.png" width=200 height=356><img src="https://github.com/TobiasBielefeld/Simple-Search/blob/master/pictures/screenshot_4.png" width=200 height=356>
+<img src="https://github.com/TobiasBielefeld/Simple-Search/blob/master/pictures/screenshot_1.png" width=200 height=356> <img src="https://github.com/TobiasBielefeld/Simple-Search/blob/master/pictures/screenshot_2.png" width=200 height=356> <img src="https://github.com/TobiasBielefeld/Simple-Search/blob/master/pictures/screenshot_3.png" width=200 height=356> <img src="https://github.com/TobiasBielefeld/Simple-Search/blob/master/pictures/screenshot_4.png" width=200 height=356>
 
 ## Usage
 If you want to use my work for your own project YOU HAVE TO FOLLOW THE GPL LICENSE! So please follow the rules! Use this attribution text (or a similar one)
