@@ -12,9 +12,7 @@ You can change the search engine in the settings (Default is DuckDuckGo) or type
 <img src="https://github.com/TobiasBielefeld/Simple-Search/blob/master/pictures/screenshot_1.png" width=250 height=444> <img src="https://github.com/TobiasBielefeld/Simple-Search/blob/master/pictures/screenshot_2.png" width=250 height=444> <img src="https://github.com/TobiasBielefeld/Simple-Search/blob/master/pictures/screenshot_3.png" width=250 height=444>
 
 ## Usage
-If you want to use my work for your own project (which means in most cases: Put ads in it and publish on Google Play Store) YOU HAVE TO FOLLOW THE GPL LICENSE! This means, your project MUST be open source under a GPLv3+ compatible license and MUST contain attribution for the original work! I already found a lot of copies which simply removed my "About" screen and changed some graphics. If I see your work violating the GPL rules, I will let it get removed by Google. 
-
-So please follow the rules! Use this attribution text (or a similar one)
+If you want to use my work for your own project YOU HAVE TO FOLLOW THE GPL LICENSE! So please follow the rules! Use this attribution text (or a similar one)
 
 Simple Search - https://github.com/TobiasBielefeld/Simple-Search -
 Copyright 2017 - Tobias Bielefeld - tobias.bielefeld@gmail.com -
