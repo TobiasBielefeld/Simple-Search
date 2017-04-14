@@ -12,6 +12,7 @@
 
         <activity
             android:name=".ui.MainActivity"
+            android:launchMode="singleTask"
             android:theme="@style/MainTheme"
             android:windowSoftInputMode="stateVisible">
             <intent-filter>

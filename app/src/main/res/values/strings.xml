@@ -53,6 +53,8 @@
     <string name="about_text1">developed by Tobias Bielefeld</string>
     <string name="about_text2">thanks for using my app :)</string>
 
+    <string name="translations">Translations</string>
+
     <string name="about_build_date">Build date</string>
     <string name="about_programm_code_text">Source code available on:</string>
     <string name="about_programm_code_text2" translatable="false"><a href="https://github.com/TobiasBielefeld/Simple-Search">GitHub</a></string>

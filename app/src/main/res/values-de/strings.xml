@@ -27,7 +27,7 @@
     <string name="pref_search_title">Suche</string>
     <string name="pref_search_summary">Ändere die Suchmaschine und richte Aufzeichnungen ein</string>
     <string name="pref_general_title">Allgemein</string>
-    <string name="pref_general_summary">Ändere das Verhalten der Anwendung</string>
+    <string name="pref_general_summary">Ändere das Verhalten der App</string>
 
     <string name="settings_search_engine_title">Suchmaschine</string>
     <string name="settings_enable_records_title">Erlaube Aufzeichnungen</string>
@@ -44,6 +44,8 @@
     <string name="about_tab_3">Änderungen</string>
     <string name="about_text1">entwickelt Tobias Bielefeld</string>
     <string name="about_text2">danke für das Nutzen meiner App :)</string>
+
+    <string name="translations">Übersetzungen</string>
 
     <string name="about_build_date">Kompiliert am</string>
     <string name="about_programm_code_text">Quellcode erhältich auf:</string>
