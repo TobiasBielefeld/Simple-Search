@@ -35,7 +35,7 @@
                 android:focusableInTouchMode="true"
                 android:hint="@string/search_hint"
                 android:imeOptions="actionSearch"
-                android:singleLine="true" />
+                android:maxLines="1" />
 
 
             <ImageView
