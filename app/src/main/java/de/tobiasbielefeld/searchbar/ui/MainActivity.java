@@ -207,11 +207,12 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
      */
     @Override
     public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-        if (actionId == EditorInfo.IME_ACTION_SEARCH) {
-            String text = v.getText().toString();
-            startSearch(text);
-            records.add(text);
-        }
+
+        //just start the search, because the ime id is not always the same on every device...
+        String text = v.getText().toString();
+        startSearch(text);
+        records.add(text);
+
         return true;
     }
 }
