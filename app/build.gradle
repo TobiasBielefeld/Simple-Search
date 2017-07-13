@@ -8,7 +8,7 @@ android {
         applicationId "de.tobiasbielefeld.searchbar"
         minSdkVersion 14
         targetSdkVersion 25
-        versionCode 3
+        versionCode 4
         versionName "1.1.1"
         vectorDrawables.useSupportLibrary = true
     }

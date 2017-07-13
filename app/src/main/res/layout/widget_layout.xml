@@ -32,7 +32,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:adjustViewBounds="true"
-            app:srcCompat="@drawable/icon_magnify" />
+            android:src="@drawable/widget_search" />
     </LinearLayout>
 
 </RelativeLayout>
