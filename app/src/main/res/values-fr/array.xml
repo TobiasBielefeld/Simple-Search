@@ -8,9 +8,10 @@
     </string-array>
 
     <string-array name="pref_language_values">
-        <item>par défaut</item>
+        <item>default</item>
         <item>en</item>
         <item>de</item>
+        <item>fr</item>
     </string-array>
 
     <string-array name="pref_orientation_titles">
