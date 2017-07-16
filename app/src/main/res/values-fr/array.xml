@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_language_titles">
+        <item>Langue par défaut</item>
+        <item>Anglais</item>
+        <item>Allemand</item>
+        <item>Français</item>
+    </string-array>
+
+    <string-array name="pref_language_values">
+        <item>par défaut</item>
+        <item>en</item>
+        <item>de</item>
+    </string-array>
+
+    <string-array name="pref_orientation_titles">
+        <item>Suivre les réglages système</item>
+        <item>Portrait</item>
+        <item>Paysage</item>
+        <item>Paysage (autre sens)</item>
+    </string-array>
+
+    <string-array name="pref_search_engine_titles">
+        <item>Custom</item>
+        <item>Google</item>
+        <item>Yahoo</item>
+        <item>Bing</item>
+        <item>Yandex</item>
+        <item>Startpage</item>
+        <item>DuckDuckGo</item>
+        <item>DuckDuckGo Lite</item>
+        <item>searx.me</item>
+    </string-array>
+
+    <string-array formatted="false" name="search_engine_uris">
+        <item>empty</item> <!-- custom search engine will be set up programmatically, so this entry can be empty-->
+        <item>https://www.google.com/#q=%s</item>
+        <item>https://search.yahoo.com/search?p=%s</item>
+        <item>https://www.bing.com/search?q=%s</item>
+        <item>https://www.yandex.com/?q=%s</item>
+        <item>https://www.startpage.com/do/search?query=%s</item>
+        <item>https://duckduckgo.com/?q=%s</item>
+        <item>https://duckduckgo.com/lite?q=%s</item>
+        <item>https://www.searx.me/?q=%s</item>
+    </string-array>
+
+
+</resources>

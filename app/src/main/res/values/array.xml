@@ -25,7 +25,7 @@
     </string-array>
 
     <string-array formatted="false" name="search_engine_uris">
-        <item>empty</item> <!-- custom search engine will be set up promatically, so this entry can be empty-->
+        <item>empty</item> <!-- custom search engine will be set up programmatically, so this entry can be empty-->
         <item>https://www.google.com/#q=%s</item>
         <item>https://search.yahoo.com/search?p=%s</item>
         <item>https://www.bing.com/search?q=%s</item>
@@ -40,12 +40,14 @@
         <item>Default language</item>
         <item>English</item>
         <item>German</item>
+        <item>French</item>
     </string-array>
 
     <string-array name="pref_language_values">
         <item>default</item>
         <item>en</item>
         <item>de</item>
+        <item>fr</item>
     </string-array>
 
     <string-array name="pref_orientation_titles">

@@ -11,7 +11,7 @@
     <string name="unsupported_search_string">Your custom search url isn\'t valid :/</string>
     <string name="string_doesnt_contain_placeholder">There is no placeholder for the search query in your custom search engine!</string>
 
-    <string name="menu_settings">@string/activity_settings</string>
+    <string name="menu_settings" translatable="false">@string/activity_settings</string>
     <string name="menu_delete_all">Delete all records</string>
     <string name="search_hint">Search for…</string>
 
@@ -54,6 +54,7 @@
     <string name="about_text2">thanks for using my app :)</string>
 
     <string name="translations">Translations</string>
+    <string name="translation_french">French: By Benjamin Tourrel</string>
 
     <string name="about_build_date">Build date</string>
     <string name="about_programm_code_text">Source code available on:</string>

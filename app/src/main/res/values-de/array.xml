@@ -26,14 +26,16 @@
 
     <string-array name="pref_language_titles">
         <item>Standard Sprache</item>
-        <item>Englisch</item>
         <item>Deutsch</item>
+        <item>Englisch</item>
+        <item>Französisch</item>
     </string-array>
 
     <string-array name="pref_language_values">
         <item>default</item>
-        <item>en</item>
         <item>de</item>
+        <item>en</item>
+        <item>fr</item>
     </string-array>
 
     <string-array name="pref_orientation_titles">

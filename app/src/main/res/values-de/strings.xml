@@ -10,7 +10,6 @@
     <string name="unsupported_search_string">Deine benutzerdefinierte Suchmaschine  ist nicht gültig :/</string>
     <string name="string_doesnt_contain_placeholder">Es gibt keinen Platzhalter für die Suchabfrage in deiner benutzerdefinierten Suchmaschine!</string>
 
-    <string name="menu_settings">@string/activity_settings</string>
     <string name="menu_delete_all">Alle Aufzeichnungen löschen</string>
     <string name="search_hint">Suche nach…</string>
 
@@ -46,6 +45,7 @@
     <string name="about_text2">danke für das Nutzen meiner App :)</string>
 
     <string name="translations">Übersetzungen</string>
+    <string name="translation_french">Französisch: Von Benjamin Tourrel</string>
 
     <string name="about_build_date">Kompiliert am</string>
     <string name="about_programm_code_text">Quellcode erhältich auf:</string>

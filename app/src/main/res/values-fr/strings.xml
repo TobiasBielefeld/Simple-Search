@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<string name="about_build_date">Date du build</string>
+<string name="about_description">"Montrer les informations sur l'application (licences, changelog)"</string>
+<string name="about_material_icons_text">Les icônes Material design sont créées par Google Inc et publiées sous <a href="https://github.com/google/material-design-icons/blob/master/LICENSE">Licence Apache 2.0</a></string>
+<string name="about_programm_code_text">Code source disponible sur:</string>
+<string name="about_tab_1">Information</string>
+<string name="about_tab_2">Licence</string>
+<string name="about_tab_3">Changelog</string>
+<string name="about_text1">développé par Tobias Bielefeld</string>
+<string name="about_text2">"merci d'utiliser mon application :)"</string>
+<string name="about_third_party_licenses">Licences tierces</string>
+<string name="activity_about">A propos</string>
+<string name="activity_settings">Réglages</string>
+<string name="app_version">Version</string>
+<string name="cancel">Annuler</string>
+<string name="confirm">Confirmer</string>
+<string name="dialog_custom_search_engine_text">Entrer un \"%s\" (sans les guillemets) comme espace réservé dans lequel la requête de recherche doit être insérée.</string>
+<string name="dialog_custom_search_engine_title">Entrer un moteur de recherche</string>
+<string name="dialog_delete_all_records_text">Tout effacer! Êtes-vous sûr?</string>
+<string name="dialog_delete_entry_title">Effacer cette entrée ?</string>
+<string name="menu_delete_all">Tout effacer</string>
+<string name="pref_general_summary">"Paramètres de l'application"</string>
+<string name="pref_general_title">Général</string>
+<string name="pref_search_summary">"Modifier le moteur de recherche et paramétrer l'historique"</string>
+<string name="pref_search_title">Recherches</string>
+<string name="record_list_button_description">Copier dans la requête de recherche</string>
+<string name="search_hint">Rechercher…</string>
+<string name="settings_change_language">Changer la langue</string>
+<string name="settings_enable_records_text">Sauvegarder les recherches</string>
+<string name="settings_enable_records_title">"Activer l'historique"</string>
+<string name="settings_hide_status_bar">Masquer la status bar</string>
+<string name="settings_orientation">"Orientation de l'écran"</string>
+<string name="settings_search_engine_title">Moteur de recherche</string>
+<string name="string_doesnt_contain_placeholder">"Il n'y a pas d'espace réservé pour la requête de recherche dans votre moteur de recherche personnalisé!"</string>
+<string name="translations">Traductions</string>
+<string name="unsupported_search_character">La recherche contient des caractères non supportés :(</string>
+<string name="unsupported_search_string">"L'url de votre moteur de recherche n'est pas valide :/"</string>
+<string name="translation_french">Français: par Benjamin Tourrel</string>
+</resources>
