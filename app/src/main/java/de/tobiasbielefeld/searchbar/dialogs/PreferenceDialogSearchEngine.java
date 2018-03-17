@@ -60,7 +60,8 @@ public class PreferenceDialogSearchEngine extends ListPreference{
      * If a custom search engine was selected, show its url, else show the title of the engine
      */
     private void updateSummary(){
-        String selectedValue = getPersistedString(getContext().getString(R.string.default_search_engine));
+        int d = getContext().getResources().getInteger(R.integer.default_search_engine);
+        String selectedValue = getPersistedString(d + "");
         int index = findIndexOfValue(selectedValue);
 
         if (index == 0){    //custom search engine

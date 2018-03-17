@@ -67,7 +67,8 @@ public class SharedData {
             PREF_STATUS_BAR = res.getString(R.string.pref_key_hide_status_bar);
             PREF_LANGUAGE = res.getString(R.string.pref_key_language);
 
-            DEFAULT_SEARCH_URL = res.getStringArray(R.array.search_engine_uris)[6];
+            int n = res.getInteger(R.integer.default_search_engine);
+            DEFAULT_SEARCH_URL = res.getStringArray(R.array.search_engine_uris)[n];
             DEFAULT_ORIENTATION = res.getStringArray(R.array.pref_orientation_values)[0];
             DEFAULT_STATUS_BAR = res.getBoolean(R.bool.default_status_bar);
         }
