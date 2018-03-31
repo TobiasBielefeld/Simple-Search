@@ -31,6 +31,9 @@
     <string name="pref_key_orientation" translatable="false">pref_key_orientation</string>
     <string name="pref_key_language" translatable="false">pref_key_language</string>
     <string name="pref_key_hide_status_bar" translatable="false">pref_key_hide_status_bar</string>
+    <string name="settings_language_french">French</string>
+
+
 
     <string name="pref_search_title">Search</string>
     <string name="pref_search_summary">Change the search engine and set up the history</string>
@@ -48,20 +51,33 @@
     <string name="activity_about">About</string>
     <string name="about_description">Show information about the app like licenses and changelog</string>
     <string name="about_tab_1">Information</string>
-    <string name="about_tab_2">License</string>
+    <string name="about_tab_2">Licenses</string>
     <string name="about_tab_3">Changelog</string>
     <string name="about_text1">developed by Tobias Bielefeld</string>
     <string name="about_text2">thanks for using my app :)</string>
 
-    <string name="translations">Translations</string>
-    <string name="translation_french">French: By Benjamin Tourrel</string>
-
     <string name="about_build_date">Build date</string>
-    <string name="about_programm_code_text">Source code available on:</string>
-    <string name="about_programm_code_text2" translatable="false"><a href="https://github.com/TobiasBielefeld/Simple-Search">GitHub</a></string>
 
-    <string name="about_third_party_licenses">Third party licenses</string>
-    <string name="about_material_icons_text">The Material design icons are made by Google Inc and published under the
-        <a href="https://github.com/google/material-design-icons/blob/master/LICENSE">Apache 2.0 license</a></string>
+    <string name="about_developer">Developer</string>
+    <string name="about_developer_name">Tobias Bielefeld</string>
+    <string name="about_compiled">Compiled on</string>
+    <string name="about_source_code">Source code</string>
+    <string name="about_license">License</string>
+    <string name="about_translations">Translations</string>
+    <string name="about_further_contributors">Further contributors</string>
+    <string name="about_android_support_libraries_title">Android support library</string>
+    <string name="about_android_support_libraries_usage">Used for better design and easier development</string>
+    <string name="about_material_icons_title">Material design icons</string>
+    <string name="about_material_icons_usage">Used for all icons in this application</string>
+    <string name="about_sliding_tabs_title">PagerSlidingTabStrip library</string>
+    <string name="about_sliding_tabs_usage">Used for the tabs in the \"About game\" screen</string>
+
+    <string name="about_app_github_link" translatable="false"><a href="https://github.com/TobiasBielefeld/Simple-Search">GitHub</a></string>
+    <string name="about_app_license_link" translatable="false"><a href="https://www.gnu.org/licenses/gpl.html">GPL 3.0+</a></string>
+    <string name="about_material_icons_license" translatable="false"><a href="https://github.com/google/material-design-icons/blob/master/LICENSE">Apache 2.0</a></string>
+    <string name="about_android_support_libraries_license" translatable="false"><a href="https://github.com/android/platform_frameworks_support/blob/master/LICENSE.txt">Apache 2.0</a></string>
+    <string name="about_sliding_tabs_license" translatable="false"><a href="https://github.com/yukuku/ambilwarna/blob/master/LICENSE">Apache 2.0</a></string>
+    <string name="contributors_julfers" translatable="false"><a href="https://github.com/julfers">julfers</a></string>
+    <string name="contributors_benjamin_tourrel" translatable="false">Benjamin Tourrel</string>
 
 </resources>

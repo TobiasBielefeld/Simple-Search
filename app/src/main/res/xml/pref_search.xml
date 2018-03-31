@@ -4,7 +4,7 @@
         android:key="@string/pref_key_search_engine"
         android:title="@string/settings_search_engine_title"
         android:negativeButtonText="@string/cancel"
-        android:defaultValue="@integer/default_search_engine"
+        android:defaultValue="@integer/default_search_engine_v2"
         android:entries="@array/pref_search_engine_titles"
         android:entryValues="@array/pref_search_engine_values"/>
 

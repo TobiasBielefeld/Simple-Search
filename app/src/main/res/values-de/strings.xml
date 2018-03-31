@@ -39,19 +39,22 @@
     <string name="activity_about">Über</string>
     <string name="about_description">Zeige Informationen über die Anwendung wie Lizenzen und Änderungen</string>
     <string name="about_tab_1">Informationen</string>
-    <string name="about_tab_2">Lizenz</string>
+    <string name="about_tab_2">Lizenzen</string>
     <string name="about_tab_3">Änderungen</string>
-    <string name="about_text1">entwickelt von Tobias Bielefeld</string>
-    <string name="about_text2">danke für das Nutzen meiner App :)</string>
 
-    <string name="translations">Übersetzungen</string>
-    <string name="translation_french">Französisch: Von Benjamin Tourrel</string>
-
-    <string name="about_build_date">Kompiliert am</string>
-    <string name="about_programm_code_text">Quellcode erhältich auf:</string>
-
-    <string name="about_third_party_licenses">Drittanbieterlizenzen</string>
-    <string name="about_material_icons_text">Die Material Design Icons wurden von Google Inc erstellt und unter der
-        <a href="https://github.com/google/material-design-icons/blob/master/LICENSE">Apache 2.0 Lizenz</a> veröffentlicht</string>
+    <string name="about_developer">"Entwickler"</string>
+    <string name="about_developer_name">"Tobias Bielefeld"</string>
+    <string name="about_compiled">"Kompiliert am"</string>
+    <string name="about_source_code">"Quelltext"</string>
+    <string name="about_license">"Lizenz"</string>
+    <string name="about_translations">"Übersetzungen"</string>
+    <string name="about_further_contributors">"Weitere Beitragende"</string>
+    <string name="about_android_support_libraries_title">"Android Support Bibliothek"</string>
+    <string name="about_android_support_libraries_usage">"Wird für besseres Design und leichtere Entwicklung benutzt"</string>
+    <string name="about_material_icons_title">"Material Design Symbole"</string>
+    <string name="about_material_icons_usage">"Werden für alle Symbole in dieser Anwendung verwendet"</string>
+    <string name="about_sliding_tabs_title">"PagerSlidingTabStrip Bibliothek"</string>
+    <string name="about_sliding_tabs_usage">"Wird für die Tabs im \"Über das Spiel\" Bildschirm verwendet"</string>
+    <string name="settings_language_french">Französisch</string>
 
 </resources>

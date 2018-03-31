@@ -20,10 +20,11 @@ package de.tobiasbielefeld.searchbar.ui.about;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
+import android.widget.TextView;
 
 import de.tobiasbielefeld.searchbar.R;
 
@@ -32,20 +33,23 @@ import de.tobiasbielefeld.searchbar.R;
  * after orientation change, so don't need to handle that.
  */
 
-public class LicenseFragment extends Fragment implements View.OnClickListener {
+public class LicenseFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.content_about_tab2, container, false);
 
-        WebView webView = (WebView) view.findViewById(R.id.about_tab2_webview);
-        webView.loadUrl("file:///android_asset/license.html");
+        TextView textMaterialIconsLicense = (TextView) view.findViewById(R.id.about_license_material_icons);
+
+        TextView textSlidingTabsLicense = (TextView) view.findViewById(R.id.about_license_sliding_tabs);
+        TextView textAndroidSupportLicense = (TextView) view.findViewById(R.id.about_license_android_support_libraries);
+
+        TextView[] textViews = new TextView[]{textMaterialIconsLicense, textSlidingTabsLicense, textAndroidSupportLicense};
+
+        for (TextView textView : textViews){
+            textView.setMovementMethod(LinkMovementMethod.getInstance());
+        }
 
         return view;
-    }
-
-    @Override
-    public void onClick(View v) {
-        //nothing
     }
 }

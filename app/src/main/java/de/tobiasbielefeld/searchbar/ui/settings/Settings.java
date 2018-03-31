@@ -108,7 +108,7 @@ public class Settings extends AppCompatPreferenceActivity implements SharedPrefe
         } else if (key.equals(PREF_ORIENTATION)) {
             setOrientation();
         } else if (key.equals(PREF_LANGUAGE)) {
-            setLocale();
+            restartApplication();
         }
     }
 
@@ -180,9 +180,14 @@ public class Settings extends AppCompatPreferenceActivity implements SharedPrefe
     /**
      * Restarts the app to apply the new locale settings
      */
-    private void setLocale() {
-        Intent intent = getBaseContext().getPackageManager().getLaunchIntentForPackage(getBaseContext().getPackageName());
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(intent);
+    protected void restartApplication() {
+        Intent i = getBaseContext().getPackageManager().getLaunchIntentForPackage(getBaseContext().getPackageName());
+
+        if (i!=null) {
+            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            finish();
+            startActivity(i);
+        }
     }
 }

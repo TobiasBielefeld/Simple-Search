@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-<string name="about_build_date">Date du build</string>
-<string name="about_description">"Montrer les informations sur l'application (licences, changelog)"</string>
-<string name="about_material_icons_text">Les icônes Material design sont créées par Google Inc et publiées sous <a href="https://github.com/google/material-design-icons/blob/master/LICENSE">Licence Apache 2.0</a></string>
-<string name="about_programm_code_text">Code source disponible sur:</string>
 <string name="about_tab_1">Information</string>
-<string name="about_tab_2">Licence</string>
+<string name="about_tab_2">Licences</string>
 <string name="about_tab_3">Changelog</string>
-<string name="about_text1">développé par Tobias Bielefeld</string>
-<string name="about_text2">"merci d'utiliser mon application :)"</string>
 <string name="about_third_party_licenses">Licences tierces</string>
 <string name="activity_about">A propos</string>
 <string name="activity_settings">Réglages</string>
-<string name="app_version">Version</string>
 <string name="cancel">Annuler</string>
 <string name="confirm">Confirmer</string>
 <string name="dialog_custom_search_engine_text">Entrer un \"%s\" (sans les guillemets) comme espace réservé dans lequel la requête de recherche doit être insérée.</string>
@@ -37,5 +30,20 @@
 <string name="translations">Traductions</string>
 <string name="unsupported_search_character">La recherche contient des caractères non supportés :(</string>
 <string name="unsupported_search_string">"L'url de votre moteur de recherche n'est pas valide :/"</string>
-<string name="translation_french">Français: par Benjamin Tourrel</string>
+<string name="about_developer">"Développeur"</string>
+<string name="about_developer_name">"Tobias Bielefeld"</string>
+<string name="about_compiled">"Date de la construction"</string>
+<string name="about_source_code">"Code source"</string>
+<string name="about_license">"Licence"</string>
+<string name="about_translations">"Traductions"</string>
+<string name="about_further_contributors">"Contributeurs supplémentaires"</string>
+<string name="about_android_support_libraries_title">"Bibliothèque de support Android"</string>
+<string name="about_android_support_libraries_usage">"Utilisé pour une meilleure conception et un développement plus facile"</string>
+<string name="about_material_icons_title">"icônes « Material Design »"</string>
+<string name="about_material_icons_usage">"Utilisé pour toutes les icônes de cette application"</string>
+<string name="about_sliding_tabs_title">"Bibliothèque PagerSlidingTabStrip"</string>
+<string name="about_sliding_tabs_usage">"Utilisé pour les onglets dans l'écran 'À propos du jeu'"</string>
+<string name="settings_language_french">Français</string>
+<string name="about_description">Afficher les informations sur l\'application comme les licences et le journal des modifications.</string>
+
 </resources>
