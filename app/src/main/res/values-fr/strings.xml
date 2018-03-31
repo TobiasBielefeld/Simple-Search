@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+<string name="app_version">"Version"</string>
 <string name="about_tab_1">Information</string>
 <string name="about_tab_2">Licences</string>
 <string name="about_tab_3">Changelog</string>
-<string name="about_third_party_licenses">Licences tierces</string>
 <string name="activity_about">A propos</string>
 <string name="activity_settings">Réglages</string>
 <string name="cancel">Annuler</string>
@@ -27,7 +27,6 @@
 <string name="settings_orientation">"Orientation de l'écran"</string>
 <string name="settings_search_engine_title">Moteur de recherche</string>
 <string name="string_doesnt_contain_placeholder">"Il n'y a pas d'espace réservé pour la requête de recherche dans votre moteur de recherche personnalisé!"</string>
-<string name="translations">Traductions</string>
 <string name="unsupported_search_character">La recherche contient des caractères non supportés :(</string>
 <string name="unsupported_search_string">"L'url de votre moteur de recherche n'est pas valide :/"</string>
 <string name="about_developer">"Développeur"</string>

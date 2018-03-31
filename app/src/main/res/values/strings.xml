@@ -53,10 +53,6 @@
     <string name="about_tab_1">Information</string>
     <string name="about_tab_2">Licenses</string>
     <string name="about_tab_3">Changelog</string>
-    <string name="about_text1">developed by Tobias Bielefeld</string>
-    <string name="about_text2">thanks for using my app :)</string>
-
-    <string name="about_build_date">Build date</string>
 
     <string name="about_developer">Developer</string>
     <string name="about_developer_name">Tobias Bielefeld</string>
