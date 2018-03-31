@@ -30,6 +30,8 @@ import android.widget.EditText;
 
 
 import de.tobiasbielefeld.searchbar.R;
+import de.tobiasbielefeld.searchbar.classes.ListPreferenceWithSummary;
+
 import static de.tobiasbielefeld.searchbar.SharedData.*;
 
 /**
@@ -139,6 +141,7 @@ public class PreferenceDialogSearchEngine extends ListPreference{
 
             if (callChangeListener(value)) {
                 setValue(value);
+                updateSummary();
             }
         }
     }

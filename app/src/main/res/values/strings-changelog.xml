@@ -2,8 +2,10 @@
 <resources>
 
     <string name="changelog_5_1" translatable="false">Improved the about screen\n</string>
-    <string name="changelog_5_2" translatable="false">Search is cleared upon opening the browser\n</string>
-    <string name="changelog_5_3" translatable="false">Bug fixes, thanks to julfers!</string>
+    <string name="changelog_5_2" translatable="false">Fixed the Google search URL\n</string>
+    <string name="changelog_5_3" translatable="false">App can now be set up as a search assistant\n</string>
+    <string name="changelog_5_4" translatable="false">Search is cleared upon opening the browser\n</string>
+    <string name="changelog_5_5" translatable="false">Bug fixes, thanks to julfers!</string>
 
     <string name="changelog_4_1" translatable="false">Added a second transparent widget\n</string>
     <string name="changelog_4_2" translatable="false">Added French translations, thanks to Benjamin Tourrel!</string>

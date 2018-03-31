@@ -1,6 +1,6 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <ListPreference
+    <de.tobiasbielefeld.searchbar.classes.ListPreferenceWithSummary
         android:defaultValue="1"
         android:entries="@array/pref_orientation_titles"
         android:entryValues="@array/pref_orientation_values"
@@ -10,7 +10,7 @@
         android:summary="%s"
         android:title="@string/settings_orientation" />
 
-    <ListPreference
+    <de.tobiasbielefeld.searchbar.classes.ListPreferenceWithSummary
         android:defaultValue="default"
         android:entries="@array/pref_language_titles"
         android:entryValues="@array/pref_language_values"

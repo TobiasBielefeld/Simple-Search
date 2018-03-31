@@ -59,6 +59,8 @@ public class Settings extends AppCompatPreferenceActivity implements SharedPrefe
         }
 
         reinitializeData(getApplicationContext());
+
+        putSavedString(PREF_LANGUAGE,getSavedString(PREF_LANGUAGE,"default"));
     }
 
     @Override

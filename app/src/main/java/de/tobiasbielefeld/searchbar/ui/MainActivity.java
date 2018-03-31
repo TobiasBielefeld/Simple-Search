@@ -143,7 +143,16 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
      * @param text The text to search
      */
     public void startSearch(String text) {
-        String baseUrl = getSavedString(PREF_SEARCH_URL, DEFAULT_SEARCH_URL);                 //get the base url of the search engine
+        String baseUrl = getSavedString(PREF_SEARCH_URL, DEFAULT_SEARCH_URL);                       //get the base url of the search engine
+
+        logText(baseUrl);
+
+        //workaround for the wrong google url
+        if (baseUrl.equals("https://www.google.de/#q=%s")){
+            baseUrl = "https://www.google.de/search?q=%s";
+        } else if (baseUrl.equals("https://www.google.com/#q=%s")){
+            baseUrl = "https://www.google.com/search?q=%s";
+        }
 
         Uri searchUrl = null;
 

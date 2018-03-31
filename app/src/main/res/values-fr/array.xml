@@ -35,7 +35,7 @@
 
     <string-array formatted="false" name="search_engine_uris">
         <item>empty</item> <!-- custom search engine will be set up programmatically, so this entry can be empty-->
-        <item>https://www.google.com/#q=%s</item>
+        <item>https://www.google.com/search?q=%s</item>
         <item>https://search.yahoo.com/search?p=%s</item>
         <item>https://www.bing.com/search?q=%s</item>
         <item>https://www.yandex.com/?q=%s</item>
