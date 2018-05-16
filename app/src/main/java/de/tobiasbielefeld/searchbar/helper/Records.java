@@ -25,6 +25,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Collections;
 
 import de.tobiasbielefeld.searchbar.R;
 import de.tobiasbielefeld.searchbar.SharedData;
@@ -43,14 +45,16 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
     private MainActivity main;
     private Resources res;
 
-    private ArrayList<LinearLayout> linearLayouts = new ArrayList<>();
-    private ArrayList<String> recordList = new ArrayList<>();
+    private List<LinearLayout> linearLayouts;
+    private List<String> recordList;
     private int MAX_NUMBER_OF_RECORDS;
 
     public Records(MainActivity mainActivity){
         main = mainActivity;
         res = main.getResources();
         MAX_NUMBER_OF_RECORDS = res.getInteger(R.integer.max_number_records);
+        linearLayouts = new ArrayList<>(MAX_NUMBER_OF_RECORDS);
+        recordList = new ArrayList<>(MAX_NUMBER_OF_RECORDS);
     }
 
     /**
@@ -94,6 +98,7 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
         if (!recordsEnabled())
             return;
 
+        recordList.removeAll(Collections.singleton(newString));
         recordList.add(0, newString);
 
         if (recordList.size() > MAX_NUMBER_OF_RECORDS) {
