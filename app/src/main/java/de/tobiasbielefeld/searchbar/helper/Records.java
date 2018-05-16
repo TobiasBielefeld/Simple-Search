@@ -53,7 +53,23 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
         main = mainActivity;
         res = main.getResources();
         MAX_NUMBER_OF_RECORDS = res.getInteger(R.integer.max_number_records);
+        
+        // populate linearLayouts with layouts from XML resource
         linearLayouts = new ArrayList<>(MAX_NUMBER_OF_RECORDS);
+        for (int i = 0; i < MAX_NUMBER_OF_RECORDS; i++) {
+            int id = res.getIdentifier("record_" + i, "id", main.getPackageName());
+            LinearLayout layout=(LinearLayout) main.findViewById(id);
+            TextView textView = (TextView) layout.getChildAt(0);
+
+            layout.setVisibility(View.GONE);
+            
+            textView.setOnClickListener(this);
+            textView.setOnLongClickListener(this);
+            layout.getChildAt(1).setOnClickListener(this);
+
+            linearLayouts.add(layout);
+        }
+        
         recordList = new ArrayList<>(MAX_NUMBER_OF_RECORDS);
     }
 
@@ -63,13 +79,10 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
      */
     public void load() {
 
-        linearLayouts.clear();
         recordList.clear();
 
-        for (int i = 0; i < MAX_NUMBER_OF_RECORDS; i++) {
-            int id = res.getIdentifier("record_" + i, "id", main.getPackageName());
-            linearLayouts.add((LinearLayout) main.findViewById(id));
-            linearLayouts.get(i).setVisibility(View.GONE);
+        for (LinearLayout layout : linearLayouts) {
+            layout.setVisibility(View.GONE);
         }
 
         //if records are disabled, stop here, so everything gets hidden if so
@@ -79,12 +92,14 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
         int recordListLength = getSavedInt(PREF_RECORD_LIST_SIZE, 0);
 
         for (int i = 0; i < recordListLength; i++) {
-            recordList.add(getSavedString(PREF_RECORD_ENTRY + i, ""));
-            linearLayouts.get(i).setVisibility(View.VISIBLE);
-            ((TextView) linearLayouts.get(i).getChildAt(0)).setText(recordList.get(i));
-            linearLayouts.get(i).getChildAt(0).setOnClickListener(this);
-            linearLayouts.get(i).getChildAt(0).setOnLongClickListener(this);
-            linearLayouts.get(i).getChildAt(1).setOnClickListener(this);
+            // Get elements for current iteration
+            String text = getSavedString(PREF_RECORD_ENTRY + i, ""); 
+            LinearLayout layout = linearLayouts.get(i);
+            
+            // Crosslink elements
+            recordList.add(text);
+            ((TextView) layout.getChildAt(0)).setText(text);
+            layout.setVisibility(View.VISIBLE);
         }
     }
 
@@ -98,10 +113,12 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
         if (!recordsEnabled())
             return;
 
+        // Prevent redundant entries from filling history
         recordList.removeAll(Collections.singleton(newString));
+
         recordList.add(0, newString);
 
-        if (recordList.size() > MAX_NUMBER_OF_RECORDS) {
+        while (recordList.size() > MAX_NUMBER_OF_RECORDS) {
             recordList.remove(recordList.size() - 1);
         }
 
@@ -112,11 +129,13 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
      * Saves the record list to the sharedPref
      */
     private void save() {
-        for (int i = 0; i < recordList.size(); i++) {
-            putSavedString(PREF_RECORD_ENTRY + i, recordList.get(i));
+        int i=0;
+        for (String text : recordList) {
+            putSavedString(PREF_RECORD_ENTRY + i, text);
+            i++;
         }
 
-        putSavedInt(PREF_RECORD_LIST_SIZE, recordList.size());
+        putSavedInt(PREF_RECORD_LIST_SIZE, i);
     }
 
     /**
