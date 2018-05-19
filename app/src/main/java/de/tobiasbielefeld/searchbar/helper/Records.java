@@ -19,12 +19,14 @@
 package de.tobiasbielefeld.searchbar.helper;
 
 import android.content.res.Resources;
+import android.content.SharedPreferences;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Collections;
 
@@ -46,7 +48,7 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
     private Resources res;
 
     private List<LinearLayout> linearLayouts;
-    private List<String> recordList;
+    private LinkedList<String> recordList;
     private int MAX_NUMBER_OF_RECORDS;
 
     public Records(MainActivity mainActivity){
@@ -70,7 +72,7 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
             linearLayouts.add(layout);
         }
         
-        recordList = new ArrayList<>(MAX_NUMBER_OF_RECORDS);
+        recordList = new LinkedList<>();
     }
 
     /**
@@ -119,7 +121,7 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
         recordList.add(0, newString);
 
         while (recordList.size() > MAX_NUMBER_OF_RECORDS) {
-            recordList.remove(recordList.size() - 1);
+            recordList.removeLast();
         }
 
         save();
@@ -129,13 +131,18 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
      * Saves the record list to the sharedPref
      */
     private void save() {
+        // Start edit session for preferences to prevent inconsistancies in stored data.
+        SharedPreferences.Editor editSession = SharedData.sharedPref.edit();
+        
         int i=0;
         for (String text : recordList) {
-            putSavedString(PREF_RECORD_ENTRY + i, text);
+            editSession.putString(PREF_RECORD_ENTRY + i, text);
             i++;
         }
 
-        putSavedInt(PREF_RECORD_LIST_SIZE, i);
+        editSession.putInt(PREF_RECORD_LIST_SIZE, i);
+        
+        editSession.apply();
     }
 
     /**
@@ -144,7 +151,7 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
      * @param text The record to delete
      */
     public void delete(String text){
-        recordList.remove(text);
+        recordList.removeAll(Collections.singleton(text));
         save();
         load();
     }
@@ -206,7 +213,7 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
         String text = ((TextView) v).getText().toString();
 
         main.setSearchText(text);
-        main.startSearch(text);
+        main.startSearch();
     }
 
     /**

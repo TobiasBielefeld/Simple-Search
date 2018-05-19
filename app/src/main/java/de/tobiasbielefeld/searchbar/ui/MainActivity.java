@@ -121,6 +121,7 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
     public void onResume() {
         super.onResume();
         records.load();
+        focusSearchBar();
     }
 
     /**
@@ -138,12 +139,12 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
     }
 
     /**
-     * Starts the search with the given text
+     * Starts the search with the text in searchText
      *
-     * @param text The text to search
      */
-    public void startSearch(String text) {
+    public void startSearch() {
         String baseUrl = getSavedString(PREF_SEARCH_URL, DEFAULT_SEARCH_URL);                       //get the base url of the search engine
+        String text = searchText.getText().toString().trim();                                       //get search text with rmoved whitespace
 
         logText(baseUrl);
 
@@ -173,12 +174,14 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
 
             try {
                 startActivity(browserIntent);                                                       //try to start the browser, if there is one installed
-                setSearchText("");
             } catch (ActivityNotFoundException e) {
                 e.printStackTrace();
                 showToast(getString(R.string.unsupported_search_string));
             }
         }
+
+        searchText.setSelection(0, searchText.length());                                            //select all text to allow for easy delete or modification on resume
+        records.add(text);                                                                          //move search term to front of history
     }
 
     /**
@@ -219,9 +222,7 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
     public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
 
         //just start the search, because the ime id is not always the same on every device...
-        String text = v.getText().toString();
-        startSearch(text);
-        records.add(text);
+        startSearch();
 
         return true;
     }
