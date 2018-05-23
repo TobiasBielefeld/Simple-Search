@@ -118,7 +118,7 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
         // Prevent redundant entries from filling history
         recordList.removeAll(Collections.singleton(newString));
 
-        recordList.add(0, newString);
+        recordList.addFirst(newString);
 
         while (recordList.size() > MAX_NUMBER_OF_RECORDS) {
             recordList.removeLast();
