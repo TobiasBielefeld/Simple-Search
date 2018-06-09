@@ -51,6 +51,7 @@ public class InformationFragment extends Fragment {
         TextView textFrenchContributors = (TextView) view.findViewById(R.id.about_french_contributors);
 
         TextView textFurtherContributors1 = (TextView) view.findViewById(R.id.about_further_contributors_1);
+        TextView textFurtherContributors2 = (TextView) view.findViewById(R.id.about_further_contributors_2);
 
         String buildDate = DateFormat.getDateInstance().format(BuildConfig.TIMESTAMP);                          //get the build date in locale time format
 
@@ -60,7 +61,7 @@ public class InformationFragment extends Fragment {
 
         //enable the hyperlink clicks
         TextView[] textViews = new TextView[]{textViewGitHubLink,textViewLicenseLink,
-                textFrenchContributors, textFurtherContributors1,
+                textFrenchContributors, textFurtherContributors1, textFurtherContributors2
         };
 
         for (TextView textView : textViews){

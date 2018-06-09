@@ -22,6 +22,9 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.preference.PreferenceManager;
+import android.text.SpannableString;
+import android.text.TextUtils;
+import android.text.style.BulletSpan;
 import android.util.Log;
 
 import de.tobiasbielefeld.searchbar.helper.Records;
@@ -97,5 +100,26 @@ public class SharedData {
 
     public static void logText(String text){
         Log.e("hey",text);
+    }
+
+    /**
+     * Uses the given string array to create a text paragraph. The strings are separated by bullet
+     * characters.
+     *
+     * @param strings The string array to use for the text paragraph
+     * @return a charSequence, which can directly be applied to a textView
+     */
+    static public CharSequence createBulletParagraph(CharSequence[] strings){
+
+        SpannableString spanns[] = new SpannableString[strings.length];
+
+        //apply the bullet characters
+        for (int i=0;i<strings.length;i++){
+            spanns[i] = new SpannableString(strings[i] + (i<strings.length-1 ? "\n" : ""));
+            spanns[i].setSpan(new BulletSpan(15), 0, strings[i].length(), 0);
+        }
+
+        //set up the textView
+        return TextUtils.concat(spanns);
     }
 }

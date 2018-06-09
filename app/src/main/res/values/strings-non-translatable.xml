@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Simple Search</string>
+    <string name="menu_settings" translatable="false">@string/activity_settings</string>
+
+    <string name="pref_key_search_engine" translatable="false">pref_key_search_engine</string>
+    <string name="pref_key_enable_records" translatable="false">pref_key_enable_records</string>
+    <string name="pref_key_custom_search_engine" translatable="false">pref_key_custom_search_engine</string>
+    <string name="pref_key_orientation" translatable="false">pref_key_orientation</string>
+    <string name="pref_key_language" translatable="false">pref_key_language</string>
+    <string name="pref_key_hide_status_bar" translatable="false">pref_key_hide_status_bar</string>
+
+    <string name="about_app_github_link" translatable="false"><a href="https://github.com/TobiasBielefeld/Simple-Search">GitHub</a></string>
+    <string name="about_app_license_link" translatable="false"><a href="https://www.gnu.org/licenses/gpl.html">GPL 3.0+</a></string>
+    <string name="about_material_icons_license" translatable="false"><a href="https://github.com/google/material-design-icons/blob/master/LICENSE">Apache 2.0</a></string>
+    <string name="about_android_support_libraries_license" translatable="false"><a href="https://github.com/android/platform_frameworks_support/blob/master/LICENSE.txt">Apache 2.0</a></string>
+    <string name="about_sliding_tabs_license" translatable="false"><a href="https://github.com/astuetz/PagerSlidingTabStrip#license">Apache 2.0</a></string>
+    <string name="contributors_julfers" translatable="false"><a href="https://github.com/julfers">julfers</a></string>
+    <string name="contributors_tedkotz" translatable="false"><a href="https://github.com/tedkotz">tedkotz</a></string>
+    <string name="contributors_benjamin_tourrel" translatable="false">Benjamin Tourrel</string>
+</resources>

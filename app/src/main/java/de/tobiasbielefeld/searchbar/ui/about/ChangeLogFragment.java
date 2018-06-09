@@ -36,6 +36,8 @@ import java.util.List;
 
 import de.tobiasbielefeld.searchbar.R;
 
+import static de.tobiasbielefeld.searchbar.SharedData.createBulletParagraph;
+
 /*
  * Shows the changelog, which is simply loaded from a webView. The About activity disables recreation
  * after orientation change, so don't need to handle that.
@@ -51,7 +53,7 @@ public class ChangeLogFragment extends Fragment {
 
         LinearLayout layoutContainer = (LinearLayout) view.findViewById(R.id.changelog_container);
 
-        String[] titles = new String[]{"1.1.3", "1.1.2", "1.1.1", "1.1", "1.0"};
+        String[] titles = new String[]{"1.1.4", "1.1.3", "1.1.2", "1.1.1", "1.1", "1.0"};
 
         for (int i = 0; i < titles.length; i++) {
             CardView card = (CardView) LayoutInflater.from(getContext()).inflate(R.layout.changelog_card_view, null);
@@ -68,7 +70,7 @@ public class ChangeLogFragment extends Fragment {
     }
 
 
-    private CharSequence createText(int pos) {
+    private CharSequence createText(int pos){
 
         List<CharSequence> stringList = new ArrayList<>(MAX_LINES_PER_VERSION);
 
@@ -86,14 +88,13 @@ public class ChangeLogFragment extends Fragment {
             }
         }
 
-        SpannableString spanns[] = new SpannableString[stringList.size()];
+        //convert to array
+        CharSequence[] strings = new CharSequence[stringList.size()];
 
-        //apply the bullet characters
-        for (int i = 0; i < stringList.size(); i++) {
-            spanns[i] = new SpannableString(stringList.get(i));
-            spanns[i].setSpan(new BulletSpan(15), 0, stringList.get(i).length(), 0);
+        for (int i=0; i<strings.length; i++){
+            strings[i] = stringList.get(i);
         }
 
-        return TextUtils.concat(spanns);
+        return TextUtils.concat(createBulletParagraph(stringList.toArray(new CharSequence[stringList.size()])));
     }
 }

@@ -1,0 +1,2 @@
+* Some little improvements, thanks to tedkotz!
+* Added Ecosia as a Search engine, because I like their project

@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="changelog_5_1" translatable="false">Improved the about screen\n</string>
-    <string name="changelog_5_2" translatable="false">Fixed the Google search URL\n</string>
-    <string name="changelog_5_3" translatable="false">App can now be set up as a search assistant\n</string>
-    <string name="changelog_5_4" translatable="false">Search is cleared upon opening the browser\n</string>
+    <string name="changelog_6_1" translatable="false">Some little improvements, thanks to tedkotz!</string>
+    <string name="changelog_6_2" translatable="false">Added Ecosia as a Search engine, because I like their project</string>
+
+    <string name="changelog_5_1" translatable="false">Improved the about screen</string>
+    <string name="changelog_5_2" translatable="false">Fixed the Google search URL</string>
+    <string name="changelog_5_3" translatable="false">App can now be set up as a search assistant</string>
+    <string name="changelog_5_4" translatable="false">Search is cleared upon opening the browser</string>
     <string name="changelog_5_5" translatable="false">Bug fixes, thanks to julfers!</string>
 
-    <string name="changelog_4_1" translatable="false">Added a second transparent widget\n</string>
+    <string name="changelog_4_1" translatable="false">Added a second transparent widget</string>
     <string name="changelog_4_2" translatable="false">Added French translations, thanks to Benjamin Tourrel!</string>
 
     <string name="changelog_3_1" translatable="false">Works now on Android 4, hopefully</string>

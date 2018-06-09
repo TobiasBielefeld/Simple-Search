@@ -10,6 +10,7 @@
         <item>DuckDuckGo</item>
         <item>DuckDuckGo Lite</item>
         <item>searx.me</item>
+        <item>Ecosia</item>
     </string-array>
 
     <string-array name="pref_search_engine_values" translatable="false">
@@ -22,6 +23,7 @@
         <item>6</item>
         <item>7</item>
         <item>8</item>
+        <item>9</item>
     </string-array>
 
     <string-array formatted="false" name="search_engine_uris">
@@ -34,6 +36,7 @@
         <item>https://duckduckgo.com/?q=%s</item>
         <item>https://duckduckgo.com/lite?q=%s</item>
         <item>https://www.searx.me/?q=%s</item>
+        <item>https://www.ecosia.org/search?q=%s</item>
     </string-array>
 
     <string-array name="pref_language_titles">

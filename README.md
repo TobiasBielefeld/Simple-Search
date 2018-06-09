@@ -28,6 +28,7 @@ Also think of the other aspects of the GPL license!
 
 The Material Design Symbols used for the menu icons are made by Google Inc and are published under the [Apache 2.0 license!](https://www.apache.org/licenses/LICENSE-2.0.txt)
 
+Sliding Tabs: Uses the [PagerSlidingTabStrip library](https://github.com/astuetz/PagerSlidingTabStrip#license) published under the [Apache 2.0 license!](https://www.apache.org/licenses/LICENSE-2.0.txt)
 
 This project is licensed under the GPLv3+ license! Full license text can be found [here](./LICENSE.txt)
 
