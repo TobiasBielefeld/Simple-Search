@@ -4,7 +4,7 @@
 [<img alt="Get it on Google Play" height="80" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png">](https://play.google.com/store/apps/details?id=de.tobiasbielefeld.searchbar)
 
 # Simple Search
-A very basic app designed for people who wants to use a search widget with their preferred search engine.
+A very basic app designed for people who want to use a search widget with their preferred search engine.
 
 This app contains a search bar to type in a search query, which will be opened in the Internet browser. A widget for the home screen will simply start the app.
 
