@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="pref_search_engine_titles">
-        <item>Custom</item>
+        <item>Custom I</item>
+        <item>Custom II</item>
+        <item>Custom III</item>
         <item>Google</item>
         <item>Yahoo</item>
         <item>Bing</item>
@@ -26,9 +28,13 @@
         <item>8</item>
         <item>9</item>
         <item>10</item>
+        <item>11</item>
+        <item>12</item>
     </string-array>
 
     <string-array formatted="false" name="search_engine_uris">
+        <item></item> <!-- custom search engine will be set up programmatically, so this entry can be empty-->
+        <item></item> <!-- custom search engine will be set up programmatically, so this entry can be empty-->
         <item></item> <!-- custom search engine will be set up programmatically, so this entry can be empty-->
         <item>https://www.google.com/search?q=%s</item>
         <item>https://search.yahoo.com/search?p=%s</item>

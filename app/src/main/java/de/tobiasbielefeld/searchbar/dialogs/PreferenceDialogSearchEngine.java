@@ -66,8 +66,10 @@ public class PreferenceDialogSearchEngine extends ListPreference{
         String selectedValue = getPersistedString(d + "");
         int index = findIndexOfValue(selectedValue);
 
-        if (index == 0){    //custom search engine
-            String summary = getSavedString(PREF_SEARCH_URL,DEFAULT_SEARCH_URL);
+        if (index < 3){    //custom search engine
+            String prefKey = index > 0 ? PREF_CUSTOM_SEARCH_URL + String.valueOf(index) : PREF_CUSTOM_SEARCH_URL;
+            String savedSearchUrl = getSavedString(PREF_SEARCH_URL,DEFAULT_SEARCH_URL);
+            String summary = getSavedString(prefKey, savedSearchUrl);
             summary = summary.replace("%","%%");    //used to escape the %-character in the summary
             setSummary(summary);
         } else {            //a search engine from the list
@@ -80,21 +82,28 @@ public class PreferenceDialogSearchEngine extends ListPreference{
     /**
      * THe user can enter a custom search engine url here
      */
-    private void showCustomSearchEngineDialog(){
+    private void showCustomSearchEngineDialog(final int which){
+
+        final String prefKey = which > 0 ? PREF_CUSTOM_SEARCH_URL + String.valueOf(which) : PREF_CUSTOM_SEARCH_URL;
+
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
 
         LayoutInflater inflater = (LayoutInflater)getContext().getSystemService (Context.LAYOUT_INFLATER_SERVICE);
         View v = inflater.inflate(R.layout.custom_search_engine_dialog, null);
 
-        customEditText = (EditText) v.findViewById(R.id.custom_search_url);
-        customEditText.setText(getSavedString(PREF_SEARCH_URL,DEFAULT_SEARCH_URL));
+
+        customEditText = v.findViewById(R.id.custom_search_url);
+        String savedSearchUrl = getSavedString(PREF_SEARCH_URL,DEFAULT_SEARCH_URL);
+        customEditText.setText(getSavedString(prefKey, savedSearchUrl));
 
         builder.setView(v);
         builder.setTitle(R.string.dialog_custom_search_engine_title)
                 .setPositiveButton(R.string.confirm, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        putSavedString(PREF_SEARCH_URL,customEditText.getText().toString());
-                        clickedDialogEntryIndex = 0;
+                        String text = customEditText.getText().toString();
+                        putSavedString(PREF_SEARCH_URL, text);
+                        putSavedString(prefKey, text);
+                        clickedDialogEntryIndex = which;
                         getDialog().dismiss();
                     }})
                 .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
@@ -113,11 +122,19 @@ public class PreferenceDialogSearchEngine extends ListPreference{
     @Override
     protected void onPrepareDialogBuilder(AlertDialog.Builder builder) {
         clickedDialogEntryIndex = findIndexOfValue(getValue());
-        builder.setSingleChoiceItems(getEntries(), clickedDialogEntryIndex,
+
+        String[] entries = getContext().getResources().getStringArray(R.array.pref_search_engine_titles);
+
+//        String savedSearchUrl = getSavedString(PREF_SEARCH_URL,DEFAULT_SEARCH_URL);
+//        entries[0] += "\n" + getSavedString(PREF_CUSTOM_SEARCH_URL, savedSearchUrl);
+//        entries[1] += "\n" + getSavedString(PREF_CUSTOM_SEARCH_URL + "1", savedSearchUrl);
+//        entries[2] += "\n" + getSavedString(PREF_CUSTOM_SEARCH_URL + "2", savedSearchUrl);
+        
+        builder.setSingleChoiceItems(entries, clickedDialogEntryIndex,
                 new DialogInterface.OnClickListener() {
                     public void onClick(final DialogInterface dialog, final int which) {
-                        if(which ==0){
-                            showCustomSearchEngineDialog();
+                        if(which < 3){
+                            showCustomSearchEngineDialog(which);
                         }
                         else{
                             clickedDialogEntryIndex = which;

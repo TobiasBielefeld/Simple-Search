@@ -41,6 +41,7 @@ public class SharedData {
     public static String PREF_RECORD_ENTRY;
     public static String PREF_DARK_THEME;
     public static String PREF_SEARCH_URL;
+    public static String PREF_CUSTOM_SEARCH_URL;
     public static String PREF_ORIENTATION;
     public static String PREF_STATUS_BAR;
     public static String PREF_LANGUAGE;
@@ -68,6 +69,7 @@ public class SharedData {
             PREF_STATUS_BAR = res.getString(R.string.pref_key_hide_status_bar);
             PREF_LANGUAGE = res.getString(R.string.pref_key_language);
             PREF_DARK_THEME = res.getString(R.string.pref_key_dark_theme);
+            PREF_CUSTOM_SEARCH_URL = res.getString(R.string.pref_key_custom_search_url);
 
             int n = res.getInteger(R.integer.default_search_engine_v2);
             DEFAULT_SEARCH_URL = res.getStringArray(R.array.search_engine_uris)[n];
