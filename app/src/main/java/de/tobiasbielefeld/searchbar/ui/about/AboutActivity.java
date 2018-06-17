@@ -22,6 +22,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.astuetz.PagerSlidingTabStrip;
@@ -43,13 +44,12 @@ public class AboutActivity extends CustomAppCompatActivity {
         setContentView(R.layout.activty_about);
 
         ActionBar actionBar = getSupportActionBar();
-
         if (actionBar!=null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
-        PagerSlidingTabStrip tabs = (PagerSlidingTabStrip) findViewById(R.id.tabs);
-        ViewPager pager = (ViewPager) findViewById(R.id.pager);
+        PagerSlidingTabStrip tabs = findViewById(R.id.tabs);
+        ViewPager pager = findViewById(R.id.pager);
         TabsPagerAdapter adapter = new TabsPagerAdapter(getSupportFragmentManager(), this);
 
         pager.setAdapter(adapter);

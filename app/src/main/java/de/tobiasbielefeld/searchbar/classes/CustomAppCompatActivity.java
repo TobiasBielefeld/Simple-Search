@@ -18,6 +18,7 @@
 
 package de.tobiasbielefeld.searchbar.classes;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
@@ -25,6 +26,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
 
+import de.tobiasbielefeld.searchbar.R;
 import de.tobiasbielefeld.searchbar.helper.LocaleChanger;
 
 import static de.tobiasbielefeld.searchbar.SharedData.*;
@@ -35,11 +37,13 @@ import static de.tobiasbielefeld.searchbar.SharedData.*;
  * was paused for a longer time and the references got lost.
  */
 
+@SuppressLint("Registered")
 public class CustomAppCompatActivity extends AppCompatActivity {
 
     @Override protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         reinitializeData(this);
+        applyDarkTheme();
     }
 
     @Override
@@ -90,5 +94,11 @@ public class CustomAppCompatActivity extends AppCompatActivity {
                     WindowManager.LayoutParams.FLAG_FULLSCREEN);
         else
             activity.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+    }
+
+    protected void applyDarkTheme(){
+        if (getSavedBoolean(PREF_DARK_THEME, DEFAULT_DARK_THEME)) {
+            setTheme(R.style.AppTheme_Dark);
+        }
     }
 }

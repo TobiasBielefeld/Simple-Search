@@ -21,19 +21,24 @@ package de.tobiasbielefeld.searchbar.ui;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -59,16 +64,25 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        ActionBar actionBar = getSupportActionBar();
+
+        assert actionBar != null;
+        actionBar.setDisplayShowCustomEnabled(true);
+        actionBar.setDisplayShowTitleEnabled(false);
+        actionBar.setCustomView(R.layout.main_toolbar);
+
         searchText = findViewById(R.id.editTextSearch);
         clearButton = findViewById(R.id.imageButtonClear);
 
         searchText.addTextChangedListener(this);
         searchText.setOnEditorActionListener(this);
 
-        setSupportActionBar(toolbar);
-
         records = new Records(this, (LinearLayout) findViewById(R.id.record_list_container));
+
+        if (getSavedBoolean(PREF_DARK_THEME, DEFAULT_DARK_THEME)) {
+            LinearLayout textSearch = findViewById(R.id.linearLayoutSearchText);
+            textSearch.setBackgroundResource(R.drawable.widget_background_dark);
+        }
     }
 
     @Override

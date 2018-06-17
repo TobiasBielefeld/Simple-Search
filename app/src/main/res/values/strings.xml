@@ -34,6 +34,7 @@
     <string name="settings_orientation">Screen orientation</string>
     <string name="settings_change_language">Change language</string>
     <string name="settings_hide_status_bar">Hide status bar</string>
+    <string name="settings_dark_theme">Enable dark theme</string>
 
     <!--About-->
     <string name="activity_about">About</string>

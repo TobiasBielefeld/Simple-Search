@@ -39,6 +39,7 @@ public class SharedData {
 
     public static String PREF_RECORD_LIST_SIZE;
     public static String PREF_RECORD_ENTRY;
+    public static String PREF_DARK_THEME;
     public static String PREF_SEARCH_URL;
     public static String PREF_ORIENTATION;
     public static String PREF_STATUS_BAR;
@@ -47,6 +48,7 @@ public class SharedData {
     public static String DEFAULT_SEARCH_URL;
     public static String DEFAULT_ORIENTATION;
     public static boolean DEFAULT_STATUS_BAR;
+    public static boolean DEFAULT_DARK_THEME;
 
     public static Records records;
 
@@ -65,11 +67,13 @@ public class SharedData {
             PREF_ORIENTATION = res.getString(R.string.pref_key_orientation);
             PREF_STATUS_BAR = res.getString(R.string.pref_key_hide_status_bar);
             PREF_LANGUAGE = res.getString(R.string.pref_key_language);
+            PREF_DARK_THEME = res.getString(R.string.pref_key_dark_theme);
 
             int n = res.getInteger(R.integer.default_search_engine_v2);
             DEFAULT_SEARCH_URL = res.getStringArray(R.array.search_engine_uris)[n];
             DEFAULT_ORIENTATION = res.getStringArray(R.array.pref_orientation_values)[0];
             DEFAULT_STATUS_BAR = res.getBoolean(R.bool.default_status_bar);
+            DEFAULT_DARK_THEME = res.getBoolean(R.bool.default_dark_theme);
         }
     }
 

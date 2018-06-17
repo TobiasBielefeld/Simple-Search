@@ -64,13 +64,6 @@ public class Settings extends AppCompatPreferenceActivity implements SharedPrefe
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        //only item is the back arrow
-        finish();
-        return true;
-    }
-
-    @Override
     public boolean onIsMultiPane() {
         return isXLargeTablet(this);
     }
@@ -111,6 +104,13 @@ public class Settings extends AppCompatPreferenceActivity implements SharedPrefe
             setOrientation();
         } else if (key.equals(PREF_LANGUAGE)) {
             restartApplication();
+        } else if (key.equals(PREF_DARK_THEME))  {
+            //restart activity
+            final Intent intent = new Intent(getApplicationContext(), Settings.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            finish();
+            startActivity(intent);
         }
     }
 

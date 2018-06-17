@@ -17,7 +17,7 @@
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            card_view:cardBackgroundColor="@color/white"
+            card_view:cardBackgroundColor="?android:attr/colorBackground"
             card_view:cardCornerRadius="2dp"
             card_view:cardUseCompatPadding="true">
 
@@ -62,16 +62,16 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/about_developer"
                             android:padding="7dp"
-                            android:textColor="?android:attr/textColorPrimary"/>
+                            android:text="@string/about_developer"
+                            android:textColor="?android:attr/textColorPrimary" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:padding="7dp"
-                            android:text="@string/about_developer_name"/>
+                            android:text="@string/about_developer_name" />
                     </TableRow>
 
                     <TableRow
@@ -91,7 +91,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:padding="7dp"
-                            android:text=""/>
+                            android:text="" />
                     </TableRow>
 
                     <TableRow
@@ -101,9 +101,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/about_compiled"
                             android:padding="7dp"
-                            android:textColor="?android:attr/textColorPrimary"/>
+                            android:text="@string/about_compiled"
+                            android:textColor="?android:attr/textColorPrimary" />
 
                         <TextView
                             android:id="@+id/aboutTextViewBuild"
@@ -111,7 +111,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:padding="7dp"
-                            android:text=""/>
+                            android:text="" />
                     </TableRow>
 
                     <TableRow
@@ -121,9 +121,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/about_source_code"
                             android:padding="7dp"
-                            android:textColor="?android:attr/textColorPrimary"/>
+                            android:text="@string/about_source_code"
+                            android:textColor="?android:attr/textColorPrimary" />
 
                         <TextView
                             android:id="@+id/aboutTextViewGitHubLink"
@@ -131,7 +131,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:padding="7dp"
-                            android:text="@string/about_app_github_link"/>
+                            android:text="@string/about_app_github_link" />
                     </TableRow>
 
                     <TableRow
@@ -141,9 +141,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/about_license"
                             android:padding="7dp"
-                            android:textColor="?android:attr/textColorPrimary"/>
+                            android:text="@string/about_license"
+                            android:textColor="?android:attr/textColorPrimary" />
 
                         <TextView
                             android:id="@+id/aboutTextViewLicenseLink"
@@ -151,7 +151,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:padding="7dp"
-                            android:text="@string/about_app_license_link"/>
+                            android:text="@string/about_app_license_link" />
                     </TableRow>
 
                 </TableLayout>
@@ -162,7 +162,7 @@
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            card_view:cardBackgroundColor="@color/white"
+            card_view:cardBackgroundColor="?android:attr/colorBackground"
             card_view:cardCornerRadius="2dp"
             card_view:cardUseCompatPadding="true">
 
@@ -202,9 +202,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/settings_language_french"
                             android:padding="7dp"
-                            android:textColor="?android:attr/textColorPrimary"/>
+                            android:text="@string/settings_language_french"
+                            android:textColor="?android:attr/textColorPrimary" />
 
                         <TextView
                             android:id="@+id/about_french_contributors"
@@ -225,7 +225,7 @@
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            card_view:cardBackgroundColor="@color/white"
+            card_view:cardBackgroundColor="?android:attr/colorBackground"
             card_view:cardCornerRadius="2dp"
             card_view:cardUseCompatPadding="true">
 
@@ -256,7 +256,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/about_further_contributors_1"

@@ -20,6 +20,7 @@ package de.tobiasbielefeld.searchbar.helper;
 
 import android.content.res.Resources;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;

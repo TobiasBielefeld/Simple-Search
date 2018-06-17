@@ -30,7 +30,12 @@ import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import de.tobiasbielefeld.searchbar.R;
 import de.tobiasbielefeld.searchbar.helper.LocaleChanger;
+
+import static de.tobiasbielefeld.searchbar.SharedData.DEFAULT_DARK_THEME;
+import static de.tobiasbielefeld.searchbar.SharedData.PREF_DARK_THEME;
+import static de.tobiasbielefeld.searchbar.SharedData.getSavedBoolean;
 
 /**
  * A {@link android.preference.PreferenceActivity} which implements and proxies the necessary calls
@@ -47,6 +52,7 @@ public abstract class AppCompatPreferenceActivity extends PreferenceActivity {
     protected void onCreate(Bundle savedInstanceState) {
         getDelegate().installViewFactory();
         getDelegate().onCreate(savedInstanceState);
+        applyDarkTheme();
         super.onCreate(savedInstanceState);
     }
 
@@ -130,5 +136,11 @@ public abstract class AppCompatPreferenceActivity extends PreferenceActivity {
             mDelegate = AppCompatDelegate.create(this, null);
         }
         return mDelegate;
+    }
+
+    private void applyDarkTheme(){
+        if (getSavedBoolean(PREF_DARK_THEME, DEFAULT_DARK_THEME)) {
+            setTheme(R.style.AppTheme_Dark);
+        }
     }
 }

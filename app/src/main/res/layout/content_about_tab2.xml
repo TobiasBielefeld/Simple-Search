@@ -17,7 +17,7 @@
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            card_view:cardBackgroundColor="@color/white"
+            card_view:cardBackgroundColor="?android:attr/colorBackground"
             card_view:cardCornerRadius="2dp"
             card_view:cardUseCompatPadding="true">
 
@@ -67,8 +67,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="left"
-                    android:text="@string/about_android_support_libraries_usage"
-                    android:padding="6dp"/>
+                    android:padding="6dp"
+                    android:text="@string/about_android_support_libraries_usage" />
 
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -76,7 +76,7 @@
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            card_view:cardBackgroundColor="@color/white"
+            card_view:cardBackgroundColor="?android:attr/colorBackground"
             card_view:cardCornerRadius="2dp"
             card_view:cardUseCompatPadding="true">
 
@@ -126,8 +126,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="left"
-                    android:text="@string/about_material_icons_usage"
-                    android:padding="6dp"/>
+                    android:padding="6dp"
+                    android:text="@string/about_material_icons_usage" />
 
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -136,7 +136,7 @@
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            card_view:cardBackgroundColor="@color/white"
+            card_view:cardBackgroundColor="?android:attr/colorBackground"
             card_view:cardCornerRadius="2dp"
             card_view:cardUseCompatPadding="true">
 
@@ -186,8 +186,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="left"
-                    android:text="@string/about_sliding_tabs_usage"
-                    android:padding="6dp"/>
+                    android:padding="6dp"
+                    android:text="@string/about_sliding_tabs_usage" />
 
             </LinearLayout>
         </android.support.v7.widget.CardView>

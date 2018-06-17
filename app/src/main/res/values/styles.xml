@@ -1,18 +1,23 @@
 <resources>
 
-    <style name="AppThemeWithActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:colorBackground">@color/white</item>
+        <item name="android:windowBackground">@color/nearlyWhite</item>
+        <item name="colorHint">@color/normalGrey</item>
+        <item name="colorText">@color/black</item>
     </style>
 
-    <style name="MainTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorControlNormal">@color/white</item>
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@android:color/black</item>
+    <style name="AppTheme.Dark" parent="Theme.AppCompat">
+        <item name="android:windowBackground">@color/grey</item>
+        <item name="android:colorBackground">@color/lightGrey</item>
+        <item name="colorPrimary">@color/darkColorPrimary</item>
+        <item name="colorPrimaryDark">@color/darkColorPrimaryDark</item>
+        <item name="colorAccent">@color/darkColorAccent</item>
+        <item name="colorHint">@color/normalGrey</item>
+        <item name="colorText">@color/white</item>
     </style>
 
 </resources>
