@@ -11,10 +11,11 @@
         <item>DuckDuckGo Lite</item>
         <item>searx.me</item>
         <item>Ecosia</item>
+        <item>Metager</item>
     </string-array>
 
     <string-array formatted="false" name="search_engine_uris">
-        <item>empty</item> <!-- custom search engine will be set up promatically, so this entry can be empty-->
+        <item></item> <!-- custom search engine will be set up promatically, so this entry can be empty-->
         <item>https://www.google.de/search?q=%s</item>
         <item>https://de.search.yahoo.com/search?p=%s</item>
         <item>https://www.bing.com/search?q=%s&amp;cc=de</item>
@@ -24,6 +25,7 @@
         <item>https://duckduckgo.com/lite?q=%s</item>
         <item>https://www.searx.me/?q=%s</item>
         <item>https://www.ecosia.org/search?q=%s</item>
+        <item>https://metager.de/meta/meta.ger3?focus=web&amp;lang=de&amp;eingabe=%s</item>
     </string-array>
 
     <string-array name="pref_language_titles">
