@@ -20,14 +20,13 @@ package de.tobiasbielefeld.searchbar.helper;
 
 import android.content.res.Resources;
 import android.content.SharedPreferences;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Collections;
 
 import de.tobiasbielefeld.searchbar.R;
@@ -45,33 +44,15 @@ import static de.tobiasbielefeld.searchbar.SharedData.*;
 public class Records implements View.OnClickListener, View.OnLongClickListener{
 
     private MainActivity main;
-    private Resources res;
-
-    private List<LinearLayout> linearLayouts;
+    private LinearLayout container;
     private LinkedList<String> recordList;
     private int MAX_NUMBER_OF_RECORDS;
 
-    public Records(MainActivity mainActivity){
+    public Records(MainActivity mainActivity, LinearLayout linearLayout){
+        container = linearLayout;
         main = mainActivity;
-        res = main.getResources();
+        Resources res = main.getResources();
         MAX_NUMBER_OF_RECORDS = res.getInteger(R.integer.max_number_records);
-        
-        // populate linearLayouts with layouts from XML resource
-        linearLayouts = new ArrayList<>(MAX_NUMBER_OF_RECORDS);
-        for (int i = 0; i < MAX_NUMBER_OF_RECORDS; i++) {
-            int id = res.getIdentifier("record_" + i, "id", main.getPackageName());
-            LinearLayout layout=(LinearLayout) main.findViewById(id);
-            TextView textView = (TextView) layout.getChildAt(0);
-
-            layout.setVisibility(View.GONE);
-            
-            textView.setOnClickListener(this);
-            textView.setOnLongClickListener(this);
-            layout.getChildAt(1).setOnClickListener(this);
-
-            linearLayouts.add(layout);
-        }
-        
         recordList = new LinkedList<>();
     }
 
@@ -82,26 +63,29 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
     public void load() {
 
         recordList.clear();
+        container.removeAllViews();
 
-        for (LinearLayout layout : linearLayouts) {
-            layout.setVisibility(View.GONE);
-        }
-
-        //if records are disabled, stop here, so everything gets hidden if so
         if (!recordsEnabled())
             return;
 
         int recordListLength = getSavedInt(PREF_RECORD_LIST_SIZE, 0);
 
+        // populate linearLayouts with layouts from XML resource
         for (int i = 0; i < recordListLength; i++) {
-            // Get elements for current iteration
-            String text = getSavedString(PREF_RECORD_ENTRY + i, ""); 
-            LinearLayout layout = linearLayouts.get(i);
-            
+            LinearLayout layout= (LinearLayout) LayoutInflater.from(main).inflate(R.layout.record_list_entry, null);
+            TextView textView = (TextView) layout.getChildAt(0);
+
+            textView.setOnClickListener(this);
+            textView.setOnLongClickListener(this);
+            layout.getChildAt(1).setOnClickListener(this);
+
+            String text = getSavedString(PREF_RECORD_ENTRY + i, "");
+
             // Crosslink elements
             recordList.add(text);
             ((TextView) layout.getChildAt(0)).setText(text);
-            layout.setVisibility(View.VISIBLE);
+
+            container.addView(layout);
         }
     }
 

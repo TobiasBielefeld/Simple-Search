@@ -33,6 +33,8 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -57,16 +59,16 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        searchText = (EditText) findViewById(R.id.editTextSearch);
-        clearButton = (ImageView) findViewById(R.id.imageButtonClear);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        searchText = findViewById(R.id.editTextSearch);
+        clearButton = findViewById(R.id.imageButtonClear);
 
         searchText.addTextChangedListener(this);
         searchText.setOnEditorActionListener(this);
 
         setSupportActionBar(toolbar);
 
-        records = new Records(this);
+        records = new Records(this, (LinearLayout) findViewById(R.id.record_list_container));
     }
 
     @Override
@@ -144,8 +146,6 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
     public void startSearch() {
         String baseUrl = getSavedString(PREF_SEARCH_URL, DEFAULT_SEARCH_URL);                       //get the base url of the search engine
         String text = searchText.getText().toString().trim();                                       //get search text with rmoved whitespace
-
-        logText(baseUrl);
 
         //workaround for the wrong google url
         if (baseUrl.equals("https://www.google.de/#q=%s")){

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/entry"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="?attr/selectableItemBackground"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:padding="@dimen/record_list_entry_padding"
+        android:text=""
+        android:textSize="@dimen/record_list_text_size" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="@string/record_list_button_description"
+        android:padding="@dimen/record_list_entry_padding"
+        app:srcCompat="@drawable/icon_plus" />
+
+</LinearLayout>
