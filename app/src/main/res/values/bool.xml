@@ -2,4 +2,5 @@
 <resources>
     <bool name="default_status_bar">false</bool>
     <bool name="default_dark_theme">false</bool>
+    <bool name="default_hide_app_icon">false</bool>
 </resources>

@@ -35,6 +35,8 @@
     <string name="settings_change_language">Change language</string>
     <string name="settings_hide_status_bar">Hide status bar</string>
     <string name="settings_dark_theme">Enable dark theme</string>
+    <string name="settings_hide_app_icon_title">Hide app icon in drawer</string>
+    <string name="settings_hide_app_icon_text">Then can only be started by using its widget</string>
 
     <!--About-->
     <string name="activity_about">About</string>

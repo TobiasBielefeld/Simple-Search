@@ -30,4 +30,10 @@
         android:key="@string/pref_key_dark_theme"
         android:title="@string/settings_dark_theme" />
 
+    <!--<CheckBoxPreference-->
+        <!--android:defaultValue="@bool/default_hide_app_icon"-->
+        <!--android:key="@string/pref_key_hide_app_icon"-->
+        <!--android:title="@string/settings_hide_app_icon_title"-->
+        <!--android:summary="@string/settings_hide_app_icon_text"/>-->
+
 </PreferenceScreen>

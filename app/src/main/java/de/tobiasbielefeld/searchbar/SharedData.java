@@ -40,6 +40,7 @@ public class SharedData {
     public static String PREF_RECORD_LIST_SIZE;
     public static String PREF_RECORD_ENTRY;
     public static String PREF_DARK_THEME;
+    public static String PREF_HIDE_APP_ICON;
     public static String PREF_SEARCH_URL;
     public static String PREF_CUSTOM_SEARCH_URL;
     public static String PREF_ORIENTATION;
@@ -50,6 +51,7 @@ public class SharedData {
     public static String DEFAULT_ORIENTATION;
     public static boolean DEFAULT_STATUS_BAR;
     public static boolean DEFAULT_DARK_THEME;
+    public static boolean DEFAULT_HIDE_APP_ICON;
 
     public static Records records;
 
@@ -70,12 +72,14 @@ public class SharedData {
             PREF_LANGUAGE = res.getString(R.string.pref_key_language);
             PREF_DARK_THEME = res.getString(R.string.pref_key_dark_theme);
             PREF_CUSTOM_SEARCH_URL = res.getString(R.string.pref_key_custom_search_url);
+            PREF_HIDE_APP_ICON = res.getString(R.string.pref_key_hide_app_icon);
 
             int n = res.getInteger(R.integer.default_search_engine_v2);
             DEFAULT_SEARCH_URL = res.getStringArray(R.array.search_engine_uris)[n];
             DEFAULT_ORIENTATION = res.getStringArray(R.array.pref_orientation_values)[0];
             DEFAULT_STATUS_BAR = res.getBoolean(R.bool.default_status_bar);
             DEFAULT_DARK_THEME = res.getBoolean(R.bool.default_dark_theme);
+            DEFAULT_HIDE_APP_ICON = res.getBoolean(R.bool.default_hide_app_icon);
         }
     }
 

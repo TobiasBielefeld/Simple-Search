@@ -18,10 +18,12 @@
 
 package de.tobiasbielefeld.searchbar.ui.settings;
 
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
@@ -34,6 +36,7 @@ import android.view.WindowManager;
 import java.util.List;
 
 import de.tobiasbielefeld.searchbar.R;
+import de.tobiasbielefeld.searchbar.ui.MainActivity;
 
 import static de.tobiasbielefeld.searchbar.SharedData.*;
 
@@ -106,12 +109,23 @@ public class Settings extends AppCompatPreferenceActivity implements SharedPrefe
             restartApplication();
         } else if (key.equals(PREF_DARK_THEME))  {
             //restart activity
-            final Intent intent = new Intent(getApplicationContext(), Settings.class);
+            final Intent intent = new Intent(getApplicationContext(), MainActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             finish();
             startActivity(intent);
-        }
+        } //else if (key.equals(PREF_HIDE_APP_ICON)) {
+//
+//            ComponentName alias = new ComponentName(this, getApplicationContext().getPackageName() + ".ui.MainActivityAlias");
+//
+//            if(sharedPreferences.getBoolean(key, false)) {
+//               getApplicationContext().getPackageManager().setComponentEnabledSetting(alias,
+//                              PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP);
+//            } else {
+//                getApplicationContext().getPackageManager().setComponentEnabledSetting(alias,
+//                               PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
+//            }
+//        }
     }
 
     /**
