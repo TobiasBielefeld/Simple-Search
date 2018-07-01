@@ -1,0 +1,3 @@
+* Added a new dark theme!
+* Added Metager as a Search engine
+* Now 3 different customized search engines can be set up
