@@ -51,14 +51,14 @@ public class ChangeLogFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.content_about_tab3, container, false);
 
-        LinearLayout layoutContainer = (LinearLayout) view.findViewById(R.id.changelog_container);
+        LinearLayout layoutContainer = view.findViewById(R.id.changelog_container);
 
-        String[] titles = new String[]{"1.1.4", "1.1.3", "1.1.2", "1.1.1", "1.1", "1.0"};
+        String[] titles = new String[]{"1.2", "1.1.4", "1.1.3", "1.1.2", "1.1.1", "1.1", "1.0"};
 
         for (int i = 0; i < titles.length; i++) {
             CardView card = (CardView) LayoutInflater.from(getContext()).inflate(R.layout.changelog_card_view, null);
-            TextView title = (TextView) card.findViewById(R.id.changelog_card_view_title);
-            TextView description = (TextView) card.findViewById(R.id.changelog_card_view_text);
+            TextView title = card.findViewById(R.id.changelog_card_view_title);
+            TextView description = card.findViewById(R.id.changelog_card_view_text);
 
             title.setText(titles[i]);
             description.setText(createText(titles.length - i));
