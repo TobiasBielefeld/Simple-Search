@@ -35,6 +35,9 @@
     <string name="settings_change_language">Ändere Sprache</string>
     <string name="settings_hide_status_bar">Verstecke Statusleiste</string>
 
+    <string name="settings_dark_theme">Aktiviere dunkles Thema</string>
+    <string name="settings_restart_app">Starte die App neu um die Änderungen anzuwenden</string>
+
     <!--About-->
     <string name="activity_about">Über</string>
     <string name="about_description">Zeige Informationen über die Anwendung wie Lizenzen und Änderungen</string>
