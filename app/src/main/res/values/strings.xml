@@ -23,10 +23,10 @@
     <string name="activity_settings">Settings</string>
     <string name="settings_language_french">French</string>
 
-    <string name="pref_search_title">Search</string>
-    <string name="pref_search_summary">Change the search engine and set up the history</string>
-    <string name="pref_general_title">General</string>
-    <string name="pref_general_summary">Change the behavior of the app</string>
+    <string name="settings_search_title">Search</string>
+    <string name="settings_search_summary">Change the search engine and set up the history</string>
+    <string name="settings_general_title">General</string>
+    <string name="settings_general_summary">Change the behavior of the app</string>
 
     <string name="settings_search_engine_title">Search engine</string>
     <string name="settings_enable_records_title">Enable history</string>
@@ -36,7 +36,9 @@
     <string name="settings_hide_status_bar">Hide status bar</string>
     <string name="settings_dark_theme">Enable dark theme</string>
     <string name="settings_hide_app_icon_title">Hide app icon in drawer</string>
-    <string name="settings_hide_app_icon_text">Then can only be started by using its widget</string>
+    <string name="settings_hide_app_icon_text">Then can only be started by using its widget</string>#
+
+    <string name="settings_restart_app">Restart app to apply the changes</string>
 
     <!--About-->
     <string name="activity_about">About</string>

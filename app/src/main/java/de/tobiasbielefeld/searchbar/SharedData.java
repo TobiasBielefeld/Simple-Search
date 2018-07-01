@@ -18,6 +18,7 @@
 
 package de.tobiasbielefeld.searchbar;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
@@ -26,6 +27,7 @@ import android.text.SpannableString;
 import android.text.TextUtils;
 import android.text.style.BulletSpan;
 import android.util.Log;
+import android.widget.Toast;
 
 import de.tobiasbielefeld.searchbar.helper.Records;
 
@@ -54,6 +56,8 @@ public class SharedData {
     public static boolean DEFAULT_HIDE_APP_ICON;
 
     public static Records records;
+
+    private static Toast toast;
 
     public static void reinitializeData(Context context){
 
@@ -132,4 +136,20 @@ public class SharedData {
         //set up the textView
         return TextUtils.concat(spanns);
     }
+
+    /**
+     * Shows the given text as a toast. New texts override the old one.
+     *
+     * @param text The text to show
+     */
+    @SuppressLint("ShowToast")
+    public static void showToast(String text, Context context) {
+        if (toast == null) {
+            toast = Toast.makeText(context, text, Toast.LENGTH_LONG);
+        } else
+            toast.setText(text);
+
+        toast.show();
+    }
+
 }

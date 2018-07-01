@@ -23,10 +23,10 @@
     <!-- Settings -->
     <string name="activity_settings">Einstellungen</string>
 
-    <string name="pref_search_title">Suche</string>
-    <string name="pref_search_summary">Ändere die Suchmaschine und richte die Chronik ein</string>
-    <string name="pref_general_title">Allgemein</string>
-    <string name="pref_general_summary">Ändere das Verhalten der App</string>
+    <string name="settings_search_title">Suche</string>
+    <string name="settings_search_summary">Ändere die Suchmaschine und richte die Chronik ein</string>
+    <string name="settings_general_title">Allgemein</string>
+    <string name="settings_general_summary">Ändere das Verhalten der App</string>
 
     <string name="settings_search_engine_title">Suchmaschine</string>
     <string name="settings_enable_records_title">Erlaube Chronik</string>

@@ -21,25 +21,19 @@ package de.tobiasbielefeld.searchbar.ui;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
-import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
-import android.view.LayoutInflater;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -98,6 +92,7 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
             case R.id.item_settings: //starts the settings activity
                 Intent intent = new Intent(getApplicationContext(), Settings.class);
                 startActivity(intent);
+                //startActivityForResult(intent, 1);
                 break;
             case R.id.item_delete_all: //shows the delete dialog
                 records.showDeleteAllDialog();
@@ -106,6 +101,19 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
 
         return true;
     }
+
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//
+//        if (requestCode == 1) {
+//            if(resultCode == Activity.RESULT_OK){
+//                if (data.hasExtra(getString(R.string.intent_recreate))){
+//                    recreate();
+//                }
+//            }
+//        }
+//    }
 
     /*
      * If the search bar contains text, show the delete-all-text button
@@ -140,20 +148,6 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
     }
 
     /**
-     * Shows the given text as a toast. New texts override the old one.
-     *
-     * @param text The text to show
-     */
-    public void showToast(String text) {
-        if (toast == null) {
-            toast = Toast.makeText(this, text, Toast.LENGTH_LONG);
-        } else
-            toast.setText(text);
-
-        toast.show();
-    }
-
-    /**
      * Starts the search with the text in searchText
      *
      */
@@ -171,7 +165,7 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
         Uri searchUrl = null;
 
         if (!baseUrl.contains("%s")) {                                                              //custom search url must contain the %s part
-            showToast(getString(R.string.string_doesnt_contain_placeholder));
+            showToast(getString(R.string.string_doesnt_contain_placeholder), this);
             return;
         }
 
@@ -179,7 +173,7 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
             searchUrl = Uri.parse(baseUrl.replace("%s",URLEncoder.encode(text, "UTF-8")));          //try to encode the string to a url. eg "this is a test" gets converted to "this+is+a+test"
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
-            showToast(getString(R.string.unsupported_search_character));
+            showToast(getString(R.string.unsupported_search_character), this);
         }
 
         if (searchUrl != null) {
@@ -189,7 +183,7 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
                 startActivity(browserIntent);                                                       //try to start the browser, if there is one installed
             } catch (ActivityNotFoundException e) {
                 e.printStackTrace();
-                showToast(getString(R.string.unsupported_search_string));
+                showToast(getString(R.string.unsupported_search_string), this);
             }
         }
 

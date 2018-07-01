@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center_vertical"
-    android:background="@drawable/widget_background_transparent"
+    android:background="@drawable/widget_background_dark"
     android:padding="5dp">
 
     <LinearLayout
@@ -22,7 +22,7 @@
             android:layout_weight="1"
             android:gravity="center_vertical"
             android:text="@string/search_hint"
-            android:textColor="#ff000000"
+            android:textColor="@color/white"
             android:textSize="16sp" />
 
         <ImageView
@@ -30,7 +30,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:adjustViewBounds="true"
-            android:src="@drawable/widget_search" />
+            android:src="@drawable/widget_search_dark_theme" />
     </LinearLayout>
 
 </RelativeLayout>

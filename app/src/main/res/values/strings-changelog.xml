@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="changelog_7_1" translatable="false">Added a new dark theme!</string>
+    <string name="changelog_7_2" translatable="false">Added Metager as a Search engine</string>
+    <string name="changelog_7_3" translatable="false">Now 3 different customized search engines can be set up</string>
+
     <string name="changelog_6_1" translatable="false">Some little improvements, thanks to tedkotz!</string>
     <string name="changelog_6_2" translatable="false">Added Ecosia as a Search engine, because I like their project</string>
 

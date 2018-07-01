@@ -14,10 +14,10 @@
 <string name="dialog_delete_all_records_text">Tout effacer! Êtes-vous sûr?</string>
 <string name="dialog_delete_entry_title">Effacer cette entrée ?</string>
 <string name="menu_delete_all">Tout effacer</string>
-<string name="pref_general_summary">"Paramètres de l'application"</string>
-<string name="pref_general_title">Général</string>
-<string name="pref_search_summary">"Modifier le moteur de recherche et paramétrer l'historique"</string>
-<string name="pref_search_title">Recherches</string>
+<string name="settings_general_summary">"Paramètres de l'application"</string>
+<string name="settings_general_title">Général</string>
+<string name="settings_search_summary">"Modifier le moteur de recherche et paramétrer l'historique"</string>
+<string name="settings_search_title">Recherches</string>
 <string name="record_list_button_description">Copier dans la requête de recherche</string>
 <string name="search_hint">Rechercher…</string>
 <string name="settings_change_language">Changer la langue</string>

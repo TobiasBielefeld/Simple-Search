@@ -18,26 +18,25 @@
 
 package de.tobiasbielefeld.searchbar.ui.settings;
 
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
-import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
 import android.support.v7.app.ActionBar;
-import android.view.MenuItem;
+
 import android.view.ViewGroup;
 import android.view.WindowManager;
 
 import java.util.List;
 
 import de.tobiasbielefeld.searchbar.R;
-import de.tobiasbielefeld.searchbar.ui.MainActivity;
 
+import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 import static de.tobiasbielefeld.searchbar.SharedData.*;
 
 /**
@@ -46,10 +45,7 @@ import static de.tobiasbielefeld.searchbar.SharedData.*;
 
 public class Settings extends AppCompatPreferenceActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
 
-    private static boolean isXLargeTablet(Context context) {
-        return (context.getResources().getConfiguration().screenLayout
-                & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_XLARGE;
-    }
+    //static Intent returnIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +59,14 @@ public class Settings extends AppCompatPreferenceActivity implements SharedPrefe
 
         reinitializeData(getApplicationContext());
 
+        //set these values here, or otherwise their first initialization (without user interaction) would
+        //trigger the OnSharedPreferenceChangeListener
         putSavedString(PREF_LANGUAGE,getSavedString(PREF_LANGUAGE,"default"));
+        putSavedBoolean(PREF_DARK_THEME,getSavedBoolean(PREF_DARK_THEME, DEFAULT_DARK_THEME));
+
+//        if (returnIntent == null) {
+//            returnIntent = new Intent();
+//        }
     }
 
     @Override
@@ -106,14 +109,11 @@ public class Settings extends AppCompatPreferenceActivity implements SharedPrefe
         } else if (key.equals(PREF_ORIENTATION)) {
             setOrientation();
         } else if (key.equals(PREF_LANGUAGE)) {
-            restartApplication();
+            //returnIntent.putExtra(getString(R.string.intent_recreate), true);
+            showToast(getString(R.string.settings_restart_app), this);
         } else if (key.equals(PREF_DARK_THEME))  {
-            //restart activity
-            final Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            finish();
-            startActivity(intent);
+            //returnIntent.putExtra(getString(R.string.intent_recreate), true);
+            showToast(getString(R.string.settings_restart_app), this);
         } //else if (key.equals(PREF_HIDE_APP_ICON)) {
 //
 //            ComponentName alias = new ComponentName(this, getApplicationContext().getPackageName() + ".ui.MainActivityAlias");
@@ -128,6 +128,13 @@ public class Settings extends AppCompatPreferenceActivity implements SharedPrefe
 //        }
     }
 
+//    @Override
+//    public void finish() {
+//        setResult(Activity.RESULT_OK, returnIntent);
+//        super.finish();
+//    }
+
+
     /**
      * Tests if a loaded fragment is valid
      *
@@ -141,7 +148,7 @@ public class Settings extends AppCompatPreferenceActivity implements SharedPrefe
 
     }
 
-    public static class SearchPreferenceFragment extends PreferenceFragment {
+    public static class SearchPreferenceFragment extends PreferenceFragment{
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -201,9 +208,15 @@ public class Settings extends AppCompatPreferenceActivity implements SharedPrefe
 
         if (i!=null) {
             i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            i.addFlags(FLAG_ACTIVITY_NEW_TASK);
             finish();
             startActivity(i);
         }
     }
+
+    private static boolean isXLargeTablet(Context context) {
+        return (context.getResources().getConfiguration().screenLayout
+                & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_XLARGE;
+    }
+
 }

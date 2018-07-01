@@ -1,13 +1,13 @@
 <preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
     <header
         android:fragment="de.tobiasbielefeld.searchbar.ui.settings.Settings$SearchPreferenceFragment"
-        android:summary="@string/pref_search_summary"
-        android:title="@string/pref_search_title" />
+        android:summary="@string/settings_search_summary"
+        android:title="@string/settings_search_title" />
 
     <header
         android:fragment="de.tobiasbielefeld.searchbar.ui.settings.Settings$GeneralPreferenceFragment"
-        android:summary="@string/pref_general_summary"
-        android:title="@string/pref_general_title" />
+        android:summary="@string/settings_general_summary"
+        android:title="@string/settings_general_title" />
 
     <header
         android:summary="@string/about_description"

@@ -3,6 +3,8 @@
     <string name="app_name" translatable="false">Simple Search</string>
     <string name="menu_settings" translatable="false">@string/activity_settings</string>
 
+    <string name="intent_recreate" translatable="false">intent_recreate</string>
+
     <string name="pref_key_search_engine" translatable="false">pref_key_search_engine</string>
     <string name="pref_key_enable_records" translatable="false">pref_key_enable_records</string>
     <string name="pref_key_orientation" translatable="false">pref_key_orientation</string>
