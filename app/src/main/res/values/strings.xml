@@ -16,8 +16,7 @@
     <string name="dialog_delete_entry_title">Delete this record?</string>
     <string name="dialog_delete_all_records_text">Delete all records! Are you sure?</string>
     <string name="dialog_custom_search_engine_title">Enter custom search engine</string>
-    <string formatted="false" name="dialog_custom_search_engine_text">Enter a \"%s\" (without the quotation marks)
-        as a placeholder where the search query should be inserted at.</string>
+    <string formatted="false" name="dialog_custom_search_engine_text">Enter a \"%s\" (without the quotation marks) as a placeholder where the search query should be inserted at.</string>
 
     <!-- Settings -->
     <string name="activity_settings">Settings</string>
