@@ -125,6 +125,10 @@ public class PreferenceDialogSearchEngine extends ListPreference{
 
         String[] entries = getContext().getResources().getStringArray(R.array.pref_search_engine_titles);
 
+        entries[0] += " I";
+        entries[1] += " II";
+        entries[2] += " III";
+
 //        String savedSearchUrl = getSavedString(PREF_SEARCH_URL,DEFAULT_SEARCH_URL);
 //        entries[0] += "\n" + getSavedString(PREF_CUSTOM_SEARCH_URL, savedSearchUrl);
 //        entries[1] += "\n" + getSavedString(PREF_CUSTOM_SEARCH_URL + "1", savedSearchUrl);

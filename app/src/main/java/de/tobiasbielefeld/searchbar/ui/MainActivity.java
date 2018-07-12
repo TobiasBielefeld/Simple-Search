@@ -35,7 +35,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -51,7 +50,6 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
 
     public EditText searchText;
     private ImageView clearButton;
-    private Toast toast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

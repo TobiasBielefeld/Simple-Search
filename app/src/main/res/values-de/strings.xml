@@ -22,21 +22,23 @@
 
     <!-- Settings -->
     <string name="activity_settings">Einstellungen</string>
-
+    <string name="settings_custom">Benutzerdefiniert</string>
     <string name="settings_search_title">Suche</string>
     <string name="settings_search_summary">Ändere die Suchmaschine und richte die Chronik ein</string>
     <string name="settings_general_title">Allgemein</string>
     <string name="settings_general_summary">Ändere das Verhalten der App</string>
-
     <string name="settings_search_engine_title">Suchmaschine</string>
     <string name="settings_enable_records_title">Erlaube Chronik</string>
     <string name="settings_enable_records_text">Speichere Suchabfragen zur Wiederverwendung</string>
     <string name="settings_orientation">Bildschirmausrichtung</string>
     <string name="settings_change_language">Ändere Sprache</string>
     <string name="settings_hide_status_bar">Verstecke Statusleiste</string>
-
     <string name="settings_dark_theme">Aktiviere dunkles Thema</string>
     <string name="settings_restart_app">Starte die App neu um die Änderungen anzuwenden</string>
+    <string name="settings_follow_system_settings">"System Einstellungen folgen"</string>
+    <string name="settings_portrait">"Hochformat"</string>
+    <string name="settings_landscape">"Querformat"</string>
+    <string name="settings_landscape_upside_down">"Querformat umgedreht"</string>
 
     <!--About-->
     <string name="activity_about">Über</string>
@@ -58,6 +60,23 @@
     <string name="about_material_icons_usage">"Werden für alle Symbole in dieser Anwendung verwendet"</string>
     <string name="about_sliding_tabs_title">"PagerSlidingTabStrip Bibliothek"</string>
     <string name="about_sliding_tabs_usage">"Wird für die Tabs im \"Über das Spiel\" Bildschirm verwendet"</string>
-    <string name="settings_language_french">Französisch</string>
+
+    <!-- Search urls -->
+    <string name="url_google" formatted="false">https://www.google.com/search?q=%s</string>
+    <string name="url_yahoo" formatted="false">https://search.yahoo.com/search?p=%s</string>
+    <string name="url_bing" formatted="false">https://www.bing.com/search?q=%s&amp;cc=de</string>
+    <string name="url_yandex" formatted="false">https://www.yandex.com/?q=%s</string>
+    <string name="url_startpage" formatted="false">https://www.startpage.com/do/search?query=%s&amp;language=deutsch</string>
+    <string name="url_duckduckgo" formatted="false">https://duckduckgo.com/?q=%s</string>
+    <string name="url_duckduckgo_lite" formatted="false">https://duckduckgo.com/lite?q=%s</string>
+    <string name="url_searx" formatted="false">https://www.searx.me/?q=%s</string>
+    <string name="url_ecosia" formatted="false">https://www.ecosia.org/search?q=%s</string>
+    <string name="url_metager" formatted="false">https://metager.de/meta/meta.ger3?focus=web&amp;lang=de&amp;eingabe=%s</string>
+
+    <!-- languages -->
+    <string name="settings_language_default">"Standard Sprache"</string>
+    <string name="settings_language_english">"Englisch"</string>
+    <string name="settings_language_french">"Französisch"</string>
+    <string name="settings_language_german">"Deutsch"</string>
 
 </resources>

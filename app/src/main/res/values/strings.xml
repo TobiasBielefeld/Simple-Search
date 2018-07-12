@@ -21,13 +21,11 @@
 
     <!-- Settings -->
     <string name="activity_settings">Settings</string>
-    <string name="settings_language_french">French</string>
-
+    <string name="settings_custom">Custom</string>
     <string name="settings_search_title">Search</string>
     <string name="settings_search_summary">Change the search engine and set up the history</string>
     <string name="settings_general_title">General</string>
     <string name="settings_general_summary">Change the behavior of the app</string>
-
     <string name="settings_search_engine_title">Search engine</string>
     <string name="settings_enable_records_title">Enable history</string>
     <string name="settings_enable_records_text">Save searched queries for reuse</string>
@@ -37,8 +35,11 @@
     <string name="settings_dark_theme">Enable dark theme</string>
     <string name="settings_hide_app_icon_title">Hide app icon in drawer</string>
     <string name="settings_hide_app_icon_text">Then the app can only be started by using its widget</string>
-
     <string name="settings_restart_app">Restart app to apply the changes</string>
+    <string name="settings_follow_system_settings">Follow system settings</string>
+    <string name="settings_portrait">Portrait</string>
+    <string name="settings_landscape">Landscape</string>
+    <string name="settings_landscape_upside_down">Landscape upside down</string>
 
     <!--About-->
     <string name="activity_about">About</string>
@@ -60,4 +61,23 @@
     <string name="about_material_icons_usage">Used for all icons in this application</string>
     <string name="about_sliding_tabs_title">PagerSlidingTabStrip library</string>
     <string name="about_sliding_tabs_usage">Used for the tabs in the \"About game\" screen</string>
+
+    <!-- Search urls -->
+    <string name="url_google" formatted="false">https://www.google.com/search?q=%s</string>
+    <string name="url_yahoo" formatted="false">https://search.yahoo.com/search?p=%s</string>
+    <string name="url_bing" formatted="false">https://www.bing.com/search?q=%s</string>
+    <string name="url_yandex" formatted="false">https://www.yandex.com/?q=%s</string>
+    <string name="url_startpage" formatted="false">https://www.startpage.com/do/search?query=%s</string>
+    <string name="url_duckduckgo" formatted="false">https://duckduckgo.com/?q=%s</string>
+    <string name="url_duckduckgo_lite" formatted="false">https://duckduckgo.com/lite?q=%s</string>
+    <string name="url_searx" formatted="false">https://www.searx.me/?q=%s</string>
+    <string name="url_ecosia" formatted="false">https://www.ecosia.org/search?q=%s</string>
+    <string name="url_metager" formatted="false">https://metager.de/en/meta/meta.ger3?focus=web&amp;lang=en&amp;eingabe=%s</string>
+
+    <!-- languages -->
+    <string name="settings_language_default">Default language</string>
+    <string name="settings_language_english">English</string>
+    <string name="settings_language_french">French</string>
+    <string name="settings_language_german">German</string>
+
 </resources>

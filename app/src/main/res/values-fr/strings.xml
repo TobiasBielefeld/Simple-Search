@@ -42,9 +42,31 @@
 <string name="about_material_icons_usage">"Utilisé pour toutes les icônes de cette application"</string>
 <string name="about_sliding_tabs_title">"Bibliothèque PagerSlidingTabStrip"</string>
 <string name="about_sliding_tabs_usage">"Utilisé pour les onglets dans l'écran 'À propos du jeu'"</string>
-<string name="settings_language_french">"Français"</string>
 <string name="about_description">"Afficher les informations sur l\'application comme les licences et le journal des modifications."</string>
 <string name="settings_dark_theme">"Activer le thème sombre"</string>
 <string name="settings_restart_app">"Redémarrer l\'application pour appliquer les changements."</string>
+<string name="settings_custom">"Custom"</string>
+<string name="settings_follow_system_settings">"Suivre les préférences système"</string>
+<string name="settings_portrait">"Portrait"</string>
+<string name="settings_landscape">"Paysage"</string>
+<string name="settings_landscape_upside_down">"Paysage renversé"</string>
+
+<!-- Search urls -->
+<string name="url_google" formatted="false">https://www.google.com/search?q=%s</string>
+<string name="url_yahoo" formatted="false">https://search.yahoo.com/search?p=%s</string>
+<string name="url_bing" formatted="false">https://www.bing.com/search?q=%s</string>
+<string name="url_yandex" formatted="false">https://www.yandex.com/?q=%s</string>
+<string name="url_startpage" formatted="false">https://www.startpage.com/do/search?query=%s</string>
+<string name="url_duckduckgo" formatted="false">https://duckduckgo.com/?q=%s</string>
+<string name="url_duckduckgo_lite" formatted="false">https://duckduckgo.com/lite?q=%s</string>
+<string name="url_searx" formatted="false">https://www.searx.me/?q=%s</string>
+<string name="url_ecosia" formatted="false">https://www.ecosia.org/search?q=%s</string>
+<string name="url_metager" formatted="false">https://metager.de/en/meta/meta.ger3?focus=web&amp;lang=en&amp;eingabe=%s</string>
+
+<!-- languages -->
+<string name="settings_language_default">"Langue par défaut"</string>
+<string name="settings_language_english">"Anglais"</string>
+<string name="settings_language_french">"Français"</string>
+<string name="settings_language_german">"Allemand"</string>
 
 </resources>

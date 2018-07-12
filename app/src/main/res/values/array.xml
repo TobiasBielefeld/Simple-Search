@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="pref_search_engine_titles">
-        <item>Custom I</item>
-        <item>Custom II</item>
-        <item>Custom III</item>
+    <string-array name="pref_search_engine_titles" translateable="false">
+        <item>@string/settings_custom</item>
+        <item>@string/settings_custom</item>
+        <item>@string/settings_custom</item>
         <item>Google</item>
         <item>Yahoo</item>
         <item>Bing</item>
@@ -32,41 +32,41 @@
         <item>12</item>
     </string-array>
 
-    <string-array formatted="false" name="search_engine_uris">
-        <item/> <!-- custom search engine will be set up programmatically, so this entry can be empty-->
-        <item/> <!-- custom search engine will be set up programmatically, so this entry can be empty-->
-        <item/> <!-- custom search engine will be set up programmatically, so this entry can be empty-->
-        <item>https://www.google.com/search?q=%s</item>
-        <item>https://search.yahoo.com/search?p=%s</item>
-        <item>https://www.bing.com/search?q=%s</item>
-        <item>https://www.yandex.com/?q=%s</item>
-        <item>https://www.startpage.com/do/search?query=%s</item>
-        <item>https://duckduckgo.com/?q=%s</item>
-        <item>https://duckduckgo.com/lite?q=%s</item>
-        <item>https://www.searx.me/?q=%s</item>
-        <item>https://www.ecosia.org/search?q=%s</item>
-        <item>https://metager.de/en/meta/meta.ger3?focus=web&amp;lang=en&amp;eingabe=%s</item>
+    <string-array formatted="false" name="search_engine_uris" translateable="false">
+        <item/> <!-- custom search engine will be set up programmatically, so these entries can be empty-->
+        <item/>
+        <item/>
+        <item>@string/url_google</item>
+        <item>@string/url_yahoo</item>
+        <item>@string/url_bing</item>
+        <item>@string/url_yandex</item>
+        <item>@string/url_startpage</item>
+        <item>@string/url_duckduckgo</item>
+        <item>@string/url_duckduckgo_lite</item>
+        <item>@string/url_searx</item>
+        <item>@string/url_ecosia</item>
+        <item>@string/url_metager</item>
     </string-array>
 
-    <string-array name="pref_language_titles">
-        <item>Default language</item>
-        <item>English</item>
-        <item>German</item>
-        <item>French</item>
+    <string-array name="pref_language_titles" translatable="false">
+        <item>@string/settings_language_default</item>
+        <item>@string/settings_language_english</item>
+        <item>@string/settings_language_german</item>
+        <item>@string/settings_language_french</item>
     </string-array>
 
-    <string-array name="pref_language_values">
+    <string-array name="pref_language_values" translatable="false">
         <item>default</item>
         <item>en</item>
         <item>de</item>
         <item>fr</item>
     </string-array>
 
-    <string-array name="pref_orientation_titles">
-        <item>Follow system settings</item>
-        <item>Portrait</item>
-        <item>Landscape</item>
-        <item>Landscape upside down</item>
+    <string-array name="pref_orientation_titles" translatable="false">
+        <item>@string/settings_follow_system_settings</item>
+        <item>@string/settings_portrait</item>
+        <item>@string/settings_landscape</item>
+        <item>@string/settings_landscape_upside_down</item>
     </string-array>
 
     <string-array name="pref_orientation_values" translatable="false">
