@@ -1,82 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_version">Version</string>
+<string name="app_version">"Version"</string>
+<string name="confirm">"Bestätigen"</string>
+<string name="cancel">"Abbrechen"</string>
 
-    <string name="confirm">Bestätigen</string>
-    <string name="cancel">Abbrechen</string>
+<!-- Main Activity -->
+<string name="record_list_button_description">"Kopiere zur Suchabfrage"</string>
+<string name="unsupported_search_character">"Abfrage enthält nicht unterstützte Werte :("</string>
+<string name="unsupported_search_string">"Deine benutzerdefinierte Suchmaschine  ist nicht gültig :/"</string>
+<string name="string_doesnt_contain_placeholder">"Es gibt keinen Platzhalter für die Suchabfrage in deiner benutzerdefinierten Suchmaschine!"</string>
+<string name="menu_delete_all">"Alle Aufzeichnungen löschen"</string>
+<string name="search_hint">"Suche nach…"</string>
 
-    <!-- Main Activity -->
-    <string name="record_list_button_description">Kopiere zur Suchabfrage</string>
-    <string name="unsupported_search_character">Abfrage enthält nicht unterstützte Werte :(</string>
-    <string name="unsupported_search_string">Deine benutzerdefinierte Suchmaschine  ist nicht gültig :/</string>
-    <string name="string_doesnt_contain_placeholder">Es gibt keinen Platzhalter für die Suchabfrage in deiner benutzerdefinierten Suchmaschine!</string>
+<!-- Dialogs -->
+<string name="dialog_delete_entry_title">"Diesen Eintrag löschen?"</string>
+<string name="dialog_delete_all_records_text">"Alle Aufzeichnungen löschen! Bist du dir sicher?"</string>
+<string name="dialog_custom_search_engine_title">"Benutzerdefinierte Suchmaschine eintragen"</string>
+<string name="dialog_custom_search_engine_text">"Trage ein \"%s\" (ohne Anführungszeichen)
+        als Platzhalter an der Stelle ein, wo die Suchabfrage eingefügt werden soll."</string>
 
-    <string name="menu_delete_all">Alle Aufzeichnungen löschen</string>
-    <string name="search_hint">Suche nach…</string>
+<!-- Settings -->
+<string name="activity_settings">"Einstellungen"</string>
+<string name="settings_custom">"Benutzerdefiniert"</string>
+<string name="settings_search_title">"Suche"</string>
+<string name="settings_search_summary">"Ändere die Suchmaschine und richte die Chronik ein"</string>
+<string name="settings_general_title">"Allgemein"</string>
+<string name="settings_general_summary">"Ändere das Verhalten der App"</string>
+<string name="settings_search_engine_title">"Suchmaschine"</string>
+<string name="settings_enable_records_title">"Erlaube Chronik"</string>
+<string name="settings_enable_records_text">"Speichere Suchabfragen zur Wiederverwendung"</string>
+<string name="settings_orientation">"Bildschirmausrichtung"</string>
+<string name="settings_change_language">"Ändere Sprache"</string>
+<string name="settings_hide_status_bar">"Verstecke Statusleiste"</string>
+<string name="settings_dark_theme">"Aktiviere dunkles Thema"</string>
+<string name="settings_restart_app">"Starte die App neu um die Änderungen anzuwenden"</string>
+<string name="settings_follow_system_settings">"System Einstellungen folgen"</string>
+<string name="settings_portrait">"Hochformat"</string>
+<string name="settings_landscape">"Querformat"</string>
+<string name="settings_landscape_upside_down">"Querformat umgedreht"</string>
 
-    <!-- Dialogs -->
-    <string name="dialog_delete_entry_title">Diesen Eintrag löschen?</string>
-    <string name="dialog_delete_all_records_text">Alle Aufzeichnungen löschen! Bist du dir sicher?</string>
-    <string name="dialog_custom_search_engine_title">Benutzerdefinierte Suchmaschine eintragen</string>
-    <string formatted="false" name="dialog_custom_search_engine_text">Trage ein \"%s\" (ohne Anführungszeichen)
-        als Platzhalter an der Stelle ein, wo die Suchabfrage eingefügt werden soll.</string>
+<!-- About -->
+<string name="activity_about">"Über"</string>
+<string name="about_description">"Zeige Informationen über die Anwendung wie Lizenzen und Änderungen"</string>
+<string name="about_tab_1">"Informationen"</string>
+<string name="about_tab_2">"Lizenzen"</string>
+<string name="about_tab_3">"Änderungen"</string>
+<string name="about_developer">"Entwickler"</string>
+<string name="about_developer_name">"Tobias Bielefeld"</string>
+<string name="about_compiled">"Kompiliert am"</string>
+<string name="about_source_code">"Quelltext"</string>
+<string name="about_license">"Lizenz"</string>
+<string name="about_translations">"Übersetzungen"</string>
+<string name="about_further_contributors">"Weitere Beitragende"</string>
+<string name="about_android_support_libraries_title">"Android Support Bibliothek"</string>
+<string name="about_android_support_libraries_usage">"Wird für besseres Design und leichtere Entwicklung benutzt"</string>
+<string name="about_material_icons_title">"Material Design Symbole"</string>
+<string name="about_material_icons_usage">"Werden für alle Symbole in dieser Anwendung verwendet"</string>
+<string name="about_sliding_tabs_title">"PagerSlidingTabStrip Bibliothek"</string>
+<string name="about_sliding_tabs_usage">"Wird für die Tabs im \"Über das Spiel\" Bildschirm verwendet"</string>
 
-    <!-- Settings -->
-    <string name="activity_settings">Einstellungen</string>
-    <string name="settings_custom">Benutzerdefiniert</string>
-    <string name="settings_search_title">Suche</string>
-    <string name="settings_search_summary">Ändere die Suchmaschine und richte die Chronik ein</string>
-    <string name="settings_general_title">Allgemein</string>
-    <string name="settings_general_summary">Ändere das Verhalten der App</string>
-    <string name="settings_search_engine_title">Suchmaschine</string>
-    <string name="settings_enable_records_title">Erlaube Chronik</string>
-    <string name="settings_enable_records_text">Speichere Suchabfragen zur Wiederverwendung</string>
-    <string name="settings_orientation">Bildschirmausrichtung</string>
-    <string name="settings_change_language">Ändere Sprache</string>
-    <string name="settings_hide_status_bar">Verstecke Statusleiste</string>
-    <string name="settings_dark_theme">Aktiviere dunkles Thema</string>
-    <string name="settings_restart_app">Starte die App neu um die Änderungen anzuwenden</string>
-    <string name="settings_follow_system_settings">"System Einstellungen folgen"</string>
-    <string name="settings_portrait">"Hochformat"</string>
-    <string name="settings_landscape">"Querformat"</string>
-    <string name="settings_landscape_upside_down">"Querformat umgedreht"</string>
+<!-- Search urls -->
+<string name="url_google">"https://www.google.com/search?q=%s"</string>
+<string name="url_yahoo">"https://search.yahoo.com/search?p=%s"</string>
+<string name="url_bing">"https://www.bing.com/search?q=%s&amp;cc=de"</string>
+<string name="url_yandex">"https://www.yandex.com/?q=%s"</string>
+<string name="url_startpage">"https://www.startpage.com/do/search?query=%s&amp;language=deutsch"</string>
+<string name="url_duckduckgo">"https://duckduckgo.com/?q=%s"</string>
+<string name="url_duckduckgo_lite">"https://duckduckgo.com/lite?q=%s"</string>
+<string name="url_searx">"https://www.searx.me/?q=%s"</string>
+<string name="url_ecosia">"https://www.ecosia.org/search?q=%s"</string>
+<string name="url_metager">"https://metager.de/meta/meta.ger3?focus=web&amp;lang=de&amp;eingabe=%s"</string>
 
-    <!--About-->
-    <string name="activity_about">Über</string>
-    <string name="about_description">Zeige Informationen über die Anwendung wie Lizenzen und Änderungen</string>
-    <string name="about_tab_1">Informationen</string>
-    <string name="about_tab_2">Lizenzen</string>
-    <string name="about_tab_3">Änderungen</string>
-
-    <string name="about_developer">"Entwickler"</string>
-    <string name="about_developer_name">"Tobias Bielefeld"</string>
-    <string name="about_compiled">"Kompiliert am"</string>
-    <string name="about_source_code">"Quelltext"</string>
-    <string name="about_license">"Lizenz"</string>
-    <string name="about_translations">"Übersetzungen"</string>
-    <string name="about_further_contributors">"Weitere Beitragende"</string>
-    <string name="about_android_support_libraries_title">"Android Support Bibliothek"</string>
-    <string name="about_android_support_libraries_usage">"Wird für besseres Design und leichtere Entwicklung benutzt"</string>
-    <string name="about_material_icons_title">"Material Design Symbole"</string>
-    <string name="about_material_icons_usage">"Werden für alle Symbole in dieser Anwendung verwendet"</string>
-    <string name="about_sliding_tabs_title">"PagerSlidingTabStrip Bibliothek"</string>
-    <string name="about_sliding_tabs_usage">"Wird für die Tabs im \"Über das Spiel\" Bildschirm verwendet"</string>
-
-    <!-- Search urls -->
-    <string name="url_google" formatted="false">https://www.google.com/search?q=%s</string>
-    <string name="url_yahoo" formatted="false">https://search.yahoo.com/search?p=%s</string>
-    <string name="url_bing" formatted="false">https://www.bing.com/search?q=%s&amp;cc=de</string>
-    <string name="url_yandex" formatted="false">https://www.yandex.com/?q=%s</string>
-    <string name="url_startpage" formatted="false">https://www.startpage.com/do/search?query=%s&amp;language=deutsch</string>
-    <string name="url_duckduckgo" formatted="false">https://duckduckgo.com/?q=%s</string>
-    <string name="url_duckduckgo_lite" formatted="false">https://duckduckgo.com/lite?q=%s</string>
-    <string name="url_searx" formatted="false">https://www.searx.me/?q=%s</string>
-    <string name="url_ecosia" formatted="false">https://www.ecosia.org/search?q=%s</string>
-    <string name="url_metager" formatted="false">https://metager.de/meta/meta.ger3?focus=web&amp;lang=de&amp;eingabe=%s</string>
-
-    <!-- languages -->
-    <string name="settings_language_default">"Standard Sprache"</string>
-    <string name="settings_language_english">"Englisch"</string>
-    <string name="settings_language_french">"Französisch"</string>
-    <string name="settings_language_german">"Deutsch"</string>
-
+<!-- languages -->
+<string name="settings_language_default">"Standard Sprache"</string>
+<string name="settings_language_english">"Englisch"</string>
+<string name="settings_language_french">"Französisch"</string>
+<string name="settings_language_german">"Deutsch"</string>
 </resources>
