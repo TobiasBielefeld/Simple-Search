@@ -43,7 +43,7 @@ public class CustomAppCompatActivity extends AppCompatActivity {
     @Override protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         reinitializeData(this);
-        applyDarkTheme();
+        applyTheme();
     }
 
     @Override
@@ -96,9 +96,17 @@ public class CustomAppCompatActivity extends AppCompatActivity {
             activity.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
-    protected void applyDarkTheme(){
-        if (getSavedBoolean(PREF_DARK_THEME, DEFAULT_DARK_THEME)) {
-            setTheme(R.style.AppTheme_Dark);
+    protected void applyTheme() {
+        switch (getSavedString(PREF_THEME, DEFAULT_THEME)) {
+            case "light":
+                setTheme(R.style.AppTheme);
+                break;
+            case "dark":
+                setTheme(R.style.AppTheme_Dark);
+                break;
+            case "black":
+                setTheme(R.style.AppTheme_Black);
+                break;
         }
     }
 }

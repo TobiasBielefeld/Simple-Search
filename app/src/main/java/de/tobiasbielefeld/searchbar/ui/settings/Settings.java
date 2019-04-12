@@ -62,7 +62,7 @@ public class Settings extends AppCompatPreferenceActivity implements SharedPrefe
         //set these values here, or otherwise their first initialization (without user interaction) would
         //trigger the OnSharedPreferenceChangeListener
         putSavedString(PREF_LANGUAGE,getSavedString(PREF_LANGUAGE,"default"));
-        putSavedBoolean(PREF_DARK_THEME,getSavedBoolean(PREF_DARK_THEME, DEFAULT_DARK_THEME));
+        putSavedString(PREF_THEME,getSavedString(PREF_THEME,DEFAULT_THEME));
 
 //        if (returnIntent == null) {
 //            returnIntent = new Intent();
@@ -111,7 +111,7 @@ public class Settings extends AppCompatPreferenceActivity implements SharedPrefe
         } else if (key.equals(PREF_LANGUAGE)) {
             //returnIntent.putExtra(getString(R.string.intent_recreate), true);
             showToast(getString(R.string.settings_restart_app), this);
-        } else if (key.equals(PREF_DARK_THEME))  {
+        } else if (key.equals(PREF_THEME))  {
             //returnIntent.putExtra(getString(R.string.intent_recreate), true);
             showToast(getString(R.string.settings_restart_app), this);
         } //else if (key.equals(PREF_HIDE_APP_ICON)) {
@@ -185,6 +185,23 @@ public class Settings extends AppCompatPreferenceActivity implements SharedPrefe
                 break;
             case "4": //landscape upside down
                 setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_REVERSE_LANDSCAPE);
+                break;
+        }
+    }
+
+    /**
+     * Applies the user them setting.
+     */
+    private void applyTheme() {
+        switch (getSavedString(PREF_THEME, DEFAULT_THEME)) {
+            case "light":
+                setTheme(R.style.AppTheme);
+                break;
+            case "dark":
+                setTheme(R.style.AppTheme_Dark);
+                break;
+            case "black":
+                setTheme(R.style.AppTheme_Black);
                 break;
         }
     }

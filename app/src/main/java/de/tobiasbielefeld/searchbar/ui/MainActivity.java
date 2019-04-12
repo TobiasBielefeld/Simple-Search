@@ -71,10 +71,7 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
 
         records = new Records(this, (LinearLayout) findViewById(R.id.record_list_container));
 
-        if (getSavedBoolean(PREF_DARK_THEME, DEFAULT_DARK_THEME)) {
-            LinearLayout textSearch = findViewById(R.id.linearLayoutSearchText);
-            textSearch.setBackgroundResource(R.drawable.widget_background_dark);
-        }
+        setSearchboxTheme();
     }
 
     @Override
@@ -233,5 +230,20 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
         startSearch();
 
         return true;
+    }
+
+    /**
+     * Change the search bar to be dark or black, if the user had specified
+     */
+    private void setSearchboxTheme() {
+        LinearLayout textSearch = findViewById(R.id.linearLayoutSearchText);
+        switch (getSavedString(PREF_THEME, DEFAULT_THEME)) {
+            case "dark":
+                textSearch.setBackgroundResource(R.drawable.widget_background_dark);
+                break;
+            case "black":
+                textSearch.setBackgroundResource(R.drawable.widget_background_black);
+                break;
+        }
     }
 }

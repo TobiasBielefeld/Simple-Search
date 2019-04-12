@@ -20,15 +20,20 @@
         android:summary="%s"
         android:title="@string/settings_change_language" />
 
+    <de.tobiasbielefeld.searchbar.classes.ListPreferenceWithSummary
+        android:defaultValue="1"
+        android:entries="@array/pref_theme_titles"
+        android:entryValues="@array/pref_theme_values"
+        android:key="@string/pref_key_theme"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@null"
+        android:summary="%s"
+        android:title="@string/settings_theme" />
+
     <CheckBoxPreference
         android:defaultValue="@bool/default_status_bar"
         android:key="@string/pref_key_hide_status_bar"
         android:title="@string/settings_hide_status_bar" />
-
-    <CheckBoxPreference
-        android:defaultValue="@bool/default_dark_theme"
-        android:key="@string/pref_key_dark_theme"
-        android:title="@string/settings_dark_theme" />
 
     <!--<CheckBoxPreference-->
         <!--android:defaultValue="@bool/default_hide_app_icon"-->

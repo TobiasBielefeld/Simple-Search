@@ -8,7 +8,7 @@
     <string name="pref_key_search_engine" translatable="false">pref_key_search_engine</string>
     <string name="pref_key_enable_records" translatable="false">pref_key_enable_records</string>
     <string name="pref_key_orientation" translatable="false">pref_key_orientation</string>
-    <string name="pref_key_dark_theme" translatable="false">pref_key_dark_theme</string>
+    <string name="pref_key_theme" translatable="false">pref_key_theme</string>
     <string name="pref_key_language" translatable="false">pref_key_language</string>
     <string name="pref_key_hide_status_bar" translatable="false">pref_key_hide_status_bar</string>
     <string name="pref_key_custom_search_url" translatable="false">pref_key_custom_search_url</string>

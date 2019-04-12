@@ -34,9 +34,10 @@ import android.view.ViewGroup;
 import de.tobiasbielefeld.searchbar.R;
 import de.tobiasbielefeld.searchbar.helper.LocaleChanger;
 
-import static de.tobiasbielefeld.searchbar.SharedData.DEFAULT_DARK_THEME;
-import static de.tobiasbielefeld.searchbar.SharedData.PREF_DARK_THEME;
+import static de.tobiasbielefeld.searchbar.SharedData.DEFAULT_THEME;
+import static de.tobiasbielefeld.searchbar.SharedData.PREF_THEME;
 import static de.tobiasbielefeld.searchbar.SharedData.getSavedBoolean;
+import static de.tobiasbielefeld.searchbar.SharedData.getSavedString;
 
 /**
  * A {@link android.preference.PreferenceActivity} which implements and proxies the necessary calls
@@ -53,7 +54,7 @@ public abstract class AppCompatPreferenceActivity extends PreferenceActivity {
     protected void onCreate(Bundle savedInstanceState) {
         getDelegate().installViewFactory();
         getDelegate().onCreate(savedInstanceState);
-        applyDarkTheme();
+        applyTheme();
         super.onCreate(savedInstanceState);
     }
 
@@ -150,9 +151,17 @@ public abstract class AppCompatPreferenceActivity extends PreferenceActivity {
         return mDelegate;
     }
 
-    private void applyDarkTheme(){
-        if (getSavedBoolean(PREF_DARK_THEME, DEFAULT_DARK_THEME)) {
-            setTheme(R.style.AppTheme_Dark);
+    private void applyTheme() {
+        switch (getSavedString(PREF_THEME, DEFAULT_THEME)) {
+            case "light":
+                setTheme(R.style.AppTheme);
+                break;
+            case "dark":
+                setTheme(R.style.AppTheme_Dark);
+                break;
+            case "black":
+                setTheme(R.style.AppTheme_Black);
+                break;
         }
     }
 }

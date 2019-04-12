@@ -31,7 +31,7 @@
     <string name="settings_orientation">Screen orientation</string>
     <string name="settings_change_language">Change language</string>
     <string name="settings_hide_status_bar">Hide status bar</string>
-    <string name="settings_dark_theme">Enable dark theme</string>
+    <string name="settings_theme">App theme</string>
     <string name="settings_hide_app_icon_title">Hide app icon in drawer</string>
     <string name="settings_hide_app_icon_text">Then the app can only be started by using its widget</string>
     <string name="settings_restart_app">Restart app to apply the changes</string>
@@ -78,5 +78,10 @@
     <string name="settings_language_english">English</string>
     <string name="settings_language_french">French</string>
     <string name="settings_language_german">German</string>
+
+    <!-- themes -->
+    <string name="settings_theme_light">Light</string>
+    <string name="settings_theme_dark">Dark</string>
+    <string name="settings_theme_black">Black</string>
 
 </resources>

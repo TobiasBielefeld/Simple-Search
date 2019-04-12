@@ -31,7 +31,7 @@
 <string name="settings_orientation">"Bildschirmausrichtung"</string>
 <string name="settings_change_language">"Ändere Sprache"</string>
 <string name="settings_hide_status_bar">"Verstecke Statusleiste"</string>
-<string name="settings_dark_theme">"Aktiviere dunkles Thema"</string>
+<string name="settings_theme">"App Thema"</string>
 <string name="settings_restart_app">"Starte die App neu um die Änderungen anzuwenden"</string>
 <string name="settings_follow_system_settings">"System Einstellungen folgen"</string>
 <string name="settings_portrait">"Hochformat"</string>
@@ -75,4 +75,9 @@
 <string name="settings_language_english">"Englisch"</string>
 <string name="settings_language_french">"Französisch"</string>
 <string name="settings_language_german">"Deutsch"</string>
+
+<!-- themes -->
+<string name="settings_theme_light">Licht</string>
+<string name="settings_theme_dark">Dunkel</string>
+<string name="settings_theme_black">Schwarz</string>
 </resources>
