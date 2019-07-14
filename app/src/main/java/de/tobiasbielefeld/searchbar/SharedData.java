@@ -82,7 +82,7 @@ public class SharedData {
             DEFAULT_SEARCH_URL = res.getStringArray(R.array.search_engine_uris)[n];
             DEFAULT_ORIENTATION = res.getStringArray(R.array.pref_orientation_values)[0];
             DEFAULT_STATUS_BAR = res.getBoolean(R.bool.default_status_bar);
-            DEFAULT_THEME = res.getStringArray(R.array.pref_orientation_values)[0];
+            DEFAULT_THEME = res.getStringArray(R.array.pref_theme_values)[0];
             DEFAULT_HIDE_APP_ICON = res.getBoolean(R.bool.default_hide_app_icon);
         }
     }
