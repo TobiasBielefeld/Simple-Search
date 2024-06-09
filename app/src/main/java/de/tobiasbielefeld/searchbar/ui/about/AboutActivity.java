@@ -1,62 +1,47 @@
-/*
- * Copyright (C) 2017  Tobias Bielefeld
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *
- * If you want to contact me, send me an e-mail at tobias.bielefeld@gmail.com
- */
-
 package de.tobiasbielefeld.searchbar.ui.about;
 
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBar;
-import android.view.MenuItem;
+import com.google.android.material.tabs.TabLayout;
 
-import com.astuetz.PagerSlidingTabStrip;
+import androidx.annotation.StringRes;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
 import de.tobiasbielefeld.searchbar.R;
 import de.tobiasbielefeld.searchbar.classes.CustomAppCompatActivity;
+import de.tobiasbielefeld.searchbar.classes.TabsPagerAdapter;
+import de.tobiasbielefeld.searchbar.databinding.ActivtyAboutBinding;
 
-import static de.tobiasbielefeld.searchbar.SharedData.*;
-
-/**
- * This is created with help of this article: http://simpledeveloper.com/how-to-create-android-swipe-views-tabs/
- * The About activity contains 3 tabs. The content of the tabs is in the fragments
- */
 public class AboutActivity extends CustomAppCompatActivity {
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activty_about);
+    @StringRes
+    private static final int[] TAB_TITLES = new int[]{R.string.about_tab_1, R.string.about_tab_2, R.string.about_tab_3};
+    private static final Fragment[] FRAGMENTS = new Fragment[]{new InformationFragment(), new LicenseFragment(), new ChangeLogFragment()};
 
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar!=null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        ActivtyAboutBinding binding = ActivtyAboutBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        TabsPagerAdapter sectionsPagerAdapter = new TabsPagerAdapter(this, getSupportFragmentManager(), TAB_TITLES, FRAGMENTS);
+        ViewPager viewPager = binding.viewPager;
+        viewPager.setAdapter(sectionsPagerAdapter);
+        TabLayout tabs = binding.tabs;
+        tabs.setupWithViewPager(viewPager);
+
+        ActionBar actionbar = getSupportActionBar();
+
+        if (actionbar != null) {
+            actionbar.setDisplayHomeAsUpEnabled(true);
+            actionbar.setDisplayShowHomeEnabled(true);
         }
 
-        PagerSlidingTabStrip tabs = findViewById(R.id.tabs);
-        ViewPager pager = findViewById(R.id.pager);
-        TabsPagerAdapter adapter = new TabsPagerAdapter(getSupportFragmentManager(), this);
-
-        pager.setAdapter(adapter);
-        tabs.setViewPager(pager);
-    }
-
-    public boolean onOptionsItemSelected(MenuItem item) {
-        //only menu item is the back button in the action bar so finish this activity
-        finish();
-        return true;
+        toolbar.setNavigationOnClickListener(view -> finish());
     }
 }

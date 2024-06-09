@@ -1,0 +1,83 @@
+<resources>
+
+    <!-- Base application theme -->
+    <style name="Base.AppThemeActionBar" parent="Theme.Material3.DayNight">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="materialButtonStyle">@style/CustomMaterialButton</item>
+        <item name="dialogTheme">@style/CustomMaterialAlertDialogTheme</item>
+        <item name="alertDialogTheme">@style/CustomMaterialAlertDialogTheme</item>
+        <item name="android:alertDialogTheme">@style/CustomMaterialAlertDialogTheme</item>
+        <item name="cardViewStyle">@style/CustomCardViewStyle</item>
+        <item name="radioButtonStyle">@style/CustomRadioButtonStyle</item>
+        <item name="switchStyle">@style/CustomSwitchStyle</item>
+        <item name="actionBarStyle">@style/CustomActionbarStyle</item>
+        <item name="materialSwitchStyle">@style/CustomSwitchStyle</item>
+    </style>
+
+    <style name="Base.AppThemeNoActionBar" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="materialButtonStyle">@style/CustomMaterialButton</item>
+        <item name="dialogTheme">@style/CustomMaterialAlertDialogTheme</item>
+        <item name="alertDialogTheme">@style/CustomMaterialAlertDialogTheme</item>
+        <item name="android:alertDialogTheme">@style/CustomMaterialAlertDialogTheme</item>
+        <item name="cardViewStyle">@style/CustomCardViewStyle</item>
+        <item name="radioButtonStyle">@style/CustomRadioButtonStyle</item>
+        <item name="switchStyle">@style/CustomSwitchStyle</item>
+        <item name="materialSwitchStyle">@style/CustomSwitchStyle</item>
+    </style>
+
+    <!-- Use overwritten styles in themes v23 -->
+    <style name="AppThemeActionBar" parent="Base.AppThemeActionBar" />
+    <style name="AppThemeNoActionBar" parent="Base.AppThemeNoActionBar" />
+    <style name="AppThemeActionBarNoDrawer" parent="Base.AppThemeActionBar" />
+
+    <!-- Button customization -->
+    <style name="CustomMaterialButton" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/colorAccent</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- Dialog customization -->
+    <style name="CustomMaterialAlertDialogTheme" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:background">@color/colorDialogBackground</item>
+    </style>
+
+    <!-- Card background customization -->
+    <style name="CustomCardViewStyle" parent="Widget.Material3.CardView.Elevated" >
+        <item name="cardBackgroundColor">@color/colorCardBackground</item>
+    </style>
+
+    <!-- Radio button customization (in custom alert dialogs) -->
+    <style name="CustomRadioButtonStyle" parent="Widget.Material3.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/colorAccent</item>
+    </style>
+
+    <!-- Switch customization -->
+    <style name="CustomSwitchStyle" parent="Widget.AppCompat.CompoundButton.Switch">
+        <item name="colorPrimary">@color/colorAccent</item>
+    </style>
+
+    <!-- Used for appbar title and menu text, use MaterialComponents since Material3 looks ugly -->
+    <style name="AppThemeNoActionBar.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar">
+        <item name="android:textColor">@color/colorAppBarMenuText</item>
+        <item name="checkboxStyle">@style/MyCheckBox</item>
+    </style>
+    <style name="AppThemeNoActionBar.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
+
+    <!-- Actionbar customization -->
+    <style name="CustomActionbarStyle" parent="@style/AppThemeNoActionBar.AppBarOverlay">
+        <item name="background">@color/colorPrimary</item>
+    </style>
+
+    <!-- checkbox in action bar menu -->
+    <style name="MyCheckBox" parent="Widget.Material3.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/colorAccent</item>
+    </style>
+
+</resources>

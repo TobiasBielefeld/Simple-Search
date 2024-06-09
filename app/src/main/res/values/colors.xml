@@ -1,22 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
     <color name="colorToolbar">#a4a4a4</color>
     <color name="nearlyWhite">#f5f5f5</color>
-    <color name="white">#ffffff</color>
     <color name="black">#ff000000</color>
     <color name="blueBackground">#3f83ff</color>
-
     <color name="mainBackground">#FFFAFAFA</color>
+    <color name="toolbarHint">#999999</color>
+    <color name="toolbarText">#454545</color>
 
     <color name="darkColorPrimary">#1e2756</color>
     <color name="darkColorPrimaryDark">#141831</color>
     <color name="darkColorAccent">#2aac4b</color>
-
     <color name="normalGrey">#c0c0c0</color>
     <color name="darkGrey">#212121</color>
     <color name="grey">#303030</color>
     <color name="lightGrey">#424242</color>
+
+    <color name="colorDrawerSelected">#E1E1E1</color>
+    <color name="white">#ffffff</color>
+    <color name="colorCardBackground">#ffffff</color>
+    <color name="colorDialogBackground">#ffffff</color>
+    <color name="black_overlay">#66000000</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#3F51B5</color>
+    <color name="colorAccent">#FF4343CD</color>
+    <color name="colorTextLink">#FF4343CD</color>
+    <color name="colorAppBarMenuText">#000000</color>
+    <color name="colorSeekbarTick">#000000</color>
+    <color name="shadow_themed">#40000000</color>
+
+    <color name="settings_dialog_highlight">#55000000</color>
+    <color name="divider">#6D020202</color>
+
 </resources>

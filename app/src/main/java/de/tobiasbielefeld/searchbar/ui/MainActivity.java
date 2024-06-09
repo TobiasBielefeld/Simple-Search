@@ -23,7 +23,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
@@ -42,9 +41,13 @@ import java.net.URLEncoder;
 import de.tobiasbielefeld.searchbar.R;
 import de.tobiasbielefeld.searchbar.classes.CustomAppCompatActivity;
 import de.tobiasbielefeld.searchbar.helper.Records;
+import de.tobiasbielefeld.searchbar.ui.about.AboutActivity;
 import de.tobiasbielefeld.searchbar.ui.settings.Settings;
 
 import static de.tobiasbielefeld.searchbar.SharedData.*;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends CustomAppCompatActivity implements TextWatcher, View.OnClickListener, TextView.OnEditorActionListener {
 
@@ -56,12 +59,9 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ActionBar actionBar = getSupportActionBar();
-
-        assert actionBar != null;
-        actionBar.setDisplayShowCustomEnabled(true);
-        actionBar.setDisplayShowTitleEnabled(false);
-        actionBar.setCustomView(R.layout.main_toolbar);
+        // Setup navbar with item select listener
+        Toolbar actionBar = findViewById(R.id.toolbar);
+        setSupportActionBar(actionBar);
 
         searchText = findViewById(R.id.editTextSearch);
         clearButton = findViewById(R.id.imageButtonClear);
@@ -86,39 +86,27 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.item_settings: //starts the settings activity
-                Intent intent = new Intent(getApplicationContext(), Settings.class);
-                startActivity(intent);
-                //startActivityForResult(intent, 1);
-                break;
-            case R.id.item_delete_all: //shows the delete dialog
-                records.showDeleteAllDialog();
-                break;
+        int id = item.getItemId();
+
+        if (id == R.id.item_settings) { //starts the settings activity
+            Intent intent = new Intent(getApplicationContext(), Settings.class);
+            startActivity(intent);
+        } else if (id == R.id.item_about) { //starts the about activity
+            Intent intentAbout = new Intent(getApplicationContext(), AboutActivity.class);
+            startActivity(intentAbout);
+        } else if (id == R.id.item_delete_all) { //shows the delete dialog
+            records.showDeleteAllDialog();
         }
 
         return true;
     }
-
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//
-//        if (requestCode == 1) {
-//            if(resultCode == Activity.RESULT_OK){
-//                if (data.hasExtra(getString(R.string.intent_recreate))){
-//                    recreate();
-//                }
-//            }
-//        }
-//    }
 
     /*
      * If the search bar contains text, show the delete-all-text button
      */
     @Override
     public void onTextChanged(CharSequence s, int start, int before, int count) {
-        clearButton.setVisibility(s.toString().equals("") ? View.GONE : View.VISIBLE);
+        clearButton.setVisibility(s.toString().isEmpty() ? View.GONE : View.VISIBLE);
     }
 
     @Override
@@ -228,7 +216,6 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
      */
     @Override
     public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-
         //just start the search, because the ime id is not always the same on every device...
         startSearch();
 

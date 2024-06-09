@@ -1,104 +1,86 @@
-/*
- * Copyright (C) 2017  Tobias Bielefeld
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *
- * If you want to contact me, send me an e-mail at tobias.bielefeld@gmail.com
- */
-
 package de.tobiasbielefeld.searchbar.classes;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.content.Context;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.view.WindowManager;
-
-import de.tobiasbielefeld.searchbar.R;
-import de.tobiasbielefeld.searchbar.helper.LocaleChanger;
+import android.view.MenuItem;
 
 import static de.tobiasbielefeld.searchbar.SharedData.*;
 
-/**
- * Custom AppCompatActivity to implement language changing in attachBaseContext()
- * and some settings in onResume().  It also sets the Preferences, in case the app
- * was paused for a longer time and the references got lost.
- */
+import java.util.Locale;
 
-@SuppressLint("Registered")
-public class CustomAppCompatActivity extends AppCompatActivity {
+public abstract class CustomAppCompatActivity extends AppCompatActivity {
 
-    @Override protected void onCreate(Bundle savedInstanceState){
-        super.onCreate(savedInstanceState);
+    private Locale lastKnownLocale;
+    private int lastKnownTheme;
+    private int lastKnownOrientation;
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         reinitializeData(this);
-        applyDarkTheme();
+
+        lastKnownLocale = Locale.getDefault();
+
+        lastKnownTheme = getSavedTheme();
+        changeTheme(lastKnownTheme);
+
+        lastKnownOrientation = getSavedOrientation();
+        setOrientation(lastKnownOrientation);
+
+        super.onCreate(savedInstanceState);
     }
 
-    @Override
-    protected void attachBaseContext(Context base) {
-        super.attachBaseContext(LocaleChanger.onAttach(base));
-    }
-
-    /**
-     * Apply the preferences from orientation and status bar to the current activity. It will be
-     * called in the onResume, so after changing the preferences I don't need a listener to update
-     * the changes on the previous activities.
-     */
-    @Override
-    public void onResume() {
+    protected void onResume() {
         super.onResume();
-        setOrientation(this);
-        showOrHideStatusBar(this);
-    }
+        showOrHideStatusBar(getWindow(), getSavedBoolean(PREF_STATUS_BAR, false));
 
-    /**
-     * Sets the screen orientation according to the settings. It is called from onResume().
-     * @param activity The activity to apply the orientation on.
-     */
-    public static void setOrientation(Activity activity) {
-        switch (getSavedString(PREF_ORIENTATION, "1")) {
-            case "1": //follow system settings
-                activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_USER);
-                break;
-            case "2": //portrait
-                activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-                break;
-            case "3": //landscape
-                activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-                break;
-            case "4": //landscape upside down
-                activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_REVERSE_LANDSCAPE);
-                break;
+        Locale newLocale = Locale.getDefault();
+        if (!lastKnownLocale.getLanguage().equals(newLocale.getLanguage())) {
+            lastKnownLocale = newLocale;
+            recreate();
+        }
+
+        int newTheme = getSavedTheme();
+        if (lastKnownTheme != newTheme) {
+            lastKnownTheme = newTheme;
+            changeTheme(newTheme);
+        }
+
+        int newOrientation = getSavedOrientation();
+        if (lastKnownOrientation != newOrientation) {
+            lastKnownOrientation = newOrientation;
+            setOrientation(lastKnownOrientation);
         }
     }
 
-    /**
-     * Hides the status bar according to the settings. It is called from onResume().
-     * @param activity The activity to apply the changes on.
-     */
-    public void showOrHideStatusBar(Activity activity) {
-        if (getSavedBoolean(PREF_STATUS_BAR, false))
-            activity.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                    WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        else
-            activity.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Respond to the action bar's Up/Home button
+        if (item.getItemId() == android.R.id.home) {
+            getOnBackPressedDispatcher().onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
-    protected void applyDarkTheme(){
-        if (getSavedBoolean(PREF_DARK_THEME, DEFAULT_DARK_THEME)) {
-            setTheme(R.style.AppTheme_Dark);
+    public void changeTheme(int theme) {
+        switch (theme) {
+            case 0 -> getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
+            case 1 -> getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+            case 2 -> getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }
+    }
+
+    public void setOrientation(int orientation) {
+
+        switch (orientation) {
+            case 1 -> setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
+            case 2 -> setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+            case 3 -> setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+            case 4 -> setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_REVERSE_LANDSCAPE);
         }
     }
 }

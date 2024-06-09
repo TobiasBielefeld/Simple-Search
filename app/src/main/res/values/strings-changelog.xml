@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="changelog_8_1" translatable="false">Made app compatible with Android 14</string>
+    <string name="changelog_8_2" translatable="false">Added 5 machine-created translations</string>
+    <string name="changelog_8_3" translatable="false">Use Android 13 language change system</string>
+    <string name="changelog_8_4" translatable="false">Updated some search providers</string>
+    <string name="changelog_8_5" translatable="false">Increased min sdk to 21</string>
+
     <string name="changelog_7_1" translatable="false">Added a new dark theme!</string>
     <string name="changelog_7_2" translatable="false">Added Metager as a Search engine</string>
     <string name="changelog_7_3" translatable="false">Now 3 different customized search engines can be set up</string>

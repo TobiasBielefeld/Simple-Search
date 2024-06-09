@@ -37,6 +37,10 @@
 <string name="settings_portrait">"Hochformat"</string>
 <string name="settings_landscape">"Querformat"</string>
 <string name="settings_landscape_upside_down">"Querformat umgedreht"</string>
+<string name="settings_change_theme">"Thema ändern"</string>
+<string name="settings_change_theme_dark">"Dunkel"</string>
+<string name="settings_change_theme_light">"Hell"</string>
+<string name="settings_change_theme_default">"System Einstellungen folgen"</string>
 
 <!-- About -->
 <string name="activity_about">"Über"</string>
@@ -58,21 +62,16 @@
 <string name="about_sliding_tabs_title">"PagerSlidingTabStrip Bibliothek"</string>
 <string name="about_sliding_tabs_usage">"Wird für die Tabs im \"Über das Spiel\" Bildschirm verwendet"</string>
 
-<!-- Search urls -->
-<string name="url_google">"https://www.google.com/search?q=%s"</string>
-<string name="url_yahoo">"https://search.yahoo.com/search?p=%s"</string>
-<string name="url_bing">"https://www.bing.com/search?q=%s&amp;cc=de"</string>
-<string name="url_yandex">"https://www.yandex.com/?q=%s"</string>
-<string name="url_startpage">"https://www.startpage.com/do/search?query=%s&amp;language=deutsch"</string>
-<string name="url_duckduckgo">"https://duckduckgo.com/?q=%s"</string>
-<string name="url_duckduckgo_lite">"https://duckduckgo.com/lite?q=%s"</string>
-<string name="url_searx">"https://www.searx.me/?q=%s"</string>
-<string name="url_ecosia">"https://www.ecosia.org/search?q=%s"</string>
-<string name="url_metager">"https://metager.de/meta/meta.ger3?focus=web&amp;lang=de&amp;eingabe=%s"</string>
-
 <!-- languages -->
 <string name="settings_language_default">"Standard Sprache"</string>
 <string name="settings_language_english">"Englisch"</string>
 <string name="settings_language_french">"Französisch"</string>
 <string name="settings_language_german">"Deutsch"</string>
+<string name="settings_language_chinese_simplified">"Chinesisch (Vereinfacht)"</string>
+<string name="settings_language_italian">"Italienisch"</string>
+<string name="settings_language_japanese">"Japanisch"</string>
+<string name="settings_language_spanish_argentina">"Spanisch (Argentinien)"</string>
+<string name="settings_language_spanish">"Spanisch"</string>
+<string name="settings_language_turkish">"Türkisch"</string>
+
 </resources>

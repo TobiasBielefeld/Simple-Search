@@ -1,0 +1,5 @@
+* Made app compatible with Android 14
+* Added 5 machine-created translations
+* Use Android 13 language change system
+* Updated some search providers
+* Increased min sdk to 21

@@ -39,6 +39,10 @@
     <string name="settings_portrait">Portrait</string>
     <string name="settings_landscape">Landscape</string>
     <string name="settings_landscape_upside_down">Landscape upside down</string>
+    <string name="settings_change_theme">"Change theme"</string>
+    <string name="settings_change_theme_dark">"Dark"</string>
+    <string name="settings_change_theme_light">"Light"</string>
+    <string name="settings_change_theme_default">"Follow system settings"</string>
 
     <!--About-->
     <string name="activity_about">About</string>
@@ -61,22 +65,15 @@
     <string name="about_sliding_tabs_title">PagerSlidingTabStrip library</string>
     <string name="about_sliding_tabs_usage">Used for the tabs in the \"About game\" screen</string>
 
-    <!-- Search urls -->
-    <string name="url_google" formatted="false">https://www.google.com/search?q=%s</string>
-    <string name="url_yahoo" formatted="false">https://search.yahoo.com/search?p=%s</string>
-    <string name="url_bing" formatted="false">https://www.bing.com/search?q=%s</string>
-    <string name="url_yandex" formatted="false">https://www.yandex.com/?q=%s</string>
-    <string name="url_startpage" formatted="false">https://www.startpage.com/do/search?query=%s</string>
-    <string name="url_duckduckgo" formatted="false">https://duckduckgo.com/?q=%s</string>
-    <string name="url_duckduckgo_lite" formatted="false">https://duckduckgo.com/lite?q=%s</string>
-    <string name="url_searx" formatted="false">https://www.searx.me/?q=%s</string>
-    <string name="url_ecosia" formatted="false">https://www.ecosia.org/search?q=%s</string>
-    <string name="url_metager" formatted="false">https://metager.de/en/meta/meta.ger3?focus=web&amp;lang=en&amp;eingabe=%s</string>
-
     <!-- languages -->
     <string name="settings_language_default">Default language</string>
     <string name="settings_language_english">English</string>
     <string name="settings_language_french">French</string>
     <string name="settings_language_german">German</string>
-
+    <string name="settings_language_chinese_simplified">"Chinese (Simplified)"</string>
+    <string name="settings_language_italian">"Italian"</string>
+    <string name="settings_language_japanese">"Japanese"</string>
+    <string name="settings_language_spanish">"Spanish"</string>
+    <string name="settings_language_spanish_argentina">"Spanish (Argentina)"</string>
+    <string name="settings_language_turkish">"Turkish"</string>
 </resources>

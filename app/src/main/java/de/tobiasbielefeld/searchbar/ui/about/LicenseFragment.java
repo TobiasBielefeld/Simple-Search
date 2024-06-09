@@ -19,12 +19,13 @@
 package de.tobiasbielefeld.searchbar.ui.about;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.fragment.app.Fragment;
 
 import de.tobiasbielefeld.searchbar.R;
 
@@ -40,14 +41,13 @@ public class LicenseFragment extends Fragment {
         View view = inflater.inflate(R.layout.content_about_tab2, container, false);
 
         TextView textMaterialIconsLicense = (TextView) view.findViewById(R.id.about_license_material_icons);
-
-        TextView textSlidingTabsLicense = (TextView) view.findViewById(R.id.about_license_sliding_tabs);
         TextView textAndroidSupportLicense = (TextView) view.findViewById(R.id.about_license_android_support_libraries);
 
-        TextView[] textViews = new TextView[]{textMaterialIconsLicense, textSlidingTabsLicense, textAndroidSupportLicense};
+        TextView[] textViews = new TextView[]{textMaterialIconsLicense, textAndroidSupportLicense};
 
         for (TextView textView : textViews){
             textView.setMovementMethod(LinkMovementMethod.getInstance());
+            textView.setLinkTextColor(getResources().getColor(R.color.colorTextLink));
         }
 
         return view;

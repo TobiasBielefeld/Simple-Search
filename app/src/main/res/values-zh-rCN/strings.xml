@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?><resources>
+      
+  <string name="app_version">版本</string>
+      
+  <string name="confirm">确认</string>
+      
+  <string name="cancel">取消</string>
+      
+  <!-- Main Activity -->
+      
+  <string name="record_list_button_description">复制到搜索查询</string>
+      
+  <string name="unsupported_search_character">查询包含不受支持的字符 :(</string>
+      
+  <string name="unsupported_search_string">您的自定义搜索网址无效 :/</string>
+      
+  <string name="string_doesnt_contain_placeholder">您的自定义搜索引擎中没有用于搜索查询的占位符！</string>
+      
+  <string name="menu_delete_all">删除所有记录</string>
+      
+  <string name="search_hint">搜索…</string>
+      
+  <!-- Dialogs -->
+      
+  <string name="dialog_delete_entry_title">删除该记录吗？</string>
+      
+  <string name="dialog_delete_all_records_text">删除所有记录！你确定吗？</string>
+      
+  <string name="dialog_custom_search_engine_title">输入自定义搜索引擎</string>
+      
+  <string formatted="false" name="dialog_custom_search_engine_text">输入“%s”（不带引号）作为应插入搜索查询的占位符。</string>
+      
+  <!-- Settings -->
+      
+  <string name="activity_settings">设置</string>
+      
+  <string name="settings_custom">风俗</string>
+      
+  <string name="settings_search_title">搜索</string>
+      
+  <string name="settings_search_summary">更改搜索引擎并设置历史记录</string>
+      
+  <string name="settings_general_title">一般的</string>
+      
+  <string name="settings_general_summary">更改应用程序的行为</string>
+      
+  <string name="settings_search_engine_title">搜索引擎</string>
+      
+  <string name="settings_enable_records_title">启用历史记录</string>
+      
+  <string name="settings_enable_records_text">保存搜索到的查询以供重复使用</string>
+      
+  <string name="settings_orientation">屏幕方向</string>
+      
+  <string name="settings_change_language">改变语言</string>
+      
+  <string name="settings_hide_status_bar">隐藏状态栏</string>
+      
+  <string name="settings_dark_theme">启用深色主题</string>
+      
+  <string name="settings_hide_app_icon_title">隐藏抽屉中的应用程序图标</string>
+      
+  <string name="settings_hide_app_icon_text">然后应用程序只能通过其小部件来启动</string>
+      
+  <string name="settings_restart_app">重新启动应用程序以应用更改</string>
+      
+  <string name="settings_follow_system_settings">按照系统设置</string>
+      
+  <string name="settings_portrait">肖像</string>
+      
+  <string name="settings_landscape">景观</string>
+      
+  <string name="settings_landscape_upside_down">景观倒置</string>
+      
+  <string name="settings_change_theme">改变主题</string>
+      
+  <string name="settings_change_theme_dark">黑暗的</string>
+      
+  <string name="settings_change_theme_light">光</string>
+      
+  <string name="settings_change_theme_default">按照系统设置</string>
+      
+  <!--About-->
+      
+  <string name="activity_about">关于</string>
+      
+  <string name="about_description">显示有关应用程序的信息，如许可证和更新日志</string>
+      
+  <string name="about_tab_1">信息</string>
+      
+  <string name="about_tab_2">许可证</string>
+      
+  <string name="about_tab_3">更新日志</string>
+      
+  <string name="about_developer">开发者</string>
+      
+  <string name="about_developer_name">托比亚斯·比勒费尔德</string>
+      
+  <string name="about_compiled">编译于</string>
+      
+  <string name="about_source_code">源代码</string>
+      
+  <string name="about_license">执照</string>
+      
+  <string name="about_translations">翻译</string>
+      
+  <string name="about_further_contributors">其他贡献者</string>
+      
+  <string name="about_android_support_libraries_title">Android 支持库</string>
+      
+  <string name="about_android_support_libraries_usage">用于更好的设计和更容易的开发</string>
+      
+  <string name="about_material_icons_title">材料设计图标</string>
+      
+  <string name="about_material_icons_usage">用于此应用程序中的所有图标</string>
+      
+  <string name="about_sliding_tabs_title">PagerSlidingTabStrip 库</string>
+      
+  <string name="about_sliding_tabs_usage">用于“关于游戏”屏幕中的选项卡</string>
+
+  <!-- languages -->
+      
+  <string name="settings_language_default">默认语言</string>
+      
+  <string name="settings_language_english">英语</string>
+      
+  <string name="settings_language_french">法语</string>
+      
+  <string name="settings_language_german">德语</string>
+      
+  <string name="settings_language_chinese_simplified">简体中文）</string>
+      
+  <string name="settings_language_italian">意大利语</string>
+      
+  <string name="settings_language_japanese">日本人</string>
+      
+  <string name="settings_language_spanish">西班牙语</string>
+      
+  <string name="settings_language_spanish_argentina">西班牙语（阿根廷）</string>
+      
+  <string name="settings_language_turkish">土耳其</string>
+  
+</resources>

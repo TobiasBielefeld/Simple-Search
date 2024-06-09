@@ -14,10 +14,9 @@
         android:paddingRight="@dimen/card_view_padding_horizontal"
         android:paddingTop="@dimen/card_view_padding_vertical">
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            card_view:cardBackgroundColor="?android:attr/colorBackground"
             card_view:cardCornerRadius="2dp"
             card_view:cardUseCompatPadding="true">
 
@@ -31,10 +30,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:paddingBottom="6dp">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="218dp"
                         android:layout_height="wrap_content"
                         android:drawableLeft="@mipmap/ic_launcher"
                         android:gravity="center"
@@ -157,12 +157,11 @@
                 </TableLayout>
 
             </LinearLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            card_view:cardBackgroundColor="?android:attr/colorBackground"
             card_view:cardCornerRadius="2dp"
             card_view:cardUseCompatPadding="true">
 
@@ -192,7 +191,6 @@
                 <TableLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="7dp"
                     android:layout_marginStart="7dp">
 
                     <TableRow
@@ -220,12 +218,11 @@
 
             </LinearLayout>
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            card_view:cardBackgroundColor="?android:attr/colorBackground"
             card_view:cardCornerRadius="2dp"
             card_view:cardUseCompatPadding="true">
 
@@ -280,7 +277,7 @@
 
             </LinearLayout>
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 

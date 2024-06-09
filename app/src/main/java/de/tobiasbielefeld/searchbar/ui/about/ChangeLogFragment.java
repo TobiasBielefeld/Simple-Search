@@ -19,15 +19,10 @@
 package de.tobiasbielefeld.searchbar.ui.about;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.CardView;
-import android.text.SpannableString;
 import android.text.TextUtils;
-import android.text.style.BulletSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -37,6 +32,9 @@ import java.util.List;
 import de.tobiasbielefeld.searchbar.R;
 
 import static de.tobiasbielefeld.searchbar.SharedData.createBulletParagraph;
+
+import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
 
 /*
  * Shows the changelog, which is simply loaded from a webView. The About activity disables recreation
@@ -53,7 +51,7 @@ public class ChangeLogFragment extends Fragment {
 
         LinearLayout layoutContainer = view.findViewById(R.id.changelog_container);
 
-        String[] titles = new String[]{"1.2", "1.1.4", "1.1.3", "1.1.2", "1.1.1", "1.1", "1.0"};
+        String[] titles = new String[]{"2.0", "1.2", "1.1.4", "1.1.3", "1.1.2", "1.1.1", "1.1", "1.0"};
 
         for (int i = 0; i < titles.length; i++) {
             CardView card = (CardView) LayoutInflater.from(getContext()).inflate(R.layout.changelog_card_view, null);
@@ -77,9 +75,7 @@ public class ChangeLogFragment extends Fragment {
         //load the lines from the changelog separately
         for (int i = 1; i <= MAX_LINES_PER_VERSION; i++) {
 
-            int ID = getResources().getIdentifier(
-                    "changelog_" + Integer.toString(pos) + "_" + Integer.toString(i),
-                    "string", getActivity().getPackageName());
+            int ID = getResources().getIdentifier("changelog_" + pos + "_" + i, "string", getActivity().getPackageName());
 
             if (ID != 0) {
                 stringList.add(getString(ID));
@@ -88,13 +84,6 @@ public class ChangeLogFragment extends Fragment {
             }
         }
 
-        //convert to array
-        CharSequence[] strings = new CharSequence[stringList.size()];
-
-        for (int i=0; i<strings.length; i++){
-            strings[i] = stringList.get(i);
-        }
-
-        return TextUtils.concat(createBulletParagraph(stringList.toArray(new CharSequence[stringList.size()])));
+        return TextUtils.concat(createBulletParagraph(stringList.toArray(new CharSequence[0])));
     }
 }

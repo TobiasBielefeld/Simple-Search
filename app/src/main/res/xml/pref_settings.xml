@@ -1,0 +1,77 @@
+<PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:title="@string/activity_settings" >
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:singleLineTitle="false"
+        app:title="@string/settings_general_title">
+
+        <ListPreference
+            app:iconSpaceReserved="false"
+            app:singleLineTitle="false"
+            app:defaultValue="0"
+            app:entries="@array/pref_change_theme_titles"
+            app:entryValues="@array/pref_change_theme_values"
+            app:key="@string/pref_key_theme"
+            app:negativeButtonText="@string/cancel"
+            app:positiveButtonText="@null"
+            app:useSimpleSummaryProvider="true"
+            app:title="@string/settings_change_theme" />
+
+        <ListPreference
+            app:iconSpaceReserved="false"
+            app:singleLineTitle="false"
+            app:defaultValue="1"
+            app:entries="@array/pref_orientation_titles"
+            app:entryValues="@array/pref_orientation_values"
+            app:key="@string/pref_key_orientation"
+            app:negativeButtonText="@string/cancel"
+            app:positiveButtonText="@null"
+            app:summary="%s"
+            app:title="@string/settings_orientation" />
+
+        <de.tobiasbielefeld.searchbar.ui.settings.PreferenceLanguage
+            app:iconSpaceReserved="false"
+            app:singleLineTitle="false"
+            app:key="@string/pref_key_language"
+            app:negativeButtonText="@string/cancel"
+            app:positiveButtonText="NULL"
+            app:title="@string/settings_change_language" />
+
+        <SwitchPreferenceCompat
+            app:iconSpaceReserved="false"
+            app:singleLineTitle="false"
+            app:defaultValue="@bool/default_status_bar"
+            app:key="@string/pref_key_hide_status_bar"
+            app:title="@string/settings_hide_status_bar" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:singleLineTitle="false"
+        app:title="@string/settings_search_title">
+
+        <de.tobiasbielefeld.searchbar.ui.settings.PreferenceSearchEngines
+            app:iconSpaceReserved="false"
+            app:singleLineTitle="false"
+            app:key="@string/pref_key_search_engine"
+            app:title="@string/settings_search_engine_title"
+            app:negativeButtonText="@string/cancel"
+            app:positiveButtonText="NULL"
+            app:defaultValue="@integer/default_search_engine_v2"
+            app:entries="@array/pref_search_engine_titles"
+            app:entryValues="@array/pref_search_engine_values"/>
+
+        <SwitchPreferenceCompat
+            app:iconSpaceReserved="false"
+            app:singleLineTitle="false"
+            app:defaultValue="true"
+            app:key="@string/pref_key_enable_records"
+            app:title="@string/settings_enable_records_title"
+            app:summary="@string/settings_enable_records_text"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -9,4 +9,8 @@
         android:id="@+id/item_settings"
         android:title="@string/menu_settings"/>
 
+    <item
+        android:id="@+id/item_about"
+        android:title="@string/activity_about"/>
+
 </menu>

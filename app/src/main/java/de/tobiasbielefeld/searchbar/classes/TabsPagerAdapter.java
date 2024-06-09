@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017  Tobias Bielefeld
+ * Copyright (C) 2016  Tobias Bielefeld
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -16,13 +16,18 @@
  * If you want to contact me, send me an e-mail at tobias.bielefeld@gmail.com
  */
 
-package de.tobiasbielefeld.searchbar.ui.about;
+package de.tobiasbielefeld.searchbar.classes;
 
 import android.content.Context;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 
-import de.tobiasbielefeld.searchbar.R;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Adapter for the tabs
@@ -30,35 +35,33 @@ import de.tobiasbielefeld.searchbar.R;
 
 public class TabsPagerAdapter extends FragmentPagerAdapter {
 
-    private final String[] TITLES;
+    private final List<String> titleList = new ArrayList<>();
+    private final List<Fragment> fragmentList = new ArrayList<>();
 
-    TabsPagerAdapter(FragmentManager fm, Context context) {
+    public TabsPagerAdapter(Context context, FragmentManager fm, int[] titleIds, Fragment[] fragments) {
         super(fm);
-        TITLES = new String[]{context.getString(R.string.about_tab_1) , context.getString(R.string.about_tab_2), context.getString(R.string.about_tab_3)};
+
+        for (int id: titleIds) {
+            titleList.add(context.getString(id));
+        }
+
+        fragmentList.addAll(Arrays.asList(fragments));
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return TITLES[position];
+        return titleList.get(position);
     }
 
     @Override
     public int getCount() {
-        return TITLES.length;
+        return titleList.size();
     }
 
+    @NonNull
     @Override
-    public android.support.v4.app.Fragment getItem(int index) {
-        switch (index) {
-            case 0:
-                return new InformationFragment();
-            case 1:
-                return new LicenseFragment();
-            case 2:
-                return new ChangeLogFragment();
-        }
-
-        return null;
+    public Fragment getItem(int index) {
+        return fragmentList.get(index);
     }
 
 }

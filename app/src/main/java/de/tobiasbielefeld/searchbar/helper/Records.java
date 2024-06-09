@@ -43,10 +43,10 @@ import static de.tobiasbielefeld.searchbar.SharedData.*;
 
 public class Records implements View.OnClickListener, View.OnLongClickListener{
 
-    private MainActivity main;
-    private LinearLayout container;
-    private LinkedList<String> recordList;
-    private int MAX_NUMBER_OF_RECORDS;
+    private final MainActivity main;
+    private final LinearLayout container;
+    private final LinkedList<String> recordList;
+    private final int MAX_NUMBER_OF_RECORDS;
 
     public Records(MainActivity mainActivity, LinearLayout linearLayout){
         container = linearLayout;
@@ -65,7 +65,7 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
         recordList.clear();
         container.removeAllViews();
 
-        if (!recordsEnabled())
+        if (recordsDisabled())
             return;
 
         int recordListLength = getSavedInt(PREF_RECORD_LIST_SIZE, 0);
@@ -96,7 +96,7 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
      */
     public void add(String newString) {
 
-        if (!recordsEnabled())
+        if (recordsDisabled())
             return;
 
         // Prevent redundant entries from filling history
@@ -115,7 +115,7 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
      * Saves the record list to the sharedPref
      */
     private void save() {
-        // Start edit session for preferences to prevent inconsistancies in stored data.
+        // Start edit session for preferences to prevent inconsistencies in stored data.
         SharedPreferences.Editor editSession = SharedData.sharedPref.edit();
         
         int i=0;
@@ -161,8 +161,8 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
         dialog.show(main.getSupportFragmentManager(), "dialog2");
     }
 
-    private boolean recordsEnabled(){
-        return getSavedBoolean(main.getString(R.string.pref_key_enable_records),true);
+    private boolean recordsDisabled(){
+        return !getSavedBoolean(main.getString(R.string.pref_key_enable_records), true);
     }
 
     /*
@@ -211,6 +211,4 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
         main.appendSearchText(text);
         main.focusSearchBar();
     }
-
-
 }

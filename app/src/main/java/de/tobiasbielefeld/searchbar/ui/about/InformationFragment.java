@@ -19,12 +19,13 @@
 package de.tobiasbielefeld.searchbar.ui.about;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.fragment.app.Fragment;
 
 import java.text.DateFormat;
 import java.util.Locale;
@@ -46,10 +47,7 @@ public class InformationFragment extends Fragment {
         TextView textViewAppVersion = (TextView) view.findViewById(R.id.aboutTextViewVersion);                  //app version
         TextView textViewGitHubLink = (TextView) view.findViewById(R.id.aboutTextViewGitHubLink);               //link for the gitHub repo
         TextView textViewLicenseLink = (TextView) view.findViewById(R.id.aboutTextViewLicenseLink);
-
-
         TextView textFrenchContributors = (TextView) view.findViewById(R.id.about_french_contributors);
-
         TextView textFurtherContributors1 = (TextView) view.findViewById(R.id.about_further_contributors_1);
         TextView textFurtherContributors2 = (TextView) view.findViewById(R.id.about_further_contributors_2);
 
@@ -66,9 +64,8 @@ public class InformationFragment extends Fragment {
 
         for (TextView textView : textViews){
             textView.setMovementMethod(LinkMovementMethod.getInstance());
+            textView.setLinkTextColor(getResources().getColor(R.color.colorTextLink));
         }
-
-
 
         return view;
     }

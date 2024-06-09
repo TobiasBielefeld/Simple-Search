@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?><resources>
+      
+  <string name="app_version">Versione</string>
+      
+  <string name="confirm">Confermare</string>
+      
+  <string name="cancel">Annulla</string>
+      
+  <!-- Main Activity -->
+      
+  <string name="record_list_button_description">Copia nella query di ricerca</string>
+      
+  <string name="unsupported_search_character">La query contiene caratteri non supportati :(</string>
+      
+  <string name="unsupported_search_string">L\'URL di ricerca personalizzato non è valido :/</string>
+      
+  <string name="string_doesnt_contain_placeholder">Non c\'è alcun segnaposto per la query di ricerca nel tuo motore di ricerca personalizzato!</string>
+      
+  <string name="menu_delete_all">Elimina tutti i record</string>
+      
+  <string name="search_hint">Cercare…</string>
+      
+  <!-- Dialogs -->
+      
+  <string name="dialog_delete_entry_title">Eliminare questo record?</string>
+      
+  <string name="dialog_delete_all_records_text">Elimina tutti i record! Sei sicuro?</string>
+      
+  <string name="dialog_custom_search_engine_title">Inserisci il motore di ricerca personalizzato</string>
+      
+  <string formatted="false" name="dialog_custom_search_engine_text">Inserisci un valore \"%s\" (senza virgolette) come segnaposto in cui inserire la query di ricerca.</string>
+      
+  <!-- Settings -->
+      
+  <string name="activity_settings">Impostazioni</string>
+      
+  <string name="settings_custom">Costume</string>
+      
+  <string name="settings_search_title">Ricerca</string>
+      
+  <string name="settings_search_summary">Cambia il motore di ricerca e imposta la cronologia</string>
+      
+  <string name="settings_general_title">Generale</string>
+      
+  <string name="settings_general_summary">Cambia il comportamento dell\'app</string>
+      
+  <string name="settings_search_engine_title">Motore di ricerca</string>
+      
+  <string name="settings_enable_records_title">Abilita la cronologia</string>
+      
+  <string name="settings_enable_records_text">Salva le query cercate per il riutilizzo</string>
+      
+  <string name="settings_orientation">Orientamento schermo</string>
+      
+  <string name="settings_change_language">Cambia lingua</string>
+      
+  <string name="settings_hide_status_bar">Nascondi barra di stato</string>
+      
+  <string name="settings_dark_theme">Abilita il tema scuro</string>
+      
+  <string name="settings_hide_app_icon_title">Nascondi l\'icona dell\'app nel drawer</string>
+      
+  <string name="settings_hide_app_icon_text">Quindi l\'app può essere avviata solo utilizzando il suo widget</string>
+      
+  <string name="settings_restart_app">Riavvia l\'app per applicare le modifiche</string>
+      
+  <string name="settings_follow_system_settings">Segui le impostazioni di sistema</string>
+      
+  <string name="settings_portrait">Ritratto</string>
+      
+  <string name="settings_landscape">Paesaggio</string>
+      
+  <string name="settings_landscape_upside_down">Paesaggio sottosopra</string>
+      
+  <string name="settings_change_theme">Cambia tema</string>
+      
+  <string name="settings_change_theme_dark">Buio</string>
+      
+  <string name="settings_change_theme_light">Leggero</string>
+      
+  <string name="settings_change_theme_default">Segui le impostazioni di sistema</string>
+      
+  <!--About-->
+      
+  <string name="activity_about">Di</string>
+      
+  <string name="about_description">Mostra informazioni sull\'app come licenze e registro delle modifiche</string>
+      
+  <string name="about_tab_1">Informazione</string>
+      
+  <string name="about_tab_2">Licenze</string>
+      
+  <string name="about_tab_3">Registro delle modifiche</string>
+      
+  <string name="about_developer">Sviluppatore</string>
+      
+  <string name="about_developer_name">Tobias Bielefeld</string>
+      
+  <string name="about_compiled">Compilato il</string>
+      
+  <string name="about_source_code">Codice sorgente</string>
+      
+  <string name="about_license">Licenza</string>
+      
+  <string name="about_translations">Traduzioni</string>
+      
+  <string name="about_further_contributors">Ulteriori contributori</string>
+      
+  <string name="about_android_support_libraries_title">Libreria di supporto Android</string>
+      
+  <string name="about_android_support_libraries_usage">Utilizzato per una migliore progettazione e uno sviluppo più semplice</string>
+      
+  <string name="about_material_icons_title">Icone del design dei materiali</string>
+      
+  <string name="about_material_icons_usage">Utilizzato per tutte le icone di questa applicazione</string>
+      
+  <string name="about_sliding_tabs_title">Libreria PagerSlidingTabStrip</string>
+      
+  <string name="about_sliding_tabs_usage">Utilizzato per le schede nella sezione \"Informazioni sul gioco\" schermo</string>
+
+  <!-- languages -->
+      
+  <string name="settings_language_default">Lingua di default</string>
+      
+  <string name="settings_language_english">Inglese</string>
+      
+  <string name="settings_language_french">francese</string>
+      
+  <string name="settings_language_german">Tedesco</string>
+      
+  <string name="settings_language_chinese_simplified">Cinese semplificato)</string>
+      
+  <string name="settings_language_italian">Italiano</string>
+      
+  <string name="settings_language_japanese">giapponese</string>
+      
+  <string name="settings_language_spanish">spagnolo</string>
+      
+  <string name="settings_language_spanish_argentina">spagnolo (Argentina)</string>
+      
+  <string name="settings_language_turkish">Turco</string>
+  
+</resources>

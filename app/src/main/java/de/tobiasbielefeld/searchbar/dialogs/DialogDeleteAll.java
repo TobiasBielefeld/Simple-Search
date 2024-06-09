@@ -20,14 +20,14 @@ package de.tobiasbielefeld.searchbar.dialogs;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.DialogFragment;
 
 import de.tobiasbielefeld.searchbar.R;
 
 import static de.tobiasbielefeld.searchbar.SharedData.records;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.DialogFragment;
 
 /**
  * Simply delete all records when pressing the confirm button
@@ -35,20 +35,16 @@ import static de.tobiasbielefeld.searchbar.SharedData.records;
 
 public class DialogDeleteAll extends DialogFragment {
 
-    @Override
     @NonNull
+    @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
         builder.setMessage(R.string.dialog_delete_all_records_text)
-                .setPositiveButton(R.string.confirm, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        records.deleteAll();
-                    }})
-                .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        //cancel
-                    }});
+                .setPositiveButton(R.string.confirm, (dialog, id) -> records.deleteAll())
+                .setNegativeButton(R.string.cancel, (dialog, id) -> {
+                    //cancel
+                });
 
         return builder.create();
     }

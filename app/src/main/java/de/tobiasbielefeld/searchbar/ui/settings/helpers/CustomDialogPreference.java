@@ -16,35 +16,34 @@
  * If you want to contact me, send me an e-mail at tobias.bielefeld@gmail.com
  */
 
-package de.tobiasbielefeld.searchbar.classes;
+package de.tobiasbielefeld.searchbar.ui.settings.helpers;
 
 import android.content.Context;
-import android.preference.ListPreference;
 import android.util.AttributeSet;
 
-/**
- * Custom list preference, because "%s" as summary doesn't update the summary on Android 4. So override
- * setValue to get around this issue. Thanks to https://stackoverflow.com/a/16661022/7016229 !
- */
+import androidx.annotation.NonNull;
+import androidx.preference.DialogPreference;
 
-public class ListPreferenceWithSummary extends ListPreference {
+public abstract class CustomDialogPreference extends DialogPreference {
 
-    public ListPreferenceWithSummary(Context context, AttributeSet attrs) {
-        super(context, attrs);
-    }
-
-    public ListPreferenceWithSummary(Context context) {
+    public CustomDialogPreference(@NonNull Context context) {
         super(context);
     }
 
-    @Override
-    public void setValue(String value) {
-        super.setValue(value);
-        setSummary(value);
+    public CustomDialogPreference(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+    public CustomDialogPreference(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
     }
 
     @Override
-    public void setSummary(CharSequence summary) {
-        super.setSummary(getEntry());
+    public int getDialogLayoutResource() {
+        return getDialogResourceId();
     }
+
+    protected abstract int getDialogResourceId();
+
+    public abstract void updateSummary(boolean positiveResult);
 }

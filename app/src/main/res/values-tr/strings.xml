@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?><resources>
+      
+  <string name="app_version">Sürüm</string>
+      
+  <string name="confirm">Onaylamak</string>
+      
+  <string name="cancel">İptal etmek</string>
+      
+  <!-- Main Activity -->
+      
+  <string name="record_list_button_description">Arama sorgusuna kopyala</string>
+      
+  <string name="unsupported_search_character">Sorgu desteklenmeyen karakterler içeriyor :(</string>
+      
+  <string name="unsupported_search_string">Özel arama URL\'niz geçerli değil :/</string>
+      
+  <string name="string_doesnt_contain_placeholder">Özel arama motorunuzda arama sorgusu için yer tutucu yoktur!</string>
+      
+  <string name="menu_delete_all">Tüm kayıtları sil</string>
+      
+  <string name="search_hint">Aramak…</string>
+      
+  <!-- Dialogs -->
+      
+  <string name="dialog_delete_entry_title">Bu kayıt silinsin mi?</string>
+      
+  <string name="dialog_delete_all_records_text">Tüm kayıtları silin! Emin misin?</string>
+      
+  <string name="dialog_custom_search_engine_title">Özel arama motorunu girin</string>
+      
+  <string formatted="false" name="dialog_custom_search_engine_text">Bir \"%s\" girin (tırnak işaretleri olmadan) arama sorgusunun eklenmesi gereken yer tutucu olarak kullanılır.</string>
+      
+  <!-- Settings -->
+      
+  <string name="activity_settings">Ayarlar</string>
+      
+  <string name="settings_custom">Gelenek</string>
+      
+  <string name="settings_search_title">Aramak</string>
+      
+  <string name="settings_search_summary">Arama motorunu değiştirin ve geçmişi ayarlayın</string>
+      
+  <string name="settings_general_title">Genel</string>
+      
+  <string name="settings_general_summary">Uygulamanın davranışını değiştirme</string>
+      
+  <string name="settings_search_engine_title">Arama motoru</string>
+      
+  <string name="settings_enable_records_title">Geçmişi etkinleştir</string>
+      
+  <string name="settings_enable_records_text">Aranan sorguları yeniden kullanmak üzere kaydedin</string>
+      
+  <string name="settings_orientation">Ekran yönü</string>
+      
+  <string name="settings_change_language">Dili değiştir</string>
+      
+  <string name="settings_hide_status_bar">Durum çubuğunu gizle</string>
+      
+  <string name="settings_dark_theme">Koyu temayı etkinleştir</string>
+      
+  <string name="settings_hide_app_icon_title">Uygulama simgesini çekmecede gizle</string>
+      
+  <string name="settings_hide_app_icon_text">Daha sonra uygulama yalnızca widget\'ı kullanılarak başlatılabilir</string>
+      
+  <string name="settings_restart_app">Değişiklikleri uygulamak için uygulamayı yeniden başlatın</string>
+      
+  <string name="settings_follow_system_settings">Sistem ayarlarını takip edin</string>
+      
+  <string name="settings_portrait">Vesika</string>
+      
+  <string name="settings_landscape">Manzara</string>
+      
+  <string name="settings_landscape_upside_down">Manzara baş aşağı</string>
+      
+  <string name="settings_change_theme">Temayı değiştir</string>
+      
+  <string name="settings_change_theme_dark">Karanlık</string>
+      
+  <string name="settings_change_theme_light">Işık</string>
+      
+  <string name="settings_change_theme_default">Sistem ayarlarını takip edin</string>
+      
+  <!--About-->
+      
+  <string name="activity_about">Hakkında</string>
+      
+  <string name="about_description">Lisanslar ve değişiklik günlüğü gibi uygulama hakkındaki bilgileri göster</string>
+      
+  <string name="about_tab_1">Bilgi</string>
+      
+  <string name="about_tab_2">Lisanslar</string>
+      
+  <string name="about_tab_3">Değişiklik günlüğü</string>
+      
+  <string name="about_developer">Geliştirici</string>
+      
+  <string name="about_developer_name">Tobias Bielefeld</string>
+      
+  <string name="about_compiled">Derlendiği tarih</string>
+      
+  <string name="about_source_code">Kaynak kodu</string>
+      
+  <string name="about_license">Lisans</string>
+      
+  <string name="about_translations">Çeviriler</string>
+      
+  <string name="about_further_contributors">Diğer katkıda bulunanlar</string>
+      
+  <string name="about_android_support_libraries_title">Android destek kütüphanesi</string>
+      
+  <string name="about_android_support_libraries_usage">Daha iyi tasarım ve daha kolay geliştirme için kullanılır</string>
+      
+  <string name="about_material_icons_title">Malzeme tasarım simgeleri</string>
+      
+  <string name="about_material_icons_usage">Bu uygulamadaki tüm simgeler için kullanılır</string>
+      
+  <string name="about_sliding_tabs_title">PagerSlidingTabStrip kitaplığı</string>
+      
+  <string name="about_sliding_tabs_usage">\"Oyun hakkında\" bölümündeki sekmeler için kullanılır; ekran</string>
+
+  <!-- languages -->
+      
+  <string name="settings_language_default">Varsayılan dil</string>
+      
+  <string name="settings_language_english">İngilizce</string>
+      
+  <string name="settings_language_french">Fransızca</string>
+      
+  <string name="settings_language_german">Almanca</string>
+      
+  <string name="settings_language_chinese_simplified">Basitleştirilmiş Çince)</string>
+      
+  <string name="settings_language_italian">İtalyan</string>
+      
+  <string name="settings_language_japanese">Japonca</string>
+      
+  <string name="settings_language_spanish">İspanyol</string>
+      
+  <string name="settings_language_spanish_argentina">İspanyolca (Arjantin)</string>
+      
+  <string name="settings_language_turkish">Türkçe</string>
+  
+</resources>

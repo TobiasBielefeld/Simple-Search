@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppThemeNoActionBar" parent="Base.AppThemeNoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="AppThemeNoActionBarNoDrawer" parent="Base.AppThemeNoActionBar">
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="Base.AppThemeNoActionBar" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="materialButtonStyle">@style/CustomMaterialButton</item>
+        <item name="dialogTheme">@style/CustomMaterialAlertDialogTheme</item>
+        <item name="alertDialogTheme">@style/CustomMaterialAlertDialogTheme</item>
+        <item name="android:alertDialogTheme">@style/CustomMaterialAlertDialogTheme</item>
+        <item name="cardViewStyle">@style/CustomCardViewStyle</item>
+        <item name="radioButtonStyle">@style/CustomRadioButtonStyle</item>
+        <item name="switchStyle">@style/CustomSwitchStyle</item>
+        <item name="materialSwitchStyle">@style/CustomSwitchStyle</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

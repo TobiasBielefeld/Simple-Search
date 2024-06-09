@@ -20,14 +20,14 @@ package de.tobiasbielefeld.searchbar.dialogs;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.DialogFragment;
 
 import de.tobiasbielefeld.searchbar.R;
 
 import static de.tobiasbielefeld.searchbar.SharedData.*;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.DialogFragment;
 
 /**
  * Simply deletes one record when pressing the confirm button
@@ -41,21 +41,17 @@ public class DialogDeleteEntry extends DialogFragment {
         this.text = text;
     }
 
-    @Override
     @NonNull
+    @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
         builder.setTitle(R.string.dialog_delete_entry_title)
                 .setMessage(text)
-                .setPositiveButton(R.string.confirm, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        records.delete(text);
-                    }})
-                .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        //cancel
-                    }});
+                .setPositiveButton(R.string.confirm, (dialog, id) -> records.delete(text))
+                .setNegativeButton(R.string.cancel, (dialog, id) -> {
+                    //cancel
+                });
 
         return builder.create();
     }

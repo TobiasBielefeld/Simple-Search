@@ -5,4 +5,9 @@
     <dimen name="record_list_text_size">18sp</dimen>
     <dimen name="card_view_padding_horizontal">10dp</dimen>
     <dimen name="card_view_padding_vertical">10dp</dimen>
+
+    <dimen name="dialog_paddingLeftRight">20dp</dimen>
+    <dimen name="dialog_paddingTopBottom">10dp</dimen>
+    <dimen name="dialog_radio_button_height">48dp</dimen>
+
 </resources>

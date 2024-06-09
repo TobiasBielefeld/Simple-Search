@@ -11,7 +11,7 @@
         <item>Startpage</item>
         <item>DuckDuckGo</item>
         <item>DuckDuckGo Lite</item>
-        <item>searx.me</item>
+        <item>metasearX</item>
         <item>Ecosia</item>
         <item>Metager</item>
     </string-array>
@@ -50,16 +50,27 @@
 
     <string-array name="pref_language_titles" translatable="false">
         <item>@string/settings_language_default</item>
+        <item>@string/settings_language_chinese_simplified</item>
         <item>@string/settings_language_english</item>
-        <item>@string/settings_language_german</item>
         <item>@string/settings_language_french</item>
+        <item>@string/settings_language_german</item>
+        <item>@string/settings_language_italian</item>
+        <item>@string/settings_language_japanese</item>
+        <item>@string/settings_language_spanish_argentina</item>
+        <item>@string/settings_language_turkish</item>
     </string-array>
 
+    <!-- language variants are separated by a minus from the "main" language-->
     <string-array name="pref_language_values" translatable="false">
-        <item>default</item>
-        <item>en</item>
-        <item>de</item>
-        <item>fr</item>
+        <item/>           <!-- default, empty to use system wide settings -->
+        <item>zh-CN</item>      <!-- Chinese (Simplified) -->
+        <item>en</item>         <!-- English -->
+        <item>fr</item>         <!-- French-->
+        <item>de</item>         <!-- German -->
+        <item>it</item>         <!-- Italian -->
+        <item>ja</item>         <!-- Japanese -->
+        <item>es-AR</item>      <!-- Spanish (Argentina) -->
+        <item>tr</item>         <!-- Turkish -->
     </string-array>
 
     <string-array name="pref_orientation_titles" translatable="false">
@@ -74,5 +85,17 @@
         <item>2</item>
         <item>3</item>
         <item>4</item>
+    </string-array>
+
+    <string-array name="pref_change_theme_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="pref_change_theme_titles" translatable="false">
+        <item>@string/settings_change_theme_default</item>
+        <item>@string/settings_change_theme_light</item>
+        <item>@string/settings_change_theme_dark</item>
     </string-array>
 </resources>

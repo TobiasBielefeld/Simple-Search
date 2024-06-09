@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?><resources>
+      
+  <string name="app_version">バージョン</string>
+      
+  <string name="confirm">確認する</string>
+      
+  <string name="cancel">キャンセル</string>
+      
+  <!-- Main Activity -->
+      
+  <string name="record_list_button_description">検索クエリにコピー</string>
+      
+  <string name="unsupported_search_character">クエリにサポートされていない文字が含まれています :(</string>
+      
+  <string name="unsupported_search_string">カスタム検索 URL が無効です :/</string>
+      
+  <string name="string_doesnt_contain_placeholder">カスタム検索エンジンには検索クエリのプレースホルダーがありません。</string>
+      
+  <string name="menu_delete_all">すべての記録を削除</string>
+      
+  <string name="search_hint">検索する…</string>
+      
+  <!-- Dialogs -->
+      
+  <string name="dialog_delete_entry_title">このレコードを削除しますか?</string>
+      
+  <string name="dialog_delete_all_records_text">すべてのレコードを削除します。本気ですか？</string>
+      
+  <string name="dialog_custom_search_engine_title">カスタム検索エンジンを入力</string>
+      
+  <string formatted="false" name="dialog_custom_search_engine_text">検索クエリを挿入するプレースホルダーとして「%s」(引用符なし) を入力します。</string>
+      
+  <!-- Settings -->
+      
+  <string name="activity_settings">設定</string>
+      
+  <string name="settings_custom">カスタム</string>
+      
+  <string name="settings_search_title">検索</string>
+      
+  <string name="settings_search_summary">検索エンジンを変更して履歴を設定する</string>
+      
+  <string name="settings_general_title">一般的な</string>
+      
+  <string name="settings_general_summary">アプリの動作を変更する</string>
+      
+  <string name="settings_search_engine_title">検索エンジン</string>
+      
+  <string name="settings_enable_records_title">履歴を有効にする</string>
+      
+  <string name="settings_enable_records_text">検索したクエリを保存して再利用する</string>
+      
+  <string name="settings_orientation">画面の向き</string>
+      
+  <string name="settings_change_language">言語を変えてください</string>
+      
+  <string name="settings_hide_status_bar">ステータスバーを非表示</string>
+      
+  <string name="settings_dark_theme">ダークテーマを有効にする</string>
+      
+  <string name="settings_hide_app_icon_title">ドロワー内のアプリアイコンを非表示にする</string>
+      
+  <string name="settings_hide_app_icon_text">その後、アプリはウィジェットを使用してのみ起動できます</string>
+      
+  <string name="settings_restart_app">変更を適用するにはアプリを再起動してください</string>
+      
+  <string name="settings_follow_system_settings">システム設定に従う</string>
+      
+  <string name="settings_portrait">ポートレート</string>
+      
+  <string name="settings_landscape">風景</string>
+      
+  <string name="settings_landscape_upside_down">逆さまの風景</string>
+      
+  <string name="settings_change_theme">テーマを変更する</string>
+      
+  <string name="settings_change_theme_dark">暗い</string>
+      
+  <string name="settings_change_theme_light">ライト</string>
+      
+  <string name="settings_change_theme_default">システム設定に従う</string>
+      
+  <!--About-->
+      
+  <string name="activity_about">について</string>
+      
+  <string name="about_description">ライセンスや変更履歴などのアプリに関する情報を表示します</string>
+      
+  <string name="about_tab_1">情報</string>
+      
+  <string name="about_tab_2">ライセンス</string>
+      
+  <string name="about_tab_3">変更履歴</string>
+      
+  <string name="about_developer">開発者</string>
+      
+  <string name="about_developer_name">トビアス・ビーレフェルト</string>
+      
+  <string name="about_compiled">コンパイル日</string>
+      
+  <string name="about_source_code">ソースコード</string>
+      
+  <string name="about_license">ライセンス</string>
+      
+  <string name="about_translations">翻訳</string>
+      
+  <string name="about_further_contributors">その他の貢献者</string>
+      
+  <string name="about_android_support_libraries_title">Android サポート ライブラリ</string>
+      
+  <string name="about_android_support_libraries_usage">より良い設計と開発の容易化のために使用される</string>
+      
+  <string name="about_material_icons_title">マテリアルデザインアイコン</string>
+      
+  <string name="about_material_icons_usage">このアプリケーションのすべてのアイコンに使用されます</string>
+      
+  <string name="about_sliding_tabs_title">PagerSlidingTabStrip ライブラリ</string>
+      
+  <string name="about_sliding_tabs_usage">「ゲームについて」画面のタブに使用されます</string>
+
+  <!-- languages -->
+      
+  <string name="settings_language_default">既定の言語</string>
+      
+  <string name="settings_language_english">英語</string>
+      
+  <string name="settings_language_french">フランス語</string>
+      
+  <string name="settings_language_german">ドイツ人</string>
+      
+  <string name="settings_language_chinese_simplified">中国語（簡体字）</string>
+      
+  <string name="settings_language_italian">イタリアの</string>
+      
+  <string name="settings_language_japanese">日本語</string>
+      
+  <string name="settings_language_spanish">スペイン語</string>
+      
+  <string name="settings_language_spanish_argentina">スペイン語（アルゼンチン）</string>
+      
+  <string name="settings_language_turkish">トルコ語</string>
+  
+</resources>
