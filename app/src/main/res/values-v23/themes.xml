@@ -1,9 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="AppThemeNoActionBar" parent="Base.AppThemeNoActionBar">
-        <item name="android:statusBarColor">@android:color/transparent</item>
-    </style>
-
     <style name="AppThemeNoActionBarNoDrawer" parent="Base.AppThemeNoActionBar">
         <item name="android:statusBarColor">@color/colorPrimaryDark</item>
     </style>

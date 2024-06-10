@@ -1,5 +1,9 @@
 <resources>
 
+    <style name="AppThemeNoActionBarNoDrawer" parent="Base.AppThemeNoActionBar">
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+    </style>
+
     <!-- Base application theme -->
     <style name="Base.AppThemeActionBar" parent="Theme.Material3.DayNight">
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -32,7 +36,6 @@
 
     <!-- Use overwritten styles in themes v23 -->
     <style name="AppThemeActionBar" parent="Base.AppThemeActionBar" />
-    <style name="AppThemeNoActionBar" parent="Base.AppThemeNoActionBar" />
     <style name="AppThemeActionBarNoDrawer" parent="Base.AppThemeActionBar" />
 
     <!-- Button customization -->
