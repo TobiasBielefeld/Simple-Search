@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="changelog_9_1" translatable="false">Use white as app background in light mode again</string>
+
     <string name="changelog_8_1" translatable="false">Made app compatible with Android 14</string>
     <string name="changelog_8_2" translatable="false">Added 5 machine-created translations</string>
     <string name="changelog_8_3" translatable="false">Use Android 13 language change system</string>

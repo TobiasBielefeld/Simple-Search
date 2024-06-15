@@ -18,6 +18,8 @@
         <item name="switchStyle">@style/CustomSwitchStyle</item>
         <item name="actionBarStyle">@style/CustomActionbarStyle</item>
         <item name="materialSwitchStyle">@style/CustomSwitchStyle</item>
+        <item name="android:windowBackground">@color/mainBackground</item>
+        <item name="actionOverflowMenuStyle">@style/CustomOverflowMenuStyle</item>
     </style>
 
     <style name="Base.AppThemeNoActionBar" parent="Theme.Material3.DayNight.NoActionBar">
@@ -32,7 +34,10 @@
         <item name="radioButtonStyle">@style/CustomRadioButtonStyle</item>
         <item name="switchStyle">@style/CustomSwitchStyle</item>
         <item name="materialSwitchStyle">@style/CustomSwitchStyle</item>
+        <item name="android:windowBackground">@color/mainBackground</item>
+        <item name="actionOverflowMenuStyle">@style/CustomOverflowMenuStyle</item>
     </style>
+
 
     <!-- Use overwritten styles in themes v23 -->
     <style name="AppThemeActionBar" parent="Base.AppThemeActionBar" />
@@ -81,6 +86,11 @@
     <!-- checkbox in action bar menu -->
     <style name="MyCheckBox" parent="Widget.Material3.CompoundButton.CheckBox">
         <item name="buttonTint">@color/colorAccent</item>
+    </style>
+
+    <!-- popup dialog theme in actionbar, to have completely white background  -->
+    <style name="CustomOverflowMenuStyle" parent="Widget.Material3.PopupMenu">
+        <item name="android:popupBackground">@color/colorDialogBackground</item>
     </style>
 
 </resources>

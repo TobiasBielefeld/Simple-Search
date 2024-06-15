@@ -12,4 +12,5 @@
     <color name="shadow_themed">#50FFFFFF</color>
     <color name="toolbarHint">#8D8D8D</color>
     <color name="toolbarText">#4F4F4F</color>
+    <color name="mainBackground">#FF141218</color>
 </resources>
