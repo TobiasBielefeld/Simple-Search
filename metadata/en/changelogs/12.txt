@@ -1,0 +1,1 @@
+* Use white as app background in light mode again
