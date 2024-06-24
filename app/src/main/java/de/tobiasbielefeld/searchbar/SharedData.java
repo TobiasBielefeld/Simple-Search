@@ -46,7 +46,6 @@ public class SharedData {
 
     public static String PREF_RECORD_LIST_SIZE;
     public static String PREF_RECORD_ENTRY;
-    public static String PREF_DARK_THEME;
     public static String PREF_THEME;
     public static String PREF_HIDE_APP_ICON;
     public static String PREF_SEARCH_URL;
@@ -60,7 +59,6 @@ public class SharedData {
     public static String DEFAULT_SEARCH_URL;
     public static String DEFAULT_ORIENTATION;
     public static boolean DEFAULT_STATUS_BAR;
-    public static boolean DEFAULT_DARK_THEME;
     public static boolean DEFAULT_CLOSE_AFTER_SEARCH;
     public static int DEFAULT_THEME;
     public static int DEFAULT_SEARCH_SELECTED_INDEX;
@@ -86,7 +84,6 @@ public class SharedData {
             PREF_ORIENTATION = res.getString(R.string.pref_key_orientation);
             PREF_STATUS_BAR = res.getString(R.string.pref_key_hide_status_bar);
             PREF_LANGUAGE = res.getString(R.string.pref_key_language);
-            PREF_DARK_THEME = res.getString(R.string.pref_key_dark_theme);
             PREF_THEME = res.getString(R.string.pref_key_theme);
             PREF_CUSTOM_SEARCH_URL = res.getString(R.string.pref_key_custom_search_url);
             PREF_HIDE_APP_ICON = res.getString(R.string.pref_key_hide_app_icon);
@@ -96,7 +93,6 @@ public class SharedData {
             DEFAULT_SEARCH_URL = res.getStringArray(R.array.search_engine_uris)[DEFAULT_SEARCH_SELECTED_INDEX];
             DEFAULT_ORIENTATION = res.getStringArray(R.array.pref_orientation_values)[0];
             DEFAULT_STATUS_BAR = res.getBoolean(R.bool.default_status_bar);
-            DEFAULT_DARK_THEME = res.getBoolean(R.bool.default_dark_theme);
             DEFAULT_THEME = res.getInteger(R.integer.default_theme);
             DEFAULT_HIDE_APP_ICON = res.getBoolean(R.bool.default_hide_app_icon);
             DEFAULT_CLOSE_AFTER_SEARCH = res.getBoolean(R.bool.default_close_after_search);

@@ -3,6 +3,7 @@
 
     <string name="changelog_10_1" translatable="false">Add small delay to showing the keyboard to fix it not showing at all</string>
     <string name="changelog_10_2" translatable="false">Add option to close app after starting the search</string>
+    <string name="changelog_10_3" translatable="false">Removed incorrect change of search bar background color</string>
 
     <string name="changelog_9_1" translatable="false">Use white as app background in light mode again</string>
 

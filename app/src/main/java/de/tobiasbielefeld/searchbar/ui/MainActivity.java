@@ -70,11 +70,6 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
         searchText.setOnEditorActionListener(this);
 
         records = new Records(this, (LinearLayout) findViewById(R.id.record_list_container));
-
-        if (getSavedBoolean(PREF_DARK_THEME, DEFAULT_DARK_THEME)) {
-            LinearLayout textSearch = findViewById(R.id.linearLayoutSearchText);
-            textSearch.setBackgroundResource(R.drawable.widget_background_dark);
-        }
     }
 
     @Override
