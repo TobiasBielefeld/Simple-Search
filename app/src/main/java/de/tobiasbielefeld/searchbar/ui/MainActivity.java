@@ -203,12 +203,13 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
      */
     public void focusSearchBar(){
         searchText.requestFocus();
+        searchText.postDelayed(() -> {
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 
-        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-
-        if (imm != null) {
-            imm.showSoftInput(searchText, InputMethodManager.SHOW_IMPLICIT);
-        }
+            if (imm != null) {
+                imm.showSoftInput(searchText, InputMethodManager.SHOW_IMPLICIT);
+            }
+        }, 200);
     }
 
     /*

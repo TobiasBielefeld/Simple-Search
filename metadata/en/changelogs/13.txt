@@ -1,0 +1,1 @@
+* Add small delay to showing the keyboard to fix it not showing at all
