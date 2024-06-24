@@ -79,7 +79,11 @@
   <string name="settings_change_theme_light">Luz</string>
       
   <string name="settings_change_theme_default">Seguir la configuración del sistema</string>
-      
+
+  <string name="settings_close_after_search_title">Cerrar la aplicación después de iniciar la búsqueda</string>
+
+  <string name="settings_close_after_search_text">La aplicación no se abrirá nuevamente cuando presiones Atrás desde tu navegador</string>
+
   <!--About-->
       
   <string name="activity_about">Acerca de</string>

@@ -25,6 +25,7 @@
     <string name="pref_key_hide_status_bar" translatable="false">pref_key_hide_status_bar</string>
     <string name="pref_key_custom_search_url" translatable="false">pref_key_custom_search_url</string>
     <string name="pref_key_hide_app_icon" translatable="false">pref_key_hide_app_icon</string>
+    <string name="pref_key_close_after_search" translatable="false">pref_key_close_after_search</string>
 
     <string name="about_app_github_link" translatable="false"><a href="https://github.com/TobiasBielefeld/Simple-Search">GitHub</a></string>
     <string name="about_app_license_link" translatable="false"><a href="https://www.gnu.org/licenses/gpl.html">GPL 3.0+</a></string>

@@ -67,6 +67,14 @@
         <SwitchPreferenceCompat
             app:iconSpaceReserved="false"
             app:singleLineTitle="false"
+            app:defaultValue="@bool/default_close_after_search"
+            app:key="@string/pref_key_close_after_search"
+            app:title="@string/settings_close_after_search_title"
+            app:summary="@string/settings_close_after_search_text"/>
+
+        <SwitchPreferenceCompat
+            app:iconSpaceReserved="false"
+            app:singleLineTitle="false"
             app:defaultValue="true"
             app:key="@string/pref_key_enable_records"
             app:title="@string/settings_enable_records_title"

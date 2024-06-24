@@ -44,6 +44,9 @@
     <string name="settings_change_theme_light">"Light"</string>
     <string name="settings_change_theme_default">"Follow system settings"</string>
 
+    <string name="settings_close_after_search_title">"Close app after starting search"</string>
+    <string name="settings_close_after_search_text">"App will not open again when you press back from your browser"</string>
+
     <!--About-->
     <string name="activity_about">About</string>
     <string name="about_description">Show information about the app like licenses and changelog</string>

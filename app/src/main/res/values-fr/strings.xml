@@ -54,8 +54,10 @@
 <string name="settings_change_theme_dark">Sombre</string>
 <string name="settings_change_theme_light">Lumière</string>
 <string name="settings_change_theme_default">Suivre les paramètres du système</string>
+<string name="settings_close_after_search_title">Fermer l\'application après avoir lancé la recherche</string>
+<string name="settings_close_after_search_text">L\'application ne s\'ouvrira pas lorsque vous reviendrez de votre navigateur</string>
 
-<!-- languages -->
+    <!-- languages -->
 <string name="settings_language_default">"Langue par défaut"</string>
 <string name="settings_language_english">"Anglais"</string>
 <string name="settings_language_french">"Français"</string>

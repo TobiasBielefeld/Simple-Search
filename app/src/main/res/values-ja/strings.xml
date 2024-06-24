@@ -118,6 +118,10 @@
       
   <string name="about_sliding_tabs_usage">「ゲームについて」画面のタブに使用されます</string>
 
+  <string name="settings_close_after_search_title">検索を開始したらアプリを閉じる</string>
+
+  <string name="settings_close_after_search_text">ブラウザから戻るを押してもアプリは再び開きません</string>
+
   <!-- languages -->
       
   <string name="settings_language_default">既定の言語</string>

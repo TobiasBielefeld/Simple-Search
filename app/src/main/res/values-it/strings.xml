@@ -118,6 +118,10 @@
       
   <string name="about_sliding_tabs_usage">Utilizzato per le schede nella sezione \"Informazioni sul gioco\" schermo</string>
 
+  <string name="settings_close_after_search_title">Chiudi l\'app dopo aver avviato la ricerca</string>
+
+  <string name="settings_close_after_search_text">L\'app non si aprirà più quando premi Indietro dal browser</string>
+
   <!-- languages -->
       
   <string name="settings_language_default">Lingua di default</string>

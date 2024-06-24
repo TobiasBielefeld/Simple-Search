@@ -118,6 +118,10 @@
       
   <string name="about_sliding_tabs_usage">用于“关于游戏”屏幕中的选项卡</string>
 
+  <string name="settings_close_after_search_title">开始搜索后关闭应用程序</string>
+
+  <string name="settings_close_after_search_text">当您从浏览器中按“返回”时，应用程序将不会再次打开</string>
+
   <!-- languages -->
       
   <string name="settings_language_default">默认语言</string>

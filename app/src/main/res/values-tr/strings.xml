@@ -118,6 +118,10 @@
       
   <string name="about_sliding_tabs_usage">\"Oyun hakkında\" bölümündeki sekmeler için kullanılır; ekran</string>
 
+  <string name="settings_close_after_search_title">Aramayı başlattıktan sonra uygulamayı kapatın</string>
+
+  <string name="settings_close_after_search_text">Tarayıcınızdan geri tuşuna bastığınızda uygulama tekrar açılmıyor</string>
+
   <!-- languages -->
       
   <string name="settings_language_default">Varsayılan dil</string>
