@@ -43,6 +43,7 @@
     <string name="settings_change_theme_dark">"Dark"</string>
     <string name="settings_change_theme_light">"Light"</string>
     <string name="settings_change_theme_default">"Follow system settings"</string>
+    <string name="settings_use_edge_to_edge_display_mode">"Use \"edge-to-edge\" display mode"</string>
 
     <string name="settings_close_after_search_title">"Close app after starting search"</string>
     <string name="settings_close_after_search_text">"App will not open again when you press back from your browser"</string>

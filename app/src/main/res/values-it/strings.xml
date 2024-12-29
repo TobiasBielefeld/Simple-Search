@@ -122,6 +122,8 @@
 
   <string name="settings_close_after_search_text">L\'app non si aprirà più quando premi Indietro dal browser</string>
 
+  <string name="settings_use_edge_to_edge_display_mode">"Usa la modalità di visualizzazione \"Edge-to-Edge\""</string>
+
   <!-- languages -->
       
   <string name="settings_language_default">Lingua di default</string>

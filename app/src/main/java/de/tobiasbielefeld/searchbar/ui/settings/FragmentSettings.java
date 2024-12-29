@@ -2,6 +2,7 @@ package de.tobiasbielefeld.searchbar.ui.settings;
 
 import static de.tobiasbielefeld.searchbar.SharedData.showOrHideStatusBar;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.preference.ListPreference;
@@ -25,6 +26,7 @@ public class FragmentSettings extends CustomPreferenceFragmentCompat {
         PreferenceLanguage language = findPreference(getString(R.string.pref_key_language));
         PreferenceSearchEngines searchEngines = findPreference(getString(R.string.pref_key_search_engine));
         Preference fullscreen = findPreference(getString(R.string.pref_key_hide_status_bar));
+        Preference useEdgeToEdgeDisplayMode = findPreference(getString(R.string.pref_key_edge_to_edge_display_mode));
 
         bindDialog(searchEngines, DialogSearchEngines.class);
         bindDialog(language, DialogLanguage.class);
@@ -41,19 +43,20 @@ public class FragmentSettings extends CustomPreferenceFragmentCompat {
 
         assert theme != null;
         theme.setOnPreferenceChangeListener((Preference pref, Object newValue) -> {
-            if (getActivity() != null) {
-                getActivity().recreate();
-            }
-
+            requireActivity().recreate();
             return true;
         });
 
         assert fullscreen != null;
         fullscreen.setOnPreferenceChangeListener((Preference pref, Object newValue) -> {
-            if (getActivity() != null) {
-                showOrHideStatusBar(requireActivity().getWindow(), (boolean) newValue);
-            }
+            showOrHideStatusBar(requireActivity().getWindow(), (boolean) newValue);
+            return true;
+        });
 
+        assert useEdgeToEdgeDisplayMode != null;
+        useEdgeToEdgeDisplayMode.setOnPreferenceChangeListener((Preference pref, Object newValue) -> {
+            Intent resultIntent = ((Settings) requireActivity()).resultIntent;
+            resultIntent.putExtra("RELOAD_EDGE_TO_EDGE", true);
             return true;
         });
     }

@@ -84,6 +84,8 @@
 
   <string name="settings_close_after_search_text">La aplicación no se abrirá nuevamente cuando presiones Atrás desde tu navegador</string>
 
+  <string name="settings_use_edge_to_edge_display_mode">"Usar el modo de pantalla \"Edge-to-Edge\""</string>
+
   <!--About-->
       
   <string name="activity_about">Acerca de</string>

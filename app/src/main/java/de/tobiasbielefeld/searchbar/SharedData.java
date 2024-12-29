@@ -55,11 +55,13 @@ public class SharedData {
     public static String PREF_STATUS_BAR;
     public static String PREF_LANGUAGE;
     public static String PREF_CLOSE_AFTER_SEARCH;
+    public static String PREF_USE_EDGE_TO_EDGE_DISPLAY_MODE;
 
     public static String DEFAULT_SEARCH_URL;
     public static String DEFAULT_ORIENTATION;
     public static boolean DEFAULT_STATUS_BAR;
     public static boolean DEFAULT_CLOSE_AFTER_SEARCH;
+    public static boolean DEFAULT_EDGE_TO_EDGE_DISPLAY_MODE;
     public static int DEFAULT_THEME;
     public static int DEFAULT_SEARCH_SELECTED_INDEX;
     public static boolean DEFAULT_HIDE_APP_ICON;
@@ -88,6 +90,7 @@ public class SharedData {
             PREF_CUSTOM_SEARCH_URL = res.getString(R.string.pref_key_custom_search_url);
             PREF_HIDE_APP_ICON = res.getString(R.string.pref_key_hide_app_icon);
             PREF_CLOSE_AFTER_SEARCH = res.getString(R.string.pref_key_close_after_search);
+            PREF_USE_EDGE_TO_EDGE_DISPLAY_MODE = res.getString(R.string.pref_key_edge_to_edge_display_mode);
 
             DEFAULT_SEARCH_SELECTED_INDEX = res.getInteger(R.integer.default_search_engine_v2);
             DEFAULT_SEARCH_URL = res.getStringArray(R.array.search_engine_uris)[DEFAULT_SEARCH_SELECTED_INDEX];
@@ -96,6 +99,7 @@ public class SharedData {
             DEFAULT_THEME = res.getInteger(R.integer.default_theme);
             DEFAULT_HIDE_APP_ICON = res.getBoolean(R.bool.default_hide_app_icon);
             DEFAULT_CLOSE_AFTER_SEARCH = res.getBoolean(R.bool.default_close_after_search);
+            DEFAULT_EDGE_TO_EDGE_DISPLAY_MODE = res.getBoolean(R.bool.default_edge_to_edge_display_mode);
         }
     }
 
@@ -134,6 +138,10 @@ public class SharedData {
 
     public static boolean getSavedCloseAfterSearch() {
         return getSavedBoolean(PREF_CLOSE_AFTER_SEARCH, DEFAULT_CLOSE_AFTER_SEARCH);
+    }
+
+    public static boolean getSavedEdgeToEdgeDisplayMode() {
+        return getSavedBoolean(PREF_USE_EDGE_TO_EDGE_DISPLAY_MODE, DEFAULT_EDGE_TO_EDGE_DISPLAY_MODE);
     }
 
     public static void logText(String text){

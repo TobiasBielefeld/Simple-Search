@@ -41,8 +41,10 @@
 <string name="settings_change_theme_dark">"Dunkel"</string>
 <string name="settings_change_theme_light">"Hell"</string>
 <string name="settings_change_theme_default">"System Einstellungen folgen"</string>
-    <string name="settings_close_after_search_title">App schließen, nachdem die Suche gestartet wurde</string>
-    <string name="settings_close_after_search_text">Die App wird nicht erneut geöffnet, wenn im Browser auf „Zurück“ geklickt wird.</string>
+<string name="settings_close_after_search_title">App schließen, nachdem die Suche gestartet wurde</string>
+<string name="settings_close_after_search_text">Die App wird nicht erneut geöffnet, wenn im Browser auf „Zurück“ geklickt wird.</string>
+<string name="settings_use_edge_to_edge_display_mode">"Verwende den \"Edge-to-Edge\"-Anzeige-Modus"</string>
+
 <!-- About -->
 <string name="activity_about">"Über"</string>
 <string name="about_description">"Zeige Informationen über die Anwendung wie Lizenzen und Änderungen"</string>

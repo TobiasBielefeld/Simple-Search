@@ -46,6 +46,13 @@
             app:key="@string/pref_key_hide_status_bar"
             app:title="@string/settings_hide_status_bar" />
 
+        <SwitchPreferenceCompat
+            app:iconSpaceReserved="false"
+            app:singleLineTitle="false"
+            app:defaultValue="@bool/default_edge_to_edge_display_mode"
+            app:key="@string/pref_key_edge_to_edge_display_mode"
+            app:title="@string/settings_use_edge_to_edge_display_mode" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

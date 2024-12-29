@@ -122,6 +122,8 @@
 
   <string name="settings_close_after_search_text">ブラウザから戻るを押してもアプリは再び開きません</string>
 
+  <string name="settings_use_edge_to_edge_display_mode">"「Edge-to-Edge」表示モードを使用する"</string>
+
   <!-- languages -->
       
   <string name="settings_language_default">既定の言語</string>

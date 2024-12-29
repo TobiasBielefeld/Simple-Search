@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="changelog_11_1" translatable="false">Made app compatible with Android 15 and updated support libraries</string>
-    <string name="changelog_11_2" translatable="false">The app now uses \"edge-to-edge\" display mode on Android 11 and up</string>
+    <string name="changelog_11_2" translatable="false">The app now uses \"edge-to-edge\" display mode on Android 11 and up (can be disabled in settings)</string>
 
     <string name="changelog_10_1" translatable="false">Add small delay to showing the keyboard to fix it not showing at all</string>
     <string name="changelog_10_2" translatable="false">Add option to close app after starting the search</string>

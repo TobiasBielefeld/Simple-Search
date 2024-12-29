@@ -46,12 +46,16 @@ import de.tobiasbielefeld.searchbar.ui.settings.Settings;
 import static de.tobiasbielefeld.searchbar.SharedData.*;
 import static de.tobiasbielefeld.searchbar.helper.InsetHelper.*;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends CustomAppCompatActivity implements TextWatcher, View.OnClickListener, TextView.OnEditorActionListener {
 
     public EditText searchText;
     private ImageView clearButton;
+    private ActivityResultLauncher<Intent> startForResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +74,7 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
 
         records = new Records(this, findViewById(R.id.record_list_container));
 
+        startForResult = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), this::onActivityResult);
         applyInsetsForActivity(findViewById(R.id.system_left_spacer), findViewById(R.id.system_right_spacer), findViewById(R.id.system_top_spacer));
         applyInset(findViewById(R.id.system_bottom_spacer), InsetLocation.BOTTOM, InsetMode.SET);
     }
@@ -87,7 +92,7 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
 
         if (id == R.id.item_settings) { //starts the settings activity
             Intent intent = new Intent(getApplicationContext(), Settings.class);
-            startActivity(intent);
+            startForResult.launch(intent);
         } else if (id == R.id.item_about) { //starts the about activity
             Intent intentAbout = new Intent(getApplicationContext(), AboutActivity.class);
             startActivity(intentAbout);
@@ -128,6 +133,15 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
         super.onResume();
         records.load();
         focusSearchBar();
+    }
+
+    private void onActivityResult(ActivityResult result) {
+        if (result.getResultCode() == RESULT_OK) {
+            Intent data = result.getData();
+            if (data != null && data.getBooleanExtra("RELOAD_EDGE_TO_EDGE", false)) {
+                recreate();
+            }
+        }
     }
 
     /**

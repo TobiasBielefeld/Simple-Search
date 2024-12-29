@@ -20,6 +20,7 @@ package de.tobiasbielefeld.searchbar.ui.settings;
 
 import static de.tobiasbielefeld.searchbar.helper.InsetHelper.*;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -34,6 +35,7 @@ import de.tobiasbielefeld.searchbar.ui.settings.helpers.CustomPreferenceFragment
 public class Settings extends CustomAppCompatActivity {
 
     public static String FRAGMENT_TAG = "SETTINGS_FRAGMENT_TAG";
+    public Intent resultIntent = new Intent();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,8 +61,15 @@ public class Settings extends CustomAppCompatActivity {
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {                                           //only menu item is the back mButton in the action bar
-        finish();                                                                                   //so finish this activity
+    public boolean onOptionsItemSelected(MenuItem item) {
+        //only menu item is the back button in the action bar so finish this activity
+        finish();
         return true;
+    }
+
+    @Override
+    public void finish() {
+        setResult(RESULT_OK, resultIntent);
+        super.finish();
     }
 }
