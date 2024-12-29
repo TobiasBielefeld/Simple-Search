@@ -1,0 +1,2 @@
+* Made app compatible with Android 15 and updated support libraries
+* The app now uses "edge-to-edge" display mode on Android 11 and up

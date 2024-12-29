@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import static de.tobiasbielefeld.searchbar.SharedData.*;
+import static de.tobiasbielefeld.searchbar.helper.InsetHelper.applyEdgelessMode;
 
 import java.util.Locale;
 
@@ -30,6 +31,7 @@ public abstract class CustomAppCompatActivity extends AppCompatActivity {
         lastKnownOrientation = getSavedOrientation();
         setOrientation(lastKnownOrientation);
 
+        applyEdgelessMode(this);
         super.onCreate(savedInstanceState);
     }
 

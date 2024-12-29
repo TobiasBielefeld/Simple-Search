@@ -1,46 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".ui.about.AboutActivity">
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppThemeNoActionBar.AppBarOverlay">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppThemeNoActionBar.PopupOverlay" />
-
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/mainBackground"
-            app:tabIndicatorColor="@color/colorAccent"
-            app:tabMode="auto"
-            app:tabSelectedTextColor="@color/colorAccent"
-            app:tabTextAppearance="@style/TextAppearance.AppCompat.Medium" />
-    </com.google.android.material.appbar.AppBarLayout>
+    tools:context=".ui.about.AboutActivity" >
 
     <View
-        android:id="@+id/divider"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="?android:attr/listDivider" />
+        android:id="@+id/system_left_spacer"
+        android:layout_width="0dp"
+        android:layout_alignParentStart="true"
+        android:layout_height="match_parent" />
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/view_pager"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        android:orientation="vertical"
+        android:layout_toEndOf="@+id/system_left_spacer"
+        android:layout_toStartOf="@+id/system_right_spacer" >
 
-</LinearLayout>
+        <View
+            android:id="@+id/system_top_spacer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="?attr/colorPrimary" />
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppThemeNoActionBar.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppThemeNoActionBar.PopupOverlay" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/mainBackground"
+                app:tabIndicatorColor="@color/colorAccent"
+                app:tabMode="auto"
+                app:tabSelectedTextColor="@color/colorAccent"
+                app:tabTextAppearance="@style/TextAppearance.AppCompat.Medium" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/system_right_spacer"
+        android:layout_width="0dp"
+        android:layout_alignParentEnd="true"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

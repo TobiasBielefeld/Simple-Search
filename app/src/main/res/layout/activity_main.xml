@@ -1,91 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/system_left_spacer"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true" />
+
+
+    <LinearLayout
+        android:layout_toStartOf="@+id/system_right_spacer"
+        android:layout_toEndOf="@+id/system_left_spacer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppThemeNoActionBar.AppBarOverlay">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppThemeNoActionBar.PopupOverlay">
-
-            <LinearLayout
-                android:id="@+id/linearLayoutSearchText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-                android:background="@drawable/widget_background"
-                android:orientation="horizontal"
-                android:paddingLeft="10dp"
-                android:paddingTop="10dp"
-                android:paddingRight="10dp"
-                android:paddingBottom="10dp">
-
-
-                <EditText
-                    android:id="@+id/editTextSearch"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@android:color/transparent"
-                    android:focusable="true"
-                    android:focusableInTouchMode="true"
-                    android:hint="@string/search_hint"
-                    android:imeOptions="actionSearch"
-                    android:singleLine="true"
-                    android:textColor="@color/toolbarText"
-                    android:textColorHint="@color/toolbarHint" />
-
-                <ImageView
-                    android:id="@+id/imageButtonClear"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:adjustViewBounds="true"
-                    android:onClick="onClick"
-                    android:visibility="gone"
-                    app:srcCompat="@drawable/icon_close_app_bar" />
-
-            </LinearLayout>
-
-        </androidx.appcompat.widget.Toolbar>
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
         <View
+            android:id="@+id/system_top_spacer"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/shadow_height"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:background="@drawable/shadow_top_to_bottom" />
+            android:background="?attr/colorPrimary"
+            android:layout_height="0dp" />
 
-
-        <ScrollView
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:background="?android:attr/windowBackground">
+            android:layout_height="wrap_content"
+            android:theme="@style/AppThemeNoActionBar.AppBarOverlay">
 
-            <LinearLayout
-                android:id="@+id/record_list_container"
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppThemeNoActionBar.PopupOverlay">
 
-        </ScrollView>
-    </RelativeLayout>
+                <LinearLayout
+                    android:id="@+id/linearLayoutSearchText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/widget_background"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp">
 
-</LinearLayout>
 
+                    <EditText
+                        android:id="@+id/editTextSearch"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:hint="@string/search_hint"
+                        android:imeOptions="actionSearch"
+                        android:singleLine="true"
+                        android:textColor="@color/toolbarText"
+                        android:textColorHint="@color/toolbarHint" />
+
+                    <ImageView
+                        android:id="@+id/imageButtonClear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:onClick="onClick"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/icon_close_app_bar" />
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/shadow_height"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/shadow_top_to_bottom" />
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="?android:attr/windowBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/record_list_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+
+                    <View
+                        android:id="@+id/system_bottom_spacer"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp" />
+
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/system_right_spacer"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

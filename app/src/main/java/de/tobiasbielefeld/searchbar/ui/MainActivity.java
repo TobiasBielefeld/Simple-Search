@@ -32,7 +32,6 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.io.UnsupportedEncodingException;
@@ -45,8 +44,8 @@ import de.tobiasbielefeld.searchbar.ui.about.AboutActivity;
 import de.tobiasbielefeld.searchbar.ui.settings.Settings;
 
 import static de.tobiasbielefeld.searchbar.SharedData.*;
+import static de.tobiasbielefeld.searchbar.helper.InsetHelper.*;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends CustomAppCompatActivity implements TextWatcher, View.OnClickListener, TextView.OnEditorActionListener {
@@ -69,7 +68,10 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
         searchText.addTextChangedListener(this);
         searchText.setOnEditorActionListener(this);
 
-        records = new Records(this, (LinearLayout) findViewById(R.id.record_list_container));
+        records = new Records(this, findViewById(R.id.record_list_container));
+
+        applyInsetsForActivity(findViewById(R.id.system_left_spacer), findViewById(R.id.system_right_spacer), findViewById(R.id.system_top_spacer));
+        applyInset(findViewById(R.id.system_bottom_spacer), InsetLocation.BOTTOM, InsetMode.SET);
     }
 
     @Override

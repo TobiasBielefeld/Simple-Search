@@ -28,20 +28,21 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 
 import de.tobiasbielefeld.searchbar.R;
+import de.tobiasbielefeld.searchbar.classes.FragmentWithBottomSpacing;
 
 /*
  * Shows the GPL License, which is simply loaded from a webView. The About activity disables recreation
  * after orientation change, so don't need to handle that.
  */
 
-public class LicenseFragment extends Fragment {
+public class LicenseFragment extends FragmentWithBottomSpacing {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.content_about_tab2, container, false);
 
-        TextView textMaterialIconsLicense = (TextView) view.findViewById(R.id.about_license_material_icons);
-        TextView textAndroidSupportLicense = (TextView) view.findViewById(R.id.about_license_android_support_libraries);
+        TextView textMaterialIconsLicense = view.findViewById(R.id.about_license_material_icons);
+        TextView textAndroidSupportLicense = view.findViewById(R.id.about_license_android_support_libraries);
 
         TextView[] textViews = new TextView[]{textMaterialIconsLicense, textAndroidSupportLicense};
 

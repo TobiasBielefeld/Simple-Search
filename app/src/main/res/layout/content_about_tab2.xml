@@ -130,6 +130,10 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
+        <View
+            android:id="@+id/system_bottom_spacer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
 
     </LinearLayout>
 

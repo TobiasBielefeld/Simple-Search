@@ -18,6 +18,8 @@
 
 package de.tobiasbielefeld.searchbar.ui.settings;
 
+import static de.tobiasbielefeld.searchbar.helper.InsetHelper.*;
+
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -52,6 +54,8 @@ public class Settings extends CustomAppCompatActivity {
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
+
+        applyInsetsForActivity(findViewById(R.id.system_left_spacer), findViewById(R.id.system_right_spacer), findViewById(R.id.system_top_spacer));
     }
 
     @Override

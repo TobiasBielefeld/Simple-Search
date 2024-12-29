@@ -1,5 +1,7 @@
 package de.tobiasbielefeld.searchbar.ui.about;
 
+import static de.tobiasbielefeld.searchbar.helper.InsetHelper.*;
+
 import android.os.Bundle;
 import com.google.android.material.tabs.TabLayout;
 
@@ -26,7 +28,7 @@ public class AboutActivity extends CustomAppCompatActivity {
         ActivtyAboutBinding binding = ActivtyAboutBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = binding.toolbar;
         setSupportActionBar(toolbar);
 
         TabsPagerAdapter sectionsPagerAdapter = new TabsPagerAdapter(this, getSupportFragmentManager(), TAB_TITLES, FRAGMENTS);
@@ -43,5 +45,6 @@ public class AboutActivity extends CustomAppCompatActivity {
         }
 
         toolbar.setNavigationOnClickListener(view -> finish());
+        applyInsetsForActivity(findViewById(R.id.system_left_spacer), findViewById(R.id.system_right_spacer), findViewById(R.id.system_top_spacer));
     }
 }

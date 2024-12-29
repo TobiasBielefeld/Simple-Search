@@ -1,6 +1,9 @@
 package de.tobiasbielefeld.searchbar.ui.settings.helpers;
 
+import static de.tobiasbielefeld.searchbar.helper.InsetHelper.*;
+
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,6 +23,12 @@ public class CustomPreferenceFragmentCompat extends PreferenceFragmentCompat {
     @Override
     public void onCreatePreferences(@Nullable Bundle savedInstanceState, @Nullable String rootKey) {
         // empty
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        applyInset(getListView(), InsetLocation.BOTTOM, InsetMode.PADDING);
     }
 
     // Bind the dialog information to this fragment and also perform the initial update of the preference
