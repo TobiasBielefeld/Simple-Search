@@ -10,6 +10,7 @@
     <string name="url_bing" translatable="false" formatted="false">https://www.bing.com/search?q=%s</string>
     <string name="url_yandex" translatable="false" formatted="false">https://www.yandex.com/search/?text=%s</string>
     <string name="url_startpage" translatable="false" formatted="false">https://www.startpage.com/do/search?query=%s</string>
+    <string name="url_qwant" translatable="false" formatted="false">https://www.qwant.com/?q=%s</string>
     <string name="url_duckduckgo" translatable="false" formatted="false">https://duckduckgo.com/?q=%s</string>
     <string name="url_duckduckgo_lite" translatable="false" formatted="false">https://duckduckgo.com/lite?q=%s</string>
     <string name="url_searx" translatable="false" formatted="false">https://metasearx.com/?q=%s</string>

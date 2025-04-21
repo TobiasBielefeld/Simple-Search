@@ -61,6 +61,7 @@ public class SearchEngines {
             new SearchEngineItem("Google", res.getString(R.string.url_google), "search_google", R.drawable.favicon_google),
             new SearchEngineItem("Metager", res.getString(R.string.url_metager), "search_metager", R.drawable.favicon_metager),
             new SearchEngineItem("metasearX", res.getString(R.string.url_searx), "search_metasearx", R.drawable.favicon_metasearchx),
+            new SearchEngineItem("Qwant", res.getString(R.string.url_qwant), "search_qwant", R.drawable.favicon_qwant),
             new SearchEngineItem("Startpage", res.getString(R.string.url_startpage), "search_startpage", R.drawable.favicon_startpage),
             new SearchEngineItem("Yahoo", res.getString(R.string.url_yahoo), "search_yahoo", R.drawable.favicon_yahoo),
             new SearchEngineItem("Yandex", res.getString(R.string.url_yandex), "search_yandex", R.drawable.favicon_yandex)
