@@ -25,7 +25,6 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.widget.Toolbar;
 
 import de.tobiasbielefeld.searchbar.R;
 import de.tobiasbielefeld.searchbar.classes.CustomAppCompatActivity;
@@ -44,8 +43,9 @@ public class Settings extends CustomAppCompatActivity {
         ActivitySettingsBinding binding = ActivitySettingsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        Toolbar toolbar = binding.toolbar;
+        toolbar = binding.toolbar;
         setSupportActionBar(toolbar);
+        systemTopSpacer = binding.systemTopSpacer;
 
         CustomPreferenceFragmentCompat fragment = new FragmentSettings();
         if (savedInstanceState == null) {
@@ -57,7 +57,7 @@ public class Settings extends CustomAppCompatActivity {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
-        applyInsetsForActivity(findViewById(R.id.system_left_spacer), findViewById(R.id.system_right_spacer), findViewById(R.id.system_top_spacer));
+        applyInsetsForActivity(binding.systemLeftSpacer, binding.systemRightSpacer, systemTopSpacer);
     }
 
     @Override

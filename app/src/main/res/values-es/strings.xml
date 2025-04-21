@@ -126,6 +126,12 @@
       
   <string name="about_sliding_tabs_usage">Se utiliza para las pestañas de la sección \"Acerca del juego\". pantalla</string>
 
+  <string name="about_custom_color_picker_usage">Usado para el selector de color personalizado</string>
+
+  <string name="about_custom_color_picker_title">Biblioteca AmbilWarna</string>
+
+  <string name="settings_toolbar_color">"Color de la barra"</string>
+
   <!-- languages -->
       
   <string name="settings_language_default">Idioma predeterminado</string>

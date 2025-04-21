@@ -1,1 +1,2 @@
 * Add option to quickly change the selected search engine in the searchbar
+* Add option to change the toolbar color

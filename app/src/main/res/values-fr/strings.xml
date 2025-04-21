@@ -44,6 +44,9 @@
 <string name="about_sliding_tabs_title">"Bibliothèque PagerSlidingTabStrip"</string>
 <string name="about_sliding_tabs_usage">"Utilisé pour les onglets dans l'écran 'À propos du jeu'"</string>
 <string name="about_description">"Afficher les informations sur l\'application comme les licences et le journal des modifications."</string>
+<string name="about_custom_color_picker_title">Bibliothèque AmbilWarna</string>
+<string name="about_custom_color_picker_usage">Utilisé pour le sélecteur de couleur personnalisé</string>
+<string name="settings_toolbar_color">"Couleur de la barre"</string>
 <string name="settings_dark_theme">"Activer le thème sombre"</string>
 <string name="settings_restart_app">"Redémarrer l\'application pour appliquer les changements."</string>
 <string name="settings_custom">"Custom"</string>

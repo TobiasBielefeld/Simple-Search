@@ -55,6 +55,8 @@ public class SharedData {
     public static String PREF_LANGUAGE;
     public static String PREF_CLOSE_AFTER_SEARCH;
     public static String PREF_USE_EDGE_TO_EDGE_DISPLAY_MODE;
+    public static String PREF_TOOLBAR_COLOR;
+    public static int DEFAULT_TOOLBAR_COLOR;
     public static String DEFAULT_ORIENTATION;
     public static String DEFAULT_SEARCH_KEY;
     public static boolean DEFAULT_STATUS_BAR;
@@ -87,7 +89,9 @@ public class SharedData {
             PREF_HIDE_APP_ICON = res.getString(R.string.pref_key_hide_app_icon);
             PREF_CLOSE_AFTER_SEARCH = res.getString(R.string.pref_key_close_after_search);
             PREF_USE_EDGE_TO_EDGE_DISPLAY_MODE = res.getString(R.string.pref_key_edge_to_edge_display_mode);
+            PREF_TOOLBAR_COLOR = res.getString(R.string.pref_key_toolbar_color);
             DEFAULT_SEARCH_KEY = "search_duckduckgo";
+            DEFAULT_TOOLBAR_COLOR = res.getColor(R.color.colorPrimary);
             DEFAULT_ORIENTATION = res.getStringArray(R.array.pref_orientation_values)[0];
             DEFAULT_STATUS_BAR = res.getBoolean(R.bool.default_status_bar);
             DEFAULT_THEME = res.getInteger(R.integer.default_theme);
@@ -134,6 +138,10 @@ public class SharedData {
         return getSavedBoolean(PREF_CLOSE_AFTER_SEARCH, DEFAULT_CLOSE_AFTER_SEARCH);
     }
 
+    public static int getSavedToolbarColor() {
+        return getSavedInt(PREF_TOOLBAR_COLOR, DEFAULT_TOOLBAR_COLOR);
+    }
+
     public static boolean getSavedEdgeToEdgeDisplayMode() {
         return getSavedBoolean(PREF_USE_EDGE_TO_EDGE_DISPLAY_MODE, DEFAULT_EDGE_TO_EDGE_DISPLAY_MODE);
     }
@@ -151,6 +159,10 @@ public class SharedData {
 
     public static void putSavedSearchEngineKey(String key) {
         putSavedString(PREF_SEARCH_KEY, key);
+    }
+
+    public static void putSavedToolbarColor(int value) {
+        putSavedInt(PREF_TOOLBAR_COLOR, value);
     }
 
     public static void logText(String text){

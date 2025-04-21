@@ -27,12 +27,14 @@
     <string name="pref_key_hide_app_icon" translatable="false">pref_key_hide_app_icon</string>
     <string name="pref_key_close_after_search" translatable="false">pref_key_close_after_search</string>
     <string name="pref_key_edge_to_edge_display_mode" translatable="false">pref_key_edge_to_edge_display_mode</string>
+    <string name="pref_key_toolbar_color" translatable="false">pref_key_toolbar_color</string>
 
     <string name="about_app_github_link" translatable="false"><a href="https://github.com/TobiasBielefeld/Simple-Search">GitHub</a></string>
     <string name="about_app_license_link" translatable="false"><a href="https://www.gnu.org/licenses/gpl.html">GPL 3.0+</a></string>
     <string name="about_material_icons_license" translatable="false"><a href="https://github.com/google/material-design-icons/blob/master/LICENSE">Apache 2.0</a></string>
     <string name="about_android_support_libraries_license" translatable="false"><a href="https://github.com/android/platform_frameworks_support/blob/master/LICENSE.txt">Apache 2.0</a></string>
     <string name="about_sliding_tabs_license" translatable="false"><a href="https://github.com/astuetz/PagerSlidingTabStrip#license">Apache 2.0</a></string>
+    <string name="about_custom_color_picker_license" translatable="false"><a href="https://github.com/yukuku/ambilwarna/blob/master/LICENSE">Apache 2.0</a></string>
     <string name="contributors_julfers" translatable="false"><a href="https://github.com/julfers">julfers</a></string>
     <string name="contributors_tedkotz" translatable="false"><a href="https://github.com/tedkotz">tedkotz</a></string>
     <string name="contributors_benjamin_tourrel" translatable="false">Benjamin Tourrel</string>

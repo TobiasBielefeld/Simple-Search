@@ -64,7 +64,6 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
     public EditText searchText;
     private ImageView clearButton, searchEngineSelectButton;
     private ActivityResultLauncher<Intent> startForResult;
-
     private SearchEngines searchEngines;
 
     @Override
@@ -73,12 +72,13 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
         setContentView(R.layout.activity_main);
 
         // Setup navbar with item select listener
-        Toolbar actionBar = findViewById(R.id.toolbar);
-        setSupportActionBar(actionBar);
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         searchText = findViewById(R.id.editTextSearch);
         clearButton = findViewById(R.id.imageButtonClear);
         searchEngineSelectButton = findViewById(R.id.imageButtonSelectSearchEngines);
+        systemTopSpacer = findViewById(R.id.system_top_spacer);
 
         searchText.addTextChangedListener(this);
         searchText.setOnEditorActionListener(this);
@@ -87,7 +87,7 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
         records = new Records(this, findViewById(R.id.record_list_container));
 
         startForResult = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), this::onActivityResult);
-        applyInsetsForActivity(findViewById(R.id.system_left_spacer), findViewById(R.id.system_right_spacer), findViewById(R.id.system_top_spacer));
+        applyInsetsForActivity(findViewById(R.id.system_left_spacer), findViewById(R.id.system_right_spacer), systemTopSpacer);
         applyInset(findViewById(R.id.system_bottom_spacer), InsetLocation.BOTTOM, InsetMode.SET);
     }
 

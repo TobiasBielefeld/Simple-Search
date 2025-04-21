@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dialog_paddingLeftRight"
+        android:paddingTop="@dimen/dialog_paddingTopBottom"
+        android:paddingRight="@dimen/dialog_paddingLeftRight"
+        android:paddingBottom="@dimen/dialog_paddingTopBottom">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:id="@+id/dialogBackgroundColorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="@dimen/dialog_background_colorbox_width"
+                    android:layout_height="@dimen/dialog_background_colorbox_width"
+                    android:background="@drawable/image_border_round_primary"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dialogBackgroundColorRed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="@dimen/dialog_background_colorbox_width"
+                    android:layout_height="@dimen/dialog_background_colorbox_width"
+                    android:background="@drawable/image_border_round_red"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dialogBackgroundColorPink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="@dimen/dialog_background_colorbox_width"
+                    android:layout_height="@dimen/dialog_background_colorbox_width"
+                    android:background="@drawable/image_border_round_pink"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dialogBackgroundColorPurple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="@dimen/dialog_background_colorbox_width"
+                    android:layout_height="@dimen/dialog_background_colorbox_width"
+                    android:background="@drawable/image_border_round_purple"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dialogBackgroundColorDeepPurple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="@dimen/dialog_background_colorbox_width"
+                    android:layout_height="@dimen/dialog_background_colorbox_width"
+                    android:background="@drawable/image_border_round_deep_purple"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dialogBackgroundColorIndigo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="@dimen/dialog_background_colorbox_width"
+                    android:layout_height="@dimen/dialog_background_colorbox_width"
+                    android:background="@drawable/image_border_round_indigo" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dialogBackgroundColorBlue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="@dimen/dialog_background_colorbox_width"
+                    android:layout_height="@dimen/dialog_background_colorbox_width"
+                    android:background="@drawable/image_border_round_blue" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:id="@+id/dialogBackgroundColorLightBlue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="@dimen/dialog_background_colorbox_width"
+                    android:layout_height="@dimen/dialog_background_colorbox_width"
+                    android:background="@drawable/image_border_round_light_blue"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dialogBackgroundColorCyan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="@dimen/dialog_background_colorbox_width"
+                    android:layout_height="@dimen/dialog_background_colorbox_width"
+                    android:background="@drawable/image_border_round_cyan"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dialogBackgroundColorTeal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="@dimen/dialog_background_colorbox_width"
+                    android:layout_height="@dimen/dialog_background_colorbox_width"
+                    android:background="@drawable/image_border_round_teal"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dialogBackgroundColorGreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="@dimen/dialog_background_colorbox_width"
+                    android:layout_height="@dimen/dialog_background_colorbox_width"
+                    android:background="@drawable/image_border_round_green" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dialogBackgroundColorLightGreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="@dimen/dialog_background_colorbox_width"
+                    android:layout_height="@dimen/dialog_background_colorbox_width"
+                    android:background="@drawable/image_border_round_light_green" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dialogBackgroundColorLime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="@dimen/dialog_background_colorbox_width"
+                    android:layout_height="@dimen/dialog_background_colorbox_width"
+                    android:background="@drawable/image_border_round_lime" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dialogBackgroundColorYellow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="@dimen/dialog_background_colorbox_width"
+                    android:layout_height="@dimen/dialog_background_colorbox_width"
+                    android:background="@drawable/image_border_round_yellow" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:id="@+id/dialogBackgroundColorAmber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="@dimen/dialog_background_colorbox_width"
+                    android:layout_height="@dimen/dialog_background_colorbox_width"
+                    android:background="@drawable/image_border_round_amber"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dialogBackgroundColorOrange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="@dimen/dialog_background_colorbox_width"
+                    android:layout_height="@dimen/dialog_background_colorbox_width"
+                    android:background="@drawable/image_border_round_orange" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dialogBackgroundColorDeepOrange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="@dimen/dialog_background_colorbox_width"
+                    android:layout_height="@dimen/dialog_background_colorbox_width"
+                    android:background="@drawable/image_border_round_deep_orange" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dialogBackgroundColorBrown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="@dimen/dialog_background_colorbox_width"
+                    android:layout_height="@dimen/dialog_background_colorbox_width"
+                    android:background="@drawable/image_border_round_brown" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dialogBackgroundColorGrey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="@dimen/dialog_background_colorbox_width"
+                    android:layout_height="@dimen/dialog_background_colorbox_width"
+                    android:background="@drawable/image_border_round_grey" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dialogBackgroundColorBlueGrey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="@dimen/dialog_background_colorbox_width"
+                    android:layout_height="@dimen/dialog_background_colorbox_width"
+                    android:background="@drawable/image_border_round_blue_grey" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+    </TableLayout>
+
+</ScrollView>

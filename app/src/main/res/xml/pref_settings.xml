@@ -53,6 +53,15 @@
             app:key="@string/pref_key_edge_to_edge_display_mode"
             app:title="@string/settings_use_edge_to_edge_display_mode" />
 
+        <de.tobiasbielefeld.searchbar.ui.settings.PreferenceToolbarColor
+            app:key="@string/pref_key_toolbar_color"
+            app:negativeButtonText="@string/cancel"
+            app:positiveButtonText="@string/settings_custom"
+            app:title="@string/settings_toolbar_color"
+            app:widgetLayout="@layout/preference_widget_layout_color"
+            app:iconSpaceReserved="false"
+            app:singleLineTitle="false" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

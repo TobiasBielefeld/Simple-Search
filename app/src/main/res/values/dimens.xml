@@ -10,4 +10,7 @@
     <dimen name="dialog_paddingTopBottom">10dp</dimen>
     <dimen name="dialog_radio_button_height">48dp</dimen>
     <dimen name="search_icon_size">28dp</dimen>
+
+    <dimen name="dialog_background_colorbox_width">48dp</dimen>
+    <dimen name="settings_color_preview_widget_border">1dp</dimen>
 </resources>

@@ -126,6 +126,12 @@
 
   <string name="settings_use_edge_to_edge_display_mode">"Edge-to-Edge ekran modunu kullan"</string>
 
+  <string name="about_custom_color_picker_title">AmbilWarna kütüphanesi</string>
+
+  <string name="about_custom_color_picker_usage">Özel renk seçici için kullanılır</string>
+
+  <string name="settings_toolbar_color">"Araç çubuğu rengi"</string>
+
   <!-- languages -->
       
   <string name="settings_language_default">Varsayılan dil</string>

@@ -126,6 +126,12 @@
 
   <string name="settings_use_edge_to_edge_display_mode">"「Edge-to-Edge」表示モードを使用する"</string>
 
+  <string name="about_custom_color_picker_title">AmbilWarna ライブラリ</string>
+
+  <string name="about_custom_color_picker_usage">カスタムカラーピッカーに使用</string>
+
+  <string name="settings_toolbar_color">"ツールバーの色"</string>
+
   <!-- languages -->
       
   <string name="settings_language_default">既定の言語</string>

@@ -28,8 +28,9 @@ public class AboutActivity extends CustomAppCompatActivity {
         ActivtyAboutBinding binding = ActivtyAboutBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        Toolbar toolbar = binding.toolbar;
+        toolbar = binding.toolbar;
         setSupportActionBar(toolbar);
+        systemTopSpacer = binding.systemTopSpacer;
 
         TabsPagerAdapter sectionsPagerAdapter = new TabsPagerAdapter(this, getSupportFragmentManager(), TAB_TITLES, FRAGMENTS);
         ViewPager viewPager = binding.viewPager;
@@ -45,6 +46,6 @@ public class AboutActivity extends CustomAppCompatActivity {
         }
 
         toolbar.setNavigationOnClickListener(view -> finish());
-        applyInsetsForActivity(findViewById(R.id.system_left_spacer), findViewById(R.id.system_right_spacer), findViewById(R.id.system_top_spacer));
+        applyInsetsForActivity(binding.systemLeftSpacer, binding.systemRightSpacer, systemTopSpacer);
     }
 }

@@ -1,13 +1,13 @@
 <resources>
 
     <style name="AppThemeNoActionBarNoDrawer" parent="Base.AppThemeNoActionBar">
-        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:statusBarColor">@color/colorPrimary</item>
     </style>
 
     <!-- Base application theme -->
     <style name="Base.AppThemeActionBar" parent="Theme.Material3.DayNight">
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="materialButtonStyle">@style/CustomMaterialButton</item>
         <item name="dialogTheme">@style/CustomMaterialAlertDialogTheme</item>
@@ -25,7 +25,7 @@
 
     <style name="Base.AppThemeNoActionBar" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="materialButtonStyle">@style/CustomMaterialButton</item>
         <item name="dialogTheme">@style/CustomMaterialAlertDialogTheme</item>

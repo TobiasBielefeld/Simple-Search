@@ -126,6 +126,12 @@
 
   <string name="settings_use_edge_to_edge_display_mode">"Usa la modalità di visualizzazione \"Edge-to-Edge\""</string>
 
+  <string name="about_custom_color_picker_title">"AmbilWarna library"</string>
+
+  <string name="about_custom_color_picker_usage">"Usata per il color picker personalizzato"</string>
+
+  <string name="settings_toolbar_color">"Colore della barra"</string>
+
   <!-- languages -->
       
   <string name="settings_language_default">Lingua di default</string>
