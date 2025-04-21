@@ -1,0 +1,1 @@
+* Add option to quickly change the selected search engine in the searchbar

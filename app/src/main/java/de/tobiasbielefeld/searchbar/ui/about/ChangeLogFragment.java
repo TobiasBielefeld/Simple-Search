@@ -44,7 +44,7 @@ import androidx.fragment.app.Fragment;
 
 public class ChangeLogFragment extends FragmentWithBottomSpacing {
 
-    private static int MAX_LINES_PER_VERSION = 10;
+    private final static int MAX_LINES_PER_VERSION = 10;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -52,7 +52,7 @@ public class ChangeLogFragment extends FragmentWithBottomSpacing {
 
         LinearLayout layoutContainer = view.findViewById(R.id.changelog_container);
 
-        String[] titles = new String[]{"2.1", "2.0.2", "2.0.1", "2.0", "1.2", "1.1.4", "1.1.3", "1.1.2", "1.1.1", "1.1", "1.0"};
+        String[] titles = new String[]{"2.2", "2.1", "2.0.2", "2.0.1", "2.0", "1.2", "1.1.4", "1.1.3", "1.1.2", "1.1.1", "1.1", "1.0"};
 
         for (int i = 0; i < titles.length; i++) {
             CardView card = (CardView) LayoutInflater.from(getContext()).inflate(R.layout.changelog_card_view, null);

@@ -23,9 +23,7 @@ public abstract class CustomPreferenceListFragmentCompat extends CustomPreferenc
     protected abstract int getSelectedIndex();
     protected void onBindView(View view) {
         if (getPreference() instanceof CustomListPreference) {
-            int id = ((CustomListPreference) getPreference()).getTitleArrayId();
-            String[] values = getResources().getStringArray(id);
-
+            String[] values = ((CustomListPreference) getPreference()).getTitles();
             radioGroup = view.findViewById(R.id.radio_group);
             int height = (int) getResources().getDimension(R.dimen.dialog_radio_button_height);
 

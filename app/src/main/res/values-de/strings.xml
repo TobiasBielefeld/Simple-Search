@@ -7,10 +7,11 @@
 <!-- Main Activity -->
 <string name="record_list_button_description">"Kopiere zur Suchabfrage"</string>
 <string name="unsupported_search_character">"Abfrage enthält nicht unterstützte Werte :("</string>
-<string name="unsupported_search_string">"Deine benutzerdefinierte Suchmaschine  ist nicht gültig :/"</string>
+<string name="unsupported_search_string">"Deine benutzerdefinierte Suchmaschine ist nicht gültig :/"</string>
 <string name="string_doesnt_contain_placeholder">"Es gibt keinen Platzhalter für die Suchabfrage in deiner benutzerdefinierten Suchmaschine!"</string>
 <string name="menu_delete_all">"Alle Aufzeichnungen löschen"</string>
 <string name="search_hint">"Suche nach…"</string>
+<string name="setup_custom_search_in_settings">Richte in den Einstellungen eine gültige Suchmaschine für diesen Eintrag ein</string>
 
 <!-- Dialogs -->
 <string name="dialog_delete_entry_title">"Diesen Eintrag löschen?"</string>

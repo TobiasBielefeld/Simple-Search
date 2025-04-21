@@ -9,5 +9,5 @@
     <dimen name="dialog_paddingLeftRight">20dp</dimen>
     <dimen name="dialog_paddingTopBottom">10dp</dimen>
     <dimen name="dialog_radio_button_height">48dp</dimen>
-
+    <dimen name="search_icon_size">28dp</dimen>
 </resources>

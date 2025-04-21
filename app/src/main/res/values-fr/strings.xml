@@ -29,6 +29,7 @@
 <string name="string_doesnt_contain_placeholder">"Il n'y a pas d'espace réservé pour la requête de recherche dans votre moteur de recherche personnalisé!"</string>
 <string name="unsupported_search_character">La recherche contient des caractères non supportés :(</string>
 <string name="unsupported_search_string">"L'url de votre moteur de recherche n'est pas valide :/"</string>
+<string name="setup_custom_search_in_settings">Configurez d\'abord une URL de recherche personnalisée valide pour cette entrée dans les paramètres</string>
 <string name="about_developer">"Développeur"</string>
 <string name="about_developer_name">"Tobias Bielefeld"</string>
 <string name="about_compiled">"Date de la construction"</string>

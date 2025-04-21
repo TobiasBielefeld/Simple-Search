@@ -11,6 +11,7 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="materialButtonStyle">@style/CustomMaterialButton</item>
         <item name="dialogTheme">@style/CustomMaterialAlertDialogTheme</item>
+        <item name="popupMenuStyle">@style/CustomPopupMenu</item>
         <item name="alertDialogTheme">@style/CustomMaterialAlertDialogTheme</item>
         <item name="android:alertDialogTheme">@style/CustomMaterialAlertDialogTheme</item>
         <item name="cardViewStyle">@style/CustomCardViewStyle</item>
@@ -28,6 +29,7 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="materialButtonStyle">@style/CustomMaterialButton</item>
         <item name="dialogTheme">@style/CustomMaterialAlertDialogTheme</item>
+        <item name="popupMenuStyle">@style/CustomPopupMenu</item>
         <item name="alertDialogTheme">@style/CustomMaterialAlertDialogTheme</item>
         <item name="android:alertDialogTheme">@style/CustomMaterialAlertDialogTheme</item>
         <item name="cardViewStyle">@style/CustomCardViewStyle</item>
@@ -48,6 +50,14 @@
         <item name="backgroundTint">@color/colorAccent</item>
         <item name="android:textColor">@color/white</item>
     </style>
+
+    <!-- Popup Dialog customization -->
+    <style name="CustomPopupMenu" parent="Widget.Material3.PopupMenu">
+        <item name="android:popupBackground">@color/colorDialogBackground</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:typeface">normal</item>
+    </style>
+
 
     <!-- Dialog customization -->
     <style name="CustomMaterialAlertDialogTheme" parent="ThemeOverlay.Material3.MaterialAlertDialog">

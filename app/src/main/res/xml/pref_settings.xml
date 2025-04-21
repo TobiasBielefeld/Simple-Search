@@ -66,10 +66,7 @@
             app:key="@string/pref_key_search_engine"
             app:title="@string/settings_search_engine_title"
             app:negativeButtonText="@string/cancel"
-            app:positiveButtonText="NULL"
-            app:defaultValue="@integer/default_search_engine_v2"
-            app:entries="@array/pref_search_engine_titles"
-            app:entryValues="@array/pref_search_engine_values"/>
+            app:positiveButtonText="NULL"/>
 
         <SwitchPreferenceCompat
             app:iconSpaceReserved="false"

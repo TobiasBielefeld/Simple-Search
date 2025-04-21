@@ -2,62 +2,63 @@
 
 package de.tobiasbielefeld.searchbar.ui.settings;
 
-import static de.tobiasbielefeld.searchbar.SharedData.DEFAULT_SEARCH_URL;
-import static de.tobiasbielefeld.searchbar.SharedData.PREF_CUSTOM_SEARCH_URL;
-import static de.tobiasbielefeld.searchbar.SharedData.PREF_SEARCH_URL;
-import static de.tobiasbielefeld.searchbar.SharedData.getSavedString;
-
 import android.content.Context;
 import android.util.AttributeSet;
 
 import androidx.annotation.NonNull;
 
-import de.tobiasbielefeld.searchbar.R;
+import java.util.List;
+
+import de.tobiasbielefeld.searchbar.classes.SearchEngineItem;
+import de.tobiasbielefeld.searchbar.helper.SearchEngines;
 import de.tobiasbielefeld.searchbar.ui.settings.helpers.CustomListPreference;
 
 
 public class PreferenceSearchEngines extends CustomListPreference {
 
-    Context context;
+    private final SearchEngines searchEngines;
 
     public PreferenceSearchEngines(@NonNull Context context) {
         super(context);
-        this.context = context;
+        searchEngines = SearchEngines.get(context.getResources());
     }
 
     public PreferenceSearchEngines(Context context, AttributeSet attrs) {
         super(context, attrs);
-        this.context = context;
+        searchEngines = SearchEngines.get(context.getResources());
     }
 
     public PreferenceSearchEngines(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        this.context = context;
+        searchEngines = SearchEngines.get(context.getResources());
     }
 
     @Override
     protected int getCurrentValue() {
-        int d = getContext().getResources().getInteger(R.integer.default_search_engine_v2);
-        return Integer.parseInt(getPersistedString(d + ""));
+        return searchEngines.selectedIndex();
     }
 
     @Override
     public int getTitleArrayId() {
-        return R.array.pref_search_engine_titles;
+        return -1; // unused, we overwrite getTitles() instead
+    }
+
+    @Override
+    public String[] getTitles() {
+        List<SearchEngineItem> items = searchEngines.items();
+        String[] titles = new String[items.size()];
+
+        for (int i = 0; i < items.size(); i++) {
+            titles[i] = items.get(i).label();
+        }
+
+        return titles;
     }
 
     @Override
     public void updateSummary(boolean positiveResult) {
-        String[] titles = context.getResources().getStringArray(getTitleArrayId());
-        int selectedValue = getCurrentValue();
-
-        if (selectedValue < 3) {    //custom search engine
-            String prefKey = selectedValue > 0 ? PREF_CUSTOM_SEARCH_URL + selectedValue : PREF_CUSTOM_SEARCH_URL;
-            String savedSearchUrl = getSavedString(PREF_SEARCH_URL,DEFAULT_SEARCH_URL);
-            String summary = getSavedString(prefKey, savedSearchUrl);
-            setSummary(summary);
-        } else {            // a search engine from the list
-            setSummary(titles[selectedValue]);
-        }
+        searchEngines.updateCustomSearchUris();
+        SearchEngineItem item = searchEngines.selectedItem();
+        setSummary(item.isCustomEngine() ? item.uri() : item.label());
     }
 }

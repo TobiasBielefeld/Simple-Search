@@ -13,4 +13,5 @@
     <color name="toolbarHint">#8D8D8D</color>
     <color name="toolbarText">#4F4F4F</color>
     <color name="mainBackground">#FF141218</color>
+    <color name="dialog_highlight">#33FFFFFF</color>
 </resources>

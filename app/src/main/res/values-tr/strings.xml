@@ -19,6 +19,8 @@
   <string name="menu_delete_all">Tüm kayıtları sil</string>
       
   <string name="search_hint">Aramak…</string>
+
+  <string name="setup_custom_search_in_settings">Öncelikle ayarlarda bu giriş için geçerli bir özel arama URL\'si ayarlayın</string>
       
   <!-- Dialogs -->
       

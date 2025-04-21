@@ -43,29 +43,25 @@ import de.tobiasbielefeld.searchbar.helper.Records;
 public class SharedData {
 
     public static SharedPreferences sharedPref;
-
     public static String PREF_RECORD_LIST_SIZE;
     public static String PREF_RECORD_ENTRY;
     public static String PREF_THEME;
     public static String PREF_HIDE_APP_ICON;
     public static String PREF_SEARCH_URL;
-    public static String PREF_SEARCH_SELECTED_INDEX;
+    public static String PREF_SEARCH_KEY;
     public static String PREF_CUSTOM_SEARCH_URL;
     public static String PREF_ORIENTATION;
     public static String PREF_STATUS_BAR;
     public static String PREF_LANGUAGE;
     public static String PREF_CLOSE_AFTER_SEARCH;
     public static String PREF_USE_EDGE_TO_EDGE_DISPLAY_MODE;
-
-    public static String DEFAULT_SEARCH_URL;
     public static String DEFAULT_ORIENTATION;
+    public static String DEFAULT_SEARCH_KEY;
     public static boolean DEFAULT_STATUS_BAR;
     public static boolean DEFAULT_CLOSE_AFTER_SEARCH;
     public static boolean DEFAULT_EDGE_TO_EDGE_DISPLAY_MODE;
     public static int DEFAULT_THEME;
-    public static int DEFAULT_SEARCH_SELECTED_INDEX;
     public static boolean DEFAULT_HIDE_APP_ICON;
-
     public static Records records;
 
     private static Toast toast;
@@ -82,7 +78,7 @@ public class SharedData {
             PREF_RECORD_LIST_SIZE = "record_list_size";
             PREF_RECORD_ENTRY = "record_entry_";
             PREF_SEARCH_URL = "search_url";
-            PREF_SEARCH_SELECTED_INDEX = res.getString(R.string.pref_key_search_engine);
+            PREF_SEARCH_KEY = "search_key";
             PREF_ORIENTATION = res.getString(R.string.pref_key_orientation);
             PREF_STATUS_BAR = res.getString(R.string.pref_key_hide_status_bar);
             PREF_LANGUAGE = res.getString(R.string.pref_key_language);
@@ -91,9 +87,7 @@ public class SharedData {
             PREF_HIDE_APP_ICON = res.getString(R.string.pref_key_hide_app_icon);
             PREF_CLOSE_AFTER_SEARCH = res.getString(R.string.pref_key_close_after_search);
             PREF_USE_EDGE_TO_EDGE_DISPLAY_MODE = res.getString(R.string.pref_key_edge_to_edge_display_mode);
-
-            DEFAULT_SEARCH_SELECTED_INDEX = res.getInteger(R.integer.default_search_engine_v2);
-            DEFAULT_SEARCH_URL = res.getStringArray(R.array.search_engine_uris)[DEFAULT_SEARCH_SELECTED_INDEX];
+            DEFAULT_SEARCH_KEY = "search_duckduckgo";
             DEFAULT_ORIENTATION = res.getStringArray(R.array.pref_orientation_values)[0];
             DEFAULT_STATUS_BAR = res.getBoolean(R.bool.default_status_bar);
             DEFAULT_THEME = res.getInteger(R.integer.default_theme);
@@ -144,6 +138,21 @@ public class SharedData {
         return getSavedBoolean(PREF_USE_EDGE_TO_EDGE_DISPLAY_MODE, DEFAULT_EDGE_TO_EDGE_DISPLAY_MODE);
     }
 
+    public static String getSavedSearchEngineKey() {
+        String value = getSavedString(PREF_SEARCH_KEY, "");
+
+        if (value.isEmpty()) {
+            putSavedSearchEngineKey(DEFAULT_SEARCH_KEY);
+            return DEFAULT_SEARCH_KEY;
+        }
+
+        return value;
+    }
+
+    public static void putSavedSearchEngineKey(String key) {
+        putSavedString(PREF_SEARCH_KEY, key);
+    }
+
     public static void logText(String text){
         Log.e("hey",text);
     }
@@ -176,11 +185,15 @@ public class SharedData {
      */
     @SuppressLint("ShowToast")
     public static void showToast(String text, Context context) {
-        if (toast == null) {
-            toast = Toast.makeText(context, text, Toast.LENGTH_LONG);
-        } else
-            toast.setText(text);
+        if (context == null) {
+            return;
+        }
 
+        if (toast != null) {
+            toast.cancel();
+        }
+
+        toast = Toast.makeText(context, text, Toast.LENGTH_LONG);
         toast.show();
     }
 

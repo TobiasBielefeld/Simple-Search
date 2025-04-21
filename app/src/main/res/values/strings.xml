@@ -11,6 +11,7 @@
     <string name="string_doesnt_contain_placeholder">There is no placeholder for the search query in your custom search engine!</string>
     <string name="menu_delete_all">Delete all records</string>
     <string name="search_hint">Search for…</string>
+    <string name="setup_custom_search_in_settings">Setup a valid custom search url for this entry in the settings first</string>">
 
     <!-- Dialogs -->
     <string name="dialog_delete_entry_title">Delete this record?</string>

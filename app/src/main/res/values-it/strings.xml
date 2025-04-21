@@ -19,6 +19,8 @@
   <string name="menu_delete_all">Elimina tutti i record</string>
       
   <string name="search_hint">Cercare…</string>
+
+  <string name="setup_custom_search_in_settings">Imposta prima un URL di ricerca personalizzato valido per questa voce nelle impostazioni</string>
       
   <!-- Dialogs -->
       

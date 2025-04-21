@@ -10,6 +10,7 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="materialButtonStyle">@style/CustomMaterialButton</item>
         <item name="dialogTheme">@style/CustomMaterialAlertDialogTheme</item>
+        <item name="popupMenuStyle">@style/CustomPopupMenu</item>
         <item name="alertDialogTheme">@style/CustomMaterialAlertDialogTheme</item>
         <item name="android:alertDialogTheme">@style/CustomMaterialAlertDialogTheme</item>
         <item name="cardViewStyle">@style/CustomCardViewStyle</item>

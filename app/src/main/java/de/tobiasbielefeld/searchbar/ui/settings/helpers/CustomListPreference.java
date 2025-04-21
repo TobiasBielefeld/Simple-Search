@@ -46,9 +46,8 @@ public abstract class CustomListPreference extends CustomDialogPreference {
     }
 
     public void updateSummary(boolean positiveResult) {
-        int amount = getCurrentValue();
-        String[] titles = context.getResources().getStringArray(getTitleArrayId());
-        setSummary(titles[amount]);
+        int index = getCurrentValue();
+        setSummary(getTitles()[index]);
     }
 
     @Override
@@ -59,4 +58,8 @@ public abstract class CustomListPreference extends CustomDialogPreference {
     protected abstract int getCurrentValue();
 
     public abstract int getTitleArrayId();
+
+    public String[] getTitles() {
+        return context.getResources().getStringArray(getTitleArrayId());
+    }
 }

@@ -1,53 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="pref_search_engine_titles" translateable="false">
-        <item>@string/settings_custom</item>
-        <item>@string/settings_custom</item>
-        <item>@string/settings_custom</item>
-        <item>Google</item>
-        <item>Yahoo</item>
-        <item>Bing</item>
-        <item>Yandex</item>
-        <item>Startpage</item>
-        <item>DuckDuckGo</item>
-        <item>DuckDuckGo Lite</item>
-        <item>metasearX</item>
-        <item>Ecosia</item>
-        <item>Metager</item>
-    </string-array>
-
-    <string-array name="pref_search_engine_values" translatable="false">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
-        <item>11</item>
-        <item>12</item>
-    </string-array>
-
-    <string-array formatted="false" name="search_engine_uris" translateable="false">
-        <item/> <!-- custom search engine will be set up programmatically, so these entries can be empty-->
-        <item/>
-        <item/>
-        <item>@string/url_google</item>
-        <item>@string/url_yahoo</item>
-        <item>@string/url_bing</item>
-        <item>@string/url_yandex</item>
-        <item>@string/url_startpage</item>
-        <item>@string/url_duckduckgo</item>
-        <item>@string/url_duckduckgo_lite</item>
-        <item>@string/url_searx</item>
-        <item>@string/url_ecosia</item>
-        <item>@string/url_metager</item>
-    </string-array>
-
     <string-array name="pref_language_titles" translatable="false">
         <item>@string/settings_language_default</item>
         <item>@string/settings_language_chinese_simplified</item>

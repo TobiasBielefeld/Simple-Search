@@ -19,6 +19,8 @@
   <string name="menu_delete_all">Eliminar todos los registros</string>
       
   <string name="search_hint">Buscar…</string>
+
+  <string name="setup_custom_search_in_settings">Primero, configure una URL de búsqueda personalizada válida para esta entrada en la configuración</string>
       
   <!-- Dialogs -->
       

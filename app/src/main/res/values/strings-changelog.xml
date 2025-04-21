@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="changelog_12_1" translatable="false">Add option to quickly change the selected search engine in the searchbar</string>
+
     <string name="changelog_11_1" translatable="false">Made app compatible with Android 15 and updated support libraries</string>
     <string name="changelog_11_2" translatable="false">The app now uses \"edge-to-edge\" display mode on Android 11 and up (can be disabled in settings)</string>
 

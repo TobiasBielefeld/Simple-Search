@@ -19,6 +19,8 @@
   <string name="menu_delete_all">删除所有记录</string>
       
   <string name="search_hint">搜索…</string>
+
+  <string name="setup_custom_search_in_settings">首先在设置中为该条目设置一个有效的自定义搜索网址</string>
       
   <!-- Dialogs -->
       
