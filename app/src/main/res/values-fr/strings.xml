@@ -61,6 +61,8 @@
 <string name="settings_close_after_search_title">Fermer l\'application après avoir lancé la recherche</string>
 <string name="settings_close_after_search_text">L\'application ne s\'ouvrira pas lorsque vous reviendrez de votre navigateur</string>
 <string name="settings_use_edge_to_edge_display_mode">"Utiliser le mode d'affichage \"Edge-to-Edge\""</string>
+<string name="settings_show_search_engines_title">Moteurs de recherche à afficher</string>
+<string name="settings_show_search_engines_text">Sélectionnez les moteurs de recherche à afficher dans le menu de commutation rapide de la barre de recherche</string>
 
     <!-- languages -->
 <string name="settings_language_default">"Langue par défaut"</string>

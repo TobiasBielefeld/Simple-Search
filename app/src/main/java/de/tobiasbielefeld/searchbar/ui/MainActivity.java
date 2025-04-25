@@ -40,6 +40,7 @@ import android.widget.TextView;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.util.List;
 
 import de.tobiasbielefeld.searchbar.R;
 import de.tobiasbielefeld.searchbar.classes.CustomAppCompatActivity;
@@ -56,7 +57,6 @@ import static de.tobiasbielefeld.searchbar.helper.InsetHelper.*;
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 
 public class MainActivity extends CustomAppCompatActivity implements TextWatcher, View.OnClickListener, TextView.OnEditorActionListener {
@@ -258,8 +258,9 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
     private void showSearchEngineSelectPopup(View anchorView) {
         View popupView = LayoutInflater.from(this).inflate(R.layout.search_engine_select_listview, null);
         ListView listView = popupView.findViewById(R.id.popup_list);
+        List<SearchEngineItem> filteredItems = searchEngines.filteredItems();
 
-        CustomMenuAdapter adapter = new CustomMenuAdapter(this, searchEngines.items());
+        CustomMenuAdapter adapter = new CustomMenuAdapter(this, filteredItems);
         listView.setAdapter(adapter);
 
         PopupWindow popupWindow = new PopupWindow(popupView,
@@ -268,7 +269,7 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
                 true);
 
         listView.setOnItemClickListener((parent, view, position, id) -> {
-            SearchEngineItem item = searchEngines.items().get(position);
+            SearchEngineItem item = filteredItems.get(position);
 
             if (item.isCustomEngine() && item.isUriNotValid()) {
                 showToast(getString(R.string.setup_custom_search_in_settings), this);

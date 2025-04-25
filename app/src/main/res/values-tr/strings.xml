@@ -132,6 +132,10 @@
 
   <string name="settings_toolbar_color">"Araç çubuğu rengi"</string>
 
+  <string name="settings_show_search_engines_title">Gösterilecek arama motorları</string>
+
+  <string name="settings_show_search_engines_text">Arama çubuğundaki hızlı geçiş menüsünde hangi arama motorlarının gösterileceğini seçin</string>
+
   <!-- languages -->
       
   <string name="settings_language_default">Varsayılan dil</string>

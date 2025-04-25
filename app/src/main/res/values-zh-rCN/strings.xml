@@ -132,6 +132,10 @@
 
   <string name="settings_toolbar_color">"工具栏颜色"</string>
 
+  <string name="settings_show_search_engines_title">搜索引擎显示</string>
+
+  <string name="settings_show_search_engines_text">选择在搜索栏的快速切换菜单中显示哪些搜索引擎</string>
+
   <!-- languages -->
       
   <string name="settings_language_default">默认语言</string>

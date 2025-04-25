@@ -20,6 +20,7 @@ package de.tobiasbielefeld.searchbar.helper;
 
 import static de.tobiasbielefeld.searchbar.SharedData.PREF_CUSTOM_SEARCH_URL;
 import static de.tobiasbielefeld.searchbar.SharedData.PREF_SEARCH_URL;
+import static de.tobiasbielefeld.searchbar.SharedData.getSavedBoolean;
 import static de.tobiasbielefeld.searchbar.SharedData.getSavedSearchEngineKey;
 import static de.tobiasbielefeld.searchbar.SharedData.getSavedString;
 import static de.tobiasbielefeld.searchbar.SharedData.putSavedSearchEngineKey;
@@ -27,6 +28,7 @@ import static de.tobiasbielefeld.searchbar.SharedData.putSavedString;
 
 import android.content.res.Resources;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -100,7 +102,19 @@ public class SearchEngines {
         return items.get(selectedIndex);
     }
 
-    public int getOldIndex() {
+    public List<SearchEngineItem> filteredItems() {
+        List<SearchEngineItem> filteredItems = new ArrayList<>();
+
+        for (SearchEngineItem item : items) {
+            if (getSavedBoolean(item.key() + "_shown", true)) {
+                filteredItems.add(item);
+            }
+        }
+
+        return filteredItems;
+    }
+
+    private int getOldIndex() {
         String oldSelected = getSavedString(PREF_SEARCH_URL, "");
 
         if (oldSelected.isEmpty()) {

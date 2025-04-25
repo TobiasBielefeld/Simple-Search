@@ -48,6 +48,8 @@
 
     <string name="settings_close_after_search_title">"Close app after starting search"</string>
     <string name="settings_close_after_search_text">"App will not open again when you press back from your browser"</string>
+    <string name="settings_show_search_engines_title">"Search engines to show"</string>
+    <string name="settings_show_search_engines_text">"Select which search engines should be shown in the quick switch menu in the search bar"</string>
 
     <!--About-->
     <string name="activity_about">About</string>

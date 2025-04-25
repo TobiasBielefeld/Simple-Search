@@ -132,6 +132,10 @@
 
   <string name="settings_toolbar_color">"ツールバーの色"</string>
 
+  <string name="settings_show_search_engines_title">表示する検索エンジン</string>
+
+  <string name="settings_show_search_engines_text">検索バーのクイックスイッチメニューに表示する検索エンジンを選択します</string>
+
   <!-- languages -->
       
   <string name="settings_language_default">既定の言語</string>

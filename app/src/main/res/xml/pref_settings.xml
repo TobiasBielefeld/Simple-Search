@@ -77,6 +77,15 @@
             app:negativeButtonText="@string/cancel"
             app:positiveButtonText="NULL"/>
 
+        <de.tobiasbielefeld.searchbar.ui.settings.PreferenceShowSearchEngines
+            app:iconSpaceReserved="false"
+            app:singleLineTitle="false"
+            app:key="@string/pref_key_show_search_engines"
+            app:negativeButtonText="@string/cancel"
+            app:positiveButtonText="@string/confirm"
+            app:title="@string/settings_show_search_engines_title"
+            app:summary="@string/settings_show_search_engines_text"/>
+
         <SwitchPreferenceCompat
             app:iconSpaceReserved="false"
             app:singleLineTitle="false"

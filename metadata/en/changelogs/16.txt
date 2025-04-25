@@ -1,3 +1,4 @@
 * Add option to quickly change the selected search engine in the searchbar
+* The list to show can be adjusted in the settings
 * Add option to change the toolbar color
 * Added Qwant search engine

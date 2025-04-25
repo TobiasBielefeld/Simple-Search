@@ -132,6 +132,10 @@
 
   <string name="settings_toolbar_color">"Colore della barra"</string>
 
+  <string name="settings_show_search_engines_title">Motori di ricerca da mostrare</string>
+
+  <string name="settings_show_search_engines_text">Seleziona quali motori di ricerca devono essere visualizzati nel menu di cambio rapido nella barra di ricerca</string>
+
   <!-- languages -->
       
   <string name="settings_language_default">Lingua di default</string>
