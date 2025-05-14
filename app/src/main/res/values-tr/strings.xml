@@ -20,7 +20,9 @@
       
   <string name="search_hint">Aramak…</string>
 
-  <string name="setup_custom_search_in_settings">Öncelikle ayarlarda bu giriş için geçerli bir özel arama URL\'si ayarlayın</string>
+  <string name="setup_search_in_settings">Öncelikle ayarlarda bu giriş için geçerli bir arama URL\'si ayarlayın</string>
+
+  <string name="load_search_engine_list">Arama motorları henüz yüklenmedi</string>
       
   <!-- Dialogs -->
       
@@ -30,7 +32,7 @@
       
   <string name="dialog_custom_search_engine_title">Özel arama motorunu girin</string>
       
-  <string formatted="false" name="dialog_custom_search_engine_text">Bir \"%s\" girin (tırnak işaretleri olmadan) arama sorgusunun eklenmesi gereken yer tutucu olarak kullanılır.</string>
+  <string formatted="false" name="dialog_edit_search_engine_text">Bir \"%s\" girin (tırnak işaretleri olmadan) arama sorgusunun eklenmesi gereken yer tutucu olarak kullanılır.</string>
       
   <!-- Settings -->
       
@@ -45,8 +47,8 @@
   <string name="settings_general_title">Genel</string>
       
   <string name="settings_general_summary">Uygulamanın davranışını değiştirme</string>
-      
-  <string name="settings_search_engine_title">Arama motoru</string>
+
+  <string name="settings_search_engine_title">Seçili Arama motoru</string>
       
   <string name="settings_enable_records_title">Geçmişi etkinleştir</string>
       
@@ -132,9 +134,39 @@
 
   <string name="settings_toolbar_color">"Araç çubuğu rengi"</string>
 
-  <string name="settings_show_search_engines_title">Gösterilecek arama motorları</string>
+  <string name="settings_show_search_engines_title">Görüntülenen arama motorları</string>
 
   <string name="settings_show_search_engines_text">Arama çubuğundaki hızlı geçiş menüsünde hangi arama motorlarının gösterileceğini seçin</string>
+
+  <string name="add">Eklemek</string>
+
+  <string name="delete">Silmek</string>
+
+  <string name="edit">Düzenlemek</string>
+
+  <string name="db_save_no_disk_space_available">Veritabanını kaydetmek için yeterli alan yok!</string>
+
+  <string name="settings_manage_search_engines_title">Arama motorlarını yönetin</string>
+
+  <string name="settings_manage_search_engines_text">Arama motorlarını ekleyin, kaldırın veya düzenleyin</string>
+
+  <string name="settings_manage_search_engines_deleted">Giriş silindi</string>
+
+  <string name="dialog_edit_search_engine_title">Arama motorunu düzenle</string>
+
+  <string name="dialog_edit_search_engine_name">İsim</string>
+
+  <string name="dialog_edit_search_engine_uri">URL</string>
+
+  <string name="dialog_edit_search_engine_load_icon">Favicon\'u URL\'den yükle</string>
+
+  <string name="dialog_edit_search_engine_favicon_load_error">Favicon yüklenemedi</string>
+
+  <string name="dialog_edit_search_engine_name_error">Seçilen isim zaten kullanımda</string>
+
+  <string name="dialog_edit_search_engine_name_success">Arama motoru kaydedildi</string>
+
+  <string name="dialog_edit_search_engine_save_error">Değer kaydedilirken hata oluştu</string>
 
   <!-- languages -->
       
@@ -157,5 +189,11 @@
   <string name="settings_language_spanish_argentina">İspanyolca (Arjantin)</string>
       
   <string name="settings_language_turkish">Türkçe</string>
-  
+
+  <string name="settings_language_portuguese">Portekizce</string>
+
+  <string name="settings_language_portuguese_brazil">Portekizce (Brezilya)</string>
+
+  <string name="settings_language_polish">Lehçe</string>
+
 </resources>

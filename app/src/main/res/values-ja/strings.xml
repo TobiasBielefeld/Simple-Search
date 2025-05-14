@@ -20,7 +20,9 @@
       
   <string name="search_hint">検索する…</string>
 
-  <string name="setup_custom_search_in_settings">まず設定でこのエントリの有効なカスタム検索 URL を設定してください</string>
+  <string name="setup_search_in_settings">まず設定でこのエントリの有効な検索 URL を設定してください</string>
+
+  <string name="load_search_engine_list">検索エンジンはまだ読み込まれていません</string>
       
   <!-- Dialogs -->
       
@@ -30,7 +32,7 @@
       
   <string name="dialog_custom_search_engine_title">カスタム検索エンジンを入力</string>
       
-  <string formatted="false" name="dialog_custom_search_engine_text">検索クエリを挿入するプレースホルダーとして「%s」(引用符なし) を入力します。</string>
+  <string formatted="false" name="dialog_edit_search_engine_text">検索クエリを挿入するプレースホルダーとして「%s」(引用符なし) を入力します。</string>
       
   <!-- Settings -->
       
@@ -45,8 +47,8 @@
   <string name="settings_general_title">一般的な</string>
       
   <string name="settings_general_summary">アプリの動作を変更する</string>
-      
-  <string name="settings_search_engine_title">検索エンジン</string>
+
+  <string name="settings_search_engine_title">選択した検索エンジン</string>
       
   <string name="settings_enable_records_title">履歴を有効にする</string>
       
@@ -81,7 +83,37 @@
   <string name="settings_change_theme_light">ライト</string>
       
   <string name="settings_change_theme_default">システム設定に従う</string>
-      
+
+  <string name="add">追加</string>
+
+  <string name="delete">消去</string>
+
+  <string name="edit">編集</string>
+
+  <string name="db_save_no_disk_space_available">データベースを保存するための十分なスペースがありません。</string>
+
+  <string name="settings_manage_search_engines_title">検索エンジンを管理する</string>
+
+  <string name="settings_manage_search_engines_text">検索エンジンを追加、削除、編集する</string>
+
+  <string name="settings_manage_search_engines_deleted">エントリーは削除されました</string>
+
+  <string name="dialog_edit_search_engine_title">検索エンジンを編集</string>
+
+  <string name="dialog_edit_search_engine_name">名前</string>
+
+  <string name="dialog_edit_search_engine_uri">URL</string>
+
+  <string name="dialog_edit_search_engine_load_icon">URL からファビコンを読み込む</string>
+
+  <string name="dialog_edit_search_engine_favicon_load_error">ファビコンを読み込めませんでした</string>
+
+  <string name="dialog_edit_search_engine_name_error">選択した名前はすでに使用されています</string>
+
+  <string name="dialog_edit_search_engine_name_success">検索エンジンが保存されました</string>
+
+  <string name="dialog_edit_search_engine_save_error">値の保存中にエラーが発生しました</string>
+
   <!--About-->
       
   <string name="activity_about">について</string>
@@ -132,7 +164,7 @@
 
   <string name="settings_toolbar_color">"ツールバーの色"</string>
 
-  <string name="settings_show_search_engines_title">表示する検索エンジン</string>
+  <string name="settings_show_search_engines_title">表示された検索エンジン</string>
 
   <string name="settings_show_search_engines_text">検索バーのクイックスイッチメニューに表示する検索エンジンを選択します</string>
 
@@ -157,5 +189,11 @@
   <string name="settings_language_spanish_argentina">スペイン語（アルゼンチン）</string>
       
   <string name="settings_language_turkish">トルコ語</string>
-  
+
+  <string name="settings_language_portuguese">ポルトガル語</string>
+
+  <string name="settings_language_portuguese_brazil">ポルトガル語 (ブラジル)</string>
+
+  <string name="settings_language_polish">ポーランド語</string>
+
 </resources>

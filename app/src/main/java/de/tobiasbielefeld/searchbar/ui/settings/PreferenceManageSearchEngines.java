@@ -23,26 +23,31 @@ import android.util.AttributeSet;
 
 import androidx.annotation.NonNull;
 
-import de.tobiasbielefeld.searchbar.ui.settings.helpers.CustomDialogPreference;
 import de.tobiasbielefeld.searchbar.R;
+import de.tobiasbielefeld.searchbar.ui.settings.helpers.CustomDialogPreference;
 
-public class PreferenceShowSearchEngines extends CustomDialogPreference {
+public class PreferenceManageSearchEngines extends CustomDialogPreference {
 
-    public PreferenceShowSearchEngines(@NonNull Context context) {
+    Context context;
+
+    public PreferenceManageSearchEngines(@NonNull Context context) {
         super(context);
+        this.context = context;
     }
 
-    public PreferenceShowSearchEngines(Context context, AttributeSet attrs) {
+    public PreferenceManageSearchEngines(Context context, AttributeSet attrs) {
         super(context, attrs);
+        this.context = context;
     }
 
-    public PreferenceShowSearchEngines(Context context, AttributeSet attrs, int defStyleAttr) {
+    public PreferenceManageSearchEngines(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        this.context = context;
     }
 
     @Override
     protected int getDialogResourceId() {
-        return R.layout.dialog_show_search_engines;
+        return R.layout.dialog_manage_search_engines;
     }
 
     @Override

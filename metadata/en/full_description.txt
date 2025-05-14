@@ -2,4 +2,4 @@ A very basic app designed for people who want to use a search widget with their 
 
 This app contains a search bar to type in a search query, which will be opened in the Internet browser. A widget for the home screen will simply start the app.
 
-You can change the search engine in the settings (Default is DuckDuckGo) or type in a custom search string. The app also saves the search queries as a history.
+You can modify or delete existing search engine and also add infinite custom search engines. The app also saves up to 20 search queries as a history.

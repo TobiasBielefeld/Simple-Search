@@ -23,6 +23,9 @@ import static de.tobiasbielefeld.searchbar.SharedData.putSavedToolbarColor;
 
 import android.app.Activity;
 import android.view.View;
+
+import androidx.appcompat.app.AlertDialog;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -98,8 +101,9 @@ public class DialogToolbarColor extends CustomPreferenceDialogFragmentCompat imp
     }
 
     @Override
-    protected void onClickOkay() {
+    protected void onClickOkay(AlertDialog dialog) {
         showCustomColorDialog();
+        dialog.dismiss();
     }
 
     @Override

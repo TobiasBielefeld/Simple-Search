@@ -18,7 +18,8 @@
 
 package de.tobiasbielefeld.searchbar.classes;
 
-import static de.tobiasbielefeld.searchbar.SharedData.getSavedSearchEngineKey;
+import static de.tobiasbielefeld.searchbar.SharedData.byteArrayToBitmap;
+import static de.tobiasbielefeld.searchbar.SharedData.getSavedSearchEngineLabel;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -34,10 +35,11 @@ import java.util.List;
 import java.util.Objects;
 
 import de.tobiasbielefeld.searchbar.R;
+import de.tobiasbielefeld.searchbar.models.SearchEngine;
 
-public class CustomMenuAdapter extends ArrayAdapter<SearchEngineItem> {
+public class CustomMenuAdapter extends ArrayAdapter<SearchEngine> {
 
-    public CustomMenuAdapter(Context context, List<SearchEngineItem> items) {
+    public CustomMenuAdapter(Context context, List<SearchEngine> items) {
         super(context, 0, items);
     }
 
@@ -47,16 +49,15 @@ public class CustomMenuAdapter extends ArrayAdapter<SearchEngineItem> {
         View view = convertView != null ? convertView :
                 LayoutInflater.from(getContext()).inflate(R.layout.search_engine_select_menu_item, parent, false);
 
-        SearchEngineItem item = getItem(position);
-        String selectedKey = getSavedSearchEngineKey();
+        SearchEngine item = getItem(position);
+        String selectedLabel = getSavedSearchEngineLabel();
 
         ImageView icon = view.findViewById(R.id.item_icon);
         TextView text = view.findViewById(R.id.item_text);
 
-
-        icon.setImageResource(item.iconRes());
-        text.setText(item.label());
-        view.setBackgroundResource(Objects.equals(item.key(), selectedKey) ? R.drawable.dialog_highlight : android.R.color.transparent);
+        icon.setImageBitmap(byteArrayToBitmap(item.icon));
+        text.setText(item.label);
+        view.setBackgroundResource(Objects.equals(item.label, selectedLabel) ? R.drawable.dialog_highlight : android.R.color.transparent);
 
         return view;
     }

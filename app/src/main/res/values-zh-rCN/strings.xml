@@ -20,7 +20,9 @@
       
   <string name="search_hint">搜索…</string>
 
-  <string name="setup_custom_search_in_settings">首先在设置中为该条目设置一个有效的自定义搜索网址</string>
+  <string name="setup_search_in_settings">首先在设置中为该条目设置一个有效的搜索网址</string>
+
+  <string name="load_search_engine_list">搜索引擎尚未加载</string>
       
   <!-- Dialogs -->
       
@@ -30,7 +32,7 @@
       
   <string name="dialog_custom_search_engine_title">输入自定义搜索引擎</string>
       
-  <string formatted="false" name="dialog_custom_search_engine_text">输入“%s”（不带引号）作为应插入搜索查询的占位符。</string>
+  <string formatted="false" name="dialog_edit_search_engine_text">输入“%s”（不带引号）作为应插入搜索查询的占位符。</string>
       
   <!-- Settings -->
       
@@ -45,8 +47,8 @@
   <string name="settings_general_title">一般的</string>
       
   <string name="settings_general_summary">更改应用程序的行为</string>
-      
-  <string name="settings_search_engine_title">搜索引擎</string>
+
+  <string name="settings_search_engine_title">选定的搜索引擎</string>
       
   <string name="settings_enable_records_title">启用历史记录</string>
       
@@ -81,7 +83,37 @@
   <string name="settings_change_theme_light">光</string>
       
   <string name="settings_change_theme_default">按照系统设置</string>
-      
+
+  <string name="add">添加</string>
+
+  <string name="delete">删除</string>
+
+  <string name="edit">编辑</string>
+
+  <string name="db_save_no_disk_space_available">没有足够的空间来保存数据库！</string>
+
+  <string name="settings_manage_search_engines_title">管理搜索引擎</string>
+
+  <string name="settings_manage_search_engines_text">添加、删除或编辑搜索引擎</string>
+
+  <string name="settings_manage_search_engines_deleted">条目已被删除</string>
+
+  <string name="dialog_edit_search_engine_title">编辑搜索引擎</string>
+
+  <string name="dialog_edit_search_engine_name">姓名</string>
+
+  <string name="dialog_edit_search_engine_uri">网址</string>
+
+  <string name="dialog_edit_search_engine_load_icon">从 网址 加载图标</string>
+
+  <string name="dialog_edit_search_engine_favicon_load_error">无法加载网站图标</string>
+
+  <string name="dialog_edit_search_engine_name_error">所选名称已被使用</string>
+
+  <string name="dialog_edit_search_engine_name_success">搜索引擎已保存</string>
+
+  <string name="dialog_edit_search_engine_save_error">保存值时出错</string>
+
   <!--About-->
       
   <string name="activity_about">关于</string>
@@ -132,7 +164,7 @@
 
   <string name="settings_toolbar_color">"工具栏颜色"</string>
 
-  <string name="settings_show_search_engines_title">搜索引擎显示</string>
+  <string name="settings_show_search_engines_title">显示的搜索引擎</string>
 
   <string name="settings_show_search_engines_text">选择在搜索栏的快速切换菜单中显示哪些搜索引擎</string>
 
@@ -157,5 +189,11 @@
   <string name="settings_language_spanish_argentina">西班牙语（阿根廷）</string>
       
   <string name="settings_language_turkish">土耳其</string>
-  
+
+  <string name="settings_language_polish">波兰语</string>
+
+  <string name="settings_language_portuguese_brazil">"葡萄牙语 （巴西）"</string>
+
+  <string name="settings_language_portuguese">"葡萄牙语"</string>
+
 </resources>

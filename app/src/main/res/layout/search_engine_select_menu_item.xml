@@ -8,11 +8,20 @@
     android:orientation="horizontal"
     android:background="?attr/selectableItemBackground">
 
-    <ImageView
-        android:id="@+id/item_icon"
-        android:layout_width="@dimen/search_icon_size"
-        android:layout_height="@dimen/search_icon_size"
-        android:layout_marginEnd="16dp" />
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/image_border"
+        android:layout_marginEnd="16dp"
+        android:padding="@dimen/search_icon_frame_padding">
+
+        <ImageView
+            android:id="@+id/item_icon"
+            android:layout_width="@dimen/search_icon_size"
+            android:layout_height="@dimen/search_icon_size" />
+
+    </FrameLayout>
+
 
     <TextView
         android:id="@+id/item_text"

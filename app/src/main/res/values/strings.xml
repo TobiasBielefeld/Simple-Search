@@ -11,13 +11,14 @@
     <string name="string_doesnt_contain_placeholder">There is no placeholder for the search query in your custom search engine!</string>
     <string name="menu_delete_all">Delete all records</string>
     <string name="search_hint">Search for…</string>
-    <string name="setup_custom_search_in_settings">Setup a valid custom search url for this entry in the settings first</string>">
+    <string name="setup_search_in_settings">Setup a valid search url for this entry in the settings first</string>
+    <string name="load_search_engine_list">Search engines are not loaded yet</string>
 
     <!-- Dialogs -->
     <string name="dialog_delete_entry_title">Delete this record?</string>
     <string name="dialog_delete_all_records_text">Delete all records! Are you sure?</string>
     <string name="dialog_custom_search_engine_title">Enter custom search engine</string>
-    <string formatted="false" name="dialog_custom_search_engine_text">Enter a \"%s\" (without the quotation marks) as a placeholder where the search query should be inserted at.</string>
+    <string formatted="false" name="dialog_edit_search_engine_text">Enter a \"%s\" (without the quotation marks) as a placeholder where the search query should be inserted at.</string>
 
     <!-- Settings -->
     <string name="activity_settings">Settings</string>
@@ -26,7 +27,7 @@
     <string name="settings_search_summary">Change the search engine and set up the history</string>
     <string name="settings_general_title">General</string>
     <string name="settings_general_summary">Change the behavior of the app</string>
-    <string name="settings_search_engine_title">Search engine</string>
+    <string name="settings_search_engine_title">Selected Search engine</string>
     <string name="settings_enable_records_title">Enable history</string>
     <string name="settings_enable_records_text">Save searched queries for reuse</string>
     <string name="settings_orientation">Screen orientation</string>
@@ -48,8 +49,25 @@
 
     <string name="settings_close_after_search_title">"Close app after starting search"</string>
     <string name="settings_close_after_search_text">"App will not open again when you press back from your browser"</string>
-    <string name="settings_show_search_engines_title">"Search engines to show"</string>
+    <string name="settings_show_search_engines_title">"Displayed search engines"</string>
     <string name="settings_show_search_engines_text">"Select which search engines should be shown in the quick switch menu in the search bar"</string>
+
+    <string name="add">"Add"</string>
+    <string name="delete">"Delete"</string>
+    <string name="edit">"Edit"</string>
+
+    <string name="db_save_no_disk_space_available">"Not enough space available for saving database!"</string>
+    <string name="settings_manage_search_engines_title">"Manage search engines"</string>
+    <string name="settings_manage_search_engines_text">"Add, remove or edit search engines"</string>
+    <string name="settings_manage_search_engines_deleted">"Entry was deleted"</string>
+    <string name="dialog_edit_search_engine_title">"Edit search engine"</string>
+    <string name="dialog_edit_search_engine_name">"Name"</string>
+    <string name="dialog_edit_search_engine_uri">"URL"</string>
+    <string name="dialog_edit_search_engine_load_icon">"Load favicon from URL"</string>
+    <string name="dialog_edit_search_engine_favicon_load_error">"Could not load favicon"</string>
+    <string name="dialog_edit_search_engine_name_error">"Selected name is already in use"</string>
+    <string name="dialog_edit_search_engine_name_success">"Search engine has been saved"</string>
+    <string name="dialog_edit_search_engine_save_error">"Error while saving value"</string>
 
     <!--About-->
     <string name="activity_about">About</string>
@@ -87,4 +105,7 @@
     <string name="settings_language_spanish">"Spanish"</string>
     <string name="settings_language_spanish_argentina">"Spanish (Argentina)"</string>
     <string name="settings_language_turkish">"Turkish"</string>
+    <string name="settings_language_polish">"Polish"</string>
+    <string name="settings_language_portuguese_brazil">"Portuguese (Brazil)"</string>
+    <string name="settings_language_portuguese">"Portuguese"</string>
 </resources>

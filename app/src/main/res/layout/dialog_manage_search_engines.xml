@@ -17,14 +17,10 @@
         app:layout_constraintTop_toTopOf="parent" >
 
         <LinearLayout
-            android:id="@+id/dialog_show_search_engines_container"
+            android:id="@+id/linear_layout_items"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingLeft="@dimen/dialog_paddingLeftRight"
-            android:paddingTop="@dimen/dialog_paddingTopBottom"
-            android:paddingRight="@dimen/dialog_paddingLeftRight"
-            android:paddingBottom="@dimen/dialog_paddingTopBottom"/>
+            android:orientation="vertical" />
 
     </ScrollView>
 
@@ -49,3 +45,5 @@
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+

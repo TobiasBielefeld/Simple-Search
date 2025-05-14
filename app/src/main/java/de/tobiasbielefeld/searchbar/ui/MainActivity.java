@@ -34,8 +34,10 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.io.UnsupportedEncodingException;
@@ -45,9 +47,10 @@ import java.util.List;
 import de.tobiasbielefeld.searchbar.R;
 import de.tobiasbielefeld.searchbar.classes.CustomAppCompatActivity;
 import de.tobiasbielefeld.searchbar.classes.CustomMenuAdapter;
-import de.tobiasbielefeld.searchbar.classes.SearchEngineItem;
+import de.tobiasbielefeld.searchbar.helper.AfterViewTreeObserved;
+import de.tobiasbielefeld.searchbar.helper.LoadingTaskHelper;
 import de.tobiasbielefeld.searchbar.helper.Records;
-import de.tobiasbielefeld.searchbar.helper.SearchEngines;
+import de.tobiasbielefeld.searchbar.models.SearchEngine;
 import de.tobiasbielefeld.searchbar.ui.about.AboutActivity;
 import de.tobiasbielefeld.searchbar.ui.settings.Settings;
 
@@ -63,13 +66,16 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
 
     public EditText searchText;
     private ImageView clearButton, searchEngineSelectButton;
+    private ProgressBar imageButtonLoadingSpinner;
     private ActivityResultLauncher<Intent> startForResult;
-    private SearchEngines searchEngines;
+    private List<SearchEngine> searchEngines;
+    private boolean searchEngineListLoading;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        searchEngineListLoading = false;
 
         // Setup navbar with item select listener
         toolbar = findViewById(R.id.toolbar);
@@ -78,11 +84,13 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
         searchText = findViewById(R.id.editTextSearch);
         clearButton = findViewById(R.id.imageButtonClear);
         searchEngineSelectButton = findViewById(R.id.imageButtonSelectSearchEngines);
+        LinearLayout linearLayoutSelectSearchEngines = findViewById(R.id.linearLayoutSelectSearchEngines);
+        imageButtonLoadingSpinner = findViewById(R.id.imageButtonLoadingSpinner);
         systemTopSpacer = findViewById(R.id.system_top_spacer);
 
         searchText.addTextChangedListener(this);
         searchText.setOnEditorActionListener(this);
-        searchEngines = SearchEngines.get(getResources());
+        linearLayoutSelectSearchEngines.setOnClickListener(this);
 
         records = new Records(this, findViewById(R.id.record_list_container));
 
@@ -139,7 +147,7 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
             searchText.setText("");
         }
 
-        if (v.getId() == R.id.linearLayoutSelectSearchEngines) {
+        if (v.getId() == R.id.linearLayoutSelectSearchEngines && !searchEngineListLoading) {
             showSearchEngineSelectPopup(v);
         }
     }
@@ -147,9 +155,21 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
     @Override
     public void onResume() {
         super.onResume();
+        searchEngineListLoading = true;
         records.load();
         focusSearchBar();
-        setSearchEngineIcon(searchEngines.selectedItem());
+
+        searchEngineSelectButton.setImageBitmap(null);
+
+        AfterViewTreeObserved.run(imageButtonLoadingSpinner, () ->
+                new LoadingTaskHelper(imageButtonLoadingSpinner,
+                    () -> searchEngines = database.getSearchEngines(),
+                    () -> {
+                        setSearchEngineIcon(getSelectedSearchEngine(searchEngines));
+                        searchEngineListLoading = false;
+                    }
+        ).execute());
+
     }
 
     private void onActivityResult(ActivityResult result) {
@@ -166,9 +186,13 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
      *
      */
     public void startSearch() {
-        searchEngines.updateCustomSearchUris();
-        SearchEngineItem item = searchEngines.selectedItem();
-        String baseUrl = item.uri();                                                                //get the base url of the search engine
+        if (searchEngineListLoading) {
+            showToast(getString(R.string.load_search_engine_list), this);
+            return;
+        }
+
+        SearchEngine item = getSelectedSearchEngine(searchEngines);
+        String baseUrl = item.uri;                                                                //get the base url of the search engine
         String text = searchText.getText().toString().trim();                                       //get search text with rmoved whitespace
 
         //workaround for the wrong google url
@@ -178,10 +202,10 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
             baseUrl = "https://www.google.com/search?q=%s";
         }
 
-        Uri searchUrl = null;
+        Uri searchUrl;
 
-        if (item.isUriNotValid()) {                                                                 //custom search url must contain the %s part
-            showToast(getString(R.string.string_doesnt_contain_placeholder), this);
+        if (!baseUrl.contains("%s")) {
+            showToast(getString(R.string.setup_search_in_settings), this);
             return;
         }
 
@@ -189,6 +213,7 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
             searchUrl = Uri.parse(baseUrl.replace("%s",URLEncoder.encode(text, "UTF-8")));          //try to encode the string to a url. eg "this is a test" gets converted to "this+is+a+test"
         } catch (UnsupportedEncodingException e) {
             showToast(getString(R.string.unsupported_search_character), this);
+            return;
         }
 
         if (searchUrl != null) {
@@ -258,7 +283,7 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
     private void showSearchEngineSelectPopup(View anchorView) {
         View popupView = LayoutInflater.from(this).inflate(R.layout.search_engine_select_listview, null);
         ListView listView = popupView.findViewById(R.id.popup_list);
-        List<SearchEngineItem> filteredItems = searchEngines.filteredItems();
+        List<SearchEngine> filteredItems = getOnlyShownSearchEngines(searchEngines);
 
         CustomMenuAdapter adapter = new CustomMenuAdapter(this, filteredItems);
         listView.setAdapter(adapter);
@@ -269,15 +294,11 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
                 true);
 
         listView.setOnItemClickListener((parent, view, position, id) -> {
-            SearchEngineItem item = filteredItems.get(position);
+            SearchEngine item = filteredItems.get(position);
 
-            if (item.isCustomEngine() && item.isUriNotValid()) {
-                showToast(getString(R.string.setup_custom_search_in_settings), this);
-            } else {
-                putSavedString(PREF_SEARCH_KEY, item.key());
-                setSearchEngineIcon(item);
-                popupWindow.dismiss();
-            }
+            putSavedSearchEngineLabel(item.label);
+            setSearchEngineIcon(item);
+            popupWindow.dismiss();
         });
 
         popupWindow.setElevation(4);
@@ -285,10 +306,8 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
         popupWindow.showAsDropDown(anchorView, 0, 0);
     }
 
-    private void setSearchEngineIcon(SearchEngineItem item) {
-        int searchbarIconRes = item.searchbarIconRes();
-        searchEngineSelectButton.setImageResource(searchbarIconRes != -1 ? searchbarIconRes : item.iconRes());
-
+    private void setSearchEngineIcon(SearchEngine item) {
+        searchEngineSelectButton.setImageBitmap(byteArrayToBitmap(item.icon));
         searchEngineSelectButton.setAdjustViewBounds(true);
         searchEngineSelectButton.setScaleType(ImageView.ScaleType.FIT_CENTER);
     }

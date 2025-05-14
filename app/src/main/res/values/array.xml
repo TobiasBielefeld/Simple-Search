@@ -8,6 +8,8 @@
         <item>@string/settings_language_german</item>
         <item>@string/settings_language_italian</item>
         <item>@string/settings_language_japanese</item>
+        <item>@string/settings_language_polish</item>
+        <item>@string/settings_language_portuguese_brazil</item>
         <item>@string/settings_language_spanish_argentina</item>
         <item>@string/settings_language_turkish</item>
     </string-array>
@@ -21,6 +23,8 @@
         <item>de</item>         <!-- German -->
         <item>it</item>         <!-- Italian -->
         <item>ja</item>         <!-- Japanese -->
+        <item>pl</item>         <!-- Polish -->
+        <item>pt-BR</item>      <!-- Portuguese (Brazil) -->
         <item>es-AR</item>      <!-- Spanish (Argentina) -->
         <item>tr</item>         <!-- Turkish -->
     </string-array>

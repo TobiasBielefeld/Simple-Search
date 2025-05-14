@@ -9,7 +9,7 @@
 <string name="activity_settings">Réglages</string>
 <string name="cancel">Annuler</string>
 <string name="confirm">Confirmer</string>
-<string name="dialog_custom_search_engine_text">Entrer un \"%s\" (sans les guillemets) comme espace réservé dans lequel la requête de recherche doit être insérée.</string>
+<string name="dialog_edit_search_engine_text">Entrer un \"%s\" (sans les guillemets) comme espace réservé dans lequel la requête de recherche doit être insérée.</string>
 <string name="dialog_custom_search_engine_title">Entrer un moteur de recherche</string>
 <string name="dialog_delete_all_records_text">Tout effacer! Êtes-vous sûr?</string>
 <string name="dialog_delete_entry_title">Effacer cette entrée ?</string>
@@ -25,11 +25,12 @@
 <string name="settings_enable_records_title">"Activer l'historique"</string>
 <string name="settings_hide_status_bar">Masquer la status bar</string>
 <string name="settings_orientation">"Orientation de l'écran"</string>
-<string name="settings_search_engine_title">Moteur de recherche</string>
+<string name="settings_search_engine_title">Moteur de recherche sélectionné</string>
 <string name="string_doesnt_contain_placeholder">"Il n'y a pas d'espace réservé pour la requête de recherche dans votre moteur de recherche personnalisé!"</string>
 <string name="unsupported_search_character">La recherche contient des caractères non supportés :(</string>
 <string name="unsupported_search_string">"L'url de votre moteur de recherche n'est pas valide :/"</string>
-<string name="setup_custom_search_in_settings">Configurez d\'abord une URL de recherche personnalisée valide pour cette entrée dans les paramètres</string>
+<string name="setup_search_in_settings">Configurez d\'abord une URL de recherche valide pour cette entrée dans les paramètres</string>
+<string name="load_search_engine_list">Les moteurs de recherche ne sont pas encore chargés</string>
 <string name="about_developer">"Développeur"</string>
 <string name="about_developer_name">"Tobias Bielefeld"</string>
 <string name="about_compiled">"Date de la construction"</string>
@@ -61,8 +62,24 @@
 <string name="settings_close_after_search_title">Fermer l\'application après avoir lancé la recherche</string>
 <string name="settings_close_after_search_text">L\'application ne s\'ouvrira pas lorsque vous reviendrez de votre navigateur</string>
 <string name="settings_use_edge_to_edge_display_mode">"Utiliser le mode d'affichage \"Edge-to-Edge\""</string>
-<string name="settings_show_search_engines_title">Moteurs de recherche à afficher</string>
+<string name="settings_show_search_engines_title">Moteurs de recherche affichés</string>
 <string name="settings_show_search_engines_text">Sélectionnez les moteurs de recherche à afficher dans le menu de commutation rapide de la barre de recherche</string>
+
+<string name="add">Ajouter</string>
+<string name="delete">Supprimer</string>
+<string name="edit">Modifier</string>
+<string name="db_save_no_disk_space_available">Pas assez d\'espace disponible pour sauvegarder la base de données !</string>
+<string name="settings_manage_search_engines_title">Gérer les moteurs de recherche</string>
+<string name="settings_manage_search_engines_text">Ajouter, supprimer ou modifier des moteurs de recherche</string>
+<string name="settings_manage_search_engines_deleted">L\'entrée a été supprimée</string>
+<string name="dialog_edit_search_engine_title">Modifier le moteur de recherche</string>
+<string name="dialog_edit_search_engine_name">Nom</string>
+<string name="dialog_edit_search_engine_uri">URL</string>
+<string name="dialog_edit_search_engine_load_icon">Charger le favicon depuis l\'URL</string>
+<string name="dialog_edit_search_engine_favicon_load_error">Impossible de charger le favicon</string>
+<string name="dialog_edit_search_engine_name_error">Le nom sélectionné est déjà utilisé</string>
+<string name="dialog_edit_search_engine_name_success">Le moteur de recherche a été enregistré</string>
+<string name="dialog_edit_search_engine_save_error">Erreur lors de l\'enregistrement de la valeur</string>
 
     <!-- languages -->
 <string name="settings_language_default">"Langue par défaut"</string>
@@ -75,5 +92,8 @@
 <string name="settings_language_chinese_simplified">Chinois (simplifié)</string>
 <string name="settings_language_japanese">Japonais</string>
 <string name="settings_language_turkish">Turc</string>
+<string name="settings_language_polish">Polonais</string>
+<string name="settings_language_portuguese">Portugais</string>
+<string name="settings_language_portuguese_brazil">"Portugais (Brésil)"</string>
 
 </resources>
