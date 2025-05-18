@@ -18,17 +18,18 @@
 
 package de.tobiasbielefeld.searchbar.dialogs;
 
-import static de.tobiasbielefeld.searchbar.SharedData.getSavedBoolean;
-import static de.tobiasbielefeld.searchbar.SharedData.putSavedBoolean;
+import static de.tobiasbielefeld.searchbar.SharedData.database;
 
 import android.annotation.SuppressLint;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.AppCompatCheckBox;
 import androidx.core.content.ContextCompat;
 
@@ -36,11 +37,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import de.tobiasbielefeld.searchbar.R;
-import de.tobiasbielefeld.searchbar.classes.SearchEngineItem;
-import de.tobiasbielefeld.searchbar.helper.SearchEngines;
+import de.tobiasbielefeld.searchbar.helper.AfterViewTreeObserved;
+import de.tobiasbielefeld.searchbar.helper.LoadingTaskHelper;
+import de.tobiasbielefeld.searchbar.models.SearchEngine;
 
 public class DialogShowSearchEngines extends CustomPreferenceDialogFragmentCompat  {
 
+    private RelativeLayout loadingLayout;
+    private LinearLayout container;
+    private List<SearchEngine> searchEngines;
     private List<AppCompatCheckBox> checkBoxes;
     private List<Integer> selectedCheckboxes;
     private boolean loadedBundleState = false;
@@ -48,7 +53,6 @@ public class DialogShowSearchEngines extends CustomPreferenceDialogFragmentCompa
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-
         ArrayList<Integer> selected = new ArrayList<>();
         for (AppCompatCheckBox checkbox: checkBoxes) {
             selected.add(checkbox.isChecked() ? 1 : 0);
@@ -66,35 +70,54 @@ public class DialogShowSearchEngines extends CustomPreferenceDialogFragmentCompa
         }
     }
 
-    protected void onClickOkay() {
-        List<SearchEngineItem> searchEngineItems = SearchEngines.get(getResources()).items();
-
-        for (int i = 0; i < checkBoxes.size(); i++) {
-            putSavedBoolean(searchEngineItems.get(i).key() + "_shown", checkBoxes.get(i).isChecked());
-        }
+    @Override
+    protected void onClickOkay(AlertDialog dialog) {
+        new LoadingTaskHelper(loadingLayout,
+                this::saveSelectedCheckboxes,
+                dialog::dismiss
+        ).execute();
     }
 
     @Override
-    @SuppressLint("RestrictedApi")
     protected void onBindView(View parent) {
-        LinearLayout container = parent.findViewById(R.id.dialog_show_search_engines_container);
-        List<SearchEngineItem> searchEngineItems = SearchEngines.get(getResources()).items();
+        loadingLayout = parent.findViewById(R.id.layout_loading);
+        container = parent.findViewById(R.id.dialog_show_search_engines_container);
         checkBoxes = new ArrayList<>();
         container.removeAllViews();
 
-        for (int i = 0; i < searchEngineItems.size(); i++) {
+        AfterViewTreeObserved.run(loadingLayout, () ->
+                new LoadingTaskHelper(loadingLayout,
+                        () -> searchEngines = database.getSearchEngines(),
+                        this::showListItems
+                ).execute()
+        );
+    }
+
+    @SuppressLint("RestrictedApi")
+    private void showListItems() {
+        for (int i = 0; i < searchEngines.size(); i++) {
             AppCompatCheckBox box = new AppCompatCheckBox(requireContext());
             box.setSupportButtonTintList(ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.colorAccent)));
-            box.setText(searchEngineItems.get(i).label());
+            box.setText(searchEngines.get(i).label);
 
             checkBoxes.add(box);
             container.addView(box);
 
             if (loadedBundleState) {
                 box.setChecked(selectedCheckboxes.get(i) == 1);
-            } else if (getSavedBoolean(searchEngineItems.get(i).key() + "_shown", true)) {
+            } else if (!searchEngines.get(i).hidden) {
                 box.setChecked(true);
             }
         }
+    }
+
+    private void saveSelectedCheckboxes() {
+        database.withTransaction(container, getContext(), () -> {
+            for (int i = 0; i < checkBoxes.size(); i++) {
+                SearchEngine newValue = searchEngines.get(i);
+                newValue.hidden = !checkBoxes.get(i).isChecked();
+                database.putSearchEngine(newValue);
+            }
+        });
     }
 }

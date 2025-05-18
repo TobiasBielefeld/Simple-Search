@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?><resources>
+      
+  <string name="app_version">Wersja</string>
+      
+  <string name="confirm">Potwierdzać</string>
+      
+  <string name="cancel">Anulować</string>
+      
+  <!-- Main Activity -->
+      
+  <string name="record_list_button_description">Kopiuj do zapytania wyszukiwania</string>
+      
+  <string name="unsupported_search_character">Zapytanie zawiera nieobsługiwane znaki :(</string>
+      
+  <string name="unsupported_search_string">Twój adres URL wyszukiwania niestandardowego jest nieprawidłowy :/</string>
+      
+  <string name="string_doesnt_contain_placeholder">W Twojej wyszukiwarce nie ma symbolu zastępczego dla zapytania wyszukiwania!</string>
+      
+  <string name="menu_delete_all">Usuń wszystkie rekordy</string>
+      
+  <string name="search_hint">Szukaj…</string>
+      
+  <string name="setup_search_in_settings">Najpierw skonfiguruj prawidłowy adres URL wyszukiwania dla tego wpisu w ustawieniach</string>
+      
+  <string name="load_search_engine_list">Wyszukiwarki nie są jeszcze załadowane</string>
+      
+  <!-- Dialogs -->
+      
+  <string name="dialog_delete_entry_title">Usunąć ten rekord?</string>
+      
+  <string name="dialog_delete_all_records_text">Usuń wszystkie rekordy! Jesteś pewien?</string>
+      
+  <string name="dialog_custom_search_engine_title">Wprowadź niestandardową wyszukiwarkę</string>
+      
+  <string formatted="false" name="dialog_edit_search_engine_text">Wprowadź „%s” (bez cudzysłowów) jako symbol zastępczy w miejscu, w którym ma zostać wstawione zapytanie wyszukiwania.</string>
+      
+  <!-- Settings -->
+      
+  <string name="activity_settings">Ustawienia</string>
+      
+  <string name="settings_custom">Zwyczaj</string>
+      
+  <string name="settings_search_title">Szukaj</string>
+      
+  <string name="settings_search_summary">Zmień wyszukiwarkę i skonfiguruj historię</string>
+      
+  <string name="settings_general_title">Ogólny</string>
+      
+  <string name="settings_general_summary">Zmień zachowanie aplikacji</string>
+      
+  <string name="settings_search_engine_title">Wybrana wyszukiwarka</string>
+      
+  <string name="settings_enable_records_title">Włącz historię</string>
+      
+  <string name="settings_enable_records_text">Zapisz wyszukiwane zapytania w celu ponownego wykorzystania</string>
+      
+  <string name="settings_orientation">Orientacja ekranu</string>
+      
+  <string name="settings_change_language">Zmień język</string>
+      
+  <string name="settings_hide_status_bar">Ukryj pasek stanu</string>
+      
+  <string name="settings_dark_theme">Włącz ciemny motyw</string>
+      
+  <string name="settings_hide_app_icon_title">Ukryj ikonę aplikacji w szufladzie</string>
+      
+  <string name="settings_hide_app_icon_text">Następnie aplikację można uruchomić tylko za pomocą jej widżetu</string>
+      
+  <string name="settings_restart_app">Uruchom ponownie aplikację, aby zastosować zmiany</string>
+      
+  <string name="settings_follow_system_settings">Postępuj zgodnie z ustawieniami systemu</string>
+      
+  <string name="settings_portrait">Portret</string>
+      
+  <string name="settings_landscape">Krajobraz</string>
+      
+  <string name="settings_landscape_upside_down">Krajobraz do góry nogami</string>
+      
+  <string name="settings_change_theme">Zmień motyw</string>
+      
+  <string name="settings_change_theme_dark">Ciemny</string>
+      
+  <string name="settings_change_theme_light">Światło</string>
+      
+  <string name="settings_change_theme_default">Postępuj zgodnie z ustawieniami systemu</string>
+      
+  <string name="settings_use_edge_to_edge_display_mode">Użyj trybu wyświetlania „od krawędzi do krawędzi”</string>
+      
+  <string name="settings_close_after_search_title">Zamknij aplikację po rozpoczęciu wyszukiwania</string>
+      
+  <string name="settings_close_after_search_text">Aplikacja nie otworzy się ponownie po naciśnięciu przycisku Wstecz w przeglądarce</string>
+
+  <string name="settings_show_search_engines_title">Wyświetlane wyszukiwarki</string>
+      
+  <string name="settings_show_search_engines_text">Wybierz wyszukiwarki, które mają być wyświetlane w menu szybkiego przełączania na pasku wyszukiwania</string>
+      
+  <string name="add">Dodać</string>
+      
+  <string name="delete">Usuwać</string>
+      
+  <string name="edit">Redagować</string>
+      
+  <string name="db_save_no_disk_space_available">Za mało miejsca na zapisanie bazy danych!</string>
+      
+  <string name="settings_manage_search_engines_title">Zarządzaj wyszukiwarkami</string>
+      
+  <string name="settings_manage_search_engines_text">Dodawaj, usuwaj lub edytuj wyszukiwarki</string>
+      
+  <string name="settings_manage_search_engines_deleted">Wpis został usunięty</string>
+      
+  <string name="dialog_edit_search_engine_title">Edytuj wyszukiwarkę</string>
+      
+  <string name="dialog_edit_search_engine_name">Nazwa</string>
+      
+  <string name="dialog_edit_search_engine_uri">Adres URL</string>
+      
+  <string name="dialog_edit_search_engine_load_icon">Załaduj favicon z adresu URL</string>
+      
+  <string name="dialog_edit_search_engine_favicon_load_error">Nie można załadować ikony favicon</string>
+      
+  <string name="dialog_edit_search_engine_name_error">Wybrana nazwa jest już używana</string>
+      
+  <string name="dialog_edit_search_engine_name_success">Wyszukiwarka została zapisana</string>
+      
+  <string name="dialog_edit_search_engine_save_error">Błąd podczas zapisywania wartości</string>
+      
+  <!--About-->
+      
+  <string name="activity_about">O</string>
+      
+  <string name="about_description">Pokaż informacje o aplikacji, takie jak licencje i dziennik zmian</string>
+      
+  <string name="about_tab_1">Informacja</string>
+      
+  <string name="about_tab_2">Licencje</string>
+      
+  <string name="about_tab_3">Dziennik zmian</string>
+      
+  <string name="about_developer">Wywoływacz</string>
+      
+  <string name="about_developer_name">Tobias Bielefeld</string>
+      
+  <string name="about_compiled">Skompilowano w dniu</string>
+      
+  <string name="about_source_code">Kod źródłowy</string>
+      
+  <string name="about_license">Licencja</string>
+      
+  <string name="about_translations">Tłumaczenia</string>
+      
+  <string name="about_further_contributors">Dalsi współautorzy</string>
+      
+  <string name="about_android_support_libraries_title">Biblioteka obsługi Androida</string>
+      
+  <string name="about_android_support_libraries_usage">Używane do lepszego projektowania i łatwiejszego rozwoju</string>
+      
+  <string name="about_material_icons_title">Ikony projektowania materiałów</string>
+      
+  <string name="about_material_icons_usage">Używane do wszystkich ikon w tej aplikacji</string>
+      
+  <string name="about_sliding_tabs_title">Biblioteka PagerSlidingTabStrip</string>
+      
+  <string name="about_sliding_tabs_usage">Używane do zakładek na ekranie „Informacje o grze”</string>
+      
+  <string name="about_custom_color_picker_usage">Używane do niestandardowego selektora kolorów</string>
+      
+  <string name="about_custom_color_picker_title">Biblioteka AmbilWarna</string>
+      
+  <string name="settings_toolbar_color">Kolor paska narzędzi</string>
+      
+  <!-- languages -->
+      
+  <string name="settings_language_default">Język domyślny</string>
+      
+  <string name="settings_language_english">angielski</string>
+      
+  <string name="settings_language_french">francuski</string>
+      
+  <string name="settings_language_german">niemiecki</string>
+      
+  <string name="settings_language_chinese_simplified">chiński (uproszczony)</string>
+      
+  <string name="settings_language_italian">włoski</string>
+      
+  <string name="settings_language_japanese">japoński</string>
+      
+  <string name="settings_language_spanish">hiszpański</string>
+      
+  <string name="settings_language_spanish_argentina">hiszpański (Argentyna)</string>
+      
+  <string name="settings_language_turkish">turecki</string>
+
+  <string name="settings_language_portuguese_brazil">"Portugalski (Brazylia)"</string>
+
+  <string name="settings_language_portuguese">"Portugalski"</string>
+
+  <string name="settings_language_polish">"Polski"</string>
+
+</resources>

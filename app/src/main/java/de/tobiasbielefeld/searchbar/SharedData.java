@@ -22,6 +22,10 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.drawable.Drawable;
 import android.preference.PreferenceManager;
 import android.text.SpannableString;
 import android.text.TextUtils;
@@ -34,7 +38,13 @@ import androidx.core.view.WindowCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.core.view.WindowInsetsControllerCompat;
 
+import java.io.ByteArrayOutputStream;
+import java.util.ArrayList;
+import java.util.List;
+
+import de.tobiasbielefeld.searchbar.helper.Database;
 import de.tobiasbielefeld.searchbar.helper.Records;
+import de.tobiasbielefeld.searchbar.models.SearchEngine;
 
 /**
  * Contains some static stuff
@@ -42,14 +52,13 @@ import de.tobiasbielefeld.searchbar.helper.Records;
 
 public class SharedData {
 
+    public static Database database;
     public static SharedPreferences sharedPref;
     public static String PREF_RECORD_LIST_SIZE;
     public static String PREF_RECORD_ENTRY;
     public static String PREF_THEME;
     public static String PREF_HIDE_APP_ICON;
-    public static String PREF_SEARCH_URL;
-    public static String PREF_SEARCH_KEY;
-    public static String PREF_CUSTOM_SEARCH_URL;
+    public static String PREF_SEARCH_LABEL;
     public static String PREF_ORIENTATION;
     public static String PREF_STATUS_BAR;
     public static String PREF_LANGUAGE;
@@ -58,7 +67,7 @@ public class SharedData {
     public static String PREF_TOOLBAR_COLOR;
     public static int DEFAULT_TOOLBAR_COLOR;
     public static String DEFAULT_ORIENTATION;
-    public static String DEFAULT_SEARCH_KEY;
+    public static String DEFAULT_SEARCH_LABEL;
     public static boolean DEFAULT_STATUS_BAR;
     public static boolean DEFAULT_CLOSE_AFTER_SEARCH;
     public static boolean DEFAULT_EDGE_TO_EDGE_DISPLAY_MODE;
@@ -69,28 +78,21 @@ public class SharedData {
     private static Toast toast;
 
     public static void reinitializeData(Context context){
-
         Resources res = context.getResources();
-
-        if (sharedPref == null) {
-            sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
-        }
 
         if (PREF_RECORD_ENTRY == null) {
             PREF_RECORD_LIST_SIZE = "record_list_size";
             PREF_RECORD_ENTRY = "record_entry_";
-            PREF_SEARCH_URL = "search_url";
-            PREF_SEARCH_KEY = "search_key";
+            PREF_SEARCH_LABEL = "search_label";
             PREF_ORIENTATION = res.getString(R.string.pref_key_orientation);
             PREF_STATUS_BAR = res.getString(R.string.pref_key_hide_status_bar);
             PREF_LANGUAGE = res.getString(R.string.pref_key_language);
             PREF_THEME = res.getString(R.string.pref_key_theme);
-            PREF_CUSTOM_SEARCH_URL = res.getString(R.string.pref_key_custom_search_url);
             PREF_HIDE_APP_ICON = res.getString(R.string.pref_key_hide_app_icon);
             PREF_CLOSE_AFTER_SEARCH = res.getString(R.string.pref_key_close_after_search);
             PREF_USE_EDGE_TO_EDGE_DISPLAY_MODE = res.getString(R.string.pref_key_edge_to_edge_display_mode);
             PREF_TOOLBAR_COLOR = res.getString(R.string.pref_key_toolbar_color);
-            DEFAULT_SEARCH_KEY = "search_duckduckgo";
+            DEFAULT_SEARCH_LABEL = "DuckDuckGo";
             DEFAULT_TOOLBAR_COLOR = res.getColor(R.color.colorPrimary);
             DEFAULT_ORIENTATION = res.getStringArray(R.array.pref_orientation_values)[0];
             DEFAULT_STATUS_BAR = res.getBoolean(R.bool.default_status_bar);
@@ -98,6 +100,15 @@ public class SharedData {
             DEFAULT_HIDE_APP_ICON = res.getBoolean(R.bool.default_hide_app_icon);
             DEFAULT_CLOSE_AFTER_SEARCH = res.getBoolean(R.bool.default_close_after_search);
             DEFAULT_EDGE_TO_EDGE_DISPLAY_MODE = res.getBoolean(R.bool.default_edge_to_edge_display_mode);
+        }
+
+        if (sharedPref == null) {
+            sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
+        }
+
+        // needs to be after sharedPref init, since it is used for some legacy imports
+        if (database == null) {
+            database = new Database(context);
         }
     }
 
@@ -146,19 +157,12 @@ public class SharedData {
         return getSavedBoolean(PREF_USE_EDGE_TO_EDGE_DISPLAY_MODE, DEFAULT_EDGE_TO_EDGE_DISPLAY_MODE);
     }
 
-    public static String getSavedSearchEngineKey() {
-        String value = getSavedString(PREF_SEARCH_KEY, "");
-
-        if (value.isEmpty()) {
-            putSavedSearchEngineKey(DEFAULT_SEARCH_KEY);
-            return DEFAULT_SEARCH_KEY;
-        }
-
-        return value;
+    public static String getSavedSearchEngineLabel() {
+        return getSavedString(PREF_SEARCH_LABEL, DEFAULT_SEARCH_LABEL);
     }
 
-    public static void putSavedSearchEngineKey(String key) {
-        putSavedString(PREF_SEARCH_KEY, key);
+    public static void putSavedSearchEngineLabel(String key) {
+        putSavedString(PREF_SEARCH_LABEL, key);
     }
 
     public static void putSavedToolbarColor(int value) {
@@ -231,7 +235,6 @@ public class SharedData {
      */
     static public int findBestLocaleMatchIndex(String[] availableLocales, String targetLocale) {
         // first search for exact match
-        logText(targetLocale);
         for (int i = 0; i < availableLocales.length; i++) {
             if (availableLocales[i].equals(targetLocale)) {
                 return i;
@@ -262,4 +265,57 @@ public class SharedData {
         // default locale is to use system settings, represented at index 0
         return 0;
     }
+
+    static public byte[] drawableToByteArray(Drawable drawable) {
+        if (drawable == null) return null;
+
+        // Convert Drawable to Bitmap
+        Bitmap bitmap = Bitmap.createBitmap(
+                drawable.getIntrinsicWidth(),
+                drawable.getIntrinsicHeight(),
+                Bitmap.Config.ARGB_8888
+        );
+
+        Canvas canvas = new Canvas(bitmap);
+        drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
+        drawable.draw(canvas);
+
+        // Convert Bitmap to byte array
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream);
+        return outputStream.toByteArray();
+    }
+
+    static public Bitmap byteArrayToBitmap(byte[] data) {
+        return BitmapFactory.decodeByteArray(data, 0, data.length);
+    }
+
+    static public SearchEngine getSelectedSearchEngine(List<SearchEngine> engines) {
+        String selectedLabel = getSavedSearchEngineLabel();
+        for (int i = 0; i < engines.size(); i++) {
+            if (engines.get(i).label.equals(selectedLabel)) {
+                return engines.get(i);
+            }
+        }
+
+        return engines.get(0);
+    }
+
+    static public int getSelectedSearchEngineIndex(List<SearchEngine> engines) {
+        SearchEngine selected = getSelectedSearchEngine(engines);
+        return engines.indexOf(selected);
+    }
+
+    static public List<SearchEngine> getOnlyShownSearchEngines(List<SearchEngine> engines) {
+        List<SearchEngine> filteredList = new ArrayList<>();
+
+        for (SearchEngine item: engines) {
+            if (!item.hidden) {
+                filteredList.add(item);
+            }
+        }
+
+        return filteredList;
+    }
+
 }

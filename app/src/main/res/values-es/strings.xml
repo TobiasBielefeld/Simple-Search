@@ -20,8 +20,10 @@
       
   <string name="search_hint">Buscar…</string>
 
-  <string name="setup_custom_search_in_settings">Primero, configure una URL de búsqueda personalizada válida para esta entrada en la configuración</string>
-      
+  <string name="setup_search_in_settings">Primero configure una URL de búsqueda válida para esta entrada en la configuración</string>
+
+  <string name="load_search_engine_list">Los motores de búsqueda aún no están cargados</string>
+
   <!-- Dialogs -->
       
   <string name="dialog_delete_entry_title">¿Eliminar este registro?</string>
@@ -30,7 +32,7 @@
       
   <string name="dialog_custom_search_engine_title">Ingrese al motor de búsqueda personalizado</string>
       
-  <string formatted="false" name="dialog_custom_search_engine_text">Introduce un valor \"%s\" (sin las comillas) como marcador de posición donde se debe insertar la consulta de búsqueda.</string>
+  <string formatted="false" name="dialog_edit_search_engine_text">Introduce un valor \"%s\" (sin las comillas) como marcador de posición donde se debe insertar la consulta de búsqueda.</string>
       
   <!-- Settings -->
       
@@ -45,8 +47,8 @@
   <string name="settings_general_title">General</string>
       
   <string name="settings_general_summary">Cambiar el comportamiento de la aplicación.</string>
-      
-  <string name="settings_search_engine_title">Buscador</string>
+
+  <string name="settings_search_engine_title">Motor de búsqueda seleccionado</string>
       
   <string name="settings_enable_records_title">Habilitar historial</string>
       
@@ -87,6 +89,36 @@
   <string name="settings_close_after_search_text">La aplicación no se abrirá nuevamente cuando presiones Atrás desde tu navegador</string>
 
   <string name="settings_use_edge_to_edge_display_mode">"Usar el modo de pantalla \"Edge-to-Edge\""</string>
+
+  <string name="add">Agregar</string>
+
+  <string name="delete">Borrar</string>
+
+  <string name="edit">Editar</string>
+
+  <string name="db_save_no_disk_space_available">¡No hay suficiente espacio disponible para guardar la base de datos!</string>
+
+  <string name="settings_manage_search_engines_title">Administrar motores de búsqueda</string>
+
+  <string name="settings_manage_search_engines_text">Agregar, eliminar o editar motores de búsqueda</string>
+
+  <string name="settings_manage_search_engines_deleted">La entrada fue eliminada</string>
+
+  <string name="dialog_edit_search_engine_title">Editar motor de búsqueda</string>
+
+  <string name="dialog_edit_search_engine_name">Nombre</string>
+
+  <string name="dialog_edit_search_engine_uri">URL</string>
+
+  <string name="dialog_edit_search_engine_load_icon">Cargar favicon desde URL</string>
+
+  <string name="dialog_edit_search_engine_favicon_load_error">No se pudo cargar el favicon</string>
+
+  <string name="dialog_edit_search_engine_name_error">El nombre seleccionado ya está en uso</string>
+
+  <string name="dialog_edit_search_engine_name_success">El motor de búsqueda se ha guardado</string>
+
+  <string name="dialog_edit_search_engine_save_error">Error al guardar el valor</string>
 
   <!--About-->
       
@@ -132,7 +164,7 @@
 
   <string name="settings_toolbar_color">"Color de la barra"</string>
 
-  <string name="settings_show_search_engines_title">Motores de búsqueda para mostrar</string>
+  <string name="settings_show_search_engines_title">Motores de búsqueda mostrados</string>
 
   <string name="settings_show_search_engines_text">Seleccione qué motores de búsqueda deben mostrarse en el menú de cambio rápido en la barra de búsqueda</string>
 
@@ -157,5 +189,11 @@
   <string name="settings_language_spanish_argentina">Español (Argentina)</string>
       
   <string name="settings_language_turkish">turco</string>
+
+  <string name="settings_language_polish">Polaco</string>
+
+  <string name="settings_language_portuguese_brazil">Portugués (Brasil)</string>
+
+  <string name="settings_language_portuguese">Portugués</string>
   
 </resources>

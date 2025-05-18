@@ -69,7 +69,16 @@
         app:singleLineTitle="false"
         app:title="@string/settings_search_title">
 
-        <de.tobiasbielefeld.searchbar.ui.settings.PreferenceSearchEngines
+        <de.tobiasbielefeld.searchbar.ui.settings.PreferenceManageSearchEngines
+            app:iconSpaceReserved="false"
+            app:singleLineTitle="false"
+            app:key="@string/pref_key_manage_search_engines"
+            app:negativeButtonText="@string/cancel"
+            app:positiveButtonText="@string/add"
+            app:title="@string/settings_manage_search_engines_title"
+            app:summary="@string/settings_manage_search_engines_text"/>
+
+        <de.tobiasbielefeld.searchbar.ui.settings.PreferenceSelectedSearchEngine
             app:iconSpaceReserved="false"
             app:singleLineTitle="false"
             app:key="@string/pref_key_search_engine"

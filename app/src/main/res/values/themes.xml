@@ -21,6 +21,7 @@
         <item name="materialSwitchStyle">@style/CustomSwitchStyle</item>
         <item name="android:windowBackground">@color/mainBackground</item>
         <item name="actionOverflowMenuStyle">@style/CustomOverflowMenuStyle</item>
+        <item name="textInputStyle">@style/CustomTextInputLayout</item>
     </style>
 
     <style name="Base.AppThemeNoActionBar" parent="Theme.Material3.DayNight.NoActionBar">
@@ -38,6 +39,7 @@
         <item name="materialSwitchStyle">@style/CustomSwitchStyle</item>
         <item name="android:windowBackground">@color/mainBackground</item>
         <item name="actionOverflowMenuStyle">@style/CustomOverflowMenuStyle</item>
+        <item name="textInputStyle">@style/CustomTextInputLayout</item>
     </style>
 
 
@@ -101,6 +103,11 @@
     <!-- popup dialog theme in actionbar, to have completely white background  -->
     <style name="CustomOverflowMenuStyle" parent="Widget.Material3.PopupMenu">
         <item name="android:popupBackground">@color/colorDialogBackground</item>
+    </style>
+
+    <style name="CustomTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/colorAccent</item>
+        <item name="hintTextColor">@color/colorAccent</item>
     </style>
 
 </resources>

@@ -8,8 +8,8 @@ android {
         applicationId "de.tobiasbielefeld.searchbar"
         minSdkVersion 21
         targetSdkVersion 35
-        versionCode 16
-        versionName "2.2"
+        versionCode 17
+        versionName "2.3"
 
         vectorDrawables.useSupportLibrary = true
         buildConfigField "long", "TIMESTAMP", System.currentTimeMillis() + "L"
@@ -46,6 +46,7 @@ android {
 
 dependencies {
     api 'com.google.android.material:material:1.12.0'
+    implementation 'org.jsoup:jsoup:1.15.4'
     implementation 'com.google.android.material:material:1.12.0'
     implementation 'androidx.preference:preference:1.2.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'

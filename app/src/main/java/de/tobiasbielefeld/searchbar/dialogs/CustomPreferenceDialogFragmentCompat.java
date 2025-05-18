@@ -23,6 +23,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -45,10 +46,7 @@ public abstract class CustomPreferenceDialogFragmentCompat extends PreferenceDia
         CharSequence positiveButtonText = getPreference().getPositiveButtonText();
 
         if (positiveButtonText != null && !positiveButtonText.equals("NULL")) {
-            alertDialogBuilder.setPositiveButton(getPreference().getPositiveButtonText(), (DialogInterface dialog, int which) -> {
-                customResult = true;
-                onClickOkay();
-            });
+            alertDialogBuilder.setPositiveButton(getPreference().getPositiveButtonText(), null);
         }
         alertDialogBuilder.setNegativeButton(getPreference().getNegativeButtonText(), (DialogInterface dialog, int which) -> {
             customResult = false;
@@ -60,7 +58,18 @@ public abstract class CustomPreferenceDialogFragmentCompat extends PreferenceDia
         onBindView(customView);
 
         alertDialogBuilder.setView(customView);
-        return alertDialogBuilder.create();
+        AlertDialog dialog = alertDialogBuilder.create();
+
+        // this way of handling the okay button prevents it from directly closing the dialog
+        dialog.setOnShowListener(d -> {
+            Button okButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
+            okButton.setOnClickListener(v -> {
+                customResult = true;
+                onClickOkay(dialog);
+            });
+        });
+
+        return dialog;
     }
 
     @Override
@@ -70,7 +79,7 @@ public abstract class CustomPreferenceDialogFragmentCompat extends PreferenceDia
         }
     }
 
-    protected void onClickOkay() {}
+    protected void onClickOkay(AlertDialog dialog) {}
 
     protected void onCancel() {}
 

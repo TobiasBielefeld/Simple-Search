@@ -20,8 +20,10 @@
       
   <string name="search_hint">Cercare…</string>
 
-  <string name="setup_custom_search_in_settings">Imposta prima un URL di ricerca personalizzato valido per questa voce nelle impostazioni</string>
-      
+  <string name="setup_search_in_settings">Imposta prima un URL di ricerca valido per questa voce nelle impostazioni</string>
+
+  <string name="load_search_engine_list">I motori di ricerca non sono ancora caricati</string>
+
   <!-- Dialogs -->
       
   <string name="dialog_delete_entry_title">Eliminare questo record?</string>
@@ -30,7 +32,7 @@
       
   <string name="dialog_custom_search_engine_title">Inserisci il motore di ricerca personalizzato</string>
       
-  <string formatted="false" name="dialog_custom_search_engine_text">Inserisci un valore \"%s\" (senza virgolette) come segnaposto in cui inserire la query di ricerca.</string>
+  <string formatted="false" name="dialog_edit_search_engine_text">Inserisci un valore \"%s\" (senza virgolette) come segnaposto in cui inserire la query di ricerca.</string>
       
   <!-- Settings -->
       
@@ -45,8 +47,8 @@
   <string name="settings_general_title">Generale</string>
       
   <string name="settings_general_summary">Cambia il comportamento dell\'app</string>
-      
-  <string name="settings_search_engine_title">Motore di ricerca</string>
+
+  <string name="settings_search_engine_title">Motore di ricerca selezionato</string>
       
   <string name="settings_enable_records_title">Abilita la cronologia</string>
       
@@ -132,9 +134,39 @@
 
   <string name="settings_toolbar_color">"Colore della barra"</string>
 
-  <string name="settings_show_search_engines_title">Motori di ricerca da mostrare</string>
+  <string name="settings_show_search_engines_title">Motori di ricerca visualizzati</string>
 
   <string name="settings_show_search_engines_text">Seleziona quali motori di ricerca devono essere visualizzati nel menu di cambio rapido nella barra di ricerca</string>
+
+  <string name="add">Aggiungere</string>
+
+  <string name="delete">Eliminare</string>
+
+  <string name="edit">Modificare</string>
+
+  <string name="db_save_no_disk_space_available">Spazio disponibile insufficiente per salvare il database!</string>
+
+  <string name="settings_manage_search_engines_title">Gestire i motori di ricerca</string>
+
+  <string name="settings_manage_search_engines_text">Aggiungere, rimuovere o modificare i motori di ricerca</string>
+
+  <string name="settings_manage_search_engines_deleted">La voce è stata eliminata</string>
+
+  <string name="dialog_edit_search_engine_title">Modifica motore di ricerca</string>
+
+  <string name="dialog_edit_search_engine_name">Nome</string>
+
+  <string name="dialog_edit_search_engine_uri">URL</string>
+
+  <string name="dialog_edit_search_engine_load_icon">Carica favicon dall\'URL</string>
+
+  <string name="dialog_edit_search_engine_favicon_load_error">Impossibile caricare il favicon</string>
+
+  <string name="dialog_edit_search_engine_name_error">Il nome selezionato è già in uso</string>
+
+  <string name="dialog_edit_search_engine_name_success">Il motore di ricerca è stato salvato</string>
+
+  <string name="dialog_edit_search_engine_save_error">Errore durante il salvataggio del valore</string>
 
   <!-- languages -->
       
@@ -157,5 +189,11 @@
   <string name="settings_language_spanish_argentina">spagnolo (Argentina)</string>
       
   <string name="settings_language_turkish">Turco</string>
-  
+
+  <string name="settings_language_polish">Polacco</string>
+
+  <string name="settings_language_portuguese">Portoghese</string>
+
+  <string name="settings_language_portuguese_brazil">Portoghese (Brasile)</string>
+
 </resources>

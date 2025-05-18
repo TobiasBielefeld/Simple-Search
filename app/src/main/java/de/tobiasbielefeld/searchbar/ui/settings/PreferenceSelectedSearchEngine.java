@@ -18,63 +18,44 @@
 
 package de.tobiasbielefeld.searchbar.ui.settings;
 
+import static de.tobiasbielefeld.searchbar.SharedData.database;
+import static de.tobiasbielefeld.searchbar.SharedData.getSelectedSearchEngine;
+
 import android.content.Context;
 import android.util.AttributeSet;
 
 import androidx.annotation.NonNull;
 
-import java.util.List;
-
-import de.tobiasbielefeld.searchbar.classes.SearchEngineItem;
-import de.tobiasbielefeld.searchbar.helper.SearchEngines;
+import de.tobiasbielefeld.searchbar.models.SearchEngine;
 import de.tobiasbielefeld.searchbar.ui.settings.helpers.CustomListPreference;
 
+public class PreferenceSelectedSearchEngine extends CustomListPreference {
 
-public class PreferenceSearchEngines extends CustomListPreference {
-
-    private final SearchEngines searchEngines;
-
-    public PreferenceSearchEngines(@NonNull Context context) {
+    public PreferenceSelectedSearchEngine(@NonNull Context context) {
         super(context);
-        searchEngines = SearchEngines.get(context.getResources());
     }
 
-    public PreferenceSearchEngines(Context context, AttributeSet attrs) {
+    public PreferenceSelectedSearchEngine(Context context, AttributeSet attrs) {
         super(context, attrs);
-        searchEngines = SearchEngines.get(context.getResources());
     }
 
-    public PreferenceSearchEngines(Context context, AttributeSet attrs, int defStyleAttr) {
+    public PreferenceSelectedSearchEngine(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        searchEngines = SearchEngines.get(context.getResources());
     }
 
     @Override
     protected int getCurrentValue() {
-        return searchEngines.selectedIndex();
+        return -1; // unused
     }
 
     @Override
     public int getTitleArrayId() {
-        return -1; // unused, we overwrite getTitles() instead
-    }
-
-    @Override
-    public String[] getTitles() {
-        List<SearchEngineItem> items = searchEngines.items();
-        String[] titles = new String[items.size()];
-
-        for (int i = 0; i < items.size(); i++) {
-            titles[i] = items.get(i).label();
-        }
-
-        return titles;
+        return -1; // unused
     }
 
     @Override
     public void updateSummary(boolean positiveResult) {
-        searchEngines.updateCustomSearchUris();
-        SearchEngineItem item = searchEngines.selectedItem();
-        setSummary(item.isCustomEngine() ? item.uri() : item.label());
+        SearchEngine selected = getSelectedSearchEngine(database.getSearchEngines());
+        setSummary(selected.label);
     }
 }

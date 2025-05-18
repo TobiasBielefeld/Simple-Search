@@ -11,13 +11,14 @@
 <string name="string_doesnt_contain_placeholder">"Es gibt keinen Platzhalter für die Suchabfrage in deiner benutzerdefinierten Suchmaschine!"</string>
 <string name="menu_delete_all">"Alle Aufzeichnungen löschen"</string>
 <string name="search_hint">"Suche nach…"</string>
-<string name="setup_custom_search_in_settings">Richte in den Einstellungen eine gültige Suchmaschine für diesen Eintrag ein</string>
+<string name="setup_search_in_settings">Richte zuerst in den Einstellungen eine gültige Such-URL für diesen Eintrag ein</string>
+<string name="load_search_engine_list">Suchmaschinen sind noch nicht geladen</string>
 
 <!-- Dialogs -->
 <string name="dialog_delete_entry_title">"Diesen Eintrag löschen?"</string>
 <string name="dialog_delete_all_records_text">"Alle Aufzeichnungen löschen! Bist du dir sicher?"</string>
 <string name="dialog_custom_search_engine_title">"Benutzerdefinierte Suchmaschine eintragen"</string>
-<string name="dialog_custom_search_engine_text">"Trage ein \"%s\" (ohne Anführungszeichen) als Platzhalter an der Stelle ein, wo die Suchabfrage eingefügt werden soll."</string>
+<string name="dialog_edit_search_engine_text">"Trage ein \"%s\" (ohne Anführungszeichen) als Platzhalter an der Stelle ein, wo die Suchabfrage eingefügt werden soll."</string>
 
 <!-- Settings -->
 <string name="activity_settings">"Einstellungen"</string>
@@ -26,7 +27,7 @@
 <string name="settings_search_summary">"Ändere die Suchmaschine und richte die Chronik ein"</string>
 <string name="settings_general_title">"Allgemein"</string>
 <string name="settings_general_summary">"Ändere das Verhalten der App"</string>
-<string name="settings_search_engine_title">"Suchmaschine"</string>
+<string name="settings_search_engine_title">"Ausgewählte Suchmaschine"</string>
 <string name="settings_enable_records_title">"Erlaube Chronik"</string>
 <string name="settings_enable_records_text">"Speichere Suchabfragen zur Wiederverwendung"</string>
 <string name="settings_orientation">"Bildschirmausrichtung"</string>
@@ -45,6 +46,22 @@
 <string name="settings_close_after_search_title">App schließen, nachdem die Suche gestartet wurde</string>
 <string name="settings_close_after_search_text">Die App wird nicht erneut geöffnet, wenn im Browser auf „Zurück“ geklickt wird.</string>
 <string name="settings_use_edge_to_edge_display_mode">"Verwende den \"Edge-to-Edge\"-Anzeige-Modus"</string>
+
+<string name="add">"Hinzufügen"</string>
+<string name="delete">"Löschen"</string>
+<string name="edit">"Bearbeiten"</string>
+<string name="db_save_no_disk_space_available">"Nicht genügend Speicherplatz zum Speichern der Datenbank verfügbar!"</string>
+<string name="settings_manage_search_engines_title">"Suchmaschinen verwalten"</string>
+<string name="settings_manage_search_engines_text">"Suchmaschinen hinzufügen, entfernen oder bearbeiten"</string>
+<string name="settings_manage_search_engines_deleted">"Eintrag wurde gelöscht"</string>
+<string name="dialog_edit_search_engine_title">"Suchmaschine bearbeiten"</string>
+<string name="dialog_edit_search_engine_name">"Name"</string>
+<string name="dialog_edit_search_engine_uri">"URL"</string>
+<string name="dialog_edit_search_engine_load_icon">"Favicon von URL laden"</string>
+<string name="dialog_edit_search_engine_favicon_load_error">"Favicon konne nicht geladen werden"</string>
+<string name="dialog_edit_search_engine_name_error">"Der ausgewählte Name wird bereits verwendet"</string>
+<string name="dialog_edit_search_engine_name_success">"Suchmaschine wurde gespeichert"</string>
+<string name="dialog_edit_search_engine_save_error">Fehler beim Speichern des Wertes</string>
 
 <!-- About -->
 <string name="activity_about">"Über"</string>
@@ -67,7 +84,8 @@
 <string name="about_sliding_tabs_usage">"Wird für die Tabs im \"Über das Spiel\" Bildschirm verwendet"</string>
 <string name="about_custom_color_picker_usage">"Wird für die benutzerdefinierte Farbauswahl benutzt"</string>
 <string name="about_custom_color_picker_title">"AmbilWarna Bibliothek"</string>
-<string name="settings_toolbar_color">"Toolbar Farbe"</string><string name="settings_show_search_engines_title">Suchmaschinen zum Anzeigen</string>
+<string name="settings_toolbar_color">"Toolbar Farbe"</string>
+<string name="settings_show_search_engines_title">Angezeigte Suchmaschinen</string>
 <string name="settings_show_search_engines_text">Wähle aus, welche Suchmaschinen im Schnellwechselmenü in der Suchleiste angezeigt werden sollen</string>
 
     <!-- languages -->
@@ -81,5 +99,8 @@
 <string name="settings_language_spanish_argentina">"Spanisch (Argentinien)"</string>
 <string name="settings_language_spanish">"Spanisch"</string>
 <string name="settings_language_turkish">"Türkisch"</string>
+<string name="settings_language_polish">"Polnisch"</string>
+<string name="settings_language_portuguese">"Portugiesisch"</string>
+<string name="settings_language_portuguese_brazil">"Portugiesisch (Brasilien)"</string>
 
 </resources>

@@ -28,9 +28,10 @@ import androidx.preference.Preference;
 
 import de.tobiasbielefeld.searchbar.R;
 import de.tobiasbielefeld.searchbar.classes.CustomAppCompatActivity;
+import de.tobiasbielefeld.searchbar.dialogs.DialogManageSearchEngines;
 import de.tobiasbielefeld.searchbar.dialogs.DialogShowSearchEngines;
 import de.tobiasbielefeld.searchbar.dialogs.DialogLanguage;
-import de.tobiasbielefeld.searchbar.dialogs.DialogSearchEngines;
+import de.tobiasbielefeld.searchbar.dialogs.DialogSelectedSearchEngine;
 import de.tobiasbielefeld.searchbar.dialogs.DialogToolbarColor;
 import de.tobiasbielefeld.searchbar.ui.settings.helpers.CustomDialogPreference;
 import de.tobiasbielefeld.searchbar.ui.settings.helpers.CustomPreferenceFragmentCompat;
@@ -45,16 +46,18 @@ public class FragmentSettings extends CustomPreferenceFragmentCompat {
         ListPreference theme = findPreference(getString(R.string.pref_key_theme));
         ListPreference screenOrientation = findPreference(getString(R.string.pref_key_orientation));
         PreferenceLanguage language = findPreference(getString(R.string.pref_key_language));
-        PreferenceSearchEngines searchEngines = findPreference(getString(R.string.pref_key_search_engine));
+        PreferenceSelectedSearchEngine searchEngines = findPreference(getString(R.string.pref_key_search_engine));
         Preference fullscreen = findPreference(getString(R.string.pref_key_hide_status_bar));
         CustomDialogPreference toolbarColor = findPreference(getString(R.string.pref_key_toolbar_color));
         Preference useEdgeToEdgeDisplayMode = findPreference(getString(R.string.pref_key_edge_to_edge_display_mode));
         CustomDialogPreference showSearchEngines = findPreference(getString(R.string.pref_key_show_search_engines));
+        CustomDialogPreference manageCustomSearchEngines = findPreference(getString(R.string.pref_key_manage_search_engines));
 
-        bindDialog(searchEngines, DialogSearchEngines.class);
+        bindDialog(searchEngines, DialogSelectedSearchEngine.class);
         bindDialog(language, DialogLanguage.class);
         bindDialog(toolbarColor, DialogToolbarColor.class);
         bindDialog(showSearchEngines, DialogShowSearchEngines.class);
+        bindDialog(manageCustomSearchEngines, DialogManageSearchEngines.class);
 
         assert screenOrientation != null;
         screenOrientation.setOnPreferenceChangeListener((Preference pref, Object newValue) -> {
