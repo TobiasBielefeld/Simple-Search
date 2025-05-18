@@ -1,5 +1,5 @@
-* Move search engines to a proper sqlite database
-* You can now edit or delete any search engines!
+* Moved search engines to a proper sqlite database
+* You can now edit or delete any search engine!
 * You can now add infinite custom search engines in the settings!
 * Added internet permission to be able to fetch favicons in the "Add search engine" dialog
 * Added Polish and Portuguese (Brazil) translations

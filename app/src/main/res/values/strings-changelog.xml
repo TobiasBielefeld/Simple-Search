@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="changelog_13_1" translatable="false">Move search engines to a proper sqlite database</string>
-    <string name="changelog_13_2" translatable="false">You can now edit or delete any search engines!</string>
+    <string name="changelog_13_1" translatable="false">Moved search engines to a proper sqlite database</string>
+    <string name="changelog_13_2" translatable="false">You can now edit or delete any search engine!</string>
     <string name="changelog_13_3" translatable="false">You can now add infinite custom search engines in the settings!</string>
     <string name="changelog_13_4" translatable="false">Added internet permission to be able to fetch favicons in the \"Add search engine\" dialog</string>
     <string name="changelog_13_5" translatable="false">Added Polish and Portuguese (Brazil) translations</string>
