@@ -68,6 +68,8 @@
     <string name="dialog_edit_search_engine_name_error">"Selected name is already in use"</string>
     <string name="dialog_edit_search_engine_name_success">"Search engine has been saved"</string>
     <string name="dialog_edit_search_engine_save_error">"Error while saving value"</string>
+    <string name="setting_keep_selected_search_engine_title">"Keep selected search engine"</string>
+    <string name="setting_keep_selected_search_engine_text">"Using the quick switch menu will only temporarily change the search engine"</string>
 
     <!--About-->
     <string name="activity_about">About</string>

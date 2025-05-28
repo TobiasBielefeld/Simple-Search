@@ -3,5 +3,6 @@
     <bool name="default_status_bar">false</bool>
     <bool name="default_hide_app_icon">false</bool>
     <bool name="default_close_after_search">false</bool>
+    <bool name="default_keep_selected_search_engine">false</bool>
     <bool name="default_edge_to_edge_display_mode">true</bool>
 </resources>

@@ -69,6 +69,7 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
     private ProgressBar imageButtonLoadingSpinner;
     private ActivityResultLauncher<Intent> startForResult;
     private List<SearchEngine> searchEngines;
+    private SearchEngine currentSearchEngine;
     private boolean searchEngineListLoading;
 
     @Override
@@ -165,7 +166,8 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
                 new LoadingTaskHelper(imageButtonLoadingSpinner,
                     () -> searchEngines = database.getSearchEngines(),
                     () -> {
-                        setSearchEngineIcon(getSelectedSearchEngine(searchEngines));
+                        currentSearchEngine = getSelectedSearchEngine(searchEngines);
+                        setSearchEngineIcon(currentSearchEngine);
                         searchEngineListLoading = false;
                     }
         ).execute());
@@ -186,13 +188,12 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
      *
      */
     public void startSearch() {
-        if (searchEngineListLoading) {
+        if (searchEngineListLoading || currentSearchEngine == null) {
             showToast(getString(R.string.load_search_engine_list), this);
             return;
         }
 
-        SearchEngine item = getSelectedSearchEngine(searchEngines);
-        String baseUrl = item.uri;                                                                //get the base url of the search engine
+        String baseUrl = currentSearchEngine.uri;                                                                //get the base url of the search engine
         String text = searchText.getText().toString().trim();                                       //get search text with rmoved whitespace
 
         //workaround for the wrong google url
@@ -294,11 +295,13 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
                 true);
 
         listView.setOnItemClickListener((parent, view, position, id) -> {
-            SearchEngine item = filteredItems.get(position);
-
-            putSavedSearchEngineLabel(item.label);
-            setSearchEngineIcon(item);
+            currentSearchEngine = filteredItems.get(position);
+            setSearchEngineIcon(currentSearchEngine);
             popupWindow.dismiss();
+
+            if (!getSavedKeepSelectedSearchEngine()) {
+                putSavedSearchEngineLabel(currentSearchEngine.label);
+            }
         });
 
         popupWindow.setElevation(4);

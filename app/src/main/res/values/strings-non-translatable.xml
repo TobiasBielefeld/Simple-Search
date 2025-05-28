@@ -15,6 +15,7 @@
     <string name="pref_key_custom_search_url" translatable="false">pref_key_custom_search_url</string>
     <string name="pref_key_hide_app_icon" translatable="false">pref_key_hide_app_icon</string>
     <string name="pref_key_close_after_search" translatable="false">pref_key_close_after_search</string>
+    <string name="pref_key_keep_selected_search_engine" translatable="false">pref_key_keep_selected_search_engine</string>
     <string name="pref_key_edge_to_edge_display_mode" translatable="false">pref_key_edge_to_edge_display_mode</string>
     <string name="pref_key_toolbar_color" translatable="false">pref_key_toolbar_color</string>
     <string name="pref_key_manage_search_engines" translatable="false">pref_key_manage_search_engines</string>

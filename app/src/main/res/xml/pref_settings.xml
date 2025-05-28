@@ -98,6 +98,14 @@
         <SwitchPreferenceCompat
             app:iconSpaceReserved="false"
             app:singleLineTitle="false"
+            app:defaultValue="@bool/default_keep_selected_search_engine"
+            app:key="@string/pref_key_keep_selected_search_engine"
+            app:title="@string/setting_keep_selected_search_engine_title"
+            app:summary="@string/setting_keep_selected_search_engine_text"/>
+
+        <SwitchPreferenceCompat
+            app:iconSpaceReserved="false"
+            app:singleLineTitle="false"
             app:defaultValue="@bool/default_close_after_search"
             app:key="@string/pref_key_close_after_search"
             app:title="@string/settings_close_after_search_title"
