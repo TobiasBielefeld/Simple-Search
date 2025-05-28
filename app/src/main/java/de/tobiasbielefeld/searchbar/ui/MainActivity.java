@@ -194,8 +194,8 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
             return;
         }
 
-        String baseUrl = currentSearchEngine.uri;                                                                //get the base url of the search engine
-        String text = searchText.getText().toString().trim();                                       //get search text with rmoved whitespace
+        String baseUrl = currentSearchEngine.uri; //get the base url of the search engine
+        String text = getSearchText(); //get search text with removed whitespace
 
         //workaround for the wrong google url
         if (baseUrl.equals("https://www.google.de/#q=%s")){
@@ -212,7 +212,7 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
         }
 
         try {
-            searchUrl = Uri.parse(baseUrl.replace("%s",URLEncoder.encode(text, "UTF-8")));          //try to encode the string to a url. eg "this is a test" gets converted to "this+is+a+test"
+            searchUrl = Uri.parse(baseUrl.replace("%s",URLEncoder.encode(text, "UTF-8"))); //try to encode the string to a url. eg "this is a test" gets converted to "this+is+a+test"
         } catch (UnsupportedEncodingException e) {
             showToast(getString(R.string.unsupported_search_character), this);
             return;
@@ -304,6 +304,10 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
             if (!getSavedKeepSelectedSearchEngine()) {
                 putSavedSearchEngineLabel(currentSearchEngine.label);
             }
+
+            if (getSavedStartOnQuickSearchSelect() && !getSearchText().isEmpty()) {
+                startSearch();
+            }
         });
 
         popupWindow.setElevation(4);
@@ -323,5 +327,9 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
         if (view != null) {
             imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
+    }
+
+    private String getSearchText() {
+        return searchText.getText().toString().trim();
     }
 }

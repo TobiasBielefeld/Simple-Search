@@ -71,10 +71,12 @@ public class SharedData {
     public static String PREF_USE_EDGE_TO_EDGE_DISPLAY_MODE;
     public static String PREF_TOOLBAR_COLOR;
     public static String PREF_KEEP_SELECTED_SEARCH_ENGINE;
+    public static String PREF_START_ON_QUICK_SEARCH_SELECT;
     public static int DEFAULT_TOOLBAR_COLOR;
     public static String DEFAULT_ORIENTATION;
     public static String DEFAULT_SEARCH_LABEL;
     public static boolean DEFAULT_KEEP_SELECTED_SEARCH_ENGINE;
+    public static boolean DEFAULT_START_ON_QUICK_SEARCH_SELECT;
     public static boolean DEFAULT_STATUS_BAR;
     public static boolean DEFAULT_CLOSE_AFTER_SEARCH;
     public static boolean DEFAULT_EDGE_TO_EDGE_DISPLAY_MODE;
@@ -99,6 +101,7 @@ public class SharedData {
             PREF_CLOSE_AFTER_SEARCH = res.getString(R.string.pref_key_close_after_search);
             PREF_USE_EDGE_TO_EDGE_DISPLAY_MODE = res.getString(R.string.pref_key_edge_to_edge_display_mode);
             PREF_KEEP_SELECTED_SEARCH_ENGINE = res.getString(R.string.pref_key_keep_selected_search_engine);
+            PREF_START_ON_QUICK_SEARCH_SELECT = res.getString(R.string.pref_key_start_on_quick_search_select);
             PREF_TOOLBAR_COLOR = res.getString(R.string.pref_key_toolbar_color);
             DEFAULT_SEARCH_LABEL = "DuckDuckGo";
             DEFAULT_TOOLBAR_COLOR = res.getColor(R.color.colorPrimary);
@@ -109,6 +112,7 @@ public class SharedData {
             DEFAULT_CLOSE_AFTER_SEARCH = res.getBoolean(R.bool.default_close_after_search);
             DEFAULT_EDGE_TO_EDGE_DISPLAY_MODE = res.getBoolean(R.bool.default_edge_to_edge_display_mode);
             DEFAULT_KEEP_SELECTED_SEARCH_ENGINE = res.getBoolean(R.bool.default_keep_selected_search_engine);
+            DEFAULT_START_ON_QUICK_SEARCH_SELECT = res.getBoolean(R.bool.default_start_on_quick_search_select);
         }
 
         if (sharedPref == null) {
@@ -172,6 +176,10 @@ public class SharedData {
 
     public static boolean getSavedKeepSelectedSearchEngine() {
         return getSavedBoolean(PREF_KEEP_SELECTED_SEARCH_ENGINE, DEFAULT_KEEP_SELECTED_SEARCH_ENGINE);
+    }
+
+    public static boolean getSavedStartOnQuickSearchSelect() {
+        return getSavedBoolean(PREF_START_ON_QUICK_SEARCH_SELECT, DEFAULT_START_ON_QUICK_SEARCH_SELECT);
     }
 
     public static void putSavedSearchEngineLabel(String key) {

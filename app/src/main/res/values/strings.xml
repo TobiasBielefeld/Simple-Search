@@ -70,6 +70,8 @@
     <string name="dialog_edit_search_engine_save_error">"Error while saving value"</string>
     <string name="setting_keep_selected_search_engine_title">"Keep selected search engine"</string>
     <string name="setting_keep_selected_search_engine_text">"Using the quick switch menu will only temporarily change the search engine"</string>
+    <string name="setting_start_on_quick_search_select_title">"Instant search for quick switch menu"</string>
+    <string name="setting_start_on_quick_search_select_text">"If the search bar has text, switching the search engine starts the search immediately"</string>
 
     <!--About-->
     <string name="activity_about">About</string>

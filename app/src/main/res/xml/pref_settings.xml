@@ -106,6 +106,14 @@
         <SwitchPreferenceCompat
             app:iconSpaceReserved="false"
             app:singleLineTitle="false"
+            app:defaultValue="@bool/default_start_on_quick_search_select"
+            app:key="@string/pref_key_start_on_quick_search_select"
+            app:title="@string/setting_start_on_quick_search_select_title"
+            app:summary="@string/setting_start_on_quick_search_select_text"/>
+
+        <SwitchPreferenceCompat
+            app:iconSpaceReserved="false"
+            app:singleLineTitle="false"
             app:defaultValue="@bool/default_close_after_search"
             app:key="@string/pref_key_close_after_search"
             app:title="@string/settings_close_after_search_title"
