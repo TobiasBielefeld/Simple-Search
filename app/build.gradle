@@ -12,7 +12,11 @@ android {
         versionName "2.3"
 
         vectorDrawables.useSupportLibrary = true
-        buildConfigField "long", "TIMESTAMP", System.currentTimeMillis() + "L"
+
+        // reproducible builds for f-droid: https://gitlab.com/fdroid/fdroidserver/-/merge_requests/1653
+        def sourceDateEpoch = System.getenv("SOURCE_DATE_EPOCH")
+        def timestampValue = sourceDateEpoch != null ? "${sourceDateEpoch}L" : "${System.currentTimeMillis()}L"
+        buildConfigField "long", "TIMESTAMP", timestampValue
     }
 
     androidResources {
