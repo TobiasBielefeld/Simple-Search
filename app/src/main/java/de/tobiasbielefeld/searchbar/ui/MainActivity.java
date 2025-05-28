@@ -149,6 +149,7 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
         }
 
         if (v.getId() == R.id.linearLayoutSelectSearchEngines && !searchEngineListLoading) {
+            hideKeyboard();
             showSearchEngineSelectPopup(v);
         }
     }
@@ -298,6 +299,7 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
             currentSearchEngine = filteredItems.get(position);
             setSearchEngineIcon(currentSearchEngine);
             popupWindow.dismiss();
+            focusSearchBar();
 
             if (!getSavedKeepSelectedSearchEngine()) {
                 putSavedSearchEngineLabel(currentSearchEngine.label);
@@ -313,5 +315,13 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
         searchEngineSelectButton.setImageBitmap(byteArrayToBitmap(item.icon));
         searchEngineSelectButton.setAdjustViewBounds(true);
         searchEngineSelectButton.setScaleType(ImageView.ScaleType.FIT_CENTER);
+    }
+
+    private void hideKeyboard() {
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        View view = getCurrentFocus();
+        if (view != null) {
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
     }
 }
