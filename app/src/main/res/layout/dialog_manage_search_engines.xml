@@ -16,8 +16,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" >
 
-        <LinearLayout
-            android:id="@+id/linear_layout_items"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_items"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" />

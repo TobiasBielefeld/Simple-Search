@@ -28,7 +28,7 @@ import androidx.preference.Preference;
 
 import de.tobiasbielefeld.searchbar.R;
 import de.tobiasbielefeld.searchbar.classes.CustomAppCompatActivity;
-import de.tobiasbielefeld.searchbar.dialogs.DialogManageSearchEngines;
+import de.tobiasbielefeld.searchbar.manageSearchEngines.DialogManageSearchEngines;
 import de.tobiasbielefeld.searchbar.dialogs.DialogShowSearchEngines;
 import de.tobiasbielefeld.searchbar.dialogs.DialogLanguage;
 import de.tobiasbielefeld.searchbar.dialogs.DialogSelectedSearchEngine;

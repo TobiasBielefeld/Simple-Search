@@ -16,7 +16,7 @@
  * If you want to contact me, send me an e-mail at tobias.bielefeld@gmail.com
  */
 
-package de.tobiasbielefeld.searchbar.dialogs;
+package de.tobiasbielefeld.searchbar.manageSearchEngines;
 
 import static de.tobiasbielefeld.searchbar.SharedData.byteArrayToBitmap;
 import static de.tobiasbielefeld.searchbar.SharedData.database;
@@ -46,19 +46,19 @@ import de.tobiasbielefeld.searchbar.models.SearchEngine;
 
 public class DialogEditSearchEngine {
 
-    private final SearchEngine editEntry;
     private final Context context;
-    private final List<SearchEngine> allSearchEngines;
-
+    private SearchEngine newEngine;
+    private final SearchEngine editEntry;
     private RelativeLayout loadingLayout;
     private ImageView favicon;
     private EditText inputName, inputUri;
     private ProgressBar loadingSpinner;
+    private final ManageSearchEnginesAdapter adapter;
 
-    public DialogEditSearchEngine(Context context, SearchEngine editEntry, List<SearchEngine> allSearchEngines) {
+    public DialogEditSearchEngine(Context context, ManageSearchEnginesAdapter adapter, SearchEngine editEngine) {
         this.context = context;
-        this.editEntry = editEntry;
-        this.allSearchEngines = allSearchEngines;
+        this.adapter = adapter;
+        this.editEntry = editEngine;
     }
 
     public void show() {
@@ -101,7 +101,7 @@ public class DialogEditSearchEngine {
         String newUri = getUri();
         String newLabel = inputName.getText().toString();
 
-        if (editEntry == null && labelAlreadyExists(allSearchEngines, newLabel)) {
+        if (editEntry == null && labelAlreadyExists(adapter.getItems(), newLabel)) {
             showToast(context.getString(R.string.dialog_edit_search_engine_name_error), context);
             return;
         } else if (!newUri.contains("%s")) {
@@ -109,18 +109,23 @@ public class DialogEditSearchEngine {
             return;
         }
 
+        newEngine = null;
         new LoadingTaskHelper(loadingLayout,
-                () -> saveSearchEngine(newLabel, newUri),
+                () -> newEngine = saveSearchEngine(newLabel, newUri),
                 () ->  {
                     showToast(context.getString(R.string.dialog_edit_search_engine_name_success), context);
                     dialog.dismiss();
+
+                    if (newEngine != null) {
+                        adapter.updateItem(editEntry, newEngine);
+                    }
                 }
         ).execute();
     }
 
-    private void saveSearchEngine(String newLabel, String newUri) {
+    private SearchEngine saveSearchEngine(String newLabel, String newUri) {
         SearchEngine newEngine = new SearchEngine(newLabel, newUri, false, drawableToByteArray(favicon.getDrawable()));
-        SearchEngine selectedSearchEngine = getSelectedSearchEngine(allSearchEngines);
+        SearchEngine selectedSearchEngine = getSelectedSearchEngine(adapter.getItems());
 
         database.withTransaction(inputName, context, () -> {
             // delete existing entry when we change the label
@@ -135,6 +140,8 @@ public class DialogEditSearchEngine {
 
             database.putSearchEngine(newEngine);
         });
+
+       return newEngine;
     }
 
     private String getUri() {

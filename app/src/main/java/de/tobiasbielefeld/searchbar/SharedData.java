@@ -31,9 +31,14 @@ import android.text.SpannableString;
 import android.text.TextUtils;
 import android.text.style.BulletSpan;
 import android.util.Log;
+import android.view.View;
 import android.view.Window;
+import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.Transformation;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.core.view.WindowCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.core.view.WindowInsetsControllerCompat;
@@ -318,4 +323,86 @@ public class SharedData {
         return filteredList;
     }
 
+    public static void viewExpand(final View v, @Nullable Runnable onEndListener) {
+        v.measure(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
+        final int targetHeight = v.getMeasuredHeight();
+
+        // Older versions of android (pre API 21) cancel animations for views with a height of 0.
+        // it also makes animation more smooth
+        v.getLayoutParams().height = 1;
+        v.setVisibility(View.VISIBLE);
+        Animation a = new Animation() {
+            @Override
+            protected void applyTransformation(float interpolatedTime, Transformation t) {
+                v.getLayoutParams().height = interpolatedTime == 1
+                        ? WindowManager.LayoutParams.WRAP_CONTENT
+                        : (int)(targetHeight * interpolatedTime);
+                v.requestLayout();
+            }
+
+            @Override
+            public boolean willChangeBounds() {
+                return true;
+            }
+
+
+        };
+
+        if (onEndListener != null) {
+            a.setAnimationListener(new Animation.AnimationListener() {
+                @Override
+                public void onAnimationStart(Animation animation) {}
+
+                @Override
+                public void onAnimationEnd(Animation animation) {
+                    onEndListener.run();
+                }
+
+                @Override
+                public void onAnimationRepeat(Animation animation) {}
+            });
+        }
+
+        // 1dp/ms
+        a.setDuration(200);
+        v.startAnimation(a);
+    }
+
+    public static void viewCollapse(final View v, Runnable runOnEnd) {
+        final int initialHeight = v.getMeasuredHeight();
+
+        Animation a = new Animation() {
+            @Override
+            protected void applyTransformation(float interpolatedTime, Transformation t) {
+                if(interpolatedTime == 1) {
+                    v.setVisibility(View.GONE);
+                } else {
+                    v.getLayoutParams().height = initialHeight - (int)(initialHeight * interpolatedTime);
+                    v.requestLayout();
+                }
+            }
+
+            @Override
+            public boolean willChangeBounds() {
+                return true;
+            }
+        };
+
+        // 1dp/ms
+        a.setDuration(200);
+
+        a.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) { }
+            @Override
+            public void onAnimationRepeat(Animation animation) { }
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                if (runOnEnd != null) {
+                    runOnEnd.run();
+                }
+            }
+        });
+        v.startAnimation(a);
+    }
 }
