@@ -28,6 +28,7 @@ import android.widget.TextView;
 
 import java.util.LinkedList;
 import java.util.Collections;
+import java.util.List;
 
 import de.tobiasbielefeld.searchbar.R;
 import de.tobiasbielefeld.searchbar.SharedData;
@@ -65,10 +66,11 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
         recordList.clear();
         container.removeAllViews();
 
-        if (recordsDisabled())
+        if (!getSavedEnableRecords())
             return;
 
-        int recordListLength = getSavedInt(PREF_RECORD_LIST_SIZE, 0);
+        int recordListLength = getSavedRecordListSize();
+        List<String> recordList = getRecordList(recordListLength);
 
         // populate linearLayouts with layouts from XML resource
         for (int i = 0; i < recordListLength; i++) {
@@ -79,7 +81,7 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
             textView.setOnLongClickListener(this);
             layout.getChildAt(1).setOnClickListener(this);
 
-            String text = getSavedString(PREF_RECORD_ENTRY + i, "");
+            String text = recordList.get(i);
 
             // Crosslink elements
             recordList.add(text);
@@ -96,7 +98,7 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
      */
     public void add(String newString) {
 
-        if (recordsDisabled())
+        if (!getSavedEnableRecords())
             return;
 
         // Prevent redundant entries from filling history
@@ -115,18 +117,7 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
      * Saves the record list to the sharedPref
      */
     private void save() {
-        // Start edit session for preferences to prevent inconsistencies in stored data.
-        SharedPreferences.Editor editSession = SharedData.sharedPref.edit();
-        
-        int i=0;
-        for (String text : recordList) {
-            editSession.putString(PREF_RECORD_ENTRY + i, text);
-            i++;
-        }
-
-        editSession.putInt(PREF_RECORD_LIST_SIZE, i);
-        
-        editSession.apply();
+        saveRecordList(recordList);
     }
 
     /**
@@ -159,10 +150,6 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
     public void showDeleteAllDialog() {
         DialogDeleteAll dialog = new DialogDeleteAll();
         dialog.show(main.getSupportFragmentManager(), "dialog2");
-    }
-
-    private boolean recordsDisabled(){
-        return !getSavedBoolean(main.getString(R.string.pref_key_enable_records), true);
     }
 
     /*

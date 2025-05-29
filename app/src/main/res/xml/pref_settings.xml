@@ -122,10 +122,31 @@
         <SwitchPreferenceCompat
             app:iconSpaceReserved="false"
             app:singleLineTitle="false"
-            app:defaultValue="true"
+            app:defaultValue="@bool/default_enable_records"
             app:key="@string/pref_key_enable_records"
             app:title="@string/settings_enable_records_title"
             app:summary="@string/settings_enable_records_text"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:singleLineTitle="false"
+        app:title="@string/settings_export_category_title">
+
+        <Preference
+            app:iconSpaceReserved="false"
+            app:singleLineTitle="false"
+            app:key="@string/pref_key_export_settings"
+            app:title="@string/settings_export_title"
+            app:summary="@string/settings_export_text"/>
+
+        <Preference
+            app:iconSpaceReserved="false"
+            app:singleLineTitle="false"
+            app:key="@string/pref_key_import_settings"
+            app:title="@string/settings_import_title"
+            app:summary="@string/settings_import_text"/>
 
     </PreferenceCategory>
 

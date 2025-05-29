@@ -73,6 +73,18 @@
     <string name="setting_start_on_quick_search_select_title">"Instant search for quick switch menu"</string>
     <string name="setting_start_on_quick_search_select_text">"If the search bar has text, switching the search engine starts the search immediately"</string>
 
+    <string name="settings_export_category_title">Export / Import</string>
+    <string name="settings_export_title">Export settings</string>
+    <string name="settings_export_text">Export app settings and search engines into a file</string>
+    <string name="settings_import_title">Import settings</string>
+    <string name="settings_import_text">Import settings and search engines from an export file</string>
+    <string name="settings_export_message_hint">Select folder for storing export</string>
+    <string name="settings_export_message_success">Settings successfully exported</string>
+    <string name="settings_export_message_error">Error while exporting settings</string>
+    <string name="settings_import_message_hint">Select file to import</string>
+    <string name="settings_import_message_success">Settings successfully imported</string>
+    <string name="settings_import_message_error">Error while importing settings</string>
+
     <!--About-->
     <string name="activity_about">About</string>
     <string name="about_description">Show information about the app like licenses and changelog</string>

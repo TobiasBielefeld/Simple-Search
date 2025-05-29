@@ -62,7 +62,7 @@ public abstract class CustomAppCompatActivity extends AppCompatActivity {
 
     protected void onResume() {
         super.onResume();
-        showOrHideStatusBar(getWindow(), getSavedBoolean(PREF_STATUS_BAR, false));
+        showOrHideStatusBar(getWindow(), getSavedStatusBar());
         changeToolbarColor();
 
         Locale newLocale = Locale.getDefault();

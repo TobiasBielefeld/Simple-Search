@@ -59,6 +59,7 @@ dependencies {
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.android.support:multidex:1.0.3'
     implementation 'com.github.yukuku:ambilwarna:2.0.1'
+    implementation 'com.google.code.gson:gson:2.10.1'
     implementation 'androidx.core:core:1.15.0'
     implementation 'androidx.gridlayout:gridlayout:1.0.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.2.0'

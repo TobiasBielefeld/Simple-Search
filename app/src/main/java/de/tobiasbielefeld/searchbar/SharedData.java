@@ -67,17 +67,20 @@ public class SharedData {
     public static String PREF_ORIENTATION;
     public static String PREF_STATUS_BAR;
     public static String PREF_LANGUAGE;
+    public static String PREF_ENABLE_RECORDS;
     public static String PREF_CLOSE_AFTER_SEARCH;
     public static String PREF_USE_EDGE_TO_EDGE_DISPLAY_MODE;
     public static String PREF_TOOLBAR_COLOR;
     public static String PREF_KEEP_SELECTED_SEARCH_ENGINE;
     public static String PREF_START_ON_QUICK_SEARCH_SELECT;
     public static int DEFAULT_TOOLBAR_COLOR;
+    public static int DEFAULT_RECORD_LIST_SIZE;
     public static String DEFAULT_ORIENTATION;
     public static String DEFAULT_SEARCH_LABEL;
     public static boolean DEFAULT_KEEP_SELECTED_SEARCH_ENGINE;
     public static boolean DEFAULT_START_ON_QUICK_SEARCH_SELECT;
     public static boolean DEFAULT_STATUS_BAR;
+    public static boolean DEFAULT_ENABLE_RECORDS;
     public static boolean DEFAULT_CLOSE_AFTER_SEARCH;
     public static boolean DEFAULT_EDGE_TO_EDGE_DISPLAY_MODE;
     public static int DEFAULT_THEME;
@@ -97,6 +100,7 @@ public class SharedData {
             PREF_STATUS_BAR = res.getString(R.string.pref_key_hide_status_bar);
             PREF_LANGUAGE = res.getString(R.string.pref_key_language);
             PREF_THEME = res.getString(R.string.pref_key_theme);
+            PREF_ENABLE_RECORDS = res.getString(R.string.pref_key_enable_records);
             PREF_HIDE_APP_ICON = res.getString(R.string.pref_key_hide_app_icon);
             PREF_CLOSE_AFTER_SEARCH = res.getString(R.string.pref_key_close_after_search);
             PREF_USE_EDGE_TO_EDGE_DISPLAY_MODE = res.getString(R.string.pref_key_edge_to_edge_display_mode);
@@ -105,10 +109,12 @@ public class SharedData {
             PREF_TOOLBAR_COLOR = res.getString(R.string.pref_key_toolbar_color);
             DEFAULT_SEARCH_LABEL = "DuckDuckGo";
             DEFAULT_TOOLBAR_COLOR = res.getColor(R.color.colorPrimary);
+            DEFAULT_ENABLE_RECORDS =  res.getBoolean(R.bool.default_enable_records);
             DEFAULT_ORIENTATION = res.getStringArray(R.array.pref_orientation_values)[0];
             DEFAULT_STATUS_BAR = res.getBoolean(R.bool.default_status_bar);
             DEFAULT_THEME = res.getInteger(R.integer.default_theme);
             DEFAULT_HIDE_APP_ICON = res.getBoolean(R.bool.default_hide_app_icon);
+            DEFAULT_RECORD_LIST_SIZE = res.getInteger(R.integer.default_record_list_size);
             DEFAULT_CLOSE_AFTER_SEARCH = res.getBoolean(R.bool.default_close_after_search);
             DEFAULT_EDGE_TO_EDGE_DISPLAY_MODE = res.getBoolean(R.bool.default_edge_to_edge_display_mode);
             DEFAULT_KEEP_SELECTED_SEARCH_ENGINE = res.getBoolean(R.bool.default_keep_selected_search_engine);
@@ -158,6 +164,14 @@ public class SharedData {
         return Integer.parseInt(getSavedString(PREF_ORIENTATION, "1"));
     }
 
+    public static int getSavedRecordListSize() {
+        return getSavedInt(PREF_RECORD_LIST_SIZE, DEFAULT_RECORD_LIST_SIZE);
+    }
+
+    public static boolean getSavedStatusBar() {
+        return getSavedBoolean(PREF_STATUS_BAR, DEFAULT_STATUS_BAR);
+    }
+
     public static boolean getSavedCloseAfterSearch() {
         return getSavedBoolean(PREF_CLOSE_AFTER_SEARCH, DEFAULT_CLOSE_AFTER_SEARCH);
     }
@@ -177,6 +191,9 @@ public class SharedData {
     public static boolean getSavedKeepSelectedSearchEngine() {
         return getSavedBoolean(PREF_KEEP_SELECTED_SEARCH_ENGINE, DEFAULT_KEEP_SELECTED_SEARCH_ENGINE);
     }
+    public static boolean getSavedEnableRecords() {
+        return getSavedBoolean(PREF_ENABLE_RECORDS, DEFAULT_ENABLE_RECORDS);
+    }
 
     public static boolean getSavedStartOnQuickSearchSelect() {
         return getSavedBoolean(PREF_START_ON_QUICK_SEARCH_SELECT, DEFAULT_START_ON_QUICK_SEARCH_SELECT);
@@ -188,6 +205,42 @@ public class SharedData {
 
     public static void putSavedToolbarColor(int value) {
         putSavedInt(PREF_TOOLBAR_COLOR, value);
+    }
+
+    public static void putSavedTheme(int value) {
+        putSavedString(PREF_THEME, String.valueOf(value));
+    }
+
+    public static void putSavedRecordListSize(int value) {
+        putSavedInt(PREF_RECORD_LIST_SIZE, value);
+    }
+
+    public static void putSavedOrientation(int value) {
+        putSavedString(PREF_ORIENTATION, String.valueOf(value));
+    }
+
+    public static void putSavedEdgeToEdgeDisplayMode(boolean value) {
+        putSavedBoolean(PREF_USE_EDGE_TO_EDGE_DISPLAY_MODE, value);
+    }
+
+    public static void putSavedKeepSelectedSearchEngine(boolean value) {
+        putSavedBoolean(PREF_KEEP_SELECTED_SEARCH_ENGINE, value);
+    }
+
+    public static void putSavedStartOnQuickSearchSelect(boolean value) {
+        putSavedBoolean(PREF_START_ON_QUICK_SEARCH_SELECT, value);
+    }
+
+    public static void putSavedStatusBar(boolean value) {
+        putSavedBoolean(PREF_STATUS_BAR, value);
+    }
+
+    public static void putSavedCloseAfterSearch(boolean value) {
+        putSavedBoolean(PREF_CLOSE_AFTER_SEARCH, value);
+    }
+
+    public static void putSavedEnableRecords(boolean value) {
+        putSavedBoolean(PREF_ENABLE_RECORDS, value);
     }
 
     public static void logText(String text){
@@ -320,6 +373,29 @@ public class SharedData {
         }
 
         return engines.get(0);
+    }
+
+    static public List<String> getRecordList(int size) {
+        List<String> data = new ArrayList<>();
+        for (int i = 0; i < size; i++) {
+            data.add(getSavedString(PREF_RECORD_ENTRY + i, ""));
+        }
+
+        return data;
+    }
+
+    static public void saveRecordList(List<String> data) {
+        SharedPreferences.Editor editSession = sharedPref.edit();
+
+        int i=0;
+        for (String text : data) {
+            editSession.putString(PREF_RECORD_ENTRY + i, text);
+            i++;
+        }
+
+        editSession.putInt(PREF_RECORD_LIST_SIZE, i);
+
+        editSession.apply();
     }
 
     static public int getSelectedSearchEngineIndex(List<SearchEngine> engines) {
