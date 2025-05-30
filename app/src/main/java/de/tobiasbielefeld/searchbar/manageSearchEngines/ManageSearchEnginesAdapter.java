@@ -73,6 +73,7 @@ public class ManageSearchEnginesAdapter extends RecyclerView.Adapter<ManageSearc
             if (!actionHandlers.isLoading()) {
                 DialogEditSearchEngine dialog = new DialogEditSearchEngine(holder.context, this, engine);
                 dialog.show();
+                actionHandlers.hideDialog();
             }
         });
 

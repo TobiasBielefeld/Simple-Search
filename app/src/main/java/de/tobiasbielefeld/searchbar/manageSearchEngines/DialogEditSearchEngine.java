@@ -47,7 +47,6 @@ import de.tobiasbielefeld.searchbar.models.SearchEngine;
 public class DialogEditSearchEngine {
 
     private final Context context;
-    private SearchEngine newEngine;
     private final SearchEngine editEntry;
     private RelativeLayout loadingLayout;
     private ImageView favicon;
@@ -109,21 +108,16 @@ public class DialogEditSearchEngine {
             return;
         }
 
-        newEngine = null;
         new LoadingTaskHelper(loadingLayout,
-                () -> newEngine = saveSearchEngine(newLabel, newUri),
+                () -> saveSearchEngine(newLabel, newUri),
                 () ->  {
                     showToast(context.getString(R.string.dialog_edit_search_engine_name_success), context);
                     dialog.dismiss();
-
-                    if (newEngine != null) {
-                        adapter.updateItem(editEntry, newEngine);
-                    }
                 }
         ).execute();
     }
 
-    private SearchEngine saveSearchEngine(String newLabel, String newUri) {
+    private void saveSearchEngine(String newLabel, String newUri) {
         SearchEngine newEngine = new SearchEngine(newLabel, newUri, false, drawableToByteArray(favicon.getDrawable()));
         SearchEngine selectedSearchEngine = getSelectedSearchEngine(adapter.getItems());
 
@@ -140,8 +134,6 @@ public class DialogEditSearchEngine {
 
             database.putSearchEngine(newEngine);
         });
-
-       return newEngine;
     }
 
     private String getUri() {

@@ -27,4 +27,6 @@ public interface ManageSearchEnginesActions {
     void moveScrollContainer(int itemBottom);
 
     boolean isLoading();
+
+    void hideDialog();
 }

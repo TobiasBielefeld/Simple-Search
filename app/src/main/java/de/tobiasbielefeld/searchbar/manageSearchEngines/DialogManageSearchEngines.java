@@ -84,6 +84,7 @@ public class DialogManageSearchEngines extends CustomPreferenceDialogFragmentCom
         if (engines != null) {
             DialogEditSearchEngine editDialog = new DialogEditSearchEngine(getActivity(), listAdapter, null);
             editDialog.show();
+            hideDialog();
         }
     }
 
@@ -115,6 +116,10 @@ public class DialogManageSearchEngines extends CustomPreferenceDialogFragmentCom
 
     public boolean isLoading() {
         return isLoading.get();
+    }
+
+    public void hideDialog() {
+        dismiss();
     }
 
     private void startLoading() {
