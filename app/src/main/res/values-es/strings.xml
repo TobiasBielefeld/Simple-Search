@@ -35,9 +35,6 @@
   <string formatted="false" name="dialog_edit_search_engine_text">Introduce un valor \"%s\" (sin las comillas) como marcador de posición donde se debe insertar la consulta de búsqueda.</string>
       
   <!-- Settings -->
-  <string name="settings_hide_app_icon_title">Ocultar el icono de la aplicación</string>
-
-  <string name="settings_hide_app_icon_text">La aplicación solo se puede iniciar usando su widget</string>
 
   <string name="activity_settings">Ajustes</string>
       

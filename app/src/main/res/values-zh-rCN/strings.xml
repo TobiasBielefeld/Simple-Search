@@ -61,10 +61,6 @@
   <string name="settings_hide_status_bar">隐藏状态栏</string>
       
   <string name="settings_dark_theme">启用深色主题</string>
-
-  <string name="settings_hide_app_icon_title">隐藏应用程序图标</string>
-
-  <string name="settings_hide_app_icon_text">该应用程序只能通过其小部件来启动</string>
       
   <string name="settings_restart_app">重新启动应用程序以应用更改</string>
       

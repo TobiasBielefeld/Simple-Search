@@ -62,10 +62,6 @@
       
   <string name="settings_dark_theme">ダークテーマを有効にする</string>
 
-  <string name="settings_hide_app_icon_title">アプリアイコンを非表示にする</string>
-
-  <string name="settings_hide_app_icon_text">アプリはウィジェットを使用してのみ起動できます</string>
-
   <string name="settings_restart_app">変更を適用するにはアプリを再起動してください</string>
       
   <string name="settings_follow_system_settings">システム設定に従う</string>

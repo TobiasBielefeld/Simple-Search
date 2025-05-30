@@ -35,9 +35,6 @@
   <string formatted="false" name="dialog_edit_search_engine_text">Inserisci un valore \"%s\" (senza virgolette) come segnaposto in cui inserire la query di ricerca.</string>
       
   <!-- Settings -->
-  <string name="settings_hide_app_icon_title">Nascondi l\'icona dell\'app</string>
-
-  <string name="settings_hide_app_icon_text">L\'app può essere avviata solo tramite il suo widget</string>
 
   <string name="activity_settings">Impostazioni</string>
       

@@ -62,7 +62,6 @@ public class SharedData {
     public static String PREF_RECORD_LIST_SIZE;
     public static String PREF_RECORD_ENTRY;
     public static String PREF_THEME;
-    public static String PREF_HIDE_APP_ICON;
     public static String PREF_SEARCH_LABEL;
     public static String PREF_ORIENTATION;
     public static String PREF_STATUS_BAR;
@@ -84,7 +83,6 @@ public class SharedData {
     public static boolean DEFAULT_CLOSE_AFTER_SEARCH;
     public static boolean DEFAULT_EDGE_TO_EDGE_DISPLAY_MODE;
     public static int DEFAULT_THEME;
-    public static boolean DEFAULT_HIDE_APP_ICON;
     public static Records records;
 
     private static Toast toast;
@@ -101,7 +99,6 @@ public class SharedData {
             PREF_LANGUAGE = res.getString(R.string.pref_key_language);
             PREF_THEME = res.getString(R.string.pref_key_theme);
             PREF_ENABLE_RECORDS = res.getString(R.string.pref_key_enable_records);
-            PREF_HIDE_APP_ICON = res.getString(R.string.pref_key_hide_app_icon);
             PREF_CLOSE_AFTER_SEARCH = res.getString(R.string.pref_key_close_after_search);
             PREF_USE_EDGE_TO_EDGE_DISPLAY_MODE = res.getString(R.string.pref_key_edge_to_edge_display_mode);
             PREF_KEEP_SELECTED_SEARCH_ENGINE = res.getString(R.string.pref_key_keep_selected_search_engine);
@@ -113,7 +110,6 @@ public class SharedData {
             DEFAULT_ORIENTATION = res.getStringArray(R.array.pref_orientation_values)[0];
             DEFAULT_STATUS_BAR = res.getBoolean(R.bool.default_status_bar);
             DEFAULT_THEME = res.getInteger(R.integer.default_theme);
-            DEFAULT_HIDE_APP_ICON = res.getBoolean(R.bool.default_hide_app_icon);
             DEFAULT_RECORD_LIST_SIZE = res.getInteger(R.integer.default_record_list_size);
             DEFAULT_CLOSE_AFTER_SEARCH = res.getBoolean(R.bool.default_close_after_search);
             DEFAULT_EDGE_TO_EDGE_DISPLAY_MODE = res.getBoolean(R.bool.default_edge_to_edge_display_mode);

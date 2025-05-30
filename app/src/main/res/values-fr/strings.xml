@@ -65,8 +65,6 @@
 <string name="settings_show_search_engines_title">Moteurs de recherche affichés</string>
 <string name="settings_show_search_engines_text">Sélectionnez les moteurs de recherche à afficher dans le menu de commutation rapide de la barre de recherche</string>
 
-<string name="settings_hide_app_icon_title">Masquer l\'icône de l\'application</string>
-<string name="settings_hide_app_icon_text">L\'application ne peut être démarrée qu\'en utilisant son widget</string>
 <string name="setting_keep_selected_search_engine_title">Conserver le moteur de recherche sélectionné</string>
 <string name="setting_keep_selected_search_engine_text">L\'utilisation du menu de changement rapide ne modifiera que temporairement le moteur de recherche</string>
 <string name="setting_start_on_quick_search_select_title">Recherche instantanée pour le menu de commutation rapide</string>

@@ -21,8 +21,6 @@
 <string name="dialog_edit_search_engine_text">"Trage ein \"%s\" (ohne Anführungszeichen) als Platzhalter an der Stelle ein, wo die Suchabfrage eingefügt werden soll."</string>
 
 <!-- Settings -->
-<string name="settings_hide_app_icon_title">App-Symbol ausblenden</string>
-<string name="settings_hide_app_icon_text">Die App kann nur über das Widget gestartet werden</string>
 <string name="activity_settings">"Einstellungen"</string>
 <string name="settings_custom">"Benutzerdefiniert"</string>
 <string name="settings_search_title">"Suche"</string>

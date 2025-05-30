@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <bool name="default_status_bar">false</bool>
-    <bool name="default_hide_app_icon">false</bool>
     <bool name="default_close_after_search">false</bool>
     <bool name="default_enable_records">true</bool>
     <bool name="default_keep_selected_search_engine">false</bool>

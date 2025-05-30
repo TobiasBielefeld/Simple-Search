@@ -61,10 +61,6 @@
   <string name="settings_hide_status_bar">Ocultar barra de status</string>
       
   <string name="settings_dark_theme">Habilitar tema escuro</string>
-
-  <string name="settings_hide_app_icon_title">Ocultar ícone do aplicativo</string>
-
-  <string name="settings_hide_app_icon_text">O aplicativo só pode ser iniciado usando seu widget</string>
       
   <string name="settings_restart_app">Reinicie o aplicativo para aplicar as alterações</string>
       
