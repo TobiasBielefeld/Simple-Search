@@ -100,9 +100,13 @@
 <string name="about_sliding_tabs_usage">"Wird für die Tabs im \"Über das Spiel\" Bildschirm verwendet"</string>
 <string name="about_custom_color_picker_usage">"Wird für die benutzerdefinierte Farbauswahl benutzt"</string>
 <string name="about_custom_color_picker_title">"AmbilWarna Bibliothek"</string>
+<string name="about_jsoup_title">"jsoup Bibliothek"</string>
+<string name="about_gson_title">"gson Bibliothek"</string>
 <string name="settings_toolbar_color">"Toolbar Farbe"</string>
 <string name="settings_show_search_engines_title">Angezeigte Suchmaschinen</string>
 <string name="settings_show_search_engines_text">Wähle aus, welche Suchmaschinen im Schnellwechselmenü in der Suchleiste angezeigt werden sollen</string>
+<string name="about_jsoup_usage">Wird zum Parsen von Websites verwendet, um deren Favicons zu erhalten</string>
+<string name="about_gson_usage">Wird zur Serialisierung und Deserialisierung von Objekten in den Einstellungen Export- und Importfunktionen verwendet</string>
 
     <!-- languages -->
 <string name="settings_language_default">"Standard Sprache"</string>

@@ -106,6 +106,10 @@
 
     <string name="about_custom_color_picker_usage">"Used for the custom color picker"</string>
     <string name="about_custom_color_picker_title">"AmbilWarna library"</string>
+    <string name="about_jsoup_title">"jsoup library"</string>
+    <string name="about_gson_title">"gson library"</string>
+    <string name="about_jsoup_usage">"Used for parsing websites to get their favicons"</string>
+    <string name="about_gson_usage">"Used for serialization and deserialization of objects in the settings export and import functions"</string>
     <string name="settings_toolbar_color">"Toolbar Color"</string>
 
     <!-- languages -->

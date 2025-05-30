@@ -186,6 +186,14 @@
 
   <string name="about_custom_color_picker_title">"AmbilWarna 库"</string>
 
+  <string name="about_jsoup_title">"jsoup 库"</string>
+
+  <string name="about_gson_title">gson 库</string>
+
+  <string name="about_jsoup_usage">用于解析网站以获取其图标</string>
+
+  <string name="about_gson_usage">用于设置导出和导入功能中对象的序列化和反序列化</string>
+
   <string name="about_custom_color_picker_usage">"使用于自定义色彩选取器"</string>
 
   <string name="settings_toolbar_color">"工具栏颜色"</string>

@@ -46,6 +46,10 @@
 <string name="about_sliding_tabs_usage">"Utilisé pour les onglets dans l'écran 'À propos du jeu'"</string>
 <string name="about_description">"Afficher les informations sur l\'application comme les licences et le journal des modifications."</string>
 <string name="about_custom_color_picker_title">Bibliothèque AmbilWarna</string>
+<string name="about_jsoup_title">Bibliothèque jsoup</string>
+<string name="about_gson_title">"Bibliothèque gson"</string>
+<string name="about_jsoup_usage">Utilisé pour analyser les sites Web afin d\'obtenir leurs favicons</string>
+<string name="about_gson_usage">Utilisé pour la sérialisation et la désérialisation des objets dans les fonctions d\'exportation et d\'importation des paramètres</string>
 <string name="about_custom_color_picker_usage">Utilisé pour le sélecteur de couleur personnalisé</string>
 <string name="settings_toolbar_color">"Couleur de la barre"</string>
 <string name="settings_dark_theme">"Activer le thème sombre"</string>

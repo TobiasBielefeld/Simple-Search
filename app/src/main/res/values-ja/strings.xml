@@ -186,6 +186,14 @@
 
   <string name="about_custom_color_picker_title">AmbilWarna ライブラリ</string>
 
+  <string name="about_jsoup_title">jsoup ライブラリ</string>
+
+  <string name="about_gson_title">gson ライブラリ</string>
+
+  <string name="about_jsoup_usage">ウェブサイトを解析してファビコンを取得するために使用されます</string>
+
+  <string name="about_gson_usage">設定のエクスポートおよびインポート機能におけるオブジェクトのシリアル化とデシリアル化に使用されます</string>
+
   <string name="about_custom_color_picker_usage">カスタムカラーピッカーに使用</string>
 
   <string name="settings_toolbar_color">"ツールバーの色"</string>

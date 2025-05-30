@@ -191,7 +191,15 @@
   <string name="about_custom_color_picker_usage">Używane do niestandardowego selektora kolorów</string>
       
   <string name="about_custom_color_picker_title">Biblioteka AmbilWarna</string>
-      
+
+  <string name="about_jsoup_title">Biblioteka jsoup</string>
+
+  <string name="about_gson_title">Biblioteka gson</string>
+
+  <string name="about_jsoup_usage">Służy do analizowania witryn internetowych w celu uzyskania ich ikon favicon</string>
+
+  <string name="about_gson_usage">Służy do serializacji i deserializacji obiektów w funkcjach eksportu i importu ustawień</string>
+
   <string name="settings_toolbar_color">Kolor paska narzędzi</string>
       
   <!-- languages -->

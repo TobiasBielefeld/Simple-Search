@@ -25,8 +25,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.fragment.app.Fragment;
-
 import de.tobiasbielefeld.searchbar.R;
 import de.tobiasbielefeld.searchbar.classes.FragmentWithBottomSpacing;
 
@@ -43,8 +41,14 @@ public class LicenseFragment extends FragmentWithBottomSpacing {
 
         TextView textMaterialIconsLicense = view.findViewById(R.id.about_license_material_icons);
         TextView textAndroidSupportLicense = view.findViewById(R.id.about_license_android_support_libraries);
+        TextView textCustomColorPickerLicense = view.findViewById(R.id.about_license_custom_color_picker);
+        TextView textJsoupLicense = view.findViewById(R.id.about_license_jsoup);
+        TextView textGsonLicense = view.findViewById(R.id.about_license_gson);
 
-        TextView[] textViews = new TextView[]{textMaterialIconsLicense, textAndroidSupportLicense};
+        TextView[] textViews = new TextView[]{
+                textMaterialIconsLicense, textAndroidSupportLicense,
+                textCustomColorPickerLicense, textJsoupLicense, textGsonLicense
+        };
 
         for (TextView textView : textViews){
             textView.setMovementMethod(LinkMovementMethod.getInstance());

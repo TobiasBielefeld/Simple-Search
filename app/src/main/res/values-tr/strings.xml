@@ -156,7 +156,15 @@
 
   <string name="about_custom_color_picker_title">AmbilWarna kütüphanesi</string>
 
+  <string name="about_jsoup_title">jsoup kütüphanesi</string>
+
+  <string name="about_gson_title">gson kütüphanesi</string>
+
   <string name="about_custom_color_picker_usage">Özel renk seçici için kullanılır</string>
+
+  <string name="about_jsoup_usage">Favicon\'larını almak için web sitelerini ayrıştırmak için kullanılır</string>
+
+  <string name="about_gson_usage">Ayarlar dışa aktarma ve içe aktarma işlevlerinde nesnelerin serileştirilmesi ve serileştirilmesinin kaldırılması için kullanılır</string>
 
   <string name="settings_toolbar_color">"Araç çubuğu rengi"</string>
 

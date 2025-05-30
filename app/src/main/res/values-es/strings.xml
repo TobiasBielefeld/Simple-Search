@@ -188,6 +188,14 @@
 
   <string name="about_custom_color_picker_title">Biblioteca AmbilWarna</string>
 
+  <string name="about_jsoup_title">Biblioteca jsoup</string>
+
+  <string name="about_gson_title">"Biblioteca gson"</string>
+
+  <string name="about_jsoup_usage">Se utiliza para analizar sitios web y obtener sus faviconos.</string>
+
+  <string name="about_gson_usage">Se utiliza para la serialización y deserialización de objetos en las funciones de exportación e importación de configuraciones.</string>
+
   <string name="settings_toolbar_color">"Color de la barra"</string>
 
   <string name="settings_show_search_engines_title">Motores de búsqueda mostrados</string>

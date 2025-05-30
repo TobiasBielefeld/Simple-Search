@@ -191,6 +191,14 @@
   <string name="about_custom_color_picker_usage">Usado para o seletor de cores personalizado</string>
       
   <string name="about_custom_color_picker_title">Biblioteca AmbilWarna</string>
+
+  <string name="about_jsoup_title">Biblioteca jsoup</string>
+
+  <string name="about_gson_title">Biblioteca gson</string>
+
+  <string name="about_jsoup_usage">Usado para analisar sites para obter seus favicons</string>
+
+  <string name="about_gson_usage">Usado para serialização e desserialização de objetos nas funções de exportação e importação de configurações</string>
       
   <string name="settings_toolbar_color">Cor da barra de ferramentas</string>
       

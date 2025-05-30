@@ -34,10 +34,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
-                        android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
-                        android:layout_toLeftOf="@+id/about_license_android_support_libraries"
-                        android:gravity="left"
+                        android:layout_toStartOf="@+id/about_license_android_support_libraries"
+                        android:gravity="start"
                         android:singleLine="true"
                         android:text="@string/about_android_support_libraries_title"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -49,8 +48,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
                         android:text="@string/about_android_support_libraries_license"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textStyle="bold" />
@@ -65,7 +63,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="left"
+                    android:gravity="start"
                     android:padding="6dp"
                     android:text="@string/about_android_support_libraries_usage" />
 
@@ -92,10 +90,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
-                        android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
-                        android:layout_toLeftOf="@+id/about_license_material_icons"
-                        android:gravity="left"
+                        android:layout_toStartOf="@+id/about_license_material_icons"
+                        android:gravity="start"
                         android:singleLine="true"
                         android:text="@string/about_material_icons_title"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -107,8 +104,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
                         android:text="@string/about_material_icons_license"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textStyle="bold" />
@@ -123,7 +119,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="left"
+                    android:gravity="start"
                     android:padding="6dp"
                     android:text="@string/about_material_icons_usage" />
 
@@ -155,7 +151,7 @@
                         android:gravity="start"
                         android:singleLine="true"
                         android:text="@string/about_custom_color_picker_title"
-                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textStyle="bold" />
 
                     <TextView
@@ -183,6 +179,122 @@
                     android:gravity="start"
                     android:padding="6dp"
                     android:text="@string/about_custom_color_picker_usage" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            card_view:cardCornerRadius="2dp"
+            card_view:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="6dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toStartOf="@+id/about_license_jsoup"
+                        android:gravity="start"
+                        android:singleLine="true"
+                        android:text="@string/about_jsoup_title"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/about_license_jsoup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/about_jsoup_license"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColorLink="@color/colorTextLink"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@android:color/darker_gray" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:padding="6dp"
+                    android:text="@string/about_jsoup_usage" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            card_view:cardCornerRadius="2dp"
+            card_view:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="6dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toStartOf="@+id/about_license_gson"
+                        android:gravity="start"
+                        android:singleLine="true"
+                        android:text="@string/about_gson_title"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/about_license_gson"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/about_gson_license"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColorLink="@color/colorTextLink"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@android:color/darker_gray" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:padding="6dp"
+                    android:text="@string/about_gson_usage" />
 
             </LinearLayout>
 

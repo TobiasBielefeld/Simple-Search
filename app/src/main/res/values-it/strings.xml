@@ -154,7 +154,15 @@
 
   <string name="settings_use_edge_to_edge_display_mode">"Usa la modalità di visualizzazione \"Edge-to-Edge\""</string>
 
-  <string name="about_custom_color_picker_title">"AmbilWarna library"</string>
+  <string name="about_custom_color_picker_title">"Biblioteca AmbilWarna"</string>
+
+  <string name="about_jsoup_title">"Biblioteca jsoup"</string>
+
+  <string name="about_gson_title">"Biblioteca gson"</string>
+
+  <string name="about_jsoup_usage">Utilizzato per analizzare i siti web e ottenere le loro icone preferite</string>
+
+  <string name="about_gson_usage">Utilizzato per la serializzazione e la deserializzazione degli oggetti nelle funzioni di esportazione e importazione delle impostazioni</string>
 
   <string name="about_custom_color_picker_usage">"Usata per il color picker personalizzato"</string>
 
