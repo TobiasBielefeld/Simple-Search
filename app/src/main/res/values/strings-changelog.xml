@@ -5,7 +5,8 @@
     <string name="changelog_14_2" translatable="false">Added option to directly start the search when the quick switch menu is used</string>
     <string name="changelog_14_3" translatable="false">Added option to export and import settings and search engines</string>
     <string name="changelog_14_4" translatable="false">Correctly hide keyboard when the quick switch menu is used</string>
-    <string name="changelog_14_5" translatable="false">Reworked the \"Manage search engine\" dialog a bit</string>
+    <string name="changelog_14_5" translatable="false">Darkened hint text for better visibility, thanks to good-good-create!</string>
+    <string name="changelog_14_6" translatable="false">Reworked the \"Manage search engine\" dialog a bit</string>
 
     <string name="changelog_13_1" translatable="false">Moved search engines to a proper sqlite database</string>
     <string name="changelog_13_2" translatable="false">You can now edit or delete any search engine!</string>

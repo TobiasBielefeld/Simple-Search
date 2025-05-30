@@ -271,6 +271,15 @@
                             android:padding="7dp"
                             android:text="@string/contributors_tedkotz" />
 
+
+                        <TextView
+                            android:id="@+id/about_further_contributors_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="7dp"
+                            android:text="@string/contributors_good_good_create" />
+
                     </TableRow>
 
                 </TableLayout>

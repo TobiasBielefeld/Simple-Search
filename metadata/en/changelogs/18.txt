@@ -2,4 +2,5 @@
 * Added option to directly start the search when the quick switch menu is used
 * Added option to export and import settings and search engines
 * Correctly hide keyboard when the quick switch menu is used
+* Darkened hint text for better visibility, thanks to good-good-create!
 * Reworked the "Manage search engine" dialog a bit

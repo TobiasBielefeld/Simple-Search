@@ -31,5 +31,6 @@
     <string name="about_custom_color_picker_license" translatable="false"><a href="https://github.com/yukuku/ambilwarna/blob/master/LICENSE">Apache 2.0</a></string>
     <string name="contributors_julfers" translatable="false"><a href="https://github.com/julfers">julfers</a></string>
     <string name="contributors_tedkotz" translatable="false"><a href="https://github.com/tedkotz">tedkotz</a></string>
+    <string name="contributors_good_good_create" translatable="false"><a href="https://github.com/good-good-create">good-good-create</a></string>
     <string name="contributors_benjamin_tourrel" translatable="false">Benjamin Tourrel</string>
 </resources>
