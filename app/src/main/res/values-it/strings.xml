@@ -35,7 +35,10 @@
   <string formatted="false" name="dialog_edit_search_engine_text">Inserisci un valore \"%s\" (senza virgolette) come segnaposto in cui inserire la query di ricerca.</string>
       
   <!-- Settings -->
-      
+  <string name="settings_hide_app_icon_title">Nascondi l\'icona dell\'app</string>
+
+  <string name="settings_hide_app_icon_text">L\'app può essere avviata solo tramite il suo widget</string>
+
   <string name="activity_settings">Impostazioni</string>
       
   <string name="settings_custom">Costume</string>
@@ -62,10 +65,6 @@
       
   <string name="settings_dark_theme">Abilita il tema scuro</string>
       
-  <string name="settings_hide_app_icon_title">Nascondi l\'icona dell\'app nel drawer</string>
-      
-  <string name="settings_hide_app_icon_text">Quindi l\'app può essere avviata solo utilizzando il suo widget</string>
-      
   <string name="settings_restart_app">Riavvia l\'app per applicare le modifiche</string>
       
   <string name="settings_follow_system_settings">Segui le impostazioni di sistema</string>
@@ -83,7 +82,37 @@
   <string name="settings_change_theme_light">Leggero</string>
       
   <string name="settings_change_theme_default">Segui le impostazioni di sistema</string>
-      
+
+  <string name="setting_keep_selected_search_engine_title">Mantieni il motore di ricerca selezionato</string>
+
+  <string name="setting_keep_selected_search_engine_text">Utilizzando il menu di cambio rapido il motore di ricerca verrà modificato solo temporaneamente</string>
+
+  <string name="setting_start_on_quick_search_select_title">Ricerca immediata per il menu di cambio rapido</string>
+
+  <string name="setting_start_on_quick_search_select_text">Se la barra di ricerca contiene del testo, cambiando il motore di ricerca la ricerca viene avviata immediatamente</string>
+
+  <string name="settings_export_category_title">Esportazione / Importazione</string>
+
+  <string name="settings_export_title">Impostazioni di esportazione</string>
+
+  <string name="settings_export_text">Esportare le impostazioni dell\'app e i motori di ricerca in un file</string>
+
+  <string name="settings_import_title">Impostazioni di importazione</string>
+
+  <string name="settings_import_text">Importa impostazioni e motori di ricerca da un file di esportazione</string>
+
+  <string name="settings_export_message_hint">Seleziona la cartella per l\'archiviazione dell\'esportazione</string>
+
+  <string name="settings_export_message_success">Impostazioni esportate correttamente</string>
+
+  <string name="settings_export_message_error">Errore durante l\'esportazione delle impostazioni</string>
+
+  <string name="settings_import_message_hint">Seleziona il file da importare</string>
+
+  <string name="settings_import_message_success">Impostazioni importate correttamente</string>
+
+  <string name="settings_import_message_error">Errore durante l\'importazione delle impostazioni</string>
+
   <!--About-->
       
   <string name="activity_about">Di</string>

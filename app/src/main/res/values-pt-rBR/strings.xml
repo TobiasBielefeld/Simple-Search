@@ -61,10 +61,10 @@
   <string name="settings_hide_status_bar">Ocultar barra de status</string>
       
   <string name="settings_dark_theme">Habilitar tema escuro</string>
-      
-  <string name="settings_hide_app_icon_title">Ocultar ícone do aplicativo na gaveta</string>
-      
-  <string name="settings_hide_app_icon_text">Então o aplicativo só pode ser iniciado usando seu widget</string>
+
+  <string name="settings_hide_app_icon_title">Ocultar ícone do aplicativo</string>
+
+  <string name="settings_hide_app_icon_text">O aplicativo só pode ser iniciado usando seu widget</string>
       
   <string name="settings_restart_app">Reinicie o aplicativo para aplicar as alterações</string>
       
@@ -123,7 +123,37 @@
   <string name="dialog_edit_search_engine_name_success">O mecanismo de busca foi salvo</string>
       
   <string name="dialog_edit_search_engine_save_error">Erro ao salvar valor</string>
-      
+
+  <string name="setting_keep_selected_search_engine_title">Manter mecanismo de busca selecionado</string>
+
+  <string name="setting_keep_selected_search_engine_text">O uso do menu de troca rápida alterará apenas temporariamente o mecanismo de pesquisa</string>
+
+  <string name="setting_start_on_quick_search_select_title">Busca instantânea para menu de troca rápida</string>
+
+  <string name="setting_start_on_quick_search_select_text">Se a barra de pesquisa tiver texto, alternar o mecanismo de pesquisa inicia a pesquisa imediatamente</string>
+
+  <string name="settings_export_category_title">Exportação / Importação</string>
+
+  <string name="settings_export_title">Configurações de exportação</string>
+
+  <string name="settings_export_text">Exportar configurações do aplicativo e mecanismos de pesquisa para um arquivo</string>
+
+  <string name="settings_import_title">Configurações de importação</string>
+
+  <string name="settings_import_text">Importar configurações e mecanismos de pesquisa de um arquivo de exportação</string>
+
+  <string name="settings_export_message_hint">Selecione a pasta para armazenar a exportação</string>
+
+  <string name="settings_export_message_success">Configurações exportadas com sucesso</string>
+
+  <string name="settings_export_message_error">Erro ao exportar configurações</string>
+
+  <string name="settings_import_message_hint">Selecione o arquivo para importar</string>
+
+  <string name="settings_import_message_success">Configurações importadas com sucesso</string>
+
+  <string name="settings_import_message_error">Erro ao importar configurações</string>
+
   <!--About-->
       
   <string name="activity_about">Sobre</string>

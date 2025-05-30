@@ -61,10 +61,10 @@
   <string name="settings_hide_status_bar">隐藏状态栏</string>
       
   <string name="settings_dark_theme">启用深色主题</string>
-      
-  <string name="settings_hide_app_icon_title">隐藏抽屉中的应用程序图标</string>
-      
-  <string name="settings_hide_app_icon_text">然后应用程序只能通过其小部件来启动</string>
+
+  <string name="settings_hide_app_icon_title">隐藏应用程序图标</string>
+
+  <string name="settings_hide_app_icon_text">该应用程序只能通过其小部件来启动</string>
       
   <string name="settings_restart_app">重新启动应用程序以应用更改</string>
       
@@ -113,6 +113,36 @@
   <string name="dialog_edit_search_engine_name_success">搜索引擎已保存</string>
 
   <string name="dialog_edit_search_engine_save_error">保存值时出错</string>
+
+  <string name="setting_keep_selected_search_engine_title">保留选定的搜索引擎</string>
+
+  <string name="setting_keep_selected_search_engine_text">使用快速切换菜单只会暂时更改搜索引擎</string>
+
+  <string name="setting_start_on_quick_search_select_title">即时搜索快速切换菜单</string>
+
+  <string name="setting_start_on_quick_search_select_text">如果搜索栏中有文本，切换搜索引擎会立即开始搜索</string>
+
+  <string name="settings_export_category_title">出口 / 进口</string>
+
+  <string name="settings_export_title">导出设置</string>
+
+  <string name="settings_export_text">将应用程序设置和搜索引擎导出到文件中</string>
+
+  <string name="settings_import_title">导入设置</string>
+
+  <string name="settings_import_text">从导出文件导入设置和搜索引擎</string>
+
+  <string name="settings_export_message_hint">选择用于存储导出的文件夹</string>
+
+  <string name="settings_export_message_success">设置已成功导出</string>
+
+  <string name="settings_export_message_error">导出设置时出错</string>
+
+  <string name="settings_import_message_hint">选择要导入的文件</string>
+
+  <string name="settings_import_message_success">设置已成功导入</string>
+
+  <string name="settings_import_message_error">导入设置时出错</string>
 
   <!--About-->
       

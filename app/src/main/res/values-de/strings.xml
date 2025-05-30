@@ -21,6 +21,8 @@
 <string name="dialog_edit_search_engine_text">"Trage ein \"%s\" (ohne Anführungszeichen) als Platzhalter an der Stelle ein, wo die Suchabfrage eingefügt werden soll."</string>
 
 <!-- Settings -->
+<string name="settings_hide_app_icon_title">App-Symbol ausblenden</string>
+<string name="settings_hide_app_icon_text">Die App kann nur über das Widget gestartet werden</string>
 <string name="activity_settings">"Einstellungen"</string>
 <string name="settings_custom">"Benutzerdefiniert"</string>
 <string name="settings_search_title">"Suche"</string>
@@ -62,6 +64,22 @@
 <string name="dialog_edit_search_engine_name_error">"Der ausgewählte Name wird bereits verwendet"</string>
 <string name="dialog_edit_search_engine_name_success">"Suchmaschine wurde gespeichert"</string>
 <string name="dialog_edit_search_engine_save_error">Fehler beim Speichern des Wertes</string>
+
+<string name="setting_keep_selected_search_engine_title">Ausgewählte Suchmaschine beibehalten</string>
+<string name="setting_keep_selected_search_engine_text">Über das Schnellwechselmenü wird die Suchmaschine nur vorübergehend geändert</string>
+<string name="setting_start_on_quick_search_select_title">Sofortsuche für das Schnellwechselmenü</string>
+<string name="setting_start_on_quick_search_select_text">Wenn die Suchleiste Text enthält, wird die Suche durch Wechseln der Suchmaschine sofort gestartet</string>
+<string name="settings_export_category_title">Exportieren / Importieren</string>
+<string name="settings_export_title">Einstellungen exportieren</string>
+<string name="settings_export_text">App-Einstellungen und Suchmaschinen in eine Datei exportieren</string>
+<string name="settings_import_title">Einstellungen importieren</string>
+<string name="settings_import_text">Importieren von Einstellungen und Suchmaschinen aus einer Exportdatei</string>
+<string name="settings_export_message_hint">Ordner zum Speichern des Exports auswählen</string>
+<string name="settings_export_message_success">Einstellungen erfolgreich exportiert</string>
+<string name="settings_export_message_error">Fehler beim Exportieren der Einstellungen</string>
+<string name="settings_import_message_hint">Zu importierende Datei auswählen</string>
+<string name="settings_import_message_success">Einstellungen erfolgreich importiert</string>
+<string name="settings_import_message_error">Fehler beim Importieren der Einstellungen</string>
 
 <!-- About -->
 <string name="activity_about">"Über"</string>

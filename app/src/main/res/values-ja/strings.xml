@@ -61,11 +61,11 @@
   <string name="settings_hide_status_bar">ステータスバーを非表示</string>
       
   <string name="settings_dark_theme">ダークテーマを有効にする</string>
-      
-  <string name="settings_hide_app_icon_title">ドロワー内のアプリアイコンを非表示にする</string>
-      
-  <string name="settings_hide_app_icon_text">その後、アプリはウィジェットを使用してのみ起動できます</string>
-      
+
+  <string name="settings_hide_app_icon_title">アプリアイコンを非表示にする</string>
+
+  <string name="settings_hide_app_icon_text">アプリはウィジェットを使用してのみ起動できます</string>
+
   <string name="settings_restart_app">変更を適用するにはアプリを再起動してください</string>
       
   <string name="settings_follow_system_settings">システム設定に従う</string>
@@ -113,6 +113,36 @@
   <string name="dialog_edit_search_engine_name_success">検索エンジンが保存されました</string>
 
   <string name="dialog_edit_search_engine_save_error">値の保存中にエラーが発生しました</string>
+
+  <string name="setting_keep_selected_search_engine_title">選択した検索エンジンを保持する</string>
+
+  <string name="setting_keep_selected_search_engine_text">クイックスイッチメニューを使用すると、検索エンジンが一時的に変更されるだけです</string>
+
+  <string name="setting_start_on_quick_search_select_title">クイックスイッチメニューの即時検索</string>
+
+  <string name="setting_start_on_quick_search_select_text">検索バーにテキストがある場合は、検索エンジンを切り替えるとすぐに検索が開始されます。</string>
+
+  <string name="settings_export_category_title">エクスポート / インポート</string>
+
+  <string name="settings_export_title">エクスポート設定</string>
+
+  <string name="settings_export_text">アプリの設定と検索エンジンをファイルにエクスポートする</string>
+
+  <string name="settings_import_title">インポート設定</string>
+
+  <string name="settings_import_text">エクスポートファイルから設定と検索エンジンをインポートする</string>
+
+  <string name="settings_export_message_hint">エクスポートを保存するフォルダを選択</string>
+
+  <string name="settings_export_message_success">設定が正常にエクスポートされました</string>
+
+  <string name="settings_export_message_error">設定のエクスポート中にエラーが発生しました</string>
+
+  <string name="settings_import_message_hint">インポートするファイルを選択</string>
+
+  <string name="settings_import_message_success">設定が正常にインポートされました</string>
+
+  <string name="settings_import_message_error">設定のインポート中にエラーが発生しました</string>
 
   <!--About-->
       

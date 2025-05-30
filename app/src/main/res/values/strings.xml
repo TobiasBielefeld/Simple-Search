@@ -34,8 +34,8 @@
     <string name="settings_change_language">Change language</string>
     <string name="settings_hide_status_bar">Hide status bar</string>
     <string name="settings_dark_theme">Enable dark theme</string>
-    <string name="settings_hide_app_icon_title">Hide app icon in drawer</string>
-    <string name="settings_hide_app_icon_text">Then the app can only be started by using its widget</string>
+    <string name="settings_hide_app_icon_title">Hide app icon</string>
+    <string name="settings_hide_app_icon_text">The app can only be started by using its widget</string>
     <string name="settings_restart_app">Restart app to apply the changes</string>
     <string name="settings_follow_system_settings">Follow system settings</string>
     <string name="settings_portrait">Portrait</string>

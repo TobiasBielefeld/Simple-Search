@@ -65,6 +65,24 @@
 <string name="settings_show_search_engines_title">Moteurs de recherche affichés</string>
 <string name="settings_show_search_engines_text">Sélectionnez les moteurs de recherche à afficher dans le menu de commutation rapide de la barre de recherche</string>
 
+<string name="settings_hide_app_icon_title">Masquer l\'icône de l\'application</string>
+<string name="settings_hide_app_icon_text">L\'application ne peut être démarrée qu\'en utilisant son widget</string>
+<string name="setting_keep_selected_search_engine_title">Conserver le moteur de recherche sélectionné</string>
+<string name="setting_keep_selected_search_engine_text">L\'utilisation du menu de changement rapide ne modifiera que temporairement le moteur de recherche</string>
+<string name="setting_start_on_quick_search_select_title">Recherche instantanée pour le menu de commutation rapide</string>
+<string name="setting_start_on_quick_search_select_text">Si la barre de recherche contient du texte, le changement de moteur de recherche lance immédiatement la recherche</string>
+<string name="settings_export_category_title">Exportation / Importation</string>
+<string name="settings_export_title">Exporter les paramètres</string>
+<string name="settings_export_text">Exporter les paramètres de l\'application et les moteurs de recherche dans un fichier</string>
+<string name="settings_import_title">Importer les paramètres</string>
+<string name="settings_import_text">Importer les paramètres et les moteurs de recherche à partir d\'un fichier d\'exportation</string>
+<string name="settings_export_message_hint">Sélectionnez le dossier pour stocker l\'exportation</string>
+<string name="settings_export_message_success">Paramètres exportés avec succès</string>
+<string name="settings_export_message_error">Erreur lors de l\'exportation des paramètres</string>
+<string name="settings_import_message_hint">Sélectionnez le fichier à importer</string>
+<string name="settings_import_message_success">Paramètres importés avec succès</string>
+<string name="settings_import_message_error">Erreur lors de l\'importation des paramètres</string>
+
 <string name="add">Ajouter</string>
 <string name="delete">Supprimer</string>
 <string name="edit">Modifier</string>

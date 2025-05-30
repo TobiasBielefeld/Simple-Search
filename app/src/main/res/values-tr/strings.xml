@@ -61,10 +61,10 @@
   <string name="settings_hide_status_bar">Durum çubuğunu gizle</string>
       
   <string name="settings_dark_theme">Koyu temayı etkinleştir</string>
-      
-  <string name="settings_hide_app_icon_title">Uygulama simgesini çekmecede gizle</string>
-      
-  <string name="settings_hide_app_icon_text">Daha sonra uygulama yalnızca widget\'ı kullanılarak başlatılabilir</string>
+
+  <string name="settings_hide_app_icon_title">Uygulama simgesini gizle</string>
+
+  <string name="settings_hide_app_icon_text">Uygulama yalnızca widget\'ı kullanılarak başlatılabilir</string>
       
   <string name="settings_restart_app">Değişiklikleri uygulamak için uygulamayı yeniden başlatın</string>
       
@@ -83,7 +83,37 @@
   <string name="settings_change_theme_light">Işık</string>
       
   <string name="settings_change_theme_default">Sistem ayarlarını takip edin</string>
-      
+
+  <string name="setting_keep_selected_search_engine_title">Seçili arama motorunu koru</string>
+
+  <string name="setting_keep_selected_search_engine_text">Hızlı geçiş menüsünü kullanmak yalnızca arama motorunu geçici olarak değiştirecektir</string>
+
+  <string name="setting_start_on_quick_search_select_title">Hızlı geçiş menüsü için anında arama</string>
+
+  <string name="setting_start_on_quick_search_select_text">Arama çubuğunda metin varsa, arama motorunu değiştirmek aramayı hemen başlatır</string>
+
+  <string name="settings_export_category_title">İhracat / İthalat</string>
+
+  <string name="settings_export_title">Dışa aktarma ayarları</string>
+
+  <string name="settings_export_text">Uygulama ayarlarını ve arama motorlarını bir dosyaya aktarın</string>
+
+  <string name="settings_import_title">Ayarları içe aktar</string>
+
+  <string name="settings_import_text">Bir dışa aktarma dosyasından ayarları ve arama motorlarını içe aktarın</string>
+
+  <string name="settings_export_message_hint">Dışa aktarmayı depolamak için klasör seçin</string>
+
+  <string name="settings_export_message_success">Ayarlar başarıyla dışa aktarıldı</string>
+
+  <string name="settings_export_message_error">Ayarlar dışa aktarılırken hata oluştu</string>
+
+  <string name="settings_import_message_hint">İçe aktarılacak dosyayı seçin</string>
+
+  <string name="settings_import_message_success">Ayarlar başarıyla içe aktarıldı</string>
+
+  <string name="settings_import_message_error">Ayarlar içe aktarılırken hata oluştu</string>
+
   <!--About-->
       
   <string name="activity_about">Hakkında</string>

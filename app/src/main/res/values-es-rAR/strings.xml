@@ -35,6 +35,10 @@
   <string formatted="false" name="dialog_edit_search_engine_text">Introduce un valor \"%s\" (sin las comillas) como marcador de posición donde se debe insertar la consulta de búsqueda.</string>
       
   <!-- Settings -->
+
+  <string name="settings_hide_app_icon_title">Ocultar el icono de la aplicación</string>
+
+  <string name="settings_hide_app_icon_text">La aplicación solo se puede iniciar usando su widget</string>
       
   <string name="activity_settings">Ajustes</string>
       
@@ -59,10 +63,6 @@
   <string name="settings_hide_status_bar">Ocultar barra de estado</string>
       
   <string name="settings_dark_theme">Habilitar tema oscuro</string>
-      
-  <string name="settings_hide_app_icon_title">Ocultar el ícono de la aplicación en el cajón</string>
-      
-  <string name="settings_hide_app_icon_text">Entonces la aplicación sólo podrá iniciarse utilizando su widget.</string>
       
   <string name="settings_restart_app">Reinicie la aplicación para aplicar los cambios.</string>
       
@@ -117,6 +117,36 @@
   <string name="dialog_edit_search_engine_name_success">El motor de búsqueda se ha guardado</string>
 
   <string name="dialog_edit_search_engine_save_error">Error al guardar el valor</string>
+
+  <string name="setting_keep_selected_search_engine_title">Mantener el motor de búsqueda seleccionado</string>
+
+  <string name="setting_keep_selected_search_engine_text">El uso del menú de cambio rápido solo cambiará temporalmente el motor de búsqueda</string>
+
+  <string name="setting_start_on_quick_search_select_title">Búsqueda instantánea para cambio rápido de menú</string>
+
+  <string name="setting_start_on_quick_search_select_text">Si la barra de búsqueda tiene texto, al cambiar el motor de búsqueda se inicia la búsqueda inmediatamente</string>
+
+  <string name="settings_export_category_title">Exportación / Importación</string>
+
+  <string name="settings_export_title">Configuración de exportación</string>
+
+  <string name="settings_export_text">Exportar la configuración de la aplicación y los motores de búsqueda a un archivo</string>
+
+  <string name="settings_import_title">Configuración de importación</string>
+
+  <string name="settings_import_text">Importar configuraciones y motores de búsqueda desde un archivo de exportación</string>
+
+  <string name="settings_export_message_hint">Seleccionar carpeta para almacenar la exportación</string>
+
+  <string name="settings_export_message_success">Configuración exportada exitosamente</string>
+
+  <string name="settings_export_message_error">Error al exportar la configuración</string>
+
+  <string name="settings_import_message_hint">Seleccione el archivo a importar</string>
+
+  <string name="settings_import_message_success">Configuraciones importadas exitosamente</string>
+
+  <string name="settings_import_message_error">Error al importar la configuración</string>
 
   <!--About-->
       
