@@ -100,7 +100,7 @@
                         android:inputType="text"
                         android:singleLine="true"
                         android:textColor="@color/toolbarText"
-                        android:textColorHint="@color/toolbarHint" />
+                        android:textColorHint="@color/toolbarHint_new" />
 
                     <ImageView
                         android:id="@+id/imageButtonClear"
