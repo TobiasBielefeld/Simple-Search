@@ -19,7 +19,6 @@
 package de.tobiasbielefeld.searchbar.helper;
 
 import android.content.res.Resources;
-import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -31,7 +30,6 @@ import java.util.Collections;
 import java.util.List;
 
 import de.tobiasbielefeld.searchbar.R;
-import de.tobiasbielefeld.searchbar.SharedData;
 import de.tobiasbielefeld.searchbar.dialogs.DialogDeleteAll;
 import de.tobiasbielefeld.searchbar.dialogs.DialogDeleteEntry;
 import de.tobiasbielefeld.searchbar.ui.MainActivity;
@@ -62,7 +60,6 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
      * loads the data from the sharedPref and applies them to the layout entries.
      */
     public void load() {
-
         recordList.clear();
         container.removeAllViews();
 
@@ -70,7 +67,7 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
             return;
 
         int recordListLength = getSavedRecordListSize();
-        List<String> recordList = getRecordList(recordListLength);
+        List<String> tempList = getRecordList(recordListLength);
 
         // populate linearLayouts with layouts from XML resource
         for (int i = 0; i < recordListLength; i++) {
@@ -81,7 +78,7 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
             textView.setOnLongClickListener(this);
             layout.getChildAt(1).setOnClickListener(this);
 
-            String text = recordList.get(i);
+            String text = tempList.get(i);
 
             // Crosslink elements
             recordList.add(text);
