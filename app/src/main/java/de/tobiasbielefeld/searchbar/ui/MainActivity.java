@@ -139,7 +139,7 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
 
     @Override
     public void afterTextChanged(Editable s) {
-        //nothing
+       records.filter(s.toString());
     }
 
     @Override

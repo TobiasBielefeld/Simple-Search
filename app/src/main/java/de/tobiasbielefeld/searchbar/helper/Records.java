@@ -110,6 +110,16 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
         save();
     }
 
+    public void filter(String search) {
+        for (int i = 0; i < recordList.size(); i++) {
+            if (recordList.get(i).contains(search)) {
+                container.getChildAt(i).setVisibility(View.VISIBLE);
+            } else {
+                container.getChildAt(i).setVisibility(View.GONE);
+            }
+        }
+    }
+
     /**
      * Saves the record list to the sharedPref
      */
