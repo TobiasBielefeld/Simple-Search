@@ -13,7 +13,9 @@
   <string name="unsupported_search_character">Sorgu desteklenmeyen karakterler içeriyor :(</string>
       
   <string name="unsupported_search_string">Özel arama URL\'niz geçerli değil :/</string>
-      
+
+  <string name="security_exception">Aramayı başlatmak için izin eksik veya uyumlu uygulama yok</string>
+
   <string name="string_doesnt_contain_placeholder">Özel arama motorunuzda arama sorgusu için yer tutucu yoktur!</string>
       
   <string name="menu_delete_all">Tüm kayıtları sil</string>

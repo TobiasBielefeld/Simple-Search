@@ -225,6 +225,8 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
                 startActivity(browserIntent);                                                       //try to start the browser, if there is one installed
             } catch (ActivityNotFoundException e) {
                 showToast(getString(R.string.unsupported_search_string), this);
+            } catch (SecurityException e) {
+                showToast(getString(R.string.security_exception), this);
             }
         }
 

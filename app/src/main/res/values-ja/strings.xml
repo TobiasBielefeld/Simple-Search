@@ -13,6 +13,8 @@
   <string name="unsupported_search_character">クエリにサポートされていない文字が含まれています :(</string>
       
   <string name="unsupported_search_string">カスタム検索 URL が無効です :/</string>
+
+  <string name="security_exception">検索を開始するための権限がないか、互換性のあるアプリがありません</string>
       
   <string name="string_doesnt_contain_placeholder">カスタム検索エンジンには検索クエリのプレースホルダーがありません。</string>
       

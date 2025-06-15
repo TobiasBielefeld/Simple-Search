@@ -13,6 +13,8 @@
   <string name="unsupported_search_character">Zapytanie zawiera nieobsługiwane znaki :(</string>
       
   <string name="unsupported_search_string">Twój adres URL wyszukiwania niestandardowego jest nieprawidłowy :/</string>
+
+  <string name="security_exception">Brak uprawnień lub brak kompatybilnej aplikacji do rozpoczęcia wyszukiwania</string>
       
   <string name="string_doesnt_contain_placeholder">W Twojej wyszukiwarce nie ma symbolu zastępczego dla zapytania wyszukiwania!</string>
       

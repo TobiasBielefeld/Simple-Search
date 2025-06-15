@@ -13,6 +13,8 @@
   <string name="unsupported_search_character">La query contiene caratteri non supportati :(</string>
       
   <string name="unsupported_search_string">L\'URL di ricerca personalizzato non è valido :/</string>
+
+  <string name="security_exception">Permesso mancante o nessuna app compatibile per avviare la ricerca</string>
       
   <string name="string_doesnt_contain_placeholder">Non c\'è alcun segnaposto per la query di ricerca nel tuo motore di ricerca personalizzato!</string>
       

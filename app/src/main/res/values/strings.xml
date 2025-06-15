@@ -8,6 +8,7 @@
     <string name="record_list_button_description">Copy to search query</string>
     <string name="unsupported_search_character">Query contains unsupported characters :(</string>
     <string name="unsupported_search_string">Your custom search url isn\'t valid :/</string>
+    <string name="security_exception">Missing permission or no compatible app to start the search</string>
     <string name="string_doesnt_contain_placeholder">There is no placeholder for the search query in your custom search engine!</string>
     <string name="menu_delete_all">Delete all records</string>
     <string name="search_hint">Search for…</string>

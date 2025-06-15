@@ -13,6 +13,8 @@
   <string name="unsupported_search_character">La consulta contiene caracteres no admitidos :(</string>
       
   <string name="unsupported_search_string">Tu URL de búsqueda personalizada no es válida :/</string>
+
+  <string name="security_exception">Falta permiso o no hay ninguna aplicación compatible para iniciar la búsqueda</string>
       
   <string name="string_doesnt_contain_placeholder">¡No hay ningún marcador de posición para la consulta de búsqueda en su motor de búsqueda personalizado!</string>
       

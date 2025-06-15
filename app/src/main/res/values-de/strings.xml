@@ -8,6 +8,7 @@
 <string name="record_list_button_description">"Kopiere zur Suchabfrage"</string>
 <string name="unsupported_search_character">"Abfrage enthält nicht unterstützte Werte :("</string>
 <string name="unsupported_search_string">"Deine benutzerdefinierte Suchmaschine ist nicht gültig :/"</string>
+<string name="security_exception">Fehlende Berechtigung oder keine kompatible App zum Starten der Suche</string>
 <string name="string_doesnt_contain_placeholder">"Es gibt keinen Platzhalter für die Suchabfrage in deiner benutzerdefinierten Suchmaschine!"</string>
 <string name="menu_delete_all">"Alle Aufzeichnungen löschen"</string>
 <string name="search_hint">"Suche nach…"</string>
