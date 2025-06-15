@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="changelog_15_1" translatable="false">Fixed loading of search record list entries</string>
+    <string name="changelog_15_2" translatable="false">The search record list is now filtered by the current search query</string>
+    <string name="changelog_15_3" translatable="false">Added options to share or copy record list entries to clipboard</string>
+
     <string name="changelog_14_1" translatable="false">Added option to make quick switch menu only temporarily change the search engine</string>
     <string name="changelog_14_2" translatable="false">Added option to directly start the search when the quick switch menu is used</string>
     <string name="changelog_14_3" translatable="false">Added option to export and import settings and search engines</string>

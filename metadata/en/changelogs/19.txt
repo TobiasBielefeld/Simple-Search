@@ -1,0 +1,3 @@
+* Fixed loading of search record list entries
+* The search record list is now filtered by the current search query
+* Added options to share or copy record list entries to clipboard
