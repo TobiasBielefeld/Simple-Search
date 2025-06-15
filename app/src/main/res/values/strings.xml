@@ -17,6 +17,11 @@
 
     <!-- Dialogs -->
     <string name="dialog_delete_entry_title">Delete this record?</string>
+    <string name="dialog_manage_record_delete">Delete record</string>
+    <string name="dialog_manage_record_copy">Copy to clipboard</string>
+    <string name="dialog_manage_record_share">Share text</string>
+    <string name="dialog_manage_record_clipboard_error">Could not copy to clipboard</string>
+    <string name="dialog_manage_record_copied_to_clipboard">Copied to clipboard</string>
     <string name="dialog_delete_all_records_text">Delete all records! Are you sure?</string>
     <string name="dialog_custom_search_engine_title">Enter custom search engine</string>
     <string formatted="false" name="dialog_edit_search_engine_text">Enter a \"%s\" (without the quotation marks) as a placeholder where the search query should be inserted at.</string>

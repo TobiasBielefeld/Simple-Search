@@ -35,7 +35,17 @@
   <string name="dialog_custom_search_engine_title">Ingrese al motor de búsqueda personalizado</string>
       
   <string formatted="false" name="dialog_edit_search_engine_text">Introduce un valor \"%s\" (sin las comillas) como marcador de posición donde se debe insertar la consulta de búsqueda.</string>
-      
+
+  <string name="dialog_manage_record_delete">Eliminar registro</string>
+
+  <string name="dialog_manage_record_copy">Copiar al portapapeles</string>
+
+  <string name="dialog_manage_record_share">Compartir texto</string>
+
+  <string name="dialog_manage_record_clipboard_error">No se pudo copiar al portapapeles</string>
+
+  <string name="dialog_manage_record_copied_to_clipboard">Copiado al portapapeles</string>
+
   <!-- Settings -->
 
   <string name="activity_settings">Ajustes</string>

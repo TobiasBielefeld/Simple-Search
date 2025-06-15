@@ -20,6 +20,11 @@
 <string name="dialog_delete_all_records_text">"Alle Aufzeichnungen löschen! Bist du dir sicher?"</string>
 <string name="dialog_custom_search_engine_title">"Benutzerdefinierte Suchmaschine eintragen"</string>
 <string name="dialog_edit_search_engine_text">"Trage ein \"%s\" (ohne Anführungszeichen) als Platzhalter an der Stelle ein, wo die Suchabfrage eingefügt werden soll."</string>
+<string name="dialog_manage_record_delete">Datensatz löschen</string>
+<string name="dialog_manage_record_copy">In die Zwischenablage kopieren</string>
+<string name="dialog_manage_record_share">Text teilen</string>
+<string name="dialog_manage_record_clipboard_error">Konnte nicht in die Zwischenablage kopieren</string>
+<string name="dialog_manage_record_copied_to_clipboard">In die Zwischenablage kopiert</string>
 
 <!-- Settings -->
 <string name="activity_settings">"Einstellungen"</string>

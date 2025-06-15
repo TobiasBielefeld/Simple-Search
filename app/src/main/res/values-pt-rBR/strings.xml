@@ -35,7 +35,17 @@
   <string name="dialog_custom_search_engine_title">Insira um mecanismo de busca personalizado</string>
       
   <string formatted="false" name="dialog_edit_search_engine_text">Insira \"%s\" (sem as aspas) como um espaço reservado onde a consulta de pesquisa deve ser inserida.</string>
-      
+
+  <string name="dialog_manage_record_delete">Excluir registro</string>
+
+  <string name="dialog_manage_record_copy">Copiar para a área de transferência</string>
+
+  <string name="dialog_manage_record_share">Compartilhar texto</string>
+
+  <string name="dialog_manage_record_clipboard_error">Não foi possível copiar para a área de transferência</string>
+
+  <string name="dialog_manage_record_copied_to_clipboard">Copiado para a área de transferência</string>
+
   <!-- Settings -->
       
   <string name="activity_settings">Configurações</string>

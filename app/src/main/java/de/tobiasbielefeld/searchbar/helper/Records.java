@@ -31,7 +31,7 @@ import java.util.List;
 
 import de.tobiasbielefeld.searchbar.R;
 import de.tobiasbielefeld.searchbar.dialogs.DialogDeleteAll;
-import de.tobiasbielefeld.searchbar.dialogs.DialogDeleteEntry;
+import de.tobiasbielefeld.searchbar.dialogs.DialogManageRecord;
 import de.tobiasbielefeld.searchbar.ui.MainActivity;
 
 import static de.tobiasbielefeld.searchbar.SharedData.*;
@@ -147,10 +147,9 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
         load();
     }
 
-    private void showDeleteEntryDialog(String text) {
-        DialogDeleteEntry dialog = new DialogDeleteEntry();
+    private void showManageDialog(String text) {
+        DialogManageRecord dialog = new DialogManageRecord();
         dialog.setText(text);
-
         dialog.show(main.getSupportFragmentManager(), "dialog");
     }
 
@@ -177,7 +176,7 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
     @Override
     public boolean onLongClick(View v) {
         String text = ((TextView) v).getText().toString();
-        showDeleteEntryDialog(text);
+        showManageDialog(text);
 
         return true;
     }

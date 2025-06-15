@@ -230,7 +230,7 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
             }
         }
 
-        searchText.setSelection(0, searchText.length());                                            //select all text to allow for easy delete or modification on resume
+        searchText.setSelection(0, searchText.length());                                       //select all text to allow for easy delete or modification on resume
         records.add(text);                                                                          //move search term to front of history
 
         if (getSavedCloseAfterSearch()) {

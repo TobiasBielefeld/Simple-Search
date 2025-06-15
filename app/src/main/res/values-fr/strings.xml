@@ -13,6 +13,11 @@
 <string name="dialog_custom_search_engine_title">Entrer un moteur de recherche</string>
 <string name="dialog_delete_all_records_text">Tout effacer! Êtes-vous sûr?</string>
 <string name="dialog_delete_entry_title">Effacer cette entrée ?</string>
+<string name="dialog_manage_record_delete">Supprimer l\'enregistrement</string>
+<string name="dialog_manage_record_copy">Copier dans le presse-papiers</string>
+<string name="dialog_manage_record_share">Partager du texte</string>
+<string name="dialog_manage_record_clipboard_error">Impossible de copier dans le presse-papiers</string>
+<string name="dialog_manage_record_copied_to_clipboard">Copié dans le presse-papiers</string>
 <string name="menu_delete_all">Tout effacer</string>
 <string name="settings_general_summary">"Paramètres de l'application"</string>
 <string name="settings_general_title">Général</string>
