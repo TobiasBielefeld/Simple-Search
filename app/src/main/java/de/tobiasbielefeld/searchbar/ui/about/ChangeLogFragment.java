@@ -53,6 +53,7 @@ public class ChangeLogFragment extends FragmentWithBottomSpacing {
         LinearLayout layoutContainer = view.findViewById(R.id.changelog_container);
 
         String[] titles = new String[]{
+                "2.5.1",
                 "2.5", "2.4", "2.3", "2.2", "2.1", "2.0.2", "2.0.1", "2.0", "1.2", "1.1.4",
                 "1.1.3", "1.1.2", "1.1.1", "1.1", "1.0"
         };

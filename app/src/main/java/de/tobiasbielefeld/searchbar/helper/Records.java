@@ -25,6 +25,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Collections;
 import java.util.List;
@@ -44,6 +45,8 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
 
     private final MainActivity main;
     private final LinearLayout container;
+
+    private final List<LinearLayout> layoutEntries;
     private final LinkedList<String> recordList;
     private final int MAX_NUMBER_OF_RECORDS;
 
@@ -53,6 +56,7 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
         Resources res = main.getResources();
         MAX_NUMBER_OF_RECORDS = res.getInteger(R.integer.max_number_records);
         recordList = new LinkedList<>();
+        layoutEntries = new ArrayList<>();
     }
 
     /**
@@ -61,6 +65,7 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
      */
     public void load() {
         recordList.clear();
+        layoutEntries.clear();
         container.removeAllViews();
 
         if (!getSavedEnableRecords())
@@ -84,6 +89,7 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
             recordList.add(text);
             ((TextView) layout.getChildAt(0)).setText(text);
 
+            layoutEntries.add(layout);
             container.addView(layout);
         }
     }
@@ -112,10 +118,16 @@ public class Records implements View.OnClickListener, View.OnLongClickListener{
 
     public void filter(String search) {
         for (int i = 0; i < recordList.size(); i++) {
+            LinearLayout layout = layoutEntries.get(i);
+
+            if (layout == null) {
+                continue;
+            }
+
             if (recordList.get(i).contains(search)) {
-                container.getChildAt(i).setVisibility(View.VISIBLE);
+                layout.setVisibility(View.VISIBLE);
             } else {
-                container.getChildAt(i).setVisibility(View.GONE);
+                layout.setVisibility(View.GONE);
             }
         }
     }

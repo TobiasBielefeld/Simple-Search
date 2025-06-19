@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="changelog_16_1" translatable="false">Small crash fix in record handling</string>
+
     <string name="changelog_15_1" translatable="false">Fixed loading of search record list entries</string>
     <string name="changelog_15_2" translatable="false">The search record list is now filtered by the current search query</string>
     <string name="changelog_15_3" translatable="false">Added options to share or copy record list entries to clipboard</string>
