@@ -98,6 +98,15 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
         startForResult = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), this::onActivityResult);
         applyInsetsForActivity(findViewById(R.id.system_left_spacer), findViewById(R.id.system_right_spacer), systemTopSpacer);
         applyInset(findViewById(R.id.system_bottom_spacer), InsetLocation.BOTTOM, InsetMode.SET);
+
+        loadIntent();
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+        loadIntent();
     }
 
     @Override
@@ -333,5 +342,16 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
 
     private String getSearchText() {
         return searchText.getText().toString().trim();
+    }
+
+    private void loadIntent() {
+        Intent intent = getIntent();
+
+        if (Intent.ACTION_SEND.equals(intent.getAction()) && "text/plain".equals(intent.getType())) {
+            String sharedText = intent.getStringExtra(Intent.EXTRA_TEXT);
+            if (sharedText != null) {
+                setSearchText(sharedText);
+            }
+        }
     }
 }
