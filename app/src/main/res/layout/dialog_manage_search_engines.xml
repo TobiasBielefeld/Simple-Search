@@ -6,23 +6,14 @@
     android:layout_height="wrap_content"
     android:paddingTop="10dp">
 
-    <ScrollView
-        android:id="@+id/scrollview_container"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_items"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="100dp"
-        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_view_items"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-
-    </ScrollView>
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical" />
 
     <RelativeLayout
         android:id="@+id/layout_loading"
@@ -32,9 +23,9 @@
         android:clickable="true"
         android:focusable="true"
         android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@id/scrollview_container"
+        app:layout_constraintBottom_toBottomOf="@id/recycler_view_items"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/scrollview_container" >
+        app:layout_constraintTop_toTopOf="@id/recycler_view_items" >
 
         <ProgressBar
             android:id="@+id/progressbar"

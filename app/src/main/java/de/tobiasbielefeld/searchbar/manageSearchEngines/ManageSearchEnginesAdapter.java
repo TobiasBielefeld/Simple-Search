@@ -34,7 +34,7 @@ import de.tobiasbielefeld.searchbar.models.SearchEngine;
 
 public class ManageSearchEnginesAdapter extends RecyclerView.Adapter<ManageSearchEnginesViewHolder> {
     private final List<SearchEngine> items;
-    private ManageSearchEnginesViewHolder selected;
+    private int selectedIndex = -1;
     private final ManageSearchEnginesActions actionHandlers;
 
     public ManageSearchEnginesAdapter(List<SearchEngine> items, ManageSearchEnginesActions actionHandlers) {
@@ -46,7 +46,7 @@ public class ManageSearchEnginesAdapter extends RecyclerView.Adapter<ManageSearc
     @Override
     public ManageSearchEnginesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.dialog_manage_search_engines_item, parent, false);
-        return new ManageSearchEnginesViewHolder(view, this);
+        return new ManageSearchEnginesViewHolder(view);
     }
 
     @Override
@@ -56,18 +56,7 @@ public class ManageSearchEnginesAdapter extends RecyclerView.Adapter<ManageSearc
         holder.imageView.setImageBitmap(byteArrayToBitmap(engine.icon));
         holder.textViewName.setText(engine.label);
         holder.textViewUri.setText(engine.uri);
-        holder.itemView.setOnClickListener((View view) -> {
-            if (holder == selected || actionHandlers.isLoading()) {
-                return;
-            }
-
-            if (selected != null) {
-                selected.hideButtonsFromListItem();
-            }
-
-            holder.showButtonsFromListItem();
-            selected = holder;
-        });
+        holder.itemView.setOnClickListener((View view) -> onItemClick(position));
 
         holder.buttonEdit.setOnClickListener((View button) -> {
             if (!actionHandlers.isLoading()) {
@@ -82,6 +71,10 @@ public class ManageSearchEnginesAdapter extends RecyclerView.Adapter<ManageSearc
                 actionHandlers.deleteEntry(engine);
             }
         });
+
+        holder.itemView.setBackgroundResource(selectedIndex == position ? R.drawable.dialog_highlight : 0);
+        holder.layoutButtons.setVisibility(selectedIndex == position ? View.VISIBLE : View.GONE);
+        holder.buttonDelete.setVisibility(getItemCount() == 1 ? View.GONE : View.VISIBLE); // cannot delete last entry
     }
 
     @Override
@@ -89,22 +82,8 @@ public class ManageSearchEnginesAdapter extends RecyclerView.Adapter<ManageSearc
         return items.size();
     }
 
-    public ManageSearchEnginesViewHolder getSelectedItem() {
-        return selected;
-    }
-
     public List<SearchEngine> getItems() {
         return items;
-    }
-
-    public void moveScrollContainer(int itemBottom) {
-        actionHandlers.moveScrollContainer(itemBottom);
-    }
-
-    public void moveItem(int fromPosition, int toPosition) {
-        SearchEngine item = items.remove(fromPosition);
-        items.add(toPosition, item);
-        notifyItemMoved(fromPosition, toPosition);
     }
 
     public void removeItem(SearchEngine engine) {
@@ -113,15 +92,22 @@ public class ManageSearchEnginesAdapter extends RecyclerView.Adapter<ManageSearc
         notifyItemRemoved(position);
     }
 
-    public void updateItem(SearchEngine oldEngine, SearchEngine newEngine) {
-        int position = items.indexOf(oldEngine);
+    private void onItemClick(int newIndex) {
+        if (newIndex == selectedIndex  || actionHandlers.isLoading()) {
+            return;
+        }
 
-        if (position == -1) {
-            items.add(newEngine);
-            notifyItemInserted(items.size());
-        } else {
-            items.set(position, newEngine);
-            notifyItemChanged(position);
+        if (items.get(newIndex) != null) {
+            collapsePreviousItem(selectedIndex);
+            notifyItemChanged(newIndex);
+            selectedIndex = newIndex;
+            actionHandlers.moveScrollContainer(newIndex);
+        }
+    }
+
+    private void collapsePreviousItem(int prevIndex) {
+        if (prevIndex != -1) {
+            notifyItemChanged(prevIndex);
         }
     }
 }

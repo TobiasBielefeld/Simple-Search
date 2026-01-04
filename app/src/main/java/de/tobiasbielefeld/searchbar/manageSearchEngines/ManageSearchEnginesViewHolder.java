@@ -18,11 +18,7 @@
 
 package de.tobiasbielefeld.searchbar.manageSearchEngines;
 
-import static de.tobiasbielefeld.searchbar.SharedData.viewCollapse;
-import static de.tobiasbielefeld.searchbar.SharedData.viewExpand;
-
 import android.content.Context;
-import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -41,12 +37,9 @@ public class ManageSearchEnginesViewHolder extends RecyclerView.ViewHolder {
     Button buttonEdit, buttonDelete;
     Context context;
     SearchEngine searchEngine;
-    ManageSearchEnginesAdapter adapter;
-    private final TypedValue typedValue = new TypedValue();
 
-    public ManageSearchEnginesViewHolder(View item, ManageSearchEnginesAdapter adapter) {
+    public ManageSearchEnginesViewHolder(View item) {
         super(item);
-        this.adapter = adapter;
         context = item.getContext();
         imageView = item.findViewById(R.id.image_view);
         textViewName = item.findViewById(R.id.dialog_manage_search_engines_name);
@@ -54,26 +47,5 @@ public class ManageSearchEnginesViewHolder extends RecyclerView.ViewHolder {
         layoutButtons = item.findViewById(R.id.dialog_manage_search_engines_layout_buttons);
         buttonEdit = item.findViewById(R.id.dialog_manage_search_engines_button_edit);
         buttonDelete = item.findViewById(R.id.dialog_manage_search_engines_button_delete);
-        item.getContext().getTheme().resolveAttribute(android.R.attr.selectableItemBackground, typedValue, true);
-    }
-
-    public void setHighlighted(boolean highlighted) {
-        boolean shouldBeHighlighted = highlighted || adapter.getSelectedItem() == this;
-        itemView.setBackgroundResource(shouldBeHighlighted ? R.drawable.dialog_highlight : typedValue.resourceId);
-    }
-
-    public void showButtonsFromListItem() {
-        itemView.setBackgroundResource(R.drawable.dialog_highlight);
-
-        if (adapter.getItemCount() == 1) {
-            buttonDelete.setVisibility(View.GONE); // cannot delete last entry
-        }
-
-        viewExpand(layoutButtons, () -> adapter.moveScrollContainer(itemView.getBottom()));
-    }
-
-    public void hideButtonsFromListItem() {
-        itemView.setBackgroundResource(typedValue.resourceId);
-        viewCollapse(layoutButtons, null);
     }
 }

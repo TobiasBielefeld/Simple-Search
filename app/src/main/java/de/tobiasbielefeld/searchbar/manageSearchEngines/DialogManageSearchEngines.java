@@ -21,16 +21,12 @@ package de.tobiasbielefeld.searchbar.manageSearchEngines;
 import static de.tobiasbielefeld.searchbar.SharedData.database;
 import static de.tobiasbielefeld.searchbar.SharedData.showToast;
 
-import android.app.Dialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
-import android.widget.ScrollView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
-import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -48,20 +44,12 @@ public class DialogManageSearchEngines extends CustomPreferenceDialogFragmentCom
     private final AtomicBoolean isLoading = new AtomicBoolean(false);
     private RecyclerView layoutContainer;
     private RelativeLayout layoutLoading;
-    private ScrollView scrollView;
     ManageSearchEnginesAdapter listAdapter;
     private List<SearchEngine> engines;
-
-    @NonNull
-    @Override
-    public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
-        return super.onCreateDialog(savedInstanceState);
-    }
 
     @Override
     protected void onBindView(View view) {
         layoutContainer = view.findViewById(R.id.recycler_view_items);
-        scrollView = view.findViewById(R.id.scrollview_container);
         layoutLoading = view.findViewById(R.id.layout_loading);
 
         startLoading();
@@ -106,11 +94,9 @@ public class DialogManageSearchEngines extends CustomPreferenceDialogFragmentCom
     }
 
     @Override
-    public void moveScrollContainer(int itemBottom) {
-        final int scrollHeight = scrollView.getHeight();
-
-        if (itemBottom > (scrollView.getScrollY() + scrollHeight)) {
-             scrollView.post(() -> scrollView.smoothScrollTo(0, itemBottom - scrollHeight));
+    public void moveScrollContainer(int index) {
+        if (index != -1) {
+            layoutContainer.postOnAnimation(() -> layoutContainer.smoothScrollToPosition(index));
         }
     }
 
