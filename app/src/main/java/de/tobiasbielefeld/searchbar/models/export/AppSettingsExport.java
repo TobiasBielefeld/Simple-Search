@@ -16,15 +16,23 @@
  * If you want to contact me, send me an e-mail at tobias.bielefeld@gmail.com
  */
 
-package de.tobiasbielefeld.searchbar.models;
+package de.tobiasbielefeld.searchbar.models.export;
 
 import java.util.List;
 
-public class AppSettings {
+public class AppSettingsExport {
 
-    public AppSettings() {}
+    /*
+     * IMPORTANT: This package path is explicitly set to keep class names in the proguard-rules.pro file
+     * This is needed to the correct names are used in the export file.
+     * Keep in mind:
+     *  * Do not use enums here
+     *  * Only use classes that are part of this package
+     *  * do not rename variables, nor change type
+     */
 
-    public List<SearchEngine> searchEngines;
+    public int version = 1;
+    public List<SearchEngineExport> searchEngines;
     public List<String> recordList;
     public String searchEngineLabel;
     public String language;

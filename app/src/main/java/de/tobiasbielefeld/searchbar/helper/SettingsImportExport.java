@@ -24,16 +24,16 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.os.LocaleListCompat;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
-import java.util.ArrayList;
-
-import de.tobiasbielefeld.searchbar.models.AppSettings;
-import de.tobiasbielefeld.searchbar.models.SearchEngine;
+import de.tobiasbielefeld.searchbar.models.export.AppSettingsExport;
+import de.tobiasbielefeld.searchbar.models.export.SearchEngineExport;
 
 public class SettingsImportExport {
-    public static AppSettings load() {
-        AppSettings model = new AppSettings();
-        model.searchEngines = database.getSearchEngines();
+    public static AppSettingsExport load() {
+        AppSettingsExport model = new AppSettingsExport();
+        model.searchEngines = database.getSearchEnginesForExport();
         model.searchEngineLabel = getSavedSearchEngineLabel();
         model.theme = getSavedTheme();
         model.orientation = getSavedOrientation();
@@ -50,8 +50,8 @@ public class SettingsImportExport {
         return model;
     }
 
-    public static void apply(AppSettings model) {
-        for (SearchEngine engine: model.searchEngines) {
+    public static void apply(AppSettingsExport model) {
+        for (SearchEngineExport engine: model.searchEngines) {
             database.putSearchEngine(engine);
         }
 
@@ -74,7 +74,11 @@ public class SettingsImportExport {
     }
 
     public static void fromJson(String json) {
-        Gson gson = new Gson();
-        apply(gson.fromJson(json, AppSettings.class));
+        JsonObject root = JsonParser.parseString(json).getAsJsonObject();
+        int version = root.get("version").getAsInt();
+
+        if (version == 1) {
+            apply(new Gson().fromJson(root, AppSettingsExport.class));
+        }
     }
 }

@@ -18,3 +18,6 @@
 
 -keep public class * extends androidx.preference.Preference
 -keep public class * extends androidx.preference.PreferenceFragmentCompat
+
+# keep export / import models
+-keep class de.tobiasbielefeld.searchbar.models.export.** { *; }

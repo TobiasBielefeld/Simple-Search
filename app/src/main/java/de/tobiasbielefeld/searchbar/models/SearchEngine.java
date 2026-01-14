@@ -34,6 +34,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import de.tobiasbielefeld.searchbar.R;
+import de.tobiasbielefeld.searchbar.models.export.SearchEngineExport;
 
 public class SearchEngine {
     static public final String TABLE_SEARCH_ENGINE = "search_engine";
@@ -116,7 +117,34 @@ public class SearchEngine {
         return entries;
     }
 
+    public static List<SearchEngineExport> getEntriesForExport(SQLiteDatabase db) {
+        List<SearchEngineExport> entries = new ArrayList<>();
+
+        try (Cursor cursor = db.query(TABLE_SEARCH_ENGINE, null, null, null, null, null, COLUMN_LABEL + " COLLATE NOCASE ASC")) {
+            while (cursor.moveToNext()) {
+                SearchEngineExport export = new SearchEngineExport();
+                export.label = cursor.getString(0);
+                export.uri = cursor.getString(1);
+                export.hidden = cursor.getInt(2) == 1;
+                export.icon = cursor.getBlob(3);
+                entries.add(export);
+            }
+        }
+
+        return entries;
+    }
+
     public static void putEntry(SQLiteDatabase db, SearchEngine entry) {
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_LABEL, entry.label);
+        values.put(COLUMN_URI, entry.uri);
+        values.put(COLUMN_HIDDEN, entry.hidden ? 1 : 0);
+        values.put(COLUMN_ICON, entry.icon);
+
+        db.insertWithOnConflict(TABLE_SEARCH_ENGINE, null, values, SQLiteDatabase.CONFLICT_REPLACE);
+    }
+
+    public static void putEntry(SQLiteDatabase db, SearchEngineExport entry) {
         ContentValues values = new ContentValues();
         values.put(COLUMN_LABEL, entry.label);
         values.put(COLUMN_URI, entry.uri);

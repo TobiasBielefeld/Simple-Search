@@ -31,6 +31,7 @@ import java.util.List;
 
 import de.tobiasbielefeld.searchbar.R;
 import de.tobiasbielefeld.searchbar.models.SearchEngine;
+import de.tobiasbielefeld.searchbar.models.export.SearchEngineExport;
 
 public class Database extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "simple_searchbar_database";
@@ -73,7 +74,15 @@ public class Database extends SQLiteOpenHelper {
         return SearchEngine.getEntries(database);
     }
 
+    public List<SearchEngineExport> getSearchEnginesForExport() {
+        return SearchEngine.getEntriesForExport(database);
+    }
+
     public void putSearchEngine(SearchEngine entry) {
+        SearchEngine.putEntry(database, entry);
+    }
+
+    public void putSearchEngine(SearchEngineExport entry) {
         SearchEngine.putEntry(database, entry);
     }
 
