@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="changelog_17_1" translatable="false">Fix export file format: Use fixed names independent from app version</string>
+    <string name="changelog_17_2" translatable="false">Support receiving shared texts from other apps</string>
+    <string name="changelog_17_3" translatable="false">Reworked the \"Manage search engine\" dialog</string>
+
     <string name="changelog_16_1" translatable="false">Small crash fix in record handling</string>
 
     <string name="changelog_15_1" translatable="false">Fixed loading of search record list entries</string>

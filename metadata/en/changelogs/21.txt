@@ -1,0 +1,3 @@
+* Fix export file format: Use fixed names independent from app version, previous exports are sadly incompatible now
+* Support receiving shared texts from other apps
+* Reworked the "Manage search engine" dialog
