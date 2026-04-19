@@ -47,6 +47,10 @@
   <string name="dialog_manage_record_copied_to_clipboard">クリップボードにコピーされました</string>
 
   <!-- Settings -->
+
+  <string name="settings_searchbar_position">検索バーの位置</string>
+  <string name="settings_searchbar_position_top">上</string>
+  <string name="settings_searchbar_position_bottom">下</string>
       
   <string name="activity_settings">設定</string>
       

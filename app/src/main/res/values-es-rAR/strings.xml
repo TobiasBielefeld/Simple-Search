@@ -47,7 +47,11 @@
   <string name="dialog_manage_record_copied_to_clipboard">Copiado al portapapeles</string>
 
   <!-- Settings -->
-      
+
+  <string name="settings_searchbar_position">Posición de la barra de búsqueda</string>
+  <string name="settings_searchbar_position_top">Arriba</string>
+  <string name="settings_searchbar_position_bottom">Abajo</string>
+
   <string name="activity_settings">Ajustes</string>
       
   <string name="settings_custom">Costumbre</string>

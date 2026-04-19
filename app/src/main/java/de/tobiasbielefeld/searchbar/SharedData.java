@@ -31,14 +31,9 @@ import android.text.SpannableString;
 import android.text.TextUtils;
 import android.text.style.BulletSpan;
 import android.util.Log;
-import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
-import android.view.animation.Animation;
-import android.view.animation.Transformation;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
 import androidx.core.view.WindowCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.core.view.WindowInsetsControllerCompat;
@@ -65,6 +60,7 @@ public class SharedData {
     public static String PREF_SEARCH_LABEL;
     public static String PREF_ORIENTATION;
     public static String PREF_STATUS_BAR;
+    public static String PREF_SEARCHBAR_POSITION;
     public static String PREF_LANGUAGE;
     public static String PREF_ENABLE_RECORDS;
     public static String PREF_CLOSE_AFTER_SEARCH;
@@ -83,6 +79,7 @@ public class SharedData {
     public static boolean DEFAULT_CLOSE_AFTER_SEARCH;
     public static boolean DEFAULT_EDGE_TO_EDGE_DISPLAY_MODE;
     public static int DEFAULT_THEME;
+    public static int DEFAULT_SEARCHBAR_POSITION;
     public static Records records;
 
     private static Toast toast;
@@ -96,6 +93,7 @@ public class SharedData {
             PREF_SEARCH_LABEL = "search_label";
             PREF_ORIENTATION = res.getString(R.string.pref_key_orientation);
             PREF_STATUS_BAR = res.getString(R.string.pref_key_hide_status_bar);
+            PREF_SEARCHBAR_POSITION = res.getString(R.string.pref_key_searchbar_position);
             PREF_LANGUAGE = res.getString(R.string.pref_key_language);
             PREF_THEME = res.getString(R.string.pref_key_theme);
             PREF_ENABLE_RECORDS = res.getString(R.string.pref_key_enable_records);
@@ -110,6 +108,7 @@ public class SharedData {
             DEFAULT_ORIENTATION = res.getStringArray(R.array.pref_orientation_values)[0];
             DEFAULT_STATUS_BAR = res.getBoolean(R.bool.default_status_bar);
             DEFAULT_THEME = res.getInteger(R.integer.default_theme);
+            DEFAULT_SEARCHBAR_POSITION = res.getInteger(R.integer.default_searchbar_position);
             DEFAULT_RECORD_LIST_SIZE = res.getInteger(R.integer.default_record_list_size);
             DEFAULT_CLOSE_AFTER_SEARCH = res.getBoolean(R.bool.default_close_after_search);
             DEFAULT_EDGE_TO_EDGE_DISPLAY_MODE = res.getBoolean(R.bool.default_edge_to_edge_display_mode);
@@ -166,6 +165,14 @@ public class SharedData {
 
     public static boolean getSavedStatusBar() {
         return getSavedBoolean(PREF_STATUS_BAR, DEFAULT_STATUS_BAR);
+    }
+
+    public static int getSavedSearchbarPosition() {
+        return Integer.parseInt(getSavedString(PREF_SEARCHBAR_POSITION, String.valueOf(DEFAULT_SEARCHBAR_POSITION)));
+    }
+
+    public static void putSavedSearchbarPosition(int value) {
+        putSavedString(PREF_SEARCHBAR_POSITION, String.valueOf(value));
     }
 
     public static boolean getSavedCloseAfterSearch() {

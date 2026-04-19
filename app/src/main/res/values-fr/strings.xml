@@ -90,6 +90,9 @@
 <string name="settings_import_message_hint">Sélectionnez le fichier à importer</string>
 <string name="settings_import_message_success">Paramètres importés avec succès</string>
 <string name="settings_import_message_error">Erreur lors de l\'importation des paramètres</string>
+<string name="settings_searchbar_position">Position de la barre de recherche</string>
+<string name="settings_searchbar_position_top">Haut</string>
+<string name="settings_searchbar_position_bottom">Bas</string>
 
 <string name="add">Ajouter</string>
 <string name="delete">Supprimer</string>

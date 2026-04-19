@@ -39,6 +39,18 @@
             app:positiveButtonText="NULL"
             app:title="@string/settings_change_language" />
 
+        <ListPreference
+            app:iconSpaceReserved="false"
+            app:singleLineTitle="false"
+            app:defaultValue="1"
+            app:entries="@array/pref_searchbar_position_titles"
+            app:entryValues="@array/pref_searchbar_position_values"
+            app:key="@string/pref_key_searchbar_position"
+            app:negativeButtonText="@string/cancel"
+            app:positiveButtonText="@null"
+            app:summary="%s"
+            app:title="@string/settings_searchbar_position" />
+
         <SwitchPreferenceCompat
             app:iconSpaceReserved="false"
             app:singleLineTitle="false"

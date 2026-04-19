@@ -47,7 +47,11 @@
   <string name="dialog_manage_record_copied_to_clipboard">Copiado para a área de transferência</string>
 
   <!-- Settings -->
-      
+
+  <string name="settings_searchbar_position">Posição da barra de pesquisa</string>
+  <string name="settings_searchbar_position_top">Topo</string>
+  <string name="settings_searchbar_position_bottom">Base</string>
+
   <string name="activity_settings">Configurações</string>
       
   <string name="settings_custom">Personalizado</string>

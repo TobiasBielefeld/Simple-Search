@@ -47,6 +47,10 @@
   <string name="dialog_manage_record_copied_to_clipboard">已复制到剪贴板</string>
 
   <!-- Settings -->
+
+  <string name="settings_searchbar_position">搜索栏位置</string>
+  <string name="settings_searchbar_position_top">顶部</string>
+  <string name="settings_searchbar_position_bottom">底部</string>
       
   <string name="activity_settings">设置</string>
       

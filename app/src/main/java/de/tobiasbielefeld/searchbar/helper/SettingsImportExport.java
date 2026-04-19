@@ -28,11 +28,12 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 import de.tobiasbielefeld.searchbar.models.export.AppSettingsExport;
+import de.tobiasbielefeld.searchbar.models.export.AppSettingsExportV2;
 import de.tobiasbielefeld.searchbar.models.export.SearchEngineExport;
 
 public class SettingsImportExport {
-    public static AppSettingsExport load() {
-        AppSettingsExport model = new AppSettingsExport();
+    public static AppSettingsExportV2 load() {
+        AppSettingsExportV2 model = new AppSettingsExportV2();
         model.searchEngines = database.getSearchEnginesForExport();
         model.searchEngineLabel = getSavedSearchEngineLabel();
         model.theme = getSavedTheme();
@@ -46,6 +47,7 @@ public class SettingsImportExport {
         model.statusBar = getSavedStatusBar();
         model.language = AppCompatDelegate.getApplicationLocales().toLanguageTags();
         model.recordList = getRecordList(getSavedRecordListSize());
+        model.searchbarPosition = getSavedSearchbarPosition();
 
         return model;
     }
@@ -69,6 +71,11 @@ public class SettingsImportExport {
         saveRecordList(model.recordList);
     }
 
+    public static void applyV2(AppSettingsExportV2 model) {
+        apply(model);
+        putSavedSearchbarPosition(model.searchbarPosition);
+    }
+
     public static String toJson() {
         return new Gson().toJson(load());
     }
@@ -77,8 +84,13 @@ public class SettingsImportExport {
         JsonObject root = JsonParser.parseString(json).getAsJsonObject();
         int version = root.get("version").getAsInt();
 
-        if (version == 1) {
-            apply(new Gson().fromJson(root, AppSettingsExport.class));
+        switch (version) {
+            case 1:
+                apply(new Gson().fromJson(root, AppSettingsExport.class));
+                break;
+            case 2:
+                applyV2(new Gson().fromJson(root, AppSettingsExportV2.class));
+                break;
         }
     }
 }

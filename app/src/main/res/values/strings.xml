@@ -39,6 +39,9 @@
     <string name="settings_orientation">Screen orientation</string>
     <string name="settings_change_language">Change language</string>
     <string name="settings_hide_status_bar">Hide status bar</string>
+    <string name="settings_searchbar_position">Searchbar Position</string>
+    <string name="settings_searchbar_position_top">Top</string>
+    <string name="settings_searchbar_position_bottom">Bottom</string>
     <string name="settings_dark_theme">Enable dark theme</string>
     <string name="settings_restart_app">Restart app to apply the changes</string>
     <string name="settings_follow_system_settings">Follow system settings</string>

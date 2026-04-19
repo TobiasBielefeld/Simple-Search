@@ -68,6 +68,7 @@ public class FragmentSettings extends CustomPreferenceFragmentCompat {
         Preference useEdgeToEdgeDisplayMode = findPreference(getString(R.string.pref_key_edge_to_edge_display_mode));
         CustomDialogPreference showSearchEngines = findPreference(getString(R.string.pref_key_show_search_engines));
         CustomDialogPreference manageCustomSearchEngines = findPreference(getString(R.string.pref_key_manage_search_engines));
+        ListPreference searchbarPosition = findPreference(getString(R.string.pref_key_searchbar_position));
 
         Preference exportSettings = findPreference(getString(R.string.pref_key_export_settings));
         Preference importSettings = findPreference(getString(R.string.pref_key_import_settings));
@@ -91,6 +92,13 @@ public class FragmentSettings extends CustomPreferenceFragmentCompat {
         assert theme != null;
         theme.setOnPreferenceChangeListener((Preference pref, Object newValue) -> {
             requireActivity().recreate();
+            return true;
+        });
+
+        assert searchbarPosition != null;
+        searchbarPosition.setOnPreferenceChangeListener((Preference pref, Object newValue) -> {
+            Intent resultIntent = ((Settings) requireActivity()).resultIntent;
+            resultIntent.putExtra("RELOAD_SEARCHBAR", true);
             return true;
         });
 

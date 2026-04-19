@@ -27,6 +27,9 @@
 <string name="dialog_manage_record_copied_to_clipboard">In die Zwischenablage kopiert</string>
 
 <!-- Settings -->
+<string name="settings_searchbar_position">Position der Suchleiste</string>
+<string name="settings_searchbar_position_top">Oben</string>
+<string name="settings_searchbar_position_bottom">Unten</string>
 <string name="activity_settings">"Einstellungen"</string>
 <string name="settings_custom">"Benutzerdefiniert"</string>
 <string name="settings_search_title">"Suche"</string>

@@ -36,6 +36,16 @@
         <item>@string/settings_landscape_upside_down</item>
     </string-array>
 
+    <string-array name="pref_searchbar_position_titles" translatable="false">
+        <item>@string/settings_searchbar_position_top</item>
+        <item>@string/settings_searchbar_position_bottom</item>
+    </string-array>
+
+    <string-array name="pref_searchbar_position_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
     <string-array name="pref_orientation_values" translatable="false">
         <item>1</item>
         <item>2</item>

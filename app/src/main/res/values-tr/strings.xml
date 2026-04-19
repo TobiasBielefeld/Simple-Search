@@ -47,7 +47,11 @@
   <string name="dialog_manage_record_copied_to_clipboard">Panoya kopyalandı</string>
 
   <!-- Settings -->
-      
+
+  <string name="settings_searchbar_position">Arama çubuğu konumu</string>
+  <string name="settings_searchbar_position_top">Üst</string>
+  <string name="settings_searchbar_position_bottom">Alt</string>
+
   <string name="activity_settings">Ayarlar</string>
       
   <string name="settings_custom">Gelenek</string>

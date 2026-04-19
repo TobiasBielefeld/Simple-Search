@@ -48,6 +48,10 @@
 
   <!-- Settings -->
 
+  <string name="settings_searchbar_position">Posizione della barra di ricerca</string>
+  <string name="settings_searchbar_position_top">In alto</string>
+  <string name="settings_searchbar_position_bottom">In basso</string>
+
   <string name="activity_settings">Impostazioni</string>
       
   <string name="settings_custom">Costume</string>

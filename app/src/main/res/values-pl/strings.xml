@@ -47,7 +47,11 @@
   <string name="dialog_manage_record_copied_to_clipboard">Skopiowano do schowka</string>
 
   <!-- Settings -->
-      
+
+  <string name="settings_searchbar_position">Pozycja paska wyszukiwania</string>
+  <string name="settings_searchbar_position_top">Góra</string>
+  <string name="settings_searchbar_position_bottom">Dół</string>
+
   <string name="activity_settings">Ustawienia</string>
       
   <string name="settings_custom">Zwyczaj</string>

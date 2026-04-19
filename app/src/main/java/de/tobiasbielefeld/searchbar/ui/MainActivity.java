@@ -75,7 +75,7 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(getSavedSearchbarPosition() == 0 ? R.layout.activity_main : R.layout.activity_main_searchbar_bottom);
         searchEngineListLoading = false;
 
         // Setup navbar with item select listener
@@ -187,8 +187,13 @@ public class MainActivity extends CustomAppCompatActivity implements TextWatcher
     private void onActivityResult(ActivityResult result) {
         if (result.getResultCode() == RESULT_OK) {
             Intent data = result.getData();
-            if (data != null && data.getBooleanExtra("RELOAD_EDGE_TO_EDGE", false)) {
-                recreate();
+            if (data != null) {
+                boolean reloadSearchbar = data.getBooleanExtra("RELOAD_SEARCHBAR", false);
+                boolean edgeToEdge = data.getBooleanExtra("RELOAD_EDGE_TO_EDGE", false);
+
+                if (reloadSearchbar || edgeToEdge) {
+                    recreate();
+                }
             }
         }
     }
