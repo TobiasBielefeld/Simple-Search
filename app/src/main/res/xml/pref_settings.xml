@@ -42,7 +42,7 @@
         <ListPreference
             app:iconSpaceReserved="false"
             app:singleLineTitle="false"
-            app:defaultValue="1"
+            app:defaultValue="0"
             app:entries="@array/pref_searchbar_position_titles"
             app:entryValues="@array/pref_searchbar_position_values"
             app:key="@string/pref_key_searchbar_position"
