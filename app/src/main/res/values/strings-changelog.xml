@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="changelog_18_1" translatable="false">Add option to move searchbar to bottom of screen</string>
+    <string name="changelog_18_2" translatable="false">Add Brave to list of search engines</string>
+    <string name="changelog_18_3" translatable="false">Update target Android SDK to 36</string>
+
     <string name="changelog_17_1" translatable="false">Fix export file format: Use fixed names independent from app version</string>
     <string name="changelog_17_2" translatable="false">Support receiving shared texts from other apps</string>
     <string name="changelog_17_3" translatable="false">Reworked the \"Manage search engine\" dialog</string>
