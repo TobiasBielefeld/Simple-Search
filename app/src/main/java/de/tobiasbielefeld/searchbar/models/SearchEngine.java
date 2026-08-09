@@ -99,10 +99,14 @@ public class SearchEngine {
                 "search_custom_2_shown",
                 R.drawable.icon_counter_three_search_bar
         );
+
+        addEntry(db, ctx, "Brave", "https://search.brave.com/search?q=%s", R.drawable.favicon_brave);
     }
 
     public static void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion, Context context) {
-        // no upgrades yet
+        if (oldVersion < 7)  {
+            addEntry(db, context, "Brave", "https://search.brave.com/search?q=%s", R.drawable.favicon_brave);
+        }
     }
 
     public static List<SearchEngine> getEntries(SQLiteDatabase db) {
@@ -157,6 +161,10 @@ public class SearchEngine {
     public static void deleteEntry(SQLiteDatabase db, SearchEngine entry) {
         String selection = String.format("%s = ?", COLUMN_LABEL);
         db.delete(TABLE_SEARCH_ENGINE, selection, new String[]{entry.label});
+    }
+
+    private static void addEntry(SQLiteDatabase db, Context ctx, String newLabel, String uri,int resId) {
+        putEntry(db, new SearchEngine(newLabel, uri, false, drawableToByteArray(AppCompatResources.getDrawable(ctx, resId))));
     }
 
     private static void importLegacyEntry(SQLiteDatabase db, Context ctx, String oldSearchKey, String newLabel, String uri, String shownKey, int resId) {

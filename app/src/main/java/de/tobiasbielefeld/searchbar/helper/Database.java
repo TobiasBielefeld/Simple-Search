@@ -35,7 +35,7 @@ import de.tobiasbielefeld.searchbar.models.export.SearchEngineExport;
 
 public class Database extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "simple_searchbar_database";
-    public static final int DATABASE_VERSION = 6;
+    public static final int DATABASE_VERSION = 7;
 
     private final SQLiteDatabase database;
     private final Context context;
